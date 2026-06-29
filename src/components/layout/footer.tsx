@@ -64,9 +64,9 @@ export default function Footer() {
           <div className="grid grid-cols-3 gap-6">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="mb-3 text-sm font-bold text-white">
+                <h3 className="mb-3 text-sm font-bold text-white">
                   {group.title}
-                </h4>
+                </h3>
                 <ul className="space-y-2">
                   {group.links.map((link) => (
                     <li key={link.label}>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-3 text-sm font-bold text-white">联系方式</h4>
+            <h3 className="mb-3 text-sm font-bold text-white">联系方式</h3>
             <ul className="space-y-3">
               {contactInfo.map((item) => (
                 <li key={item.label} className="text-sm">

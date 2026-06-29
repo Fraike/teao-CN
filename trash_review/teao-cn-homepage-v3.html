@@ -1,0 +1,1560 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>特澳 TEAO - 汽车内饰阻尼器与锁扣定制源头厂家</title>
+<style>
+  :root {
+    --orange: #E8821A;
+    --orange-deep: #C56A0C;
+    --orange-light: #FFF0E0;
+    --orange-glow: rgba(232,130,26,0.22);
+    --ink: #3A3028;
+    --ink-2: #4A4038;
+    --muted: #7A6E62;
+    --muted-light: #A89B8E;
+    --cream: #FBF7F2;
+    --cream-2: #F4ECE2;
+    --warm-white: #FFFCF8;
+    --line: #E5DACA;
+    --line-soft: #EFE6D8;
+    --brown: #5C4A3D;
+    --brown-deep: #3D2F25;
+    --green: #5A8A5A;
+    --red: #C7503A;
+    --blue: #5A8AB5;
+    --radius: 14px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+    --shadow-sm: 0 2px 12px rgba(92,74,61,0.06);
+    --shadow-md: 0 8px 30px rgba(92,74,61,0.10);
+    --shadow-lg: 0 20px 50px rgba(92,74,61,0.12);
+    --shadow-glow: 0 0 40px rgba(232,130,26,0.12);
+    --font-main: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    --font-display: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: var(--cream); }
+  body {
+    font-family: var(--font-main);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background: var(--cream);
+  }
+  img { display: block; max-width: 100%; -webkit-user-drag: none; user-select: none; }
+  a { color: inherit; text-decoration: none; }
+  button, input, textarea, select { font: inherit; border: none; outline: none; }
+
+  /* ====== SCROLL PROGRESS BAR ====== */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--orange), #F5A040);
+    z-index: 9999; transition: width 0.1s linear;
+    box-shadow: 0 0 10px var(--orange-glow);
+  }
+
+  /* ====== CUSTOM SCROLLBAR ====== */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream-2); }
+  ::-webkit-scrollbar-thumb { background: var(--orange-deep); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+  /* ====== UTILITIES ====== */
+  .wrap { width: min(1280px, calc(100% - 40px)); margin: 0 auto; }
+
+  /* ====== SCROLL REVEAL ====== */
+  .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-scale { opacity: 0; transform: scale(0.94); transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+  .reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right { opacity: 0; transform: translateX(36px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* ====== TOP BAR ====== */
+  .topbar {
+    background: var(--brown-deep);
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+    position: relative; z-index: 101;
+  }
+  .topbar .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 36px; gap: 20px;
+  }
+  .topbar-left, .topbar-right { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
+  .topbar b { color: #fff; font-weight: 600; }
+  .topbar .divider { opacity: 0.25; margin: 0 2px; }
+  .topbar a { transition: color 0.2s; }
+  .topbar a:hover { color: var(--orange); }
+
+  /* ====== HEADER ====== */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(251,247,242,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line-soft);
+    transition: all 0.3s var(--ease-out);
+  }
+  .site-header.scrolled {
+    background: rgba(251,247,242,0.96);
+    box-shadow: 0 2px 20px rgba(92,74,61,0.06);
+  }
+  .site-header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 70px; gap: 28px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 14px;
+    min-width: 220px; text-decoration: none;
+  }
+  .brand img.logo-img { height: 40px; width: auto; }
+  .brand-text {
+    padding-left: 14px; border-left: 1px solid var(--line);
+    line-height: 1.35;
+  }
+  .brand-text strong {
+    display: block; font-size: 17px; letter-spacing: 0.04em; color: var(--ink);
+    font-weight: 700;
+  }
+  .brand-text span {
+    display: block; margin-top: 2px; color: var(--muted);
+    font-size: 11px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .main-nav {
+    flex: 1; display: flex; justify-content: center; gap: 2px;
+  }
+  .main-nav a {
+    padding: 8px 16px; font-size: 13px; font-weight: 600;
+    color: var(--ink-2); position: relative;
+    transition: color 0.2s var(--ease-out);
+    letter-spacing: 0.02em;
+  }
+  .main-nav a::after {
+    content: ""; position: absolute; bottom: 2px; left: 50%;
+    width: 0; height: 2px; background: var(--orange);
+    border-radius: 1px;
+    transition: width 0.3s var(--ease-out), left 0.3s var(--ease-out);
+  }
+  .main-nav a:hover, .main-nav a.active { color: var(--orange-deep); }
+  .main-nav a:hover::after, .main-nav a.active::after { width: 60%; left: 20%; }
+
+  .header-cta {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 11px 24px;
+    background: var(--orange); color: #fff !important;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.03em;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 16px rgba(232,130,26,0.28);
+    transition: all 0.25s var(--ease-out);
+    position: relative; overflow: hidden;
+  }
+  .header-cta::before {
+    content: ""; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.5s var(--ease-out);
+  }
+  .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,130,26,0.40); }
+  .header-cta:hover::before { left: 100%; }
+
+  /* ====== HERO SECTION ====== */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(170deg, var(--cream) 0%, var(--cream-2) 100%);
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse at 75% 40%, rgba(232,130,26,0.08) 0%, transparent 55%),
+      radial-gradient(ellipse at 15% 85%, rgba(232,130,26,0.04) 0%, transparent 50%);
+  }
+  .hero-bg::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(232,130,26,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 65%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 65%);
+  }
+  .hero-bg-img {
+    position: absolute; inset: 0; z-index: 0;
+    background: url("public/images/company/automation-workshop.webp") right center / cover no-repeat;
+    opacity: 0.12;
+    mask-image: linear-gradient(90deg, transparent 0%, transparent 30%, black 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 30%, black 100%);
+  }
+  .hero .wrap {
+    position: relative; z-index: 2; display: grid;
+    grid-template-columns: 1fr 380px; gap: 48px;
+    align-items: center; padding: 50px 0 50px;
+  }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(232,130,26,0.25);
+    background: rgba(255,240,224,0.6);
+    backdrop-filter: blur(10px);
+    padding: 9px 18px; color: var(--orange-deep);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  .hero-tag::before {
+    content: ""; width: 6px; height: 6px;
+    background: var(--orange); border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+    box-shadow: 0 0 8px var(--orange-glow);
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.5); }
+  }
+
+  .hero h1 {
+    margin: 22px 0 0; font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.1; letter-spacing: -0.02em;
+    font-weight: 300; color: var(--ink);
+  }
+  .hero h1 .word { display: inline-block; overflow: hidden; }
+  .hero h1 .word span {
+    display: inline-block; transform: translateY(100%);
+    animation: word-up 0.8s var(--ease-out) forwards;
+  }
+  @keyframes word-up { to { transform: translateY(0); } }
+  .hero h1 em {
+    font-style: normal; color: var(--orange-deep);
+    font-weight: 700; position: relative;
+  }
+  .hero h1 em::after {
+    content: ""; position: absolute; left: 0; bottom: 2px;
+    width: 100%; height: 8px; background: rgba(232,130,26,0.15);
+    border-radius: 4px; z-index: -1;
+  }
+
+  .hero-desc {
+    max-width: 560px; margin: 20px 0 0;
+    color: var(--muted); font-size: 15px; line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .trust-badges {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
+  }
+  .trust-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid var(--line);
+    background: var(--warm-white);
+    padding: 9px 15px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s var(--ease-out);
+  }
+  .trust-badge:hover {
+    border-color: rgba(232,130,26,0.3);
+    background: var(--orange-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .trust-badge svg { flex-shrink: 0; }
+  .trust-badge span {
+    font-size: 12.5px; font-weight: 600; color: var(--ink-2);
+  }
+
+  .hero-actions {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 28px;
+    background: var(--orange); color: #fff;
+    font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(232,130,26,0.28);
+    transition: all 0.3s var(--ease-out);
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::before {
+    content: ""; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.6s var(--ease-out);
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(232,130,26,0.40); }
+  .btn-primary:hover::before { left: 100%; }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 26px;
+    background: var(--warm-white); color: var(--ink);
+    font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    cursor: pointer; transition: all 0.3s var(--ease-out);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange-deep); background: var(--orange-light); }
+
+  .hero-subnote {
+    margin-top: 18px; color: var(--muted-light);
+    font-size: 12px; font-weight: 500; line-height: 1.8;
+  }
+  .hero-subnote code {
+    display: inline-block; background: var(--orange-light); padding: 2px 8px;
+    font-size: 11.5px; color: var(--orange-deep); font-weight: 600;
+    border: 1px solid rgba(232,130,26,0.15);
+    border-radius: 4px;
+  }
+
+  /* Hero Right Panel */
+  .hero-panel {
+    display: flex; flex-direction: column; gap: 14px;
+    align-self: stretch; justify-content: center;
+  }
+  .inquiry-card {
+    border: 1px solid var(--line);
+    background: rgba(255,252,248,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s;
+  }
+  .inquiry-card:hover { border-color: rgba(232,130,26,0.25); box-shadow: 0 20px 50px rgba(92,74,61,0.15); }
+  .inquiry-card h3 { font-size: 20px; margin-bottom: 6px; color: var(--ink); font-weight: 700; }
+  .inquiry-card > p { color: var(--muted); font-size: 13px; line-height: 1.7; margin-bottom: 18px; }
+  .quick-product-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;
+  }
+  .quick-product-item {
+    border: 1px solid var(--line-soft);
+    background: var(--warm-white); padding: 14px; text-align: center;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out);
+  }
+  .quick-product-item:hover { border-color: rgba(232,130,26,0.3); background: var(--orange-light); transform: translateY(-2px); }
+  .quick-product-item img { width: 90%; aspect-ratio: 1.2; object-fit: contain; margin: 0 auto; }
+  .quick-product-item p { margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--ink-2); }
+  .contact-mini-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  }
+  .contact-mini {
+    background: var(--cream); padding: 14px;
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-sm);
+  }
+  .contact-mini label { display: block; font-size: 11px; font-weight: 600; color: var(--muted-light); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .contact-mini strong { display: block; font-size: 13.5px; color: var(--ink); }
+  .hotline-strip {
+    display: flex; align-items: center; gap: 12px;
+    background: linear-gradient(135deg, var(--orange), #F0A030);
+    color: #fff; padding: 16px 20px;
+    border-radius: var(--radius);
+    position: relative; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(232,130,26,0.25);
+  }
+  .hotline-strip::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s var(--ease-out);
+  }
+  .hotline-strip:hover::before { transform: translateX(100%); }
+  .hotline-strip svg { flex-shrink: 0; }
+  .hotline-strip div b { display: block; font-size: 18px; font-weight: 700; }
+  .hotline-strip div span { font-size: 11.5px; opacity: 0.85; }
+
+  /* ====== STATS BAR ====== */
+  .stats-bar {
+    position: relative; z-index: 10;
+    padding: 40px 0;
+  }
+  .stats-bar-inner {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--line);
+    background: var(--warm-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .stat-cell {
+    padding: 28px 20px; border-right: 1px solid var(--line-soft);
+    text-align: center; position: relative;
+    transition: background 0.3s var(--ease-out);
+  }
+  .stat-cell::before {
+    content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+    background: var(--orange); transform: scaleX(0); transition: transform 0.3s var(--ease-out);
+    border-radius: 2px 2px 0 0;
+  }
+  .stat-cell:hover { background: var(--cream); }
+  .stat-cell:hover::before { transform: scaleX(1); }
+  .stat-cell:last-child { border-right: none; }
+  .stat-num {
+    display: block; font-size: 34px; font-weight: 300;
+    color: var(--ink); line-height: 1.1; letter-spacing: -0.02em;
+  }
+  .stat-num .unit { font-size: 15px; font-weight: 700; color: var(--orange-deep); }
+  .stat-label {
+    display: block; margin-top: 8px;
+    font-size: 12px; font-weight: 600; color: var(--muted);
+    letter-spacing: 0.03em;
+  }
+
+  /* ====== SECTION COMMONS ====== */
+  .section { padding: 80px 0; position: relative; }
+  .section.white { background: var(--warm-white); }
+  .section.soft { background: var(--cream-2); }
+  .section.warm { background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%); }
+  .section.dark { background: var(--brown-deep); color: #F5EDE3; }
+  .section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; margin-bottom: 44px; }
+  .section-tag {
+    font-size: 12px; font-weight: 700; color: var(--orange-deep);
+    margin-bottom: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .section-tag::before {
+    content: ""; width: 24px; height: 2px; background: var(--orange); border-radius: 1px;
+  }
+  .section.dark .section-tag { color: var(--orange); }
+  .section-title {
+    font-size: 38px; line-height: 1.2; letter-spacing: -0.02em;
+    font-weight: 300; color: var(--ink);
+  }
+  .section.dark .section-title { color: #fff; }
+  .section-title b { font-weight: 700; color: var(--orange-deep); }
+  .section.dark .section-title b { color: var(--orange); }
+  .section-desc { max-width: 440px; color: var(--muted); font-size: 14px; line-height: 1.8; font-weight: 400; }
+  .section.dark .section-desc { color: rgba(245,237,227,0.6); }
+  .more-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 700; color: var(--orange-deep);
+    white-space: nowrap; transition: gap 0.25s var(--ease-out);
+    letter-spacing: 0.03em;
+  }
+  .more-link:hover { gap: 12px; }
+
+  /* ====== PRODUCTS GRID ====== */
+  .products-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+  }
+  .product-card {
+    overflow: hidden; border: 1px solid var(--line);
+    background: var(--warm-white); border-radius: var(--radius);
+    transition: all 0.4s var(--ease-out);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+  .product-card::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--orange), #F5A040);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s var(--ease-out);
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .product-card:hover {
+    border-color: rgba(232,130,26,0.25); box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+  }
+  .product-card:hover::before { transform: scaleX(1); }
+  .product-card-img {
+    display: grid; place-items: center;
+    aspect-ratio: 1 / 0.8; background: var(--cream);
+    padding: 20px; position: relative; overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .product-card-img::after {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at center, rgba(232,130,26,0.05), transparent 70%);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .product-card:hover .product-card-img::after { opacity: 1; }
+  .product-card-img img { width: 88%; object-fit: contain; transition: transform 0.5s var(--ease-out); }
+  .product-card:hover .product-card-img img { transform: scale(1.08) rotate(-2deg); }
+  .product-card-badge {
+    position: absolute; top: 0; left: 0;
+    background: var(--orange); color: #fff;
+    font-size: 10px; font-weight: 700; padding: 5px 10px;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    border-radius: var(--radius) 0 var(--radius-xs) 0;
+  }
+  .product-card-body { padding: 20px 20px 22px; }
+  .product-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+  .product-card-body p {
+    color: var(--muted); font-size: 12.5px; line-height: 1.65; font-weight: 400;
+    min-height: 42px;
+  }
+  .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .product-tags span {
+    background: var(--cream); padding: 4px 10px;
+    font-size: 11px; font-weight: 600; color: var(--brown);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-xs);
+    transition: all 0.2s;
+  }
+  .product-card:hover .product-tags span { border-color: rgba(232,130,26,0.2); background: var(--orange-light); }
+  .product-card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line-soft);
+  }
+  .product-price-hint { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+  .product-quote-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 700; color: var(--orange-deep);
+    transition: gap 0.25s var(--ease-out);
+    letter-spacing: 0.03em;
+  }
+  .product-quote-btn:hover { gap: 8px; }
+
+  /* ====== APPLICATIONS ====== */
+  .app-layout {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: stretch;
+  }
+  .app-hero-card {
+    background:
+      linear-gradient(180deg, rgba(61,47,37,0.75) 0%, rgba(61,47,37,0.35) 50%, rgba(61,47,37,0.75) 100%),
+      url("public/images/company/automation-workshop.webp") center/cover no-repeat;
+    color: #fff; padding: 40px; display: flex; flex-direction: column;
+    justify-content: space-between; min-height: 480px;
+    position: relative; overflow: hidden;
+    border-radius: var(--radius);
+    transition: transform 0.5s var(--ease-out);
+  }
+  .app-hero-card::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(232,130,26,0.12), transparent 50%);
+    opacity: 0; transition: opacity 0.5s;
+    border-radius: var(--radius);
+  }
+  .app-hero-card:hover::before { opacity: 1; }
+  .app-hero-card h3 { font-size: 32px; line-height: 1.25; font-weight: 300; max-width: 500px; }
+  .app-hero-card h3 em { font-style: normal; color: var(--orange); font-weight: 700; }
+  .app-hero-card p { color: rgba(255,255,255,0.75); font-size: 15px; line-height: 1.85; margin-top: 14px; max-width: 480px; font-weight: 400; }
+  .app-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .app-card {
+    border: 1px solid var(--line);
+    background: var(--warm-white); padding: 24px; border-radius: var(--radius);
+    transition: all 0.35s var(--ease-out);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .app-card::before {
+    content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
+    background: linear-gradient(180deg, transparent, rgba(232,130,26,0.04));
+    transition: height 0.4s var(--ease-out);
+  }
+  .app-card:hover { border-color: rgba(232,130,26,0.25); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .app-card:hover::before { height: 100%; }
+  .app-icon {
+    width: 44px; height: 44px;
+    background: var(--orange-light); display: grid; place-items: center;
+    margin-bottom: 14px; color: var(--orange-deep);
+    border-radius: var(--radius-sm);
+    transition: all 0.35s var(--ease-out);
+  }
+  .app-card:hover .app-icon { background: var(--orange); color: #fff; transform: rotate(-5deg) scale(1.05); }
+  .app-card h4 { font-size: 17px; font-weight: 700; position: relative; z-index: 1; color: var(--ink); }
+  .app-card .app-desc { margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.7; font-weight: 400; position: relative; z-index: 1; }
+  .app-recommend {
+    display: inline-block; margin-top: 14px;
+    color: var(--orange-deep); font-size: 11.5px; font-weight: 700;
+    background: var(--orange-light); padding: 4px 12px;
+    border-radius: var(--radius-xs);
+    letter-spacing: 0.02em; position: relative; z-index: 1;
+  }
+
+  /* ====== FACTORY CAPABILITY ====== */
+  .factory-layout {
+    display: grid; grid-template-columns: 440px 1fr; gap: 48px; align-items: center;
+  }
+  .factory-photo-frame {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+  .factory-photo-frame::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(232,130,26,0.06), transparent 50%);
+    pointer-events: none;
+    border-radius: var(--radius);
+  }
+  .factory-photo-frame img { width: 100%; height: 500px; object-fit: cover; display: block; transition: transform 0.8s var(--ease-out); }
+  .factory-photo-frame:hover img { transform: scale(1.05); }
+  .capability-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .cap-item {
+    background: var(--warm-white); padding: 26px 22px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    min-height: 150px; display: flex; flex-direction: column; justify-content: center;
+    transition: all 0.35s var(--ease-out);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .cap-item::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 3px; height: 0;
+    background: var(--orange); transition: height 0.4s var(--ease-out);
+    border-radius: 2px;
+  }
+  .cap-item:hover { background: var(--cream); border-color: rgba(232,130,26,0.2); box-shadow: var(--shadow-md); }
+  .cap-item:hover::before { height: 100%; }
+  .cap-item strong { font-size: 18px; font-weight: 700; color: var(--ink); }
+  .cap-item p { margin-top: 10px; color: var(--muted); font-size: 13.5px; line-height: 1.75; font-weight: 400; }
+
+  /* ====== QUALITY ====== */
+  .quality-layout {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: start;
+  }
+  .cert-list { display: grid; gap: 14px; }
+  .cert-card {
+    display: flex; align-items: center; justify-content: space-between;
+    border: 1px solid var(--line);
+    background: var(--warm-white); padding: 26px; border-radius: var(--radius);
+    transition: all 0.3s var(--ease-out);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .cert-card::before {
+    content: ""; position: absolute; left: 0; top: 0; width: 0; height: 100%;
+    background: linear-gradient(90deg, rgba(232,130,26,0.04), transparent);
+    transition: width 0.4s var(--ease-out);
+  }
+  .cert-card:hover { border-color: rgba(232,130,26,0.25); transform: translateX(4px); box-shadow: var(--shadow-md); }
+  .cert-card:hover::before { width: 100%; }
+  .cert-info { position: relative; z-index: 1; }
+  .cert-info strong { display: block; font-size: 22px; font-weight: 700; color: var(--ink); }
+  .cert-info span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; font-weight: 400; }
+  .cert-icon {
+    width: 60px; height: 60px;
+    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 13px;
+    flex-shrink: 0; transition: transform 0.35s var(--ease-out);
+    border-radius: var(--radius-sm);
+    position: relative; z-index: 1;
+  }
+  .cert-card:hover .cert-icon { transform: rotate(5deg) scale(1.05); }
+  .qc-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .qc-step {
+    border: 1px solid var(--line);
+    background: var(--warm-white); padding: 24px; border-radius: var(--radius);
+    transition: all 0.3s var(--ease-out);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .qc-step:hover { border-color: rgba(232,130,26,0.25); box-shadow: var(--shadow-md); }
+  .qc-step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    background: var(--orange); color: #fff; font-size: 13px; font-weight: 700;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out);
+  }
+  .qc-step:hover .qc-step-num { transform: scale(1.1); }
+  .qc-step strong { display: block; margin-top: 14px; font-size: 17px; font-weight: 700; color: var(--ink); }
+  .qc-step p { margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.65; font-weight: 400; }
+
+  /* ====== CLIENTS ====== */
+  .clients-layout {
+    display: grid; grid-template-columns: 340px 1fr; gap: 44px; align-items: center;
+  }
+  .client-logos {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .client-logo-cell {
+    display: grid; place-items: center; min-height: 88px;
+    background: var(--warm-white); font-size: 15px; font-weight: 700;
+    color: var(--brown); transition: all 0.3s var(--ease-out);
+    position: relative; overflow: hidden;
+  }
+  .client-logo-cell::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(232,130,26,0.06), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .client-logo-cell:hover { background: var(--cream); color: var(--orange-deep); }
+  .client-logo-cell:hover::before { opacity: 1; }
+
+  /* ====== CTA / INQUIRY SECTION ====== */
+  .cta-section {
+    background:
+      linear-gradient(105deg, rgba(61,47,37,0.96) 0%, rgba(61,47,37,0.90) 60%, rgba(61,47,37,0.80) 100%),
+      url("public/images/company/automation-workshop.webp") center/cover no-repeat;
+    color: #fff;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ""; position: absolute; top: 0; right: 0;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(232,130,26,0.10), transparent 70%);
+    pointer-events: none;
+  }
+  .cta-layout {
+    display: grid; grid-template-columns: 1fr 430px; gap: 56px; align-items: start;
+    position: relative; z-index: 1;
+  }
+  .cta-left h2 { font-size: 40px; font-weight: 300; line-height: 1.2; max-width: 720px; letter-spacing: -0.02em; }
+  .cta-left h2 b { font-weight: 700; color: var(--orange); }
+  .cta-left > p { margin-top: 18px; color: rgba(245,237,227,0.6); font-size: 15px; line-height: 1.85; font-weight: 400; }
+  .cta-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+  .cta-benefit {
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04); padding: 18px; font-weight: 600; font-size: 13px;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out);
+  }
+  .cta-benefit:hover { border-color: rgba(232,130,26,0.3); background: rgba(232,130,26,0.06); }
+
+  .inquiry-form-card {
+    background: var(--warm-white); padding: 30px; color: var(--ink);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    border-top: 3px solid var(--orange);
+    border-radius: var(--radius);
+  }
+  .inquiry-form-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .inquiry-form-card > p.sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-input {
+    border: 1px solid var(--line);
+    background: var(--cream); padding: 13px 14px;
+    font-size: 13.5px; color: var(--ink); font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: all 0.25s var(--ease-out);
+  }
+  .form-input:focus { border-color: var(--orange); background: #fff; box-shadow: 0 0 0 3px rgba(232,130,26,0.10); }
+  .form-input.wide { grid-column: 1 / -1; }
+  .file-upload-area {
+    grid-column: 1 / -1;
+    display: grid; place-items: center;
+    min-height: 74px; border: 2px dashed #D4BFA0;
+    background: #FEF9F2; color: var(--orange-deep);
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all 0.25s var(--ease-out);
+  }
+  .file-upload-area:hover { border-color: var(--orange); background: var(--orange-light); transform: scale(1.01); }
+  .submit-btn {
+    grid-column: 1 / -1; margin-top: 8px;
+    padding: 15px;
+    background: var(--orange); color: #fff; font-size: 14px; font-weight: 700;
+    cursor: pointer; box-shadow: 0 6px 20px rgba(232,130,26,0.28);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out);
+    position: relative; overflow: hidden; letter-spacing: 0.03em;
+  }
+  .submit-btn::before {
+    content: ""; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.6s var(--ease-out);
+  }
+  .submit-btn:hover { background: var(--orange-deep); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,130,26,0.38); }
+  .submit-btn:hover::before { left: 100%; }
+  .form-footer-note { margin-top: 12px; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    padding: 50px 0 30px; background: var(--brown-deep); color: rgba(245,237,227,0.55); font-size: 13px;
+    border-top: 2px solid var(--orange);
+  }
+  .footer .wrap { display: flex; justify-content: space-between; gap: 32px; align-items: flex-start; }
+  .footer-brand img { height: 36px; margin-bottom: 12px; filter: brightness(0) invert(1); }
+  .footer-brand p { max-width: 300px; line-height: 1.7; font-weight: 400; }
+  .footer-links { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .footer-links h4 { color: rgba(245,237,227,0.85); font-size: 13px; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.03em; }
+  .footer-links a { display: block; margin-bottom: 8px; color: rgba(245,237,227,0.4); font-weight: 400; font-size: 12.5px; transition: all 0.2s; }
+  .footer-links a:hover { color: var(--orange); transform: translateX(3px); }
+  .footer-contact { min-width: 240px; }
+  .footer-contact-item { margin-bottom: 12px; }
+  .footer-contact-item label { display: block; font-weight: 700; color: rgba(245,237,227,0.35); font-size: 11px; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-contact-item span, .footer-contact-item a { color: rgba(245,237,227,0.65); font-weight: 400; }
+  .footer-bottom {
+    margin-top: 36px; padding-top: 20px;
+    border-top: 1px solid rgba(245,237,227,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 11.5px; color: rgba(245,237,227,0.3);
+  }
+
+  /* ====== MOBILE FLOAT BAR ====== */
+  .mobile-float-bar {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: 200; background: rgba(61,47,37,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-float-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .float-btn {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 3px; padding: 10px 0; font-size: 11px; font-weight: 700;
+    color: rgba(245,237,227,0.7); border: none; background: none; cursor: pointer;
+    transition: color 0.2s;
+  }
+  .float-btn:first-child { color: var(--orange); }
+  .float-btn svg { width: 22px; height: 22px; }
+
+  /* ====== FLOATING PARTICLES ====== */
+  .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+  .particle {
+    position: absolute; width: 3px; height: 3px;
+    background: var(--orange); border-radius: 50%;
+    opacity: 0; animation: float-up linear infinite;
+  }
+  @keyframes float-up {
+    0% { opacity: 0; transform: translateY(100vh) translateX(0); }
+    10% { opacity: 0.3; }
+    90% { opacity: 0.3; }
+    100% { opacity: 0; transform: translateY(-100px) translateX(50px); }
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 1120px) {
+    .main-nav { display: none; }
+    .hero .wrap, .applications .app-layout,
+    .factory-layout, .quality-layout, .clients-layout,
+    .cta-layout { grid-template-columns: 1fr; }
+    .products-grid, .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell { border-bottom: 1px solid var(--line-soft); border-right: none; }
+    .hero-panel { display: none; }
+    .hero .wrap { padding: 40px 0 40px; }
+  }
+  @media (max-width: 720px) {
+    .wrap { width: calc(100% - 24px); }
+    .topbar, .brand-text { display: none; }
+    .site-header .wrap { min-height: 56px; }
+    .hero h1 { font-size: 30px; }
+    .hero-desc { font-size: 14px; }
+    .stats-bar-inner, .products-grid, .app-cards,
+    .capability-grid, .qc-steps, .cta-benefits,
+    .form-fields { grid-template-columns: 1fr; }
+    .stat-cell { border-bottom: 1px solid var(--line-soft); border-right: none; }
+    .section { padding: 50px 0; }
+    .section-header { display: block; }
+    .section-desc { margin-top: 12px; }
+    .section-title, .cta-left h2 { font-size: 26px; }
+    .footer .wrap { display: block; }
+    .footer-links { grid-template-columns: 1fr 1fr; margin-top: 24px; }
+    .mobile-float-bar { display: block; }
+    body { padding-bottom: 60px; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ========== TOP BAR ========== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>国内业务热线：<b>400-XXX-XXXX</b></span>
+      <span class="divider">|</span>
+      <span>微信咨询：<b>扫码添加</b></span>
+      <span class="divider">|</span>
+      <span>邮箱：sales@chinateao.com</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">下载中心</a>
+      <a href="#">English Site</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img class="logo-img" src="public/images/logo-color.webp" alt="TEAO 特澳" />
+      <span class="brand-text">
+        <strong>特澳 TEAO</strong>
+        <span>阻尼器 · 锁扣 · 定制缓冲机构源头厂家</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#" class="active">首页</a>
+      <a href="#products">产品中心</a>
+      <a href="#applications">应用领域</a>
+      <a href="#factory">制造实力</a>
+      <a href="#quality">质量认证</a>
+      <a href="#clients">客户案例</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+    <a class="header-cta" href="#contact">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      获取报价
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-img"></div>
+  <div class="particles" id="particles"></div>
+  <div class="wrap">
+    <!-- Left Content -->
+    <div>
+      <div class="hero-tag reveal visible">面向汽车、家电、卫浴及办公设备供应链</div>
+      <h1>
+        <span class="word"><span style="animation-delay:0.1s">汽车内饰</span></span>
+        <span class="word"><span style="animation-delay:0.2s"><em>阻尼器</em></span></span>
+        <span class="word"><span style="animation-delay:0.3s">与锁扣</span></span><br/>
+        <span class="word"><span style="animation-delay:0.4s">定制源头厂家</span></span>
+      </h1>
+      <p class="hero-desc reveal visible reveal-delay-2">
+        特澳 TEAO 专注齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构研发制造。
+        支持扭矩、角度、方向和安装结构按图定制，从打样到量产一体化交付。
+      </p>
+      <div class="trust-badges reveal visible reveal-delay-3">
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A8A5A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>IATF 16949</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A8AB5" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>ISO 14001</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8821A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>8000 万件年产能</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C7503A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>100% 扭矩全检</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8821A" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>支持图纸 / 样品定制</span>
+        </span>
+      </div>
+      <div class="hero-actions reveal visible reveal-delay-4">
+        <button class="btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          发送图纸获取选型建议
+        </button>
+        <button class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          电话咨询
+        </button>
+        <button class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          加微信
+        </button>
+      </div>
+      <p class="hero-subnote reveal visible reveal-delay-5">
+        适用于：<code>汽车杯托</code><code>手套箱</code><code>扶手箱</code><code>眼镜盒</code><code>充电口盖</code><code>家电盖板</code> 等开合缓冲结构
+      </p>
+    </div>
+
+    <!-- Right Panel: Quick Inquiry -->
+    <aside class="hero-panel reveal-right" aria-label="快速询盘">
+      <div class="inquiry-card">
+        <h3>工程师在线评估</h3>
+        <p>提交产品类型、应用场景、目标扭矩或上传图纸，工程师将在 2 小时内给出选型与打样建议。</p>
+        <div class="quick-product-row">
+          <div class="quick-product-item">
+            <img src="public/images/products/gear-damper/GearDamperCategory.webp" alt="齿轮阻尼器" oncontextmenu="return false"/>
+            <p>齿轮阻尼器</p>
+          </div>
+          <div class="quick-product-item">
+            <img src="public/images/products/axial-damper/AxialDamperCategory.webp" alt="轴向阻尼器" oncontextmenu="return false"/>
+            <p>轴向阻尼器</p>
+          </div>
+        </div>
+        <div class="contact-mini-grid">
+          <div class="contact-mini">
+            <label>需要提供</label>
+            <strong>图纸 / 样品 / 年用量</strong>
+          </div>
+          <div class="contact-mini">
+            <label>回复方式</label>
+            <strong>电话 / 微信 / 邮件</strong>
+          </div>
+        </div>
+      </div>
+      <div class="hotline-strip">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <b>400-XXX-XXXX</b>
+          <span>工作日 8:30 - 18:00 在线</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ========== STATS BAR ========== -->
+<section class="stats-bar" aria-label="核心实力数据">
+  <div class="wrap">
+    <div class="stats-bar-inner reveal-scale">
+      <div class="stat-cell">
+        <span class="stat-num" data-count="20" data-suffix="">0</span><span class="stat-num" style="display:inline"><span class="unit">+年</span></span>
+        <span class="stat-label">阻尼器研发制造经验</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-count="8000" data-suffix="">0</span><span class="stat-num" style="display:inline"><span class="unit">万+</span></span>
+        <span class="stat-label">年产能（参考值）</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">IATF</span>
+        <span class="stat-label">16949 质量体系认证</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label">出厂扭矩检测覆盖</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-count="5" data-suffix="">0</span><span class="stat-num" style="display:inline"><span class="unit">大</span></span>
+        <span class="stat-label">核心产品线</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRODUCTS SECTION ========== -->
+<section class="section white" id="products">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">产品中心</p>
+        <h2 class="section-title">从标准型号到<b>按图非标定制</b></h2>
+      </div>
+      <div class="section-desc reveal reveal-delay-1">每款产品支持扭矩范围、阻尼方向、安装方式和材料定制。点击查看参数表、尺寸图和性能曲线。</div>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <article class="product-card reveal reveal-delay-1">
+        <div class="product-card-img">
+          <span class="product-card-badge">主推</span>
+          <img src="public/images/products/gear-damper/GearDamperCategory.webp" alt="齿轮阻尼器" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>齿轮阻尼器</h3>
+          <p>也称旋转阻尼器。适用于杯托、眼镜盒、储物盒、扶手箱等开合结构。</p>
+          <div class="product-tags">
+            <span>扭矩 50-500 gf.cm</span>
+            <span>双向可选</span>
+            <span>螺丝安装</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 2 -->
+      <article class="product-card reveal reveal-delay-2">
+        <div class="product-card-img">
+          <img src="public/images/products/axial-damper/AxialDamperCategory.webp" alt="轴向阻尼器" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>轴向阻尼器</h3>
+          <p>圆筒阻尼器 / 桶形阻尼器。适合拉手、滑动门、缓开缓闭等线性运动场景。</p>
+          <div class="product-tags">
+            <span>推拉阻尼</span>
+            <span>角度可控</span>
+            <span>多规格</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 3 -->
+      <article class="product-card reveal reveal-delay-3">
+        <div class="product-card-img">
+          <img src="public/images/products/glove-box-damper/GloveBoxDamperCategory.webp" alt="手套箱阻尼器" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>手套箱阻尼器</h3>
+          <p>汽车杂物箱专用缓降阻尼器，解决打开过快、末端撞击和异响问题。</p>
+          <div class="product-tags">
+            <span>汽车内饰</span>
+            <span>缓降控制</span>
+            <span>静音设计</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 4 -->
+      <article class="product-card reveal reveal-delay-4">
+        <div class="product-card-img">
+          <img src="public/images/products/latch/LatchCategory.webp" alt="Push-Push 锁扣" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>Push-Push 锁扣</h3>
+          <p>汽车内饰锁止释放机构，可与阻尼结构配合使用实现完整的开合手感方案。</p>
+          <div class="product-tags">
+            <span>锁止释放</span>
+            <span>结构配套</span>
+            <span>手感可调</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 5 -->
+      <article class="product-card reveal reveal-delay-5">
+        <div class="product-card-img">
+          <img src="public/images/products/other/OthersCategory.webp" alt="其他定制零部件" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>定制零部件</h3>
+          <p>定制缓冲机构、收纳机构和其他汽车内饰功能组件。按图纸或样品开发模具。</p>
+          <div class="product-tags">
+            <span>非标开发</span>
+            <span>样品评估</span>
+            <span>模具自制</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">按需报价</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== APPLICATIONS SECTION ========== -->
+<section class="section soft" id="applications">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">应用领域</p>
+        <h2 class="section-title">先看场景，<b>再选产品</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">国内采购更习惯从使用场景出发找解决方案。以下是我们最常见的应用领域和推荐产品组合。</p>
+    </div>
+
+    <div class="app-layout">
+      <div class="app-hero-card reveal-left">
+        <div>
+          <h3>汽车内饰开合机构的<br/><em>静音缓冲方案</em></h3>
+          <p>解决杯托弹开撞击、手套箱下落过快、眼镜盒异响、充电口盖回弹等问题。稳定扭矩输出，适配 -30°C ~ +80°C 温度区间。</p>
+        </div>
+        <button class="btn-secondary" style="border-color:rgba(255,255,255,0.25);color:#fff;background:rgba(255,255,255,0.08)">提交应用需求 &rarr;</button>
+      </div>
+      <div class="app-cards">
+        <div class="app-card reveal reveal-delay-1">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          </div>
+          <h4>汽车杯托</h4>
+          <p class="app-desc">解决弹开过快、末端撞击和手感突兀问题，让开合节奏一致且安静。</p>
+          <span class="app-recommend">推荐：齿轮阻尼器 RD-T 系列</span>
+        </div>
+        <div class="app-card reveal reveal-delay-2">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <h4>手套箱 / 扶手箱</h4>
+          <p class="app-desc">控制打开速度，提升乘员舱使用质感，避免储物格意外砸落。</p>
+          <span class="app-recommend">推荐：手套箱阻尼器 RD-V 系列</span>
+        </div>
+        <div class="app-card reveal reveal-delay-3">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+          </div>
+          <h4>眼镜盒 / 储物盒</h4>
+          <p class="app-desc">小空间开合结构的最佳选择，支持多种安装方式定制。</p>
+          <span class="app-recommend">推荐：齿轮 / 轴向阻尼器</span>
+        </div>
+        <div class="app-card reveal reveal-delay-4">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h4>充电口盖 / 家电卫浴</h4>
+          <p class="app-desc">外饰盖板开启控制、马桶盖缓降、家电盖板的缓开缓闭体验优化。</p>
+          <span class="app-recommend">推荐：轴向阻尼器 / 定制机构</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MANUFACTURING CAPABILITY ========== -->
+<section class="section white" id="factory">
+  <div class="wrap">
+    <div class="factory-layout">
+      <div class="reveal-left">
+        <p class="section-tag">制造实力</p>
+        <h2 class="section-title" style="margin-top:10px;">模具开发 → 注塑生产 →<br/><b>自动化装配 → 批量交付</b></h2>
+        <p class="section-desc" style="margin-top:18px;">
+          国内采购判断供应商时，工厂实拍、设备清单和检测能力是关键依据。
+          我们拥有完整的模具、注塑、装配、检测一体化能力，支持从样品到数百万级的批量交付。
+        </p>
+        <div class="factory-photo-frame" style="margin-top:24px;">
+          <img src="public/images/company/automation-workshop.webp" alt="特澳自动化生产车间" oncontextmenu="return false"/>
+        </div>
+      </div>
+      <div class="capability-grid">
+        <div class="cap-item reveal reveal-delay-1">
+          <strong>模具开发</strong>
+          <p>根据产品结构和安装空间进行方案评估，自有模具设计与制造能力。</p>
+        </div>
+        <div class="cap-item reveal reveal-delay-2">
+          <strong>注塑生产</strong>
+          <p>POM / PA66 + GF 等工程塑料精密注塑，过程尺寸与外观控制。</p>
+        </div>
+        <div class="cap-item reveal reveal-delay-3">
+          <strong>自动化装配线</strong>
+          <p>半自动到全自动装配，保证产品一致性，适配不同批量需求。</p>
+        </div>
+        <div class="cap-item reveal reveal-delay-1">
+          <strong>扭矩全检</strong>
+          <p>围绕核心性能指标进行 100% 出厂扭矩检测与记录。</p>
+        </div>
+        <div class="cap-item reveal reveal-delay-2">
+          <strong>可靠性测试</strong>
+          <p>寿命测试、高低温循环、盐雾测试等环境适应性验证能力。</p>
+        </div>
+        <div class="cap-item reveal reveal-delay-3">
+          <strong>批量交付</strong>
+          <p>年产能可达千万级，支持汽车主机厂、Tier-1 及家电供应链节奏。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUALITY SECTION ========== -->
+<section class="section soft" id="quality">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">质量认证</p>
+        <h2 class="section-title">不只是证书墙 — <b>展示质量怎么管</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">从来料到出货的全流程质量控制，每一批次产品均可追溯。</p>
+    </div>
+
+    <div class="quality-layout">
+      <div class="cert-list reveal-left">
+        <div class="cert-card">
+          <div class="cert-info">
+            <strong>IATF 16949</strong>
+            <span>汽车行业质量管理体系认证 — 覆盖产品设计、生产和服务全过程</span>
+          </div>
+          <div class="cert-icon" style="background:var(--green)">IATF</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-info">
+            <strong>ISO 14001</strong>
+            <span>环境管理体系认证 — 生产过程环保合规</span>
+          </div>
+          <div class="cert-icon" style="background:var(--blue)">ISO</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-info">
+            <strong>专利与技术积累</strong>
+            <span>阻尼器、锁扣及相关缓冲结构的专利与工艺沉淀</span>
+          </div>
+          <div class="cert-icon" style="background:var(--orange)">PAT</div>
+        </div>
+      </div>
+      <div class="qc-steps">
+        <div class="qc-step reveal reveal-delay-1">
+          <span class="qc-step-num">01</span>
+          <strong>来料检验</strong>
+          <p>关键原材料和外购件进入生产前先确认材质、尺寸和批次信息。</p>
+        </div>
+        <div class="qc-step reveal reveal-delay-2">
+          <span class="qc-step-num">02</span>
+          <strong>注塑过程控制</strong>
+          <p>注塑成型环节的温度、压力和时间监控，确保尺寸一致性。</p>
+        </div>
+        <div class="qc-step reveal reveal-delay-3">
+          <span class="qc-step-num">03</span>
+          <strong>100% 扭矩检测</strong>
+          <p>围绕核心使用手感和性能指标，对每个成品进行扭矩检测并记录。</p>
+        </div>
+        <div class="qc-step reveal reveal-delay-4">
+          <span class="qc-step-num">04</span>
+          <strong>出货检验与追溯</strong>
+          <p>批次号、外观、功能和包装出货前确认，支持后续质量问题追溯。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CLIENTS SECTION ========== -->
+<section class="section white" id="clients">
+  <div class="wrap">
+    <div class="clients-layout">
+      <div class="reveal-left">
+        <p class="section-tag">客户案例</p>
+        <h2 class="section-title" style="margin-top:10px;">服务汽车及<br/><b>家电供应链客户</b></h2>
+        <p class="section-desc" style="margin-top:16px;">
+          产品已应用于国内外多家汽车品牌及零部件供应商项目。具体 Logo 和案例展示需获得客户授权后替换当前占位内容。
+        </p>
+      </div>
+      <div class="client-logos reveal-right" aria-label="部分合作客户（待授权）">
+        <div class="client-logo-cell">BYD 比亚迪</div>
+        <div class="client-logo-cell">Geely 吉利</div>
+        <div class="client-logo-cell">Chery 奇瑞</div>
+        <div class="client-logo-cell">SAIC 上汽</div>
+        <div class="client-logo-cell">FAW 一汽</div>
+        <div class="client-logo-cell">GAC 广汽</div>
+        <div class="client-logo-cell">NIO 蔚来</div>
+        <div class="client-logo-cell">XPeng 小鹏</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA / INQUIRY SECTION ========== -->
+<section class="section cta-section" id="contact">
+  <div class="wrap">
+    <div class="cta-layout">
+      <div class="cta-left reveal-left">
+        <p class="section-tag">快速询盘</p>
+        <h2>发图纸或描述需求<br/><b>我们先帮你判断结构和扭矩方向</b></h2>
+        <p>无论是标准品选型还是非标定制，提交以下任一信息即可启动工程师评估流程。正式版本将接入电话、微信二维码、文件上传、邮件通知等完整询盘链路。</p>
+        <div class="cta-benefits">
+          <div class="cta-benefit">&#10003; 提交图纸获取选型建议</div>
+          <div class="cta-benefit">&#10003; 发送样品信息安排打样</div>
+          <div class="cta-benefit">&#10003; 描述应用场景获取方案</div>
+        </div>
+      </div>
+      <form class="inquiry-form-card reveal-right">
+        <h3>获取选型与报价建议</h3>
+        <p class="sub">工程师将在 2 小时内响应</p>
+        <div class="form-fields">
+          <input class="form-input" type="text" placeholder="您的姓名 *" />
+          <input class="form-input" type="text" placeholder="公司名称 *" />
+          <input class="form-input" type="tel" placeholder="手机号码 *" />
+          <select class="form-input"><option value="">选择产品类型 *</option><option>齿轮阻尼器</option><option>轴向阻尼器</option><option>手套箱阻尼器</option><option>锁扣</option><option>定制零部件</option><option>不确定 / 需要推荐</option></select>
+          <input class="form-input wide" type="text" placeholder="应用场景 / 目标扭矩 / 年用量预估" />
+          <div class="file-upload-area">
+            &#128194; 上传图纸、图片、PDF 或 CAD 文件（可选）
+          </div>
+          <button class="submit-btn" type="button">提交需求，获取选型方案 &rarr;</button>
+        </div>
+        <p class="form-footer-note">提交即表示同意隐私政策。具体字段、文件大小限制和通知方式待最终确认后配置。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="public/images/logo-color.webp" alt="TEAO 特澳" oncontextmenu="return false"/>
+      <p>东莞市特澳电子科技有限公司 — 专注汽车内饰阻尼器、齿轮阻尼器、轴向阻尼器与锁扣的源头制造商。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>产品中心</h4>
+        <a href="#">齿轮阻尼器</a>
+        <a href="#">轴向阻尼器</a>
+        <a href="#">手套箱阻尼器</a>
+        <a href="#">Push-Push 锁扣</a>
+        <a href="#">定制零部件</a>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <a href="#">公司介绍</a>
+        <a href="#">制造实力</a>
+        <a href="#">质量认证</a>
+        <a href="#">新闻资讯</a>
+        <a href="#">技术支持</a>
+      </div>
+      <div>
+        <h4>技术资源</h4>
+        <a href="#">选型指南</a>
+        <a href="#">扭矩单位换算</a>
+        <a href="#">常见问题 FAQ</a>
+        <a href="#">下载中心</a>
+        <a href="#">图纸询盘</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4 style="color:rgba(245,237,227,0.85);font-size:13px;margin-bottom:14px;letter-spacing:0.03em;">联系方式</h4>
+      <div class="footer-contact-item">
+        <label>业务热线</label>
+        <span>400-XXX-XXXX</span>
+      </div>
+      <div class="footer-contact-item">
+        <label>微信咨询</label>
+        <span>扫码添加销售工程师</span>
+      </div>
+      <div class="footer-contact-item">
+        <label>邮箱</label>
+        <a href="mailto:sales@chinateao.com">sales@chinateao.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <label>地址</label>
+        <span>广东省东莞市（详细地址待确认）</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 东莞市特澳电子科技有限公司 版权所有</span>
+      <span>ICP备案号 / 公安备案号 待正式资料确认后替换</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== MOBILE FLOATING CTA BAR ========== -->
+<div class="mobile-float-bar">
+  <div class="mobile-float-inner">
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      电话咨询
+    </button>
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      加微信
+    </button>
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      发图纸询盘
+    </button>
+  </div>
+</div>
+
+<script>
+  // ====== SCROLL PROGRESS BAR ======
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  // ====== HEADER SCROLL EFFECT ======
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  // ====== SCROLL REVEAL ANIMATIONS ======
+  const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -60px 0px' };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // ====== ANIMATED COUNTERS ======
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        const animate = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.floor(eased * target);
+          el.textContent = value + suffix;
+          if (progress < 1) requestAnimationFrame(animate);
+          else el.textContent = target + suffix;
+        };
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // ====== FLOATING PARTICLES ======
+  const particlesContainer = document.getElementById('particles');
+  if (particlesContainer) {
+    for (let i = 0; i < 20; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = (8 + Math.random() * 12) + 's';
+      p.style.animationDelay = Math.random() * 10 + 's';
+      p.style.width = (2 + Math.random() * 3) + 'px';
+      p.style.height = p.style.width;
+      particlesContainer.appendChild(p);
+    }
+  }
+
+  // ====== PARALLAX HERO BG ======
+  const heroBgImg = document.querySelector('.hero-bg-img');
+  window.addEventListener('scroll', () => {
+    if (heroBgImg && window.scrollY < window.innerHeight) {
+      const offset = window.scrollY * 0.3;
+      heroBgImg.style.transform = `translateY(${offset}px)`;
+    }
+  });
+
+  // ====== MAGNETIC BUTTONS ======
+  document.querySelectorAll('.btn-primary, .header-cta, .submit-btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.12}px, ${y * 0.12 - 2}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+
+  // ====== PRODUCT CARD 3D TILT ======
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rx = ((y - cy) / cy) * -3;
+      const ry = ((x - cx) / cx) * 3;
+      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+</script>
+
+</body>
+</html>

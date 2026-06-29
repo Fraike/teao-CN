@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于特澳 TEAO — 20+ 年汽车阻尼器与锁扣制造厂家</title>
+<style>
+  :root {
+    --orange: #E8821A;
+    --orange-deep: #C56A0C;
+    --orange-light: #FFF0E0;
+    --orange-glow: rgba(232,130,26,0.22);
+    --ink: #3A3028;
+    --ink-2: #4A4038;
+    --muted: #7A6E62;
+    --muted-light: #A89B8E;
+    --cream: #FBF7F2;
+    --cream-2: #F4ECE2;
+    --warm-white: #FFFCF8;
+    --line: #E5DACA;
+    --line-soft: #EFE6D8;
+    --brown: #5C4A3D;
+    --brown-deep: #3D2F25;
+    --green: #5A8A5A;
+    --red: #C7503A;
+    --blue: #5A8AB5;
+    --radius: 14px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+    --shadow-sm: 0 2px 12px rgba(92,74,61,0.06);
+    --shadow-md: 0 8px 30px rgba(92,74,61,0.10);
+    --shadow-lg: 0 20px 50px rgba(92,74,61,0.12);
+    --font-main: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: var(--cream); }
+  body {
+    font-family: var(--font-main); color: var(--ink); line-height: 1.65;
+    font-size: 14px; -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; background: var(--cream);
+  }
+  img { display: block; max-width: 100%; -webkit-user-drag: none; user-select: none; }
+  a { color: inherit; text-decoration: none; }
+  button, input, textarea, select { font: inherit; border: none; outline: none; }
+  .wrap { width: min(1280px, calc(100% - 40px)); margin: 0 auto; }
+
+  /* SCROLL PROGRESS */
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--orange), #F5A040); z-index: 9999;
+    transition: width 0.1s linear; box-shadow: 0 0 10px var(--orange-glow); }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream-2); }
+  ::-webkit-scrollbar-thumb { background: var(--orange-deep); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-scale { opacity: 0; transform: scale(0.94); transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+  .reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right { opacity: 0; transform: translateX(36px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* TOP BAR */
+  .topbar { background: var(--brown-deep); color: rgba(255,255,255,0.65); font-size: 12px;
+    position: relative; z-index: 101; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 36px; gap: 20px; }
+  .topbar-left, .topbar-right { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
+  .topbar b { color: #fff; font-weight: 600; }
+  .topbar .divider { opacity: 0.25; margin: 0 2px; }
+  .topbar a { transition: color 0.2s; } .topbar a:hover { color: var(--orange); }
+
+  /* HEADER */
+  .site-header { position: sticky; top: 0; z-index: 100;
+    background: rgba(251,247,242,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line-soft);
+    transition: all 0.3s var(--ease-out); }
+  .site-header.scrolled { background: rgba(251,247,242,0.96); box-shadow: 0 2px 20px rgba(92,74,61,0.06); }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 70px; gap: 28px; }
+  .brand { display: flex; align-items: center; gap: 14px; min-width: 220px; text-decoration: none; }
+  .brand img.logo-img { height: 40px; width: auto; }
+  .brand-text { padding-left: 14px; border-left: 1px solid var(--line); line-height: 1.35; }
+  .brand-text strong { display: block; font-size: 17px; letter-spacing: 0.04em; color: var(--ink); font-weight: 700; }
+  .brand-text span { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; font-weight: 500; }
+  .main-nav { flex: 1; display: flex; justify-content: center; gap: 2px; }
+  .main-nav a { padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--ink-2);
+    position: relative; transition: color 0.2s var(--ease-out); letter-spacing: 0.02em; }
+  .main-nav a::after { content: ""; position: absolute; bottom: 2px; left: 50%; width: 0; height: 2px;
+    background: var(--orange); border-radius: 1px; transition: width 0.3s var(--ease-out), left 0.3s var(--ease-out); }
+  .main-nav a:hover, .main-nav a.active { color: var(--orange-deep); }
+  .main-nav a:hover::after, .main-nav a.active::after { width: 60%; left: 20%; }
+  .header-cta { display: inline-flex; align-items: center; gap: 7px; padding: 11px 24px;
+    background: var(--orange); color: #fff !important; font-size: 13px; font-weight: 700; letter-spacing: 0.03em;
+    border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(232,130,26,0.28);
+    transition: all 0.25s var(--ease-out); position: relative; overflow: hidden; }
+  .header-cta::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left 0.5s var(--ease-out); }
+  .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,130,26,0.40); }
+  .header-cta:hover::before { left: 100%; }
+
+  /* PAGE HERO */
+  .page-hero { position: relative; overflow: hidden;
+    background: linear-gradient(170deg, var(--cream) 0%, var(--cream-2) 100%); }
+  .page-hero-bg { position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse at 75% 40%, rgba(232,130,26,0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 15% 85%, rgba(232,130,26,0.04) 0%, transparent 50%); }
+  .page-hero-bg::before { content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(232,130,26,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 65%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 65%); }
+  .page-hero-bg-img { position: absolute; inset: 0; z-index: 0;
+    background: url("public/images/company/automation-workshop.webp") right center / cover no-repeat;
+    opacity: 0.10; mask-image: linear-gradient(90deg, transparent 0%, transparent 30%, black 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 30%, black 100%); }
+  .page-hero .wrap { position: relative; z-index: 2; display: grid;
+    grid-template-columns: 1fr 360px; gap: 48px; align-items: center; padding: 50px 0 50px; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted);
+    font-weight: 600; margin-bottom: 20px; letter-spacing: 0.02em; }
+  .breadcrumb a { transition: color 0.2s; } .breadcrumb a:hover { color: var(--orange-deep); }
+  .breadcrumb .sep { opacity: 0.4; } .breadcrumb .current { color: var(--orange-deep); }
+  .page-hero-tag { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(232,130,26,0.25);
+    background: rgba(255,240,224,0.6); backdrop-filter: blur(10px); padding: 9px 18px; color: var(--orange-deep);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 20px; }
+  .page-hero h1 { margin: 20px 0 0; font-size: clamp(34px, 4.5vw, 54px); line-height: 1.12;
+    letter-spacing: -0.02em; font-weight: 300; color: var(--ink); }
+  .page-hero h1 em { font-style: normal; color: var(--orange-deep); font-weight: 700; position: relative; }
+  .page-hero h1 em::after { content: ""; position: absolute; left: 0; bottom: 2px; width: 100%; height: 8px;
+    background: rgba(232,130,26,0.15); border-radius: 4px; z-index: -1; }
+  .page-hero-desc { max-width: 540px; margin: 20px 0 0; color: var(--muted);
+    font-size: 15px; line-height: 1.85; font-weight: 400; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .trust-badge { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line);
+    background: var(--warm-white); padding: 9px 15px; border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm); transition: all 0.3s var(--ease-out); }
+  .trust-badge:hover { border-color: rgba(232,130,26,0.3); background: var(--orange-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .trust-badge span { font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
+
+  /* HERO SIDE CARD */
+  .hero-side-card { border: 1px solid var(--line); background: rgba(255,252,248,0.85);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 26px;
+    border-radius: var(--radius); box-shadow: var(--shadow-lg); transition: all 0.3s; }
+  .hero-side-card:hover { border-color: rgba(232,130,26,0.25); box-shadow: 0 20px 50px rgba(92,74,61,0.15); }
+  .hero-side-card .big-num { font-size: 56px; font-weight: 300; color: var(--orange-deep); line-height: 1; letter-spacing: -0.03em; }
+  .hero-side-card .big-num span { font-size: 20px; font-weight: 700; }
+  .hero-side-card .big-label { margin-top: 8px; font-size: 14px; font-weight: 600; color: var(--ink); }
+  .hero-side-card .divider-line { height: 1px; background: var(--line); margin: 22px 0; }
+  .hero-side-card .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .hero-side-card .mini-stat strong { display: block; font-size: 22px; font-weight: 300; color: var(--ink); }
+  .hero-side-card .mini-stat span { font-size: 11px; font-weight: 600; color: var(--muted-light); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* SECTIONS */
+  .section { padding: 80px 0; position: relative; }
+  .section.white { background: var(--warm-white); } .section.soft { background: var(--cream-2); }
+  .section.warm { background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%); }
+  .section.dark { background: var(--brown-deep); color: #F5EDE3; }
+  .section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; margin-bottom: 44px; }
+  .section-tag { font-size: 12px; font-weight: 700; color: var(--orange-deep); margin-bottom: 10px;
+    letter-spacing: 0.15em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; }
+  .section-tag::before { content: ""; width: 24px; height: 2px; background: var(--orange); border-radius: 1px; }
+  .section-title { font-size: 38px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 300; color: var(--ink); }
+  .section.dark .section-title { color: #fff; }
+  .section-title b { font-weight: 700; color: var(--orange-deep); }
+  .section.dark .section-title b { color: var(--orange); }
+  .section-desc { max-width: 440px; color: var(--muted); font-size: 14px; line-height: 1.8; font-weight: 400; }
+  .section.dark .section-desc { color: rgba(245,237,227,0.6); }
+
+  /* COMPANY INTRO */
+  .intro-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .intro-text p { color: #5A4F47; font-size: 15px; line-height: 1.95; font-weight: 400; margin-bottom: 16px; }
+  .intro-text p strong { color: var(--ink); font-weight: 700; }
+  .intro-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+  .intro-fact { display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--line);
+    background: var(--cream); padding: 16px; border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out); box-shadow: var(--shadow-sm); }
+  .intro-fact:hover { border-color: rgba(232,130,26,0.25); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .intro-fact-icon { width: 36px; height: 36px; background: var(--orange-light); display: grid; place-items: center;
+    flex-shrink: 0; color: var(--orange-deep); border-radius: var(--radius-xs); transition: all 0.3s var(--ease-out); }
+  .intro-fact:hover .intro-fact-icon { background: var(--orange); color: #fff; }
+  .intro-fact strong { display: block; font-size: 14px; font-weight: 700; }
+  .intro-fact span { font-size: 12.5px; color: var(--muted); font-weight: 400; line-height: 1.5; }
+  .intro-photo-frame { overflow: hidden; box-shadow: var(--shadow-lg); position: relative; border-radius: var(--radius); }
+  .intro-photo-frame::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(232,130,26,0.06), transparent 50%); pointer-events: none; border-radius: var(--radius); }
+  .intro-photo-frame img { width: 100%; height: 460px; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+  .intro-photo-frame:hover img { transform: scale(1.05); }
+  .intro-photo-badge { position: absolute; bottom: 20px; left: 20px;
+    background: rgba(61,47,37,0.88); backdrop-filter: blur(10px); padding: 16px 22px;
+    border-left: 3px solid var(--orange); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; z-index: 1; }
+  .intro-photo-badge strong { display: block; font-size: 18px; font-weight: 700; color: #fff; }
+  .intro-photo-badge span { font-size: 12.5px; color: rgba(255,255,255,0.65); font-weight: 400; }
+
+  /* TIMELINE */
+  .timeline-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+  .timeline-grid::before { content: ""; position: absolute; top: 28px; left: 5%; right: 5%; height: 2px;
+    background: linear-gradient(90deg, var(--orange) 0%, rgba(232,130,26,0.15) 100%); border-radius: 1px; }
+  .timeline-item { text-align: center; padding: 0 12px; position: relative; }
+  .timeline-dot { width: 16px; height: 16px; background: var(--orange); border: 3px solid var(--warm-white);
+    margin: 20px auto 24px; position: relative; z-index: 2; border-radius: 50%;
+    transition: all 0.3s var(--ease-out); }
+  .timeline-item:hover .timeline-dot { transform: scale(1.3); box-shadow: 0 0 15px var(--orange-glow); }
+  .timeline-year { font-size: 26px; font-weight: 300; color: var(--orange-deep); letter-spacing: -0.02em; }
+  .timeline-title { margin-top: 8px; font-size: 15px; font-weight: 700; color: var(--ink); }
+  .timeline-desc { margin-top: 8px; font-size: 12.5px; color: var(--muted); line-height: 1.65; font-weight: 400; }
+
+  /* STATS GRID */
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .stat-card { border: 1px solid var(--line); background: var(--warm-white); padding: 28px;
+    border-radius: var(--radius); transition: all 0.35s var(--ease-out);
+    position: relative; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .stat-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--orange), #F5A040); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s var(--ease-out); border-radius: var(--radius) var(--radius) 0 0; }
+  .stat-card:hover { border-color: rgba(232,130,26,0.25); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+  .stat-card:hover::before { transform: scaleX(1); }
+  .stat-card .num { font-size: 40px; font-weight: 300; color: var(--orange-deep); line-height: 1.1; letter-spacing: -0.03em; }
+  .stat-card .num span { font-size: 17px; font-weight: 700; }
+  .stat-card .label { margin-top: 10px; font-size: 14px; font-weight: 700; color: var(--ink); }
+  .stat-card .sub { margin-top: 4px; font-size: 12.5px; color: var(--muted); font-weight: 400; line-height: 1.5; }
+
+  /* COMPETENCY */
+  .comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .comp-card { overflow: hidden; border: 1px solid var(--line); background: var(--warm-white);
+    border-radius: var(--radius); transition: all 0.4s var(--ease-out); position: relative; box-shadow: var(--shadow-sm); }
+  .comp-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--orange), #F5A040); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s var(--ease-out); border-radius: var(--radius) var(--radius) 0 0; }
+  .comp-card.highlight { border-color: rgba(232,130,26,0.25); box-shadow: 0 8px 32px rgba(232,130,26,0.08); }
+  .comp-card.highlight::before { transform: scaleX(1); }
+  .comp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-6px); }
+  .comp-card:hover::before { transform: scaleX(1); }
+  .comp-card-img { aspect-ratio: 16/10; background: var(--cream); overflow: hidden; position: relative; }
+  .comp-card-img::after { content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at center, rgba(232,130,26,0.05), transparent 70%);
+    opacity: 0; transition: opacity 0.4s; }
+  .comp-card:hover .comp-card-img::after { opacity: 1; }
+  .comp-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out); }
+  .comp-card:hover .comp-card-img img { transform: scale(1.06); }
+  .comp-card-body { padding: 24px; }
+  .comp-card-body .comp-sub { font-size: 11px; font-weight: 700; color: var(--orange-deep);
+    text-transform: uppercase; letter-spacing: 0.1em; }
+  .comp-card-body h3 { font-size: 20px; font-weight: 700; margin-top: 6px; color: var(--ink); }
+  .comp-card-body p { margin-top: 10px; color: var(--muted); font-size: 13.5px; line-height: 1.75; font-weight: 400; }
+
+  /* CERTIFICATIONS */
+  .cert-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 20px; align-items: stretch; }
+  .cert-block { padding: 28px; border-radius: var(--radius); }
+  .cert-block.light { border: 1px solid var(--line); background: var(--warm-white); box-shadow: var(--shadow-sm); }
+  .cert-block.dark { border: 1px solid rgba(245,237,227,0.10); background: var(--brown); color: #F5EDE3; }
+  .cert-block-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+  .cert-block-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+  .cert-block.light .cert-block-tag { color: var(--orange-deep); }
+  .cert-block.dark .cert-block-tag { color: var(--orange); }
+  .cert-block h3 { font-size: 24px; font-weight: 700; margin-top: 6px; }
+  .cert-block.dark h3 { color: #fff; }
+  .cert-block .cert-pill { font-size: 11px; font-weight: 600; padding: 4px 12px;
+    border: 1px solid var(--line); color: var(--muted); white-space: nowrap; border-radius: var(--radius-xs); }
+  .cert-block.dark .cert-pill { border-color: rgba(245,237,227,0.15); color: rgba(245,237,227,0.55); }
+  .cert-items { display: grid; gap: 14px; }
+  .cert-items.cols-2 { grid-template-columns: 1fr 1fr; }
+  .cert-items.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .cert-item { overflow: hidden; transition: all 0.3s var(--ease-out); border-radius: var(--radius-sm); }
+  .cert-block.light .cert-item { border: 1px solid var(--line-soft); background: var(--cream); }
+  .cert-block.light .cert-item:hover { border-color: rgba(232,130,26,0.25); transform: translateY(-3px); }
+  .cert-block.dark .cert-item { border: 1px solid rgba(245,237,227,0.10); background: rgba(255,255,255,0.04); }
+  .cert-block.dark .cert-item:hover { border-color: rgba(232,130,26,0.3); transform: translateY(-3px); }
+  .cert-item-img { aspect-ratio: 4/3; display: grid; place-items: center; padding: 16px; }
+  .cert-block.light .cert-item-img { background: var(--warm-white); }
+  .cert-block.dark .cert-item-img { background: rgba(255,255,255,0.04); }
+  .cert-item-img .placeholder { width: 100%; height: 100%; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--line) 100%);
+    font-size: 28px; font-weight: 300; color: var(--orange-deep); transition: all 0.3s; border-radius: var(--radius-xs); }
+  .cert-block.dark .cert-item-img .placeholder {
+    background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); color: var(--orange); }
+  .cert-item:hover .placeholder { transform: scale(1.05); }
+  .cert-item-body { padding: 14px; }
+  .cert-item-body h4 { font-size: 14px; font-weight: 700; color: var(--ink); }
+  .cert-block.dark .cert-item-body h4 { color: #fff; }
+  .cert-item-body p { margin-top: 4px; font-size: 12px; line-height: 1.55; font-weight: 400; }
+  .cert-block.light .cert-item-body p { color: var(--muted); }
+  .cert-block.dark .cert-item-body p { color: rgba(245,237,227,0.45); }
+
+  /* INDUSTRIES */
+  .ind-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .ind-card { border: 1px solid var(--line); background: var(--warm-white); padding: 24px 20px; text-align: center;
+    border-radius: var(--radius); transition: all 0.35s var(--ease-out);
+    position: relative; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .ind-card::before { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
+    background: linear-gradient(180deg, transparent, rgba(232,130,26,0.04)); transition: height 0.4s var(--ease-out); }
+  .ind-card:hover { border-color: rgba(232,130,26,0.25); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .ind-card:hover::before { height: 100%; }
+  .ind-icon { width: 48px; height: 48px; background: var(--orange-light); display: grid; place-items: center;
+    margin: 0 auto 16px; color: var(--orange-deep); border-radius: var(--radius-sm); transition: all 0.35s var(--ease-out); }
+  .ind-card:hover .ind-icon { background: var(--orange); color: #fff; transform: rotate(-5deg) scale(1.05); }
+  .ind-card h4 { font-size: 16px; font-weight: 700; position: relative; z-index: 1; color: var(--ink); }
+  .ind-card p { margin-top: 8px; color: var(--muted); font-size: 12.5px; line-height: 1.65; font-weight: 400; position: relative; z-index: 1; }
+
+  /* VALUES */
+  .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .value-card { border: 1px solid var(--line); background: var(--warm-white); padding: 24px;
+    border-radius: var(--radius); transition: all 0.35s var(--ease-out);
+    position: relative; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .value-card::before { content: ""; position: absolute; top: 0; left: 0; width: 3px; height: 0;
+    background: var(--orange); transition: height 0.4s var(--ease-out); border-radius: 2px; }
+  .value-card:hover { border-color: rgba(232,130,26,0.20); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+  .value-card:hover::before { height: 100%; }
+  .value-icon { width: 40px; height: 40px; background: var(--orange-light); display: grid; place-items: center;
+    margin-bottom: 18px; color: var(--orange-deep); border-radius: var(--radius-sm); transition: all 0.35s var(--ease-out); }
+  .value-card:hover .value-icon { background: var(--orange); color: #fff; }
+  .value-card h4 { font-size: 17px; font-weight: 700; color: var(--ink); }
+  .value-card p { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.7; font-weight: 400; }
+
+  /* TEAM CULTURE */
+  .culture-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: center; }
+  .culture-text h2 { font-size: 32px; font-weight: 300; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink); }
+  .culture-text h2 b { font-weight: 700; color: var(--orange-deep); }
+  .culture-text > p { margin-top: 18px; color: var(--muted); font-size: 15px; line-height: 1.85; font-weight: 400; }
+  .culture-highlights { display: grid; gap: 14px; margin-top: 28px; }
+  .culture-highlight { display: flex; align-items: flex-start; gap: 14px; border: 1px solid var(--line);
+    background: var(--warm-white); padding: 20px; border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out); box-shadow: var(--shadow-sm); }
+  .culture-highlight:hover { border-color: rgba(232,130,26,0.25); transform: translateX(4px); box-shadow: var(--shadow-md); }
+  .culture-highlight-icon { width: 36px; height: 36px; background: var(--orange-light); display: grid; place-items: center;
+    flex-shrink: 0; color: var(--orange-deep); border-radius: var(--radius-xs); transition: all 0.3s var(--ease-out); }
+  .culture-highlight:hover .culture-highlight-icon { background: var(--orange); color: #fff; }
+  .culture-highlight strong { display: block; font-size: 15px; font-weight: 700; color: var(--ink); }
+  .culture-highlight p { margin-top: 4px; font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 400; }
+  .culture-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .culture-photo { aspect-ratio: 4/3; overflow: hidden; border: 1px solid var(--line);
+    background: var(--cream); border-radius: var(--radius-sm); position: relative; transition: all 0.4s var(--ease-out); }
+  .culture-photo:nth-child(2), .culture-photo:nth-child(4) { margin-top: 20px; }
+  .culture-photo:hover { border-color: rgba(232,130,26,0.25); transform: scale(1.02); }
+  .culture-photo .ph { width: 100%; height: 100%; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--line-soft) 100%);
+    color: var(--muted); font-size: 13px; font-weight: 600; transition: all 0.3s; }
+  .culture-photo:hover .ph { background: linear-gradient(135deg, rgba(232,130,26,0.08) 0%, rgba(232,130,26,0.02) 100%); color: var(--orange-deep); }
+
+  /* CTA SECTION */
+  .cta-section { background: linear-gradient(105deg, rgba(61,47,37,0.96) 0%, rgba(61,47,37,0.90) 60%, rgba(61,47,37,0.80) 100%),
+    url("public/images/company/automation-workshop.webp") center/cover no-repeat; color: #fff;
+    position: relative; overflow: hidden; }
+  .cta-section::before { content: ""; position: absolute; top: 0; right: 0; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(232,130,26,0.10), transparent 70%); pointer-events: none; }
+  .cta-layout { display: grid; grid-template-columns: 1fr 430px; gap: 56px; align-items: start; position: relative; z-index: 1; }
+  .cta-left h2 { font-size: 40px; font-weight: 300; line-height: 1.2; max-width: 720px; letter-spacing: -0.02em; }
+  .cta-left h2 b { font-weight: 700; color: var(--orange); }
+  .cta-left > p { margin-top: 18px; color: rgba(245,237,227,0.6); font-size: 15px; line-height: 1.85; font-weight: 400; }
+  .cta-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+  .cta-benefit { border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04);
+    padding: 18px; font-weight: 600; font-size: 13px; border-radius: var(--radius-sm); transition: all 0.3s var(--ease-out); }
+  .cta-benefit:hover { border-color: rgba(232,130,26,0.3); background: rgba(232,130,26,0.06); }
+  .inquiry-form-card { background: var(--warm-white); padding: 30px; color: var(--ink);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25); border-top: 3px solid var(--orange); border-radius: var(--radius); }
+  .inquiry-form-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .inquiry-form-card > p.sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-input { border: 1px solid var(--line); background: var(--cream); padding: 13px 14px;
+    font-size: 13.5px; color: var(--ink); font-weight: 500; border-radius: var(--radius-sm);
+    transition: all 0.25s var(--ease-out); }
+  .form-input:focus { border-color: var(--orange); background: #fff; box-shadow: 0 0 0 3px rgba(232,130,26,0.10); }
+  .form-input.wide { grid-column: 1 / -1; }
+  .file-upload-area { grid-column: 1 / -1; display: grid; place-items: center; min-height: 74px;
+    border: 2px dashed #D4BFA0; background: #FEF9F2; color: var(--orange-deep);
+    font-size: 13px; font-weight: 600; cursor: pointer; border-radius: var(--radius-sm); transition: all 0.25s var(--ease-out); }
+  .file-upload-area:hover { border-color: var(--orange); background: var(--orange-light); transform: scale(1.01); }
+  .submit-btn { grid-column: 1 / -1; margin-top: 8px; padding: 15px; background: var(--orange);
+    color: #fff; font-size: 14px; font-weight: 700; cursor: pointer;
+    box-shadow: 0 6px 20px rgba(232,130,26,0.28); border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-out); position: relative; overflow: hidden; letter-spacing: 0.03em; }
+  .submit-btn::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left 0.6s var(--ease-out); }
+  .submit-btn:hover { background: var(--orange-deep); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,130,26,0.38); }
+  .submit-btn:hover::before { left: 100%; }
+  .form-footer-note { margin-top: 12px; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
+
+  /* FOOTER */
+  .footer { padding: 50px 0 30px; background: var(--brown-deep); color: rgba(245,237,227,0.55); font-size: 13px;
+    border-top: 2px solid var(--orange); }
+  .footer .wrap { display: flex; justify-content: space-between; gap: 32px; align-items: flex-start; }
+  .footer-brand img { height: 36px; margin-bottom: 12px; filter: brightness(0) invert(1); }
+  .footer-brand p { max-width: 300px; line-height: 1.7; font-weight: 400; }
+  .footer-links { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .footer-links h4 { color: rgba(245,237,227,0.85); font-size: 13px; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.03em; }
+  .footer-links a { display: block; margin-bottom: 8px; color: rgba(245,237,227,0.4); font-weight: 400;
+    font-size: 12.5px; transition: all 0.2s; }
+  .footer-links a:hover { color: var(--orange); transform: translateX(3px); }
+  .footer-contact { min-width: 240px; }
+  .footer-contact-item { margin-bottom: 12px; }
+  .footer-contact-item label { display: block; font-weight: 700; color: rgba(245,237,227,0.35);
+    font-size: 11px; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-contact-item span, .footer-contact-item a { color: rgba(245,237,227,0.65); font-weight: 400; }
+  .footer-bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(245,237,227,0.08);
+    display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: rgba(245,237,227,0.3); }
+
+  /* MOBILE FLOAT BAR */
+  .mobile-float-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    background: rgba(61,47,37,0.95); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.08); }
+  .mobile-float-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .float-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    padding: 10px 0; font-size: 11px; font-weight: 700; color: rgba(245,237,227,0.7);
+    border: none; background: none; cursor: pointer; transition: color 0.2s; }
+  .float-btn:first-child { color: var(--orange); }
+  .float-btn svg { width: 22px; height: 22px; }
+
+  /* PARTICLES */
+  .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+  .particle { position: absolute; width: 3px; height: 3px; background: var(--orange); border-radius: 50%;
+    opacity: 0; animation: float-up linear infinite; }
+  @keyframes float-up {
+    0% { opacity: 0; transform: translateY(100vh) translateX(0); }
+    10% { opacity: 0.3; } 90% { opacity: 0.3; }
+    100% { opacity: 0; transform: translateY(-100px) translateX(50px); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1120px) {
+    .main-nav { display: none; }
+    .page-hero .wrap, .intro-layout, .culture-layout, .cta-layout { grid-template-columns: 1fr; }
+    .stats-grid, .comp-grid, .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .ind-grid { grid-template-columns: repeat(3, 1fr); }
+    .cert-layout { grid-template-columns: 1fr; }
+    .timeline-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .timeline-grid::before { display: none; }
+    .hero-side-card { display: none; }
+    .page-hero .wrap { padding: 40px 0 40px; }
+  }
+  @media (max-width: 720px) {
+    .wrap { width: calc(100% - 24px); }
+    .topbar, .brand-text { display: none; }
+    .site-header .wrap { min-height: 56px; }
+    .page-hero .wrap { padding: 30px 0 30px; }
+    .page-hero h1 { font-size: 28px; }
+    .stats-grid, .comp-grid, .ind-grid, .values-grid,
+    .cert-items.cols-2, .cert-items.cols-3, .cta-benefits, .form-fields { grid-template-columns: 1fr; }
+    .timeline-grid { grid-template-columns: 1fr; }
+    .section { padding: 50px 0; }
+    .section-header { display: block; }
+    .section-desc { margin-top: 12px; }
+    .section-title, .cta-left h2, .culture-text h2 { font-size: 26px; }
+    .footer .wrap { display: block; }
+    .footer-links { grid-template-columns: 1fr 1fr; margin-top: 24px; }
+    .mobile-float-bar { display: block; }
+    body { padding-bottom: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>国内业务热线：<b>400-XXX-XXXX</b></span>
+      <span class="divider">|</span>
+      <span>微信咨询：<b>扫码添加</b></span>
+      <span class="divider">|</span>
+      <span>邮箱：sales@chinateao.com</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">下载中心</a>
+      <a href="#">English Site</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="teao-cn-homepage-v3.html">
+      <img class="logo-img" src="public/images/logo-color.webp" alt="TEAO 特澳" />
+      <span class="brand-text">
+        <strong>特澳 TEAO</strong>
+        <span>阻尼器 · 锁扣 · 定制缓冲机构源头厂家</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="teao-cn-homepage-v3.html">首页</a>
+      <a href="teao-cn-homepage-v3.html#products">产品中心</a>
+      <a href="teao-cn-homepage-v3.html#applications">应用领域</a>
+      <a href="teao-cn-homepage-v3.html#factory">制造实力</a>
+      <a href="teao-cn-homepage-v3.html#quality">质量认证</a>
+      <a href="#" class="active">关于特澳</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+    <a class="header-cta" href="#contact">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      获取报价
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-bg-img" id="heroBgImg"></div>
+  <div class="particles" id="particles"></div>
+  <div class="wrap">
+    <div>
+      <div class="breadcrumb reveal visible">
+        <a href="teao-cn-homepage-v3.html">首页</a>
+        <span class="sep">/</span>
+        <span class="current">关于特澳</span>
+      </div>
+      <div class="page-hero-tag reveal visible">公司介绍</div>
+      <h1 class="reveal visible reveal-delay-1">东莞市特澳电子科技有限公司<br/><em>20+ 年</em>阻尼器与锁扣制造经验</h1>
+      <p class="page-hero-desc reveal visible reveal-delay-2">
+        特澳 TEAO 成立于 2001 年，专注齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构的研发与制造。
+        从深圳到东莞黄江，从家电到汽车主机厂供应链，我们为国内外客户提供从模具开发到批量交付的一体化方案。
+      </p>
+      <div class="trust-badges reveal visible reveal-delay-3">
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A8A5A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>IATF 16949</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A8AB5" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>ISO 14001</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8821A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>20+ 项专利</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C7503A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>200+ 国内外客户</span>
+        </span>
+      </div>
+    </div>
+    <aside class="hero-side-card reveal-right">
+      <div class="big-num" data-count="20" data-suffix="">0</div><div class="big-num" style="display:inline"><span>+ 年</span></div>
+      <div class="big-label">专注阻尼器研发制造</div>
+      <div class="divider-line"></div>
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <strong>2001</strong>
+          <span>公司成立</span>
+        </div>
+        <div class="mini-stat">
+          <strong>东莞</strong>
+          <span>生产基地</span>
+        </div>
+        <div class="mini-stat">
+          <strong>5 大</strong>
+          <span>核心产品线</span>
+        </div>
+        <div class="mini-stat">
+          <strong>4 行业</strong>
+          <span>覆盖领域</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- COMPANY INTRO -->
+<section class="section white" id="intro">
+  <div class="wrap">
+    <div class="intro-layout">
+      <div class="intro-text reveal-left">
+        <p class="section-tag">公司简介</p>
+        <h2 class="section-title" style="margin-bottom: 24px;">从模具到量产，<br/><b>一体化阻尼器制造能力</b></h2>
+        <p>
+          <strong>东莞市特澳电子科技有限公司</strong>是一家专注于阻尼器、锁扣及定制缓冲机构研发与制造的源头厂家。
+          自 2001 年在深圳创立以来，公司历经多次扩建搬迁，现生产基地位于广东省东莞市黄江镇北岸三街2号。
+        </p>
+        <p>
+          2009 年起，特澳进入汽车内饰应用领域，建立注塑工艺和自动化装配能力，
+          逐步发展为<strong>齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构</strong>五大产品线。
+          2021 年新增空气阻尼器和单向阻尼器产品线，并积累 20 余项专利技术。
+        </p>
+        <p>
+          公司已通过 <strong>IATF 16949 汽车质量管理体系</strong>和 <strong>ISO 14001 环境管理体系</strong>认证，
+          拥有模具开发、精密注塑、自动化装配、扭矩全检和可靠性测试一体化制造能力，
+          服务覆盖汽车、家电、卫浴、医疗及工业设备等多个行业。
+        </p>
+        <div class="intro-facts">
+          <div class="intro-fact">
+            <div class="intro-fact-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><strong>生产基地</strong><span>广东省东莞市黄江镇</span></div>
+          </div>
+          <div class="intro-fact">
+            <div class="intro-fact-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div><strong>成立时间</strong><span>2001 年，20+ 年行业经验</span></div>
+          </div>
+          <div class="intro-fact">
+            <div class="intro-fact-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <div><strong>核心产品</strong><span>阻尼器、锁扣、定制缓冲机构</span></div>
+          </div>
+          <div class="intro-fact">
+            <div class="intro-fact-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div><strong>服务客户</strong><span>200+ 国内外品牌及供应链</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-photo-frame reveal-right">
+        <img src="public/images/company/automation-workshop.webp" alt="特澳自动化生产车间" oncontextmenu="return false"/>
+        <div class="intro-photo-badge">
+          <strong>特澳自动化车间</strong>
+          <span>东莞黄江生产基地</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section soft" id="timeline">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">发展历程</p>
+        <h2 class="section-title">从 2001 到现在，<br/><b>专注阻尼器制造的每一步</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">以下是特澳发展的关键节点 — 从深圳创立到进入汽车供应链，从产品线拓展到产能升级。</p>
+    </div>
+    <div class="timeline-grid">
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2001</div>
+        <div class="timeline-title">公司成立</div>
+        <p class="timeline-desc">在深圳东升科技园创立，起步于阻尼器研发与生产。</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2009</div>
+        <div class="timeline-title">进入汽车行业</div>
+        <p class="timeline-desc">开始汽车内饰应用开发，建立注塑工艺和自动化装配能力。</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2014</div>
+        <div class="timeline-title">产能扩建</div>
+        <p class="timeline-desc">生产基地搬迁至东莞市黄江镇，扩大生产规模与产线布局。</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2021</div>
+        <div class="timeline-title">产品创新</div>
+        <p class="timeline-desc">新增空气阻尼器、单向阻尼器产品线，累计 20 余项专利。</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-5">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2025</div>
+        <div class="timeline-title">再次扩建</div>
+        <p class="timeline-desc">搬迁至黄江镇北岸三街2号新址，升级产线与检测能力。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS STATS -->
+<section class="section white" id="stats">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">经营数据</p>
+        <h2 class="section-title">规模化的<b>制造能力</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">以下数据反映特澳在产品覆盖、产线配置、质量控制和客户服务方面的综合能力。</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="num" data-count="100" data-suffix="">0</div><div class="num" style="display:inline"><span>+ 种</span></div>
+        <div class="label">阻尼与缓冲解决方案</div>
+        <div class="sub">涵盖齿轮、轴向、手套箱、空气阻尼器及锁扣定制</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="num" data-count="4" data-suffix="">0</div><div class="num" style="display:inline"><span> 大行业</span></div>
+        <div class="label">服务领域覆盖</div>
+        <div class="sub">汽车 / 家电 / 卫浴 / 医疗及工业设备</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="num" data-count="100" data-suffix="%">0</div>
+        <div class="label">出厂扭矩检测</div>
+        <div class="sub">每件成品经过扭矩检测与外观检验双重把关</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="num" data-count="6" data-suffix="%">0</div>
+        <div class="label">年营收投入研发</div>
+        <div class="sub">持续投入产品创新与工艺改进</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="num"><span>20+11</span></div>
+        <div class="label">生产线与自动化检测线</div>
+        <div class="sub">支持从定制打样到千万级批量交付</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="num" data-count="200" data-suffix="">0</div><div class="num" style="display:inline"><span>+ 家</span></div>
+        <div class="label">国内外客户</div>
+        <div class="sub">覆盖汽车主机厂、Tier-1 及消费品牌供应链</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE COMPETENCIES -->
+<section class="section soft" id="competency">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">核心能力</p>
+        <h2 class="section-title">完整的<b>制造能力链路</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">从工程支持到注塑生产再到自动化装配，特澳拥有模具、注塑、装配一体化能力，支持灵活的定制与批量需求。</p>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card reveal reveal-delay-1">
+        <div class="comp-card-img">
+          <img src="public/images/company/automation-workshop.webp" alt="工程支持与扭矩调校" oncontextmenu="return false"/>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-sub">扭矩调校支持</div>
+          <h3>工程支持</h3>
+          <p>工程师团队提供扭矩调校、样品评估和应用匹配支持，在量产前确认结构与手感方案，确保产品满足实际使用需求。</p>
+        </div>
+      </div>
+      <div class="comp-card highlight reveal reveal-delay-2">
+        <div class="comp-card-img">
+          <img src="public/images/company/automation-workshop.webp" alt="模具与注塑生产" oncontextmenu="return false"/>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-sub">模具 + 注塑 + 生产</div>
+          <h3>注塑生产</h3>
+          <p>提供从模具设计、模具制造到精密注塑和产品装配的完整解决方案。POM / PA66+GF 等工程塑料精密成型，过程尺寸与外观可控。</p>
+        </div>
+      </div>
+      <div class="comp-card reveal reveal-delay-3">
+        <div class="comp-card-img">
+          <img src="public/images/company/automation-workshop.webp" alt="自动化装配线" oncontextmenu="return false"/>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-sub">柔性生产</div>
+          <h3>自动化装配</h3>
+          <p>全自动、半自动和手动装配线并行，支持从定制项目到批量制造的灵活生产需求，保证产品一致性与交付节奏。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section dark" id="certs">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">认证与专利</p>
+        <h2 class="section-title">IATF 16949 体系认证<br/>+ <b>20 余项专利技术</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">特澳是汽车质量体系和环境管理体系认证制造商、高新技术企业，长期从事阻尼器结构与机构的专利开发。</p>
+    </div>
+    <div class="cert-layout">
+      <div class="cert-block light reveal-left">
+        <div class="cert-block-head">
+          <div>
+            <div class="cert-block-tag">体系认证</div>
+            <h3>IATF 16949 / ISO 14001</h3>
+          </div>
+          <span class="cert-pill">工厂管理</span>
+        </div>
+        <div class="cert-items cols-2">
+          <div class="cert-item">
+            <div class="cert-item-img"><div class="placeholder">IATF</div></div>
+            <div class="cert-item-body"><h4>IATF 16949</h4><p>汽车行业质量管理体系认证，覆盖产品设计、生产和服务全过程。</p></div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-item-img"><div class="placeholder">ISO</div></div>
+            <div class="cert-item-body"><h4>ISO 14001</h4><p>环境管理体系认证，生产过程环保合规。</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="cert-block dark reveal-right">
+        <div class="cert-block-head">
+          <div>
+            <div class="cert-block-tag">专利证书</div>
+            <h3>20+ 项专利技术</h3>
+          </div>
+          <span class="cert-pill">研发成果</span>
+        </div>
+        <div class="cert-items cols-3">
+          <div class="cert-item">
+            <div class="cert-item-img"><div class="placeholder">P1</div></div>
+            <div class="cert-item-body"><h4>吊绳阻尼器专利</h4><p>阻尼机构创新结构专利。</p></div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-item-img"><div class="placeholder">P2</div></div>
+            <div class="cert-item-body"><h4>空气阻尼器专利</h4><p>空气阻尼结构设计专利。</p></div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-item-img"><div class="placeholder">P3</div></div>
+            <div class="cert-item-body"><h4>旋转阻尼器专利</h4><p>旋转阻尼组件结构专利。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section white" id="industries">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">服务行业</p>
+        <h2 class="section-title">覆盖汽车与<b>消费品市场</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">特澳产品已应用于多个行业的开合、缓降和缓冲控制场景。</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal reveal-delay-1">
+        <div class="ind-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 17h14M5 17l1.5-5h11L19 17M5 17v3M19 17v3"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+        </div>
+        <h4>汽车行业</h4>
+        <p>手套箱、扶手箱、杯托、充电口盖及内饰储物机构。</p>
+      </div>
+      <div class="ind-card reveal reveal-delay-2">
+        <div class="ind-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h4>家电行业</h4>
+        <p>洗衣机盖板、冰箱翻门、锅盖及缓闭面板。</p>
+      </div>
+      <div class="ind-card reveal reveal-delay-3">
+        <div class="ind-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 6l6-3 6 6-3 6-6 3-6-6 3-6z"/><path d="M9 6l6 6"/></svg>
+        </div>
+        <h4>卫浴行业</h4>
+        <p>马桶盖缓降、柜门控制闭合机构。</p>
+      </div>
+      <div class="ind-card reveal reveal-delay-4">
+        <div class="ind-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h4>医疗设备</h4>
+        <p>设备外壳、检修面板及可控运动模块。</p>
+      </div>
+      <div class="ind-card reveal reveal-delay-5">
+        <div class="ind-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h4>工业设备</h4>
+        <p>检修门、外壳及特殊运动控制应用。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE VALUES -->
+<section class="section soft" id="values">
+  <div class="wrap">
+    <div class="section-header">
+      <div class="reveal">
+        <p class="section-tag">企业责任</p>
+        <h2 class="section-title">关注教育、公益<br/>与<b>环境保护</b></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-1">特澳认为企业发展应创造产品之外的价值，积极参与教育支持、公益慈善、环境保护和社区建设。</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal reveal-delay-1">
+        <div class="value-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h4>教育支持</h4>
+        <p>支持教育公益和技术学习，帮助年轻人建立实用技能。</p>
+      </div>
+      <div class="value-card reveal reveal-delay-2">
+        <div class="value-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h4>公益参与</h4>
+        <p>鼓励员工参与公益活动和社区关怀，传递企业温度。</p>
+      </div>
+      <div class="value-card reveal reveal-delay-3">
+        <div class="value-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19.2 2.96c1.4 9.3-4.1 15.6-8.2 17.04"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+        </div>
+        <h4>环境保护</h4>
+        <p>以 ISO 14001 体系指导清洁生产、节约资源和废物管理。</p>
+      </div>
+      <div class="value-card reveal reveal-delay-4">
+        <div class="value-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+        </div>
+        <h4>社区贡献</h4>
+        <p>负责任的企业成长意味着在服务客户的同时回馈本地社区。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM CULTURE -->
+<section class="section white" id="culture">
+  <div class="wrap">
+    <div class="culture-layout">
+      <div class="culture-text reveal-left">
+        <p class="section-tag">团队与文化</p>
+        <h2 style="margin-top: 10px;">每一次精准运动的背后，<br/>都有一个<b>有凝聚力的团队</b></h2>
+        <p>
+          特澳通过员工成长与团队建设驱动发展。我们支持员工学习、团队协作、身心健康和公平的工作环境，
+          让每位成员都能以自信和创造力投入工作。
+        </p>
+        <div class="culture-highlights">
+          <div class="culture-highlight">
+            <div class="culture-highlight-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div><strong>成长与学习</strong><p>定期培训和跨团队复盘，帮助员工提升技能并共同解决客户难题。</p></div>
+          </div>
+          <div class="culture-highlight">
+            <div class="culture-highlight-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <div><strong>关怀与健康</strong><p>团队活动和温暖的工作氛围帮助成员保持联系、健康和投入。</p></div>
+          </div>
+          <div class="culture-highlight">
+            <div class="culture-highlight-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div><strong>尊重与责任</strong><p>公平对待、员工权益和共同责任贯穿日常工作与公司发展。</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="culture-photos reveal-right">
+        <div class="culture-photo"><div class="ph">办公团队合影</div></div>
+        <div class="culture-photo"><div class="ph">团队建设活动</div></div>
+        <div class="culture-photo"><div class="ph">员工培训交流</div></div>
+        <div class="culture-photo"><div class="ph">团队互动瞬间</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section cta-section" id="contact">
+  <div class="wrap">
+    <div class="cta-layout">
+      <div class="cta-left reveal-left">
+        <p class="section-tag">合作咨询</p>
+        <h2>寻找可靠的<br/><b>阻尼器制造合作伙伴？</b></h2>
+        <p>告诉我们您的应用场景、扭矩需求和年用量，特澳工程师团队将帮助推荐合适的方案。无论是标准品选型还是非标定制，我们都能提供从打样到量产的全流程支持。</p>
+        <div class="cta-benefits">
+          <div class="cta-benefit">&#10003; 提交图纸获取选型建议</div>
+          <div class="cta-benefit">&#10003; 发送样品安排打样</div>
+          <div class="cta-benefit">&#10003; 描述场景获取方案</div>
+        </div>
+      </div>
+      <form class="inquiry-form-card reveal-right">
+        <h3>获取选型与报价建议</h3>
+        <p class="sub">工程师将在 2 小时内响应</p>
+        <div class="form-fields">
+          <input class="form-input" type="text" placeholder="您的姓名 *" />
+          <input class="form-input" type="text" placeholder="公司名称 *" />
+          <input class="form-input" type="tel" placeholder="手机号码 *" />
+          <select class="form-input"><option value="">选择产品类型 *</option><option>齿轮阻尼器</option><option>轴向阻尼器</option><option>手套箱阻尼器</option><option>锁扣</option><option>定制零部件</option><option>不确定 / 需要推荐</option></select>
+          <input class="form-input wide" type="text" placeholder="应用场景 / 目标扭矩 / 年用量预估" />
+          <div class="file-upload-area">&#128194; 上传图纸、图片、PDF 或 CAD 文件（可选）</div>
+          <button class="submit-btn" type="button">提交需求，获取选型方案 &rarr;</button>
+        </div>
+        <p class="form-footer-note">提交即表示同意隐私政策。具体字段、文件大小限制和通知方式待最终确认后配置。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="public/images/logo-color.webp" alt="TEAO 特澳" oncontextmenu="return false"/>
+      <p>东莞市特澳电子科技有限公司 — 专注汽车内饰阻尼器、齿轮阻尼器、轴向阻尼器与锁扣的源头制造商。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>产品中心</h4>
+        <a href="#">齿轮阻尼器</a><a href="#">轴向阻尼器</a><a href="#">手套箱阻尼器</a><a href="#">Push-Push 锁扣</a><a href="#">定制零部件</a>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <a href="#">公司介绍</a><a href="#">制造实力</a><a href="#">质量认证</a><a href="#">新闻资讯</a><a href="#">技术支持</a>
+      </div>
+      <div>
+        <h4>技术资源</h4>
+        <a href="#">选型指南</a><a href="#">扭矩单位换算</a><a href="#">常见问题 FAQ</a><a href="#">下载中心</a><a href="#">图纸询盘</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4 style="color:rgba(245,237,227,0.85);font-size:13px;margin-bottom:14px;letter-spacing:0.03em;">联系方式</h4>
+      <div class="footer-contact-item"><label>业务热线</label><span>400-XXX-XXXX</span></div>
+      <div class="footer-contact-item"><label>微信咨询</label><span>扫码添加销售工程师</span></div>
+      <div class="footer-contact-item"><label>邮箱</label><a href="mailto:sales@chinateao.com">sales@chinateao.com</a></div>
+      <div class="footer-contact-item"><label>地址</label><span>广东省东莞市黄江镇北岸三街2号</span></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 东莞市特澳电子科技有限公司 版权所有</span>
+      <span>ICP备案号 / 公安备案号 待正式资料确认后替换</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE FLOAT BAR -->
+<div class="mobile-float-bar">
+  <div class="mobile-float-inner">
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      电话咨询
+    </button>
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      加微信
+    </button>
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      发图纸询盘
+    </button>
+  </div>
+</div>
+
+<script>
+  // SCROLL PROGRESS
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  // HEADER SCROLL
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  // SCROLL REVEAL
+  const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -60px 0px' };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, observerOptions);
+  document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right').forEach(el => revealObserver.observe(el));
+
+  // ANIMATED COUNTERS
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        const animate = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target) + suffix;
+          if (progress < 1) requestAnimationFrame(animate);
+          else el.textContent = target + suffix;
+        };
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // PARTICLES
+  const particlesContainer = document.getElementById('particles');
+  if (particlesContainer) {
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = (8 + Math.random() * 12) + 's';
+      p.style.animationDelay = Math.random() * 10 + 's';
+      p.style.width = (2 + Math.random() * 3) + 'px';
+      p.style.height = p.style.width;
+      particlesContainer.appendChild(p);
+    }
+  }
+
+  // PARALLAX
+  const heroBgImg = document.getElementById('heroBgImg');
+  window.addEventListener('scroll', () => {
+    if (heroBgImg && window.scrollY < 600) {
+      heroBgImg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+    }
+  });
+
+  // MAGNETIC BUTTONS
+  document.querySelectorAll('.header-cta, .submit-btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.12}px, ${y * 0.12 - 2}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+</script>
+</body>
+</html>

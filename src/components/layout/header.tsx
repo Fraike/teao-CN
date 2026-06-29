@@ -75,11 +75,7 @@ export default function Header() {
             >
               <Link
                 href={item.href}
-                className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                  item.children
-                    ? "text-ink-soft hover:text-brand-500"
-                    : "text-ink-soft hover:text-brand-500"
-                }`}
+                className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-soft transition-colors hover:text-brand-500"
               >
                 {item.label}
                 {item.children && (

@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>特澳 TEAO - 汽车内饰阻尼器与锁扣定制厂家</title>
+<style>
+  :root {
+    --orange: #ed7606;
+    --orange-deep: #c85d00;
+    --orange-light: #fff4eb;
+    --ink: #1a1a1a;
+    --muted: #5f6368;
+    --soft: #f7f6f3;
+    --line: #e8e4db;
+    --dark: #222222;
+    --white: #ffffff;
+    --green: #0d7a52;
+    --red-e: #d32f2f;
+    --blue: #1976d2;
+    --radius: 8px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --font-main: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: var(--soft); }
+  body {
+    font-family: var(--font-main);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; -webkit-user-drag: none; user-select: none; }
+  a { color: inherit; text-decoration: none; }
+  button, input, textarea, select { font: inherit; }
+
+  /* ====== UTILITIES ====== */
+  .wrap { width: min(1240px, calc(100% - 32px)); margin: 0 auto; }
+  .flex { display: flex; align-items: center; }
+  .flex-between { justify-content: space-between; gap: 24px; }
+  .grid { display: grid; }
+  .text-orange { color: var(--orange-deep); }
+  .bg-white { background: #fff; }
+  .bg-dark { background: #1e1e1e; color: #eee; }
+
+  /* ====== TOP BAR ====== */
+  .topbar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: rgba(255,255,255,0.78);
+    font-size: 12.5px;
+    border-bottom: 1px solid rgba(237,118,6,0.25);
+  }
+  .topbar .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 36px; gap: 20px;
+  }
+  .topbar-left, .topbar-right { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
+  .topbar b { color: #fff; font-weight: 700; }
+  .topbar .divider { opacity: 0.25; margin: 0 4px; }
+  .topbar a:hover { color: var(--orange); }
+
+  /* ====== HEADER ====== */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+  .site-header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 72px; gap: 28px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 14px;
+    min-width: 220px; text-decoration: none;
+  }
+  .brand img.logo-img { height: 42px; width: auto; }
+  .brand-text {
+    padding-left: 14px; border-left: 2px solid var(--line);
+    line-height: 1.35;
+  }
+  .brand-text strong {
+    display: block; font-size: 17px; letter-spacing: 0.03em; color: var(--ink);
+  }
+  .brand-text span {
+    display: block; margin-top: 2px; color: var(--muted);
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.02em;
+  }
+  .main-nav {
+    flex: 1; display: flex; justify-content: center; gap: 6px;
+  }
+  .main-nav a {
+    padding: 8px 14px; font-size: 14px; font-weight: 700;
+    color: #3a3a3a; border-radius: var(--radius);
+    transition: all 0.15s ease;
+  }
+  .main-nav a:hover,
+  .main-nav a.active { color: var(--orange-deep); background: var(--orange-light); }
+
+  .header-cta {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 10px 22px; border-radius: var(--radius);
+    background: var(--orange); color: #fff !important;
+    font-size: 13.5px; font-weight: 800;
+    box-shadow: 0 4px 14px rgba(237,118,6,0.30);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .header-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(237,118,6,0.38); }
+
+  /* ====== HERO SECTION ====== */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      linear-gradient(110deg, #faf9f6 0%, #faf9f6 45%, rgba(250,249,246,0.75) 70%, transparent 100%),
+      url("public/images/company/automation-workshop.webp") right center / cover no-repeat;
+    min-height: 680px;
+  }
+  .hero .wrap {
+    position: relative; display: grid;
+    grid-template-columns: 1fr 400px; gap: 48px;
+    min-height: 680px; align-items: center;
+    padding: 64px 0 80px;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1.5px solid rgba(237,118,6,0.28);
+    border-radius: 999px; background: rgba(255,255,255,0.88);
+    padding: 9px 16px; color: var(--orange-deep);
+    font-size: 13px; font-weight: 800; letter-spacing: 0.02em;
+  }
+  .hero-tag::before {
+    content: ""; width: 8px; height: 8px;
+    border-radius: 50%; background: var(--orange);
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+  .hero h1 {
+    margin: 24px 0 0; font-size: clamp(38px, 4.8vw, 64px);
+    line-height: 1.08; letter-spacing: -0.03em;
+    font-weight: 800; color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: normal; color: var(--orange-deep);
+    position: relative;
+  }
+  .hero h1 em::after {
+    content: ""; position: absolute; left: 0; bottom: 2px;
+    width: 100%; height: 8px; background: rgba(237,118,6,0.15);
+    border-radius: 4px; z-index: -1;
+  }
+  .hero-desc {
+    max-width: 600px; margin: 20px 0 0;
+    color: #4a4c50; font-size: 17px; line-height: 1.85; font-weight: 500;
+  }
+  /* Trust badges in hero */
+  .trust-badges {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
+  }
+  .trust-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid rgba(0,0,0,0.07); border-radius: 6px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(8px); padding: 10px 15px;
+  }
+  .trust-badge svg { flex-shrink: 0; }
+  .trust-badge span {
+    font-size: 13px; font-weight: 800; color: #2a2a2a;
+  }
+  .hero-actions {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 14px 28px; border-radius: var(--radius);
+    background: var(--orange); color: #fff;
+    font-size: 15px; font-weight: 800;
+    border: none; cursor: pointer;
+    box-shadow: 0 6px 22px rgba(237,118,6,0.26);
+    transition: all 0.18s ease;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(237,118,6,0.34); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 14px 26px; border-radius: var(--radius);
+    background: #fff; color: var(--ink);
+    font-size: 14.5px; font-weight: 800;
+    border: 1.5px solid var(--line);
+    cursor: pointer; transition: all 0.18s ease;
+  }
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange-deep); }
+  .btn-outline-w {
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 14px 26px; border-radius: var(--radius);
+    background: transparent; color: #fff;
+    font-size: 14.5px; font-weight: 800;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    cursor: pointer; transition: all 0.18s ease;
+  }
+  .btn-outline-w:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.55); }
+  .hero-subnote {
+    margin-top: 18px; color: var(--muted);
+    font-size: 13px; font-weight: 700; line-height: 1.7;
+  }
+  .hero-subnote code {
+    display: inline-block; background: #f0ede5; padding: 1px 7px; border-radius: 4px;
+    font-size: 12px; color: var(--orange-deep); font-weight: 800;
+  }
+
+  /* Hero Right Panel - Quick Inquiry */
+  .hero-panel {
+    display: flex; flex-direction: column; gap: 14px;
+    align-self: stretch; justify-content: end;
+  }
+  .inquiry-card {
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 12px; background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(16px);
+    padding: 26px; box-shadow: 0 20px 56px rgba(0,0,0,0.14);
+  }
+  .inquiry-card h3 { font-size: 21px; margin-bottom: 6px; }
+  .inquiry-card > p { color: var(--muted); font-size: 13.5px; line-height: 1.7; margin-bottom: 18px; }
+  .quick-product-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;
+  }
+  .quick-product-item {
+    border: 1px solid var(--line); border-radius: 8px;
+    background: #fcfbf8; padding: 14px; text-align: center;
+    transition: border-color 0.15s;
+  }
+  .quick-product-item:hover { border-color: var(--orange); }
+  .quick-product-item img { width: 90%; aspect-ratio: 1.2; object-fit: contain; margin: 0 auto; }
+  .quick-product-item p { margin-top: 6px; font-size: 12px; font-weight: 800; color: #444; }
+  .contact-mini-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  }
+  .contact-mini {
+    border-radius: 8px; background: #f3f0ea; padding: 14px;
+  }
+  .contact-mini label { display: block; font-size: 11.5px; font-weight: 800; color: var(--muted); margin-bottom: 3px; }
+  .contact-mini strong { display: block; font-size: 14.5px; }
+  .hotline-strip {
+    display: flex; align-items: center; gap: 10px;
+    border-radius: 10px; background: linear-gradient(135deg, var(--orange), #e68a00);
+    color: #fff; padding: 16px 20px;
+  }
+  .hotline-strip svg { flex-shrink: 0; }
+  .hotline-strip div b { display: block; font-size: 17px; }
+  .hotline-strip div span { font-size: 12px; opacity: 0.9; }
+
+  /* ====== STATS BAR ====== */
+  .stats-bar {
+    position: relative; z-index: 10; margin-top: -40px;
+  }
+  .stats-bar-inner {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--line); border-radius: 12px;
+    background: #fff; box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .stat-cell {
+    padding: 26px 20px; border-right: 1px solid var(--line);
+    text-align: center;
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-num {
+    display: block; font-size: 32px; font-weight: 900;
+    color: var(--orange-deep); line-height: 1.1;
+  }
+  .stat-label {
+    display: block; margin-top: 6px;
+    font-size: 12.5px; font-weight: 800; color: var(--muted);
+  }
+
+  /* ====== SECTION COMMONS ====== */
+  .section { padding: 80px 0; }
+  .section.white { background: #fff; }
+  .section.soft { background: var(--soft); }
+  .section.dark { background: #1e1e1e; color: #eee; }
+  .section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; margin-bottom: 42px; }
+  .section-tag { font-size: 13.5px; font-weight: 900; color: var(--orange-deep); margin-bottom: 8px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .section.dark .section-tag { color: #ff9a3a; }
+  .section-title { font-size: 36px; line-height: 1.18; letter-spacing: -0.02em; font-weight: 800; }
+  .section-desc { max-width: 480px; color: var(--muted); font-size: 14.5px; line-height: 1.8; font-weight: 500; }
+  .section.dark .section-desc { color: rgba(255,255,255,0.66); }
+  .more-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 14px; font-weight: 800; color: var(--orange-deep);
+    white-space: nowrap; transition: gap 0.15s ease;
+  }
+  .more-link:hover { gap: 10px; }
+
+  /* ====== PRODUCTS GRID ====== */
+  .products-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+  }
+  .product-card {
+    overflow: hidden; border: 1.5px solid var(--line); border-radius: 12px;
+    background: #fff; transition: all 0.2s ease;
+  }
+  .product-card:hover {
+    border-color: var(--orange); box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+  .product-card-img {
+    display: grid; place-items: center;
+    aspect-ratio: 1 / 0.8; background: #fafaf7;
+    padding: 20px; position: relative;
+  }
+  .product-card-img img { width: 88%; object-fit: contain; transition: transform 0.25s ease; }
+  .product-card:hover .product-card-img img { transform: scale(1.05); }
+  .product-card-badge {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--orange); color: #fff;
+    font-size: 11px; font-weight: 800; padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .product-card-body { padding: 18px 18px 20px; }
+  .product-card-body h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+  .product-card-body p {
+    color: var(--muted); font-size: 12.5px; line-height: 1.6; font-weight: 600;
+    min-height: 40px;
+  }
+  .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .product-tags span {
+    background: #f1eeE6; padding: 4px 10px; border-radius: 999px;
+    font-size: 11.5px; font-weight: 800; color: #4a4a4a;
+  }
+  .product-card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid #f0ece3;
+  }
+  .product-price-hint { font-size: 12px; color: var(--muted); font-weight: 700; }
+  .product-quote-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12.5px; font-weight: 900; color: var(--orange-deep);
+    transition: gap 0.15s;
+  }
+  .product-quote-btn:hover { gap: 7px; }
+
+  /* ====== APPLICATIONS ====== */
+  .app-layout {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: stretch;
+  }
+  .app-hero-card {
+    border-radius: 12px;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.5) 100%),
+      url("public/images/company/automation-workshop.webp") center/cover no-repeat;
+    color: #fff; padding: 36px; display: flex; flex-direction: column;
+    justify-content: space-between; min-height: 480px;
+  }
+  .app-hero-card h3 { font-size: 32px; line-height: 1.22; font-weight: 800; max-width: 500px; }
+  .app-hero-card p { color: rgba(255,255,255,0.84); font-size: 15px; line-height: 1.8; margin-top: 14px; max-width: 480px; }
+  .app-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .app-card {
+    border: 1.5px solid var(--line); border-radius: 10px;
+    background: #fff; padding: 22px; transition: all 0.18s ease;
+  }
+  .app-card:hover { border-color: var(--orange); box-shadow: var(--shadow-sm); }
+  .app-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--orange-light); display: grid; place-items: center;
+    margin-bottom: 14px; color: var(--orange-deep);
+  }
+  .app-card h4 { font-size: 17px; font-weight: 800; }
+  .app-card .app-desc { margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.7; font-weight: 600; }
+  .app-recommend {
+    display: inline-block; margin-top: 14px;
+    color: var(--orange-deep); font-size: 12px; font-weight: 900;
+    background: var(--orange-light); padding: 4px 12px; border-radius: 999px;
+  }
+
+  /* ====== FACTORY CAPABILITY ====== */
+  .factory-layout {
+    display: grid; grid-template-columns: 420px 1fr; gap: 48px; align-items: center;
+  }
+  .factory-photo-frame {
+    border-radius: 12px; overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+  }
+  .factory-photo-frame img { width: 100%; height: 520px; object-fit: cover; display: block; }
+  .capability-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px; overflow: hidden;
+  }
+  .cap-item {
+    background: #1e1e1e; padding: 26px 22px;
+    min-height: 150px; display: flex; flex-direction: column; justify-content: center;
+    transition: background 0.15s;
+  }
+  .cap-item:hover { background: #282828; }
+  .cap-item strong { font-size: 19px; font-weight: 800; }
+  .cap-item p { margin-top: 10px; color: rgba(255,255,255,0.62); font-size: 13.5px; line-height: 1.7; font-weight: 500; }
+
+  /* ====== QUALITY ====== */
+  .quality-layout {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: start;
+  }
+  .cert-list { display: grid; gap: 14px; }
+  .cert-card {
+    display: flex; align-items: center; justify-content: space-between;
+    border: 1.5px solid var(--line); border-radius: 10px;
+    background: #fff; padding: 24px; transition: border-color 0.15s;
+  }
+  .cert-card:hover { border-color: var(--orange); }
+  .cert-info strong { display: block; font-size: 20px; font-weight: 800; }
+  .cert-info span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; font-weight: 700; }
+  .cert-icon {
+    width: 64px; height: 64px; border-radius: 50%;
+    display: grid; place-items: center; color: #fff; font-weight: 900; font-size: 13px;
+    flex-shrink: 0;
+  }
+  .qc-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .qc-step {
+    border: 1.5px solid var(--line); border-radius: 10px;
+    background: #fff; padding: 22px; transition: border-color 0.15s;
+  }
+  .qc-step:hover { border-color: var(--orange); }
+  .qc-step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--orange); color: #fff; font-size: 13px; font-weight: 900;
+  }
+  .qc-step strong { display: block; margin-top: 14px; font-size: 17px; font-weight: 800; }
+  .qc-step p { margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.65; font-weight: 600; }
+
+  /* ====== CLIENTS ====== */
+  .clients-layout {
+    display: grid; grid-template-columns: 340px 1fr; gap: 44px; align-items: center;
+  }
+  .client-logos {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  }
+  .client-logo-cell {
+    display: grid; place-items: center; min-height: 86px;
+    background: #fff; font-size: 15px; font-weight: 900;
+    color: #4a4a4a; transition: background 0.15s;
+  }
+  .client-logo-cell:hover { background: var(--soft); }
+
+  /* ====== CTA / INQUIRY SECTION ====== */
+  .cta-section {
+    background:
+      linear-gradient(105deg, rgba(30,30,30,0.97) 0%, rgba(30,30,30,0.92) 60%, rgba(30,30,30,0.78) 100%),
+      url("public/images/company/automation-workshop.webp") center/cover no-repeat;
+    color: #fff;
+  }
+  .cta-layout {
+    display: grid; grid-template-columns: 1fr 430px; gap: 56px; align-items: start;
+  }
+  .cta-left h2 { font-size: 40px; font-weight: 800; line-height: 1.16; max-width: 720px; }
+  .cta-left > p { margin-top: 18px; color: rgba(255,255,255,0.72); font-size: 16px; line-height: 1.85; font-weight: 500; }
+  .cta-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+  .cta-benefit {
+    border: 1px solid rgba(255,255,255,0.14); border-radius: 10px;
+    background: rgba(255,255,255,0.06); padding: 18px; font-weight: 800; font-size: 14px;
+  }
+
+  .inquiry-form-card {
+    border-radius: 12px; background: #fff; padding: 28px; color: var(--ink);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+  }
+  .inquiry-form-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+  .inquiry-form-card > p.sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-input {
+    border: 1.5px solid var(--line); border-radius: 8px;
+    background: #fafafa; padding: 13px 14px;
+    font-size: 13.5px; color: #333; font-weight: 600;
+    outline: none; transition: border-color 0.15s;
+  }
+  .form-input:focus { border-color: var(--orange); background: #fff; }
+  .form-input.wide { grid-column: 1 / -1; }
+  .file-upload-area {
+    grid-column: 1 / -1;
+    display: grid; place-items: center;
+    min-height: 74px; border: 2px dashed #d4c4ad; border-radius: 8px;
+    background: #fef9f2; color: var(--orange-deep);
+    font-size: 13px; font-weight: 800; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .file-upload-area:hover { border-color: var(--orange); background: #fff4e6; }
+  .submit-btn {
+    grid-column: 1 / -1; margin-top: 8px;
+    padding: 14px; border: none; border-radius: 8px;
+    background: var(--orange); color: #fff; font-size: 15px; font-weight: 900;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(237,118,6,0.28);
+    transition: all 0.15s;
+  }
+  .submit-btn:hover { background: var(--orange-deep); transform: translateY(-1px); }
+  .form-footer-note { margin-top: 12px; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    padding: 40px 0; background: #141414; color: rgba(255,255,255,0.58); font-size: 13px;
+    border-top: 3px solid var(--orange);
+  }
+  .footer .wrap { display: flex; justify-content: space-between; gap: 32px; align-items: flex-start; }
+  .footer-brand img { height: 36px; margin-bottom: 12px; }
+  .footer-brand p { max-width: 300px; line-height: 1.7; font-weight: 500; }
+  .footer-links { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .footer-links h4 { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 800; margin-bottom: 14px; }
+  .footer-links a { display: block; margin-bottom: 8px; color: rgba(255,255,255,0.5); font-weight: 600; font-size: 12.5px; transition: color 0.15s; }
+  .footer-links a:hover { color: var(--orange); }
+  .footer-contact { min-width: 240px; }
+  .footer-contact-item { margin-bottom: 12px; }
+  .footer-contact-item label { display: block; font-weight: 800; color: rgba(255,255,255,0.45); font-size: 11.5px; margin-bottom: 2px; }
+  .footer-contact-item span, .footer-contact-item a { color: rgba(255,255,255,0.75); font-weight: 600; }
+  .footer-bottom {
+    margin-top: 32px; padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: rgba(255,255,255,0.35);
+  }
+
+  /* ====== MOBILE FLOAT BAR ====== */
+  .mobile-float-bar {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: 200; background: #fff;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  }
+  .mobile-float-inner {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+  }
+  .float-btn {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 3px; padding: 10px 0; font-size: 12px; font-weight: 800;
+    color: var(--ink); border: none; background: none; cursor: pointer;
+    transition: color 0.15s;
+  }
+  .float-btn:first-child { color: var(--orange-deep); }
+  .float-btn svg { width: 22px; height: 22px; }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 1120px) {
+    .main-nav { display: none; }
+    .hero .wrap, .applications .app-layout,
+    .factory-layout, .quality-layout, .clients-layout,
+    .cta-layout { grid-template-columns: 1fr; }
+    .products-grid, .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell { border-bottom: 1px solid var(--line); border-right: none; }
+    .hero-panel { display: none; }
+    .stats-bar { margin-top: 0; }
+  }
+  @media (max-width: 720px) {
+    .wrap { width: calc(100% - 24px); }
+    .topbar, .brand-text { display: none; }
+    .site-header .wrap { min-height: 60px; }
+    .hero { min-height: auto; }
+    .hero .wrap { min-height: auto; padding: 48px 0 64px; }
+    .hero h1 { font-size: 32px; }
+    .hero-desc { font-size: 15px; }
+    .stats-bar-inner, .products-grid, .app-cards,
+    .capability-grid, .qc-steps, .cta-benefits,
+    .logo-wall, .form-fields { grid-template-columns: 1fr; }
+    .stat-cell { border-bottom: 1px solid var(--line); border-right: none; }
+    .section { padding: 54px 0; }
+    .section-header { display: block; }
+    .section-desc { margin-top: 12px; }
+    .section-title, .cta h2 { font-size: 27px; }
+    .footer .wrap { display: block; }
+    .footer-links { grid-template-columns: 1fr 1fr; margin-top: 24px; }
+    .mobile-float-bar { display: block; }
+    body { padding-bottom: 60px; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>国内业务热线：<b>400-XXX-XXXX</b></span>
+      <span class="divider">|</span>
+      <span>微信咨询：<b>扫码添加</b></span>
+      <span class="divider">|</span>
+      <span>邮箱：sales@chinateao.com</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">下载中心</a>
+      <a href="#">English Site</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img class="logo-img" src="public/images/logo-color.webp" alt="TEAO 特澳" />
+      <span class="brand-text">
+        <strong>特澳 TEAO</strong>
+        <span>阻尼器 · 锁扣 · 定制缓冲机构源头厂家</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#" class="active">首页</a>
+      <a href="#products">产品中心</a>
+      <a href="#applications">应用领域</a>
+      <a href="#factory">制造实力</a>
+      <a href="#quality">质量认证</a>
+      <a href="#clients">客户案例</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+    <a class="header-cta" href="#contact">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      获取报价
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero">
+  <div class="wrap">
+    <!-- Left Content -->
+    <div>
+      <div class="hero-tag">面向汽车、家电、卫浴及办公设备供应链</div>
+      <h1>汽车内饰<em>阻尼器</em>与锁扣<br/>定制源头厂家</h1>
+      <p class="hero-desc">
+        特澳 TEAO 专注齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构研发制造。
+        支持扭矩、角度、方向和安装结构按图定制，从打样到量产一体化交付。
+      </p>
+      <div class="trust-badges">
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d7a52" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>IATF 16949 质量体系</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1976d2" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>ISO 14001 环境管理</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ed7606" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>8000 万件年产能</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d32f2f" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>100% 扭矩全检</span>
+        </span>
+        <span class="trust-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ed7606" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>支持图纸 / 样品定制</span>
+        </span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          发送图纸获取选型建议
+        </button>
+        <button class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          电话咨询
+        </button>
+        <button class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          加微信
+        </button>
+      </div>
+      <p class="hero-subnote">
+        适用于：<code>汽车杯托</code><code>手套箱</code><code>扶手箱</code><code>眼镜盒</code><code>充电口盖</code><code>家电盖板</code> 等开合缓冲结构
+      </p>
+    </div>
+
+    <!-- Right Panel: Quick Inquiry -->
+    <aside class="hero-panel" aria-label="快速询盘">
+      <div class="inquiry-card">
+        <h3>工程师在线评估</h3>
+        <p>提交产品类型、应用场景、目标扭矩或上传图纸，工程师将在 2 小时内给出选型与打样建议。</p>
+        <div class="quick-product-row">
+          <div class="quick-product-item">
+            <img src="public/images/products/gear-damper/GearDamperCategory.webp" alt="齿轮阻尼器" oncontextmenu="return false"/>
+            <p>齿轮阻尼器</p>
+          </div>
+          <div class="quick-product-item">
+            <img src="public/images/products/axial-damper/AxialDamperCategory.webp" alt="轴向阻尼器" oncontextmenu="return false"/>
+            <p>轴向阻尼器</p>
+          </div>
+        </div>
+        <div class="contact-mini-grid">
+          <div class="contact-mini">
+            <label>需要提供</label>
+            <strong>图纸 / 样品 / 年用量</strong>
+          </div>
+          <div class="contact-mini">
+            <label>回复方式</label>
+            <strong>电话 / 微信 / 邮件</strong>
+          </div>
+        </div>
+      </div>
+      <div class="hotline-strip">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <b>400-XXX-XXXX</b>
+          <span>工作日 8:30 - 18:00 在线</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ========== STATS BAR ========== -->
+<section class="stats-bar" aria-label="核心实力数据">
+  <div class="wrap">
+    <div class="stats-bar-inner">
+      <div class="stat-cell">
+        <span class="stat-num">20<span style="font-size:18px">+年</span></span>
+        <span class="stat-label">阻尼器研发制造经验</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">8000<span style="font-size:16px">万+</span></span>
+        <span class="stat-label">年产能（参考值）</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">IATF</span>
+        <span class="stat-label">16949 质量体系认证</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">出厂扭矩检测覆盖</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">5<span style="font-size:18px">大</span></span>
+        <span class="stat-label">核心产品线</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRODUCTS SECTION ========== -->
+<section class="section white" id="products">
+  <div class="wrap">
+    <div class="section-header">
+      <div>
+        <p class="section-tag">产品中心</p>
+        <h2 class="section-title">从标准型号到按图非标定制</h2>
+      </div>
+      <div class="section-desc">每款产品支持扭矩范围、阻尼方向、安装方式和材料定制。点击查看参数表、尺寸图和性能曲线。</div>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <article class="product-card">
+        <div class="product-card-img">
+          <span class="product-card-badge">主推</span>
+          <img src="public/images/products/gear-damper/GearDamperCategory.webp" alt="齿轮阻尼器" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>齿轮阻尼器</h3>
+          <p>也称旋转阻尼器。适用于杯托、眼镜盒、储物盒、扶手箱等开合结构。</p>
+          <div class="product-tags">
+            <span>扭矩 50-500 gf.cm</span>
+            <span>双向可选</span>
+            <span>螺丝安装</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 2 -->
+      <article class="product-card">
+        <div class="product-card-img">
+          <img src="public/images/products/axial-damper/AxialDamperCategory.webp" alt="轴向阻尼器" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>轴向阻尼器</h3>
+          <p>圆筒阻尼器 / 桶形阻尼器。适合拉手、滑动门、缓开缓闭等线性运动场景。</p>
+          <div class="product-tags">
+            <span>推拉阻尼</span>
+            <span>角度可控</span>
+            <span>多规格</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 3 -->
+      <article class="product-card">
+        <div class="product-card-img">
+          <img src="public/images/products/glove-box-damper/GloveBoxDamperCategory.webp" alt="手套箱阻尼器" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>手套箱阻尼器</h3>
+          <p>汽车杂物箱专用缓降阻尼器，解决打开过快、末端撞击和异响问题。</p>
+          <div class="product-tags">
+            <span>汽车内饰</span>
+            <span>缓降控制</span>
+            <span>静音设计</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 4 -->
+      <article class="product-card">
+        <div class="product-card-img">
+          <img src="public/images/products/latch/LatchCategory.webp" alt="Push-Push 锁扣" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>Push-Push 锁扣</h3>
+          <p>汽车内饰锁止释放机构，可与阻尼结构配合使用实现完整的开合手感方案。</p>
+          <div class="product-tags">
+            <span>锁止释放</span>
+            <span>结构配套</span>
+            <span>手感可调</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">起订量可议</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+      <!-- Product 5 -->
+      <article class="product-card">
+        <div class="product-card-img">
+          <img src="public/images/products/other/OthersCategory.webp" alt="其他定制零部件" oncontextmenu="return false"/>
+        </div>
+        <div class="product-card-body">
+          <h3>定制零部件</h3>
+          <p>定制缓冲机构、收纳机构和其他汽车内饰功能组件。按图纸或样品开发模具。</p>
+          <div class="product-tags">
+            <span>非标开发</span>
+            <span>样品评估</span>
+            <span>模具自制</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-hint">按需报价</span>
+            <a class="product-quote-btn" href="#">获取报价 &rarr;</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== APPLICATIONS SECTION ========== -->
+<section class="section soft" id="applications">
+  <div class="wrap">
+    <div class="section-header">
+      <div>
+        <p class="section-tag">应用领域</p>
+        <h2 class="section-title">先看场景，再选产品</h2>
+      </div>
+      <p class="section-desc">国内采购更习惯从使用场景出发找解决方案。以下是我们最常见的应用领域和推荐产品组合。</p>
+    </div>
+
+    <div class="app-layout">
+      <div class="app-hero-card">
+        <div>
+          <h3>汽车内饰开合机构的<br/><em style="color:#ff9a3a;font-style:normal;">静音缓冲方案</em></h3>
+          <p>解决杯托弹开撞击、手套箱下落过快、眼镜盒异响、充电口盖回弹等问题。稳定扭矩输出，适配 -30°C ~ +80°C 温度区间。</p>
+        </div>
+        <button class="btn-outline-w">提交应用需求 &rarr;</button>
+      </div>
+      <div class="app-cards">
+        <div class="app-card">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          </div>
+          <h4>汽车杯托</h4>
+          <p class="app-desc">解决弹开过快、末端撞击和手感突兀问题，让开合节奏一致且安静。</p>
+          <span class="app-recommend">推荐：齿轮阻尼器 RD-T 系列</span>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <h4>手套箱 / 扶手箱</h4>
+          <p class="app-desc">控制打开速度，提升乘员舱使用质感，避免储物格意外砸落。</p>
+          <span class="app-recommend">推荐：手套箱阻尼器 RD-V 系列</span>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+          </div>
+          <h4>眼镜盒 / 储物盒</h4>
+          <p class="app-desc">小空间开合结构的最佳选择，支持多种安装方式定制。</p>
+          <span class="app-recommend">推荐：齿轮 / 轴向阻尼器</span>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h4>充电口盖 / 家电卫浴</h4>
+          <p class="app-desc">外饰盖板开启控制、马桶盖缓降、家电盖板的缓开缓闭体验优化。</p>
+          <span class="app-recommend">推荐：轴向阻尼器 / 定制机构</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MANUFACTURING CAPABILITY ========== -->
+<section class="section dark" id="factory">
+  <div class="wrap">
+    <div class="factory-layout">
+      <div>
+        <p class="section-tag">制造实力</p>
+        <h2 class="section-title" style="margin-top:10px;">模具开发 → 注塑生产 → 自动化装配 → 批量交付</h2>
+        <p class="section-desc" style="margin-top:18px;">
+          国内采购判断供应商时，工厂实拍、设备清单和检测能力是关键依据。
+          我们拥有完整的模具、注塑、装配、检测一体化能力，支持从样品到数百万级的批量交付。
+        </p>
+        <div class="factory-photo-frame" style="margin-top:24px;">
+          <img src="public/images/company/automation-workshop.webp" alt="特澳自动化生产车间" oncontextmenu="return false"/>
+        </div>
+      </div>
+      <div class="capability-grid">
+        <div class="cap-item">
+          <strong>模具开发</strong>
+          <p>根据产品结构和安装空间进行方案评估，自有模具设计与制造能力。</p>
+        </div>
+        <div class="cap-item">
+          <strong>注塑生产</strong>
+          <p>POM / PA66 + GF 等工程塑料精密注塑，过程尺寸与外观控制。</p>
+        </div>
+        <div class="cap-item">
+          <strong>自动化装配线</strong>
+          <p>半自动到全自动装配，保证产品一致性，适配不同批量需求。</p>
+        </div>
+        <div class="cap-item">
+          <strong>扭矩全检</strong>
+          <p>围绕核心性能指标进行 100% 出厂扭矩检测与记录。</p>
+        </div>
+        <div class="cap-item">
+          <strong>可靠性测试</strong>
+          <p>寿命测试、高低温循环、盐雾测试等环境适应性验证能力。</p>
+        </div>
+        <div class="cap-item">
+          <strong>批量交付</strong>
+          <p>年产能可达千万级，支持汽车主机厂、Tier-1 及家电供应链节奏。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUALITY SECTION ========== -->
+<section class="section white" id="quality">
+  <div class="wrap">
+    <div class="section-header">
+      <div>
+        <p class="section-tag">质量认证</p>
+        <h2 class="section-title">不只是证书墙 — 展示质量怎么管</h2>
+      </div>
+      <p class="section-desc">从来料到出货的全流程质量控制，每一批次产品均可追溯。</p>
+    </div>
+
+    <div class="quality-layout">
+      <div class="cert-list">
+        <div class="cert-card">
+          <div class="cert-info">
+            <strong>IATF 16949</strong>
+            <span>汽车行业质量管理体系认证 — 覆盖产品设计、生产和服务全过程</span>
+          </div>
+          <div class="cert-icon" style="background:var(--green)">IATF</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-info">
+            <strong>ISO 14001</strong>
+            <span>环境管理体系认证 — 生产过程环保合规</span>
+          </div>
+          <div class="cert-icon" style="background:var(--blue)">ISO</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-info">
+            <strong>专利与技术积累</strong>
+            <span>阻尼器、锁扣及相关缓冲结构的专利与工艺沉淀</span>
+          </div>
+          <div class="cert-icon" style="background:var(--orange)">&#xe001;</div>
+        </div>
+      </div>
+      <div class="qc-steps">
+        <div class="qc-step">
+          <span class="qc-step-num">01</span>
+          <strong>来料检验</strong>
+          <p>关键原材料和外购件进入生产前先确认材质、尺寸和批次信息。</p>
+        </div>
+        <div class="qc-step">
+          <span class="qc-step-num">02</span>
+          <strong>注塑过程控制</strong>
+          <p>注塑成型环节的温度、压力和时间监控，确保尺寸一致性。</p>
+        </div>
+        <div class="qc-step">
+          <span class="qc-step-num">03</span>
+          <strong>100% 扭矩检测</strong>
+          <p>围绕核心使用手感和性能指标，对每个成品进行扭矩检测并记录。</p>
+        </div>
+        <div class="qc-step">
+          <span class="qc-step-num">04</span>
+          <strong>出货检验与追溯</strong>
+          <p>批次号、外观、功能和包装出货前确认，支持后续质量问题追溯。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CLIENTS SECTION ========== -->
+<section class="section soft" id="clients">
+  <div class="wrap">
+    <div class="clients-layout">
+      <div>
+        <p class="section-tag">客户案例</p>
+        <h2 class="section-title" style="margin-top:10px;">服务汽车及家电供应链客户</h2>
+        <p class="section-desc" style="margin-top:16px;">
+          产品已应用于国内外多家汽车品牌及零部件供应商项目。具体 Logo 和案例展示需获得客户授权后替换当前占位内容。
+        </p>
+      </div>
+      <div class="client-logos" aria-label="部分合作客户（待授权）">
+        <div class="client-logo-cell">BYD 比亚迪</div>
+        <div class="client-logo-cell">Geely 吉利</div>
+        <div class="client-logo-cell">Chery 奇瑞</div>
+        <div class="client-logo-cell">SAIC 上汽</div>
+        <div class="client-logo-cell">FAW 一汽</div>
+        <div class="client-logo-cell">GAC 广汽</div>
+        <div class="client-logo-cell">NIO 蔚来</div>
+        <div class="client-logo-cell">XPeng 小鹏</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA / INQUIRY SECTION ========== -->
+<section class="section cta-section" id="contact">
+  <div class="wrap">
+    <div class="cta-layout">
+      <div class="cta-left">
+        <p class="section-tag">快速询盘</p>
+        <h2>发图纸或描述需求<br/>我们先帮你判断结构和扭矩方向</h2>
+        <p>无论是标准品选型还是非标定制，提交以下任一信息即可启动工程师评估流程。正式版本将接入电话、微信二维码、文件上传、邮件通知等完整询盘链路。</p>
+        <div class="cta-benefits">
+          <div class="cta-benefit">&#10003; 提交图纸获取选型建议</div>
+          <div class="cta-benefit">&#10003; 发送样品信息安排打样</div>
+          <div class="cta-benefit">&#10003; 描述应用场景获取方案</div>
+        </div>
+      </div>
+      <form class="inquiry-form-card">
+        <h3>获取选型与报价建议</h3>
+        <p class="sub">工程师将在 2 小时内响应</p>
+        <div class="form-fields">
+          <input class="form-input" type="text" placeholder="您的姓名 *" />
+          <input class="form-input" type="text" placeholder="公司名称 *" />
+          <input class="form-input" type="tel" placeholder="手机号码 *" />
+          <select class="form-input"><option value="">选择产品类型 *</option><option>齿轮阻尼器</option><option>轴向阻尼器</option><option>手套箱阻尼器</option><option>锁扣</option><option>定制零部件</option><option>不确定 / 需要推荐</option></select>
+          <input class="form-input wide" type="text" placeholder="应用场景 / 目标扭矩 / 年用量预估" />
+          <div class="file-upload-area">
+            &#128194; 上传图纸、图片、PDF 或 CAD 文件（可选）
+          </div>
+          <button class="submit-btn" type="button">提交需求，获取选型方案 &rarr;</button>
+        </div>
+        <p class="form-footer-note">提交即表示同意隐私政策。具体字段、文件大小限制和通知方式待最终确认后配置。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="public/images/logo-color.webp" alt="TEAO 特澳" oncontextmenu="return false"/>
+      <p>东莞市特澳电子科技有限公司 — 专注汽车内饰阻尼器、齿轮阻尼器、轴向阻尼器与锁扣的源头制造商。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>产品中心</h4>
+        <a href="#">齿轮阻尼器</a>
+        <a href="#">轴向阻尼器</a>
+        <a href="#">手套箱阻尼器</a>
+        <a href="#">Push-Push 锁扣</a>
+        <a href="#">定制零部件</a>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <a href="#">公司介绍</a>
+        <a href="#">制造实力</a>
+        <a href="#">质量认证</a>
+        <a href="#">新闻资讯</a>
+        <a href="#">技术支持</a>
+      </div>
+      <div>
+        <h4>技术资源</h4>
+        <a href="#">选型指南</a>
+        <a href="#">扭矩单位换算</a>
+        <a href="#">常见问题 FAQ</a>
+        <a href="#">下载中心</a>
+        <a href="#">图纸询盘</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4 style="color:rgba(255,255,255,0.85);font-size:14px;margin-bottom:14px;">联系方式</h4>
+      <div class="footer-contact-item">
+        <label>业务热线</label>
+        <span>400-XXX-XXXX</span>
+      </div>
+      <div class="footer-contact-item">
+        <label>微信咨询</label>
+        <span>扫码添加销售工程师</span>
+      </div>
+      <div class="footer-contact-item">
+        <label>邮箱</label>
+        <a href="mailto:sales@chinateao.com">sales@chinateao.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <label>地址</label>
+        <span>广东省东莞市（详细地址待确认）</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 东莞市特澳电子科技有限公司 版权所有</span>
+      <span>ICP备案号 / 公安备案号 待正式资料确认后替换</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== MOBILE FLOATING CTA BAR ========== -->
+<div class="mobile-float-bar">
+  <div class="mobile-float-inner">
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      电话咨询
+    </button>
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      加微信
+    </button>
+    <button class="float-btn">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      发图纸询盘
+    </button>
+  </div>
+</div>
+
+</body>
+</html>
