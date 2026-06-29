@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand */
+  --color-brand-50: #FFF3E8;
+  --color-brand-500: #E8781A;
+  --color-brand-700: #C7610A;
+  /* Neutrals */
+  --color-ink: #1E1E20;
+  --color-ink-soft: #3A3A3E;
+  --color-muted: #6F6F75;
+  --color-muted-light: #9A9AA0;
+  --color-line: #E4E4E7;
+  --color-line-soft: #EEEEF0;
+  /* Surfaces */
+  --color-surface: #FAFAFB;
+  --color-surface-warm: #FFFBF7;
+  /* Semantic */
+  --color-green: #2D8A56;
+  --color-red: #D14343;
+  --color-blue: #3B82C4;
+  /* Font */
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background: var(--color-surface);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    line-height: 1.7;
+    font-size: 15px;
+    overflow-x: hidden;
+    background: var(--color-surface);
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
 }
