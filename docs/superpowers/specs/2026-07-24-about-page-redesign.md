@@ -21,7 +21,8 @@
 |---------|------------|-------------|
 | QualityPromise | 📋⚡✅📦 | ClipboardCheck / Zap / ShieldCheck / Truck |
 | ServiceIndustries | 🚗🏠🛁🏥⚙️ | Car / Home / Bath / HeartPulse / Wrench |
-| CorporateValues | 📚🤝🌱🏘️ | GraduationCap / Heart / Leaf / Building2 |
+| CorporateValues | 📚🤝🌱🏘️ | BookOpen / HeartHandshake / Leaf / Building2 |
+| PeopleCulture | —（新建） | GraduationCap / HeartPulse / ShieldCheck |
 | CoreCapabilities | 无 | Settings / Wrench / Cog |
 - **动画：** 所有 section 使用现有 `Reveal` 组件驱动入场动画
 - **卡片交互：** hover 上浮 4px + 阴影加深 + 边框变品牌色（统一交互模式）
@@ -159,24 +160,46 @@
 
 ---
 
-### 8. CorporateValues（企业文化区）
+### 8. CorporateValues（企业社会责任区）
 
-**素材：** 无新素材
+**素材：** SVG 装饰 `bg-latch-outline.svg`
 
 **布局：**
-- 居中 eyebrow + 标题 + 描述
+- 左右分栏标题区：左侧 eyebrow "企业社会责任" + 标题 "做有温度的企业"，右侧描述文字
 - 4 列价值观卡片
 
 **卡片样式：**
-- Lucide 图标（GraduationCap / Heart / Leaf / Building2），浅灰圆形衬底
-- 标题 + 描述
+- Lucide 图标（BookOpen / HeartHandshake / Leaf / Building2），品牌色 28px
+- 标题（xl 粗体）+ 描述
 - hover：上浮 + 阴影加深 + 边框变品牌色
 
 **背景：** 白色
 
 ---
 
-### 9. AboutCTA（底部 CTA 区）
+### 9. PeopleCulture（团队文化区）
+
+**素材：** 4 张团队实拍图（`/images/about/team/team-*.webp`），从 teao-website 复制
+
+**布局：**
+- 左右分栏：左文字（eyebrow "团队与文化" + 标题 + 描述），右 2×2 图片网格
+- 图片网格：4 张 4:3 比例圆角图片，第 2/4 列向下偏移形成错落感
+- 下方 3 列文化理念卡片
+
+**图片网格样式：**
+- 圆角 12px，白底边框，浅阴影
+- 左侧装饰性虚线框（品牌色淡边框）
+
+**文化理念卡片：**
+- Lucide 图标（GraduationCap / HeartPulse / ShieldCheck），品牌色
+- 标题（粗体）+ 描述
+- hover：上浮 + 阴影加深
+
+**背景：** 浅灰 `bg-surface-warm` 或 `#F8FAFC`
+
+---
+
+### 10. AboutCTA（底部 CTA 区）
 
 **素材：** `/images/company/factory-entrance.webp` 低透明度叠加背景，3 张产品缩略图（从 teao-website 复制）
 
@@ -273,17 +296,17 @@ youtubeVideoPlaybackUrl: 通过 YOUTUBE_VIDEO_ID 环境变量构建
 | `src/components/about/certifications-section.tsx` | 修改 | 视觉优化 |
 | `src/components/about/quality-promise.tsx` | 修改 | Lucide 图标替代 emoji |
 | `src/components/about/service-industries.tsx` | 修改 | Lucide 图标替代 emoji |
-| `src/components/about/corporate-values.tsx` | 修改 | Lucide 图标替代 emoji |
+| `src/components/about/corporate-values.tsx` | 重写 | 对标英文站，Lucide 图标+左右分栏标题 |
+| `src/components/about/people-culture.tsx` | **新建** | 团队图片网格+文化理念卡片 |
 | `src/components/about/about-cta.tsx` | 重写 | 深色底+产品卡片布局 |
-| `src/content/about.ts` | 不修改 | 数据保持不变 |
-| `src/app/about/page.tsx` | 不修改 | section 数量不变 |
+| `src/content/about.ts` | 不修改 | 数据保持不变（peopleCulture 已存在） |
+| `src/app/about/page.tsx` | 修改 | 新增 PeopleCulture 导入和使用 |
 
 ---
 
 ## 不在此次范围的改动
 
-- 不新增 PeopleCultureSection（数据已有，但当前不加入页面）
-- 不新增 CompanyVideoSection（YouTube 链接后续替换为国内平台）
+- 不新增 CompanyVideoSection（YouTube 链接后续替换为国内平台时再做）
 - 不新增 CustomersSection
 - 不修改 `src/content/about.ts` 数据文件
 - 不修改页面路由结构
