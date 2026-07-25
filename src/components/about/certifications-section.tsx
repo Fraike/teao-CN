@@ -27,7 +27,7 @@ export function CertificationsSection() {
         <div className="mb-10 grid gap-6 sm:grid-cols-2">
           {systemCertificates.map((cert, i) => (
             <Reveal key={cert.name} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-              <div className="group relative cursor-default overflow-hidden rounded-2xl border border-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+              <div className="group relative cursor-default overflow-hidden rounded-2xl border border-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
                 <div className="flex items-start gap-5">
                   <div className="relative h-28 w-20 shrink-0 overflow-hidden rounded-lg border border-line shadow-sm transition-transform duration-500 group-hover:scale-105">
                     <Image
@@ -70,7 +70,7 @@ export function CertificationsSection() {
         <div className="grid gap-5 sm:grid-cols-3">
           {patentCertificates.map((pat, i) => (
             <Reveal key={pat.name} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5}>
-              <div className="group cursor-default overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div className="group cursor-default overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-md">
                 <div className="relative aspect-[3/4] overflow-hidden bg-[#F0F0F0]">
                   <Image
                     src={pat.image}

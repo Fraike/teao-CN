@@ -31,7 +31,7 @@ export function CoreCapabilities() {
             const Icon = icons[i];
             return (
               <Reveal key={item.title} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group overflow-hidden rounded-2xl border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+                <div className="group overflow-hidden rounded-2xl border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
                   {/* Image */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-[#1a1a1e]">
                     <Image

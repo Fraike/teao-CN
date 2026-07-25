@@ -5,7 +5,7 @@ import { timeline } from "@/content/about";
 
 export function CompanyTimeline() {
   return (
-    <section className="bg-white py-14 lg:py-20">
+    <section className="bg-surface-warm py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-[0.32fr_1fr] lg:gap-12">
           {/* Left: section head */}
@@ -28,7 +28,7 @@ export function CompanyTimeline() {
           <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-5">
             {timeline.map((item, i) => (
               <Reveal key={item.year} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group relative cursor-default rounded-xl border border-line bg-surface p-4 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:bg-brand-50 hover:shadow-lg">
+                <div className="group relative cursor-default rounded-xl border border-line bg-surface p-4 transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:bg-brand-50 hover:shadow-lg">
                   {/* Top accent bar */}
                   <div className="mb-2 h-1 w-8 rounded-full bg-line transition-all duration-300 group-hover:w-12 group-hover:bg-brand-500" />
 
