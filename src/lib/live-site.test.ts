@@ -82,3 +82,22 @@ test("unknown and near-miss paths still go to the live origin", () => {
   assert.equal(liveHref("/quality/"), LIVE_ORIGIN + "/quality/");
   assert.equal(liveHref("/faqs/"), LIVE_ORIGIN + "/faqs/");
 });
+
+test("applications leaves resolve locally with and without trailing slash", () => {
+  assert.equal(getPilotPage(["applications"]), "applications");
+  assert.equal(getPilotPage(["applications", "automotive-interior"]), "automotive-interior");
+  assert.equal(getPilotPage(["applications", "automotive-interior", "internal"]), "interior");
+  assert.equal(getPilotPage(["applications", "automotive-interior", "external"]), "exterior");
+  assert.equal(getPilotPage(["applications", "home-life"]), "home-life");
+  assert.equal(getPilotPage(["applications", "office-equipment"]), "office-equipment");
+  assert.equal(getPilotPage(["applications", "industrial-application"]), "industrial-application");
+  assert.equal(liveHref("/applications/"), "/applications/");
+  assert.equal(liveHref("/applications/automotive-interior/internal/"), "/applications/automotive-interior/internal/");
+});
+
+test("applications near-miss, pagination and deep links still go live", () => {
+  assert.equal(getPilotPage(["application"]), null);
+  assert.equal(getPilotPage(["applications", "automotive-interior", "internal", "article.html"]), null);
+  assert.equal(liveHref("/applications/index_2.html"), LIVE_ORIGIN + "/applications/index_2.html");
+  assert.equal(liveHref("/applications/automotive-interior/index_2.html"), LIVE_ORIGIN + "/applications/automotive-interior/index_2.html");
+});

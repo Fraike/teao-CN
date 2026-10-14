@@ -4,6 +4,13 @@ export const LIVE_ORIGIN = "https://www.chinateao.com";
 export const PILOT_PRODUCT_PATH = "/gear-damper/gear-rotary-damper-rd-t038-v038.html";
 export const QUALITY_PATH = "/quality-control/";
 export const FAQ_PATH = "/faq/";
+export const APPLICATIONS_PATH = "/applications/";
+export const AUTOMOTIVE_INTERIOR_PATH = "/applications/automotive-interior/";
+export const INTERIOR_PATH = "/applications/automotive-interior/internal/";
+export const EXTERIOR_PATH = "/applications/automotive-interior/external/";
+export const HOME_LIFE_PATH = "/applications/home-life/";
+export const OFFICE_EQUIPMENT_PATH = "/applications/office-equipment/";
+export const INDUSTRIAL_APPLICATION_PATH = "/applications/industrial-application/";
 export const liveCategories = categoryRoutes;
 
 export function developmentCategoryPath(id: string): string | null {
@@ -19,13 +26,34 @@ export function legacyPathFromSegments(segments: readonly string[]): string {
     } catch { return segment; }
   }).join("/");
 }
-export function getPilotPage(segments: readonly string[]): "category" | "product" | "quality" | "faq" | null {
+export type ApplicationPageType =
+  | "applications"
+  | "automotive-interior"
+  | "interior"
+  | "exterior"
+  | "home-life"
+  | "office-equipment"
+  | "industrial-application";
+
+const APPLICATION_PAGE_PATHS: Record<string, ApplicationPageType> = {
+  [APPLICATIONS_PATH]: "applications",
+  [AUTOMOTIVE_INTERIOR_PATH]: "automotive-interior",
+  [INTERIOR_PATH]: "interior",
+  [EXTERIOR_PATH]: "exterior",
+  [HOME_LIFE_PATH]: "home-life",
+  [OFFICE_EQUIPMENT_PATH]: "office-equipment",
+  [INDUSTRIAL_APPLICATION_PATH]: "industrial-application",
+};
+
+export function getPilotPage(segments: readonly string[]): "category" | "product" | "quality" | "faq" | ApplicationPageType | null {
   const path = legacyPathFromSegments(segments);
   if (liveCategories.some(category => path + "/" === category.path)) return "category";
   if (liveCategories.some(category => Array.from({ length: category.pageCount - 1 }, (_, index) => category.path + `index_${index + 2}.html`).includes(path))) return "category";
   if (path === PILOT_PRODUCT_PATH) return "product";
   if (path + "/" === QUALITY_PATH) return "quality";
   if (path + "/" === FAQ_PATH) return "faq";
+  const applicationPage = APPLICATION_PAGE_PATHS[path + "/"];
+  if (applicationPage) return applicationPage;
   return null;
 }
 
