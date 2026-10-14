@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CategoryPage } from "@/components/live-site/catalog";
 import ProductDetail from "@/components/live-site/product-detail";
-import { getPilotPage, LIVE_ORIGIN, PILOT_PRODUCT_PATH } from "@/lib/live-site";
+import QualityPage from "@/components/live-site/quality-page";
+import { getPilotPage, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH } from "@/lib/live-site";
 import { getCategoryRoute } from "@/lib/live-catalog";
+
+const QUALITY_META: Metadata = {
+  title: { absolute: "质量控制 | IATF 16949 认证 · 100% 扭矩检测 | 特澳 TEAO" },
+  description: "IATF 16949 认证质量管理体系,100% 扭矩检测与 100% 外观检测。实验室支持扭矩、寿命、尺寸与环境验证,提供 PPAP 与扭矩测试报告。",
+  alternates: { canonical: LIVE_ORIGIN + QUALITY_PATH },
+  robots: { index: false, follow: true },
+};
 
 type Props = { params: Promise<{ legacyPath: string[] }> };
 
@@ -11,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const segments = (await params).legacyPath;
   const type = getPilotPage(segments);
   if (!type) notFound();
+  if (type === "quality") return QUALITY_META;
   const product = type === "product";
   const categoryRoute = getCategoryRoute(segments);
   return {
@@ -25,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LegacyPage({ params }: Props) {
   const segments = (await params).legacyPath;
   const type = getPilotPage(segments);
+  if (type === "quality") return <QualityPage />;
   const route = getCategoryRoute(segments);
   if (route) return <CategoryPage category={route.category} page={route.page} />;
   if (type === "product") return <ProductDetail />;
