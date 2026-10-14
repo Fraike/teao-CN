@@ -1,0 +1,32 @@
+[
+  {
+    "id": "gear-damper",
+    "label": "齿轮阻尼器",
+    "path": "/gear-damper/",
+    "pageCount": 3
+  },
+  {
+    "id": "axial-damper",
+    "label": "圆筒阻尼器",
+    "path": "/axial-dampers/",
+    "pageCount": 2
+  },
+  {
+    "id": "glove-box-damper",
+    "label": "手套箱阻尼器",
+    "path": "/Glove Box Dampers/",
+    "pageCount": 2
+  },
+  {
+    "id": "latch",
+    "label": "锁扣",
+    "path": "/latches/",
+    "pageCount": 1
+  },
+  {
+    "id": "other",
+    "label": "其他零部件",
+    "path": "/qitaqichelingbujian/",
+    "pageCount": 1
+  }
+]

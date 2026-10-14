@@ -1,32 +1,33 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import SiteFrame from "@/components/layout/site-frame";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.chinateao.com"),
   title: {
-    template: "%s | 特澳 TEAO — 汽车内饰阻尼器定制厂家",
-    default: "特澳 TEAO — 汽车内饰阻尼器与锁扣定制厂家",
+    template: "%s | 特澳 TEAO — 阻尼器与锁扣定制厂家",
+    default: "特澳 TEAO — 阻尼器与锁扣机构定制厂家",
   },
   description:
-    "特澳 TEAO 专注汽车内饰阻尼器、齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构。IATF 16949认证，20+年制造经验，支持来图定制。",
+    "特澳 TEAO 专注阻尼器、齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构。IATF 16949认证，20+年制造经验，产品覆盖汽车、家电、卫浴、医疗、工业等领域，支持来图定制。",
   keywords: [
-    "汽车阻尼器",
+    "阻尼器",
     "齿轮阻尼器",
     "轴向阻尼器",
     "手套箱阻尼器",
     "Push-Push锁扣",
-    "汽车内饰锁扣",
+    "锁扣机构",
     "TEAO",
     "特澳",
-    "汽车零部件",
+    "阻尼器厂家",
     "B2B",
     "定制阻尼器",
+    "缓冲机构",
   ],
   openGraph: {
-    title: "特澳 TEAO — 汽车内饰阻尼器与锁扣定制厂家",
+    title: "特澳 TEAO — 阻尼器与锁扣机构定制厂家",
     description:
-      "IATF 16949认证，20+年制造经验，专注汽车内饰阻尼器与锁扣机构。",
+      "IATF 16949认证，20+年制造经验，专注阻尼器与锁扣机构，产品覆盖汽车、家电、卫浴、医疗、工业等领域。",
     siteName: "特澳 TEAO",
     locale: "zh_CN",
     type: "website",
@@ -40,10 +41,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <body className="flex min-h-screen flex-col bg-surface text-ink">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="flex min-h-screen flex-col bg-surface text-ink pt-[73px]">
+        <SiteFrame>{children}</SiteFrame>
       </body>
     </html>
   );

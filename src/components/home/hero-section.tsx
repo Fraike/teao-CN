@@ -24,10 +24,10 @@ const quickProducts = [
 const sceneTags = [
   "汽车杯托",
   "手套箱",
-  "扶手箱",
-  "眼镜盒",
-  "充电口盖",
   "家电盖板",
+  "马桶盖",
+  "医疗设备",
+  "工业机构",
 ];
 
 export function HeroSection() {
@@ -63,14 +63,14 @@ export function HeroSection() {
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-[12.5px] font-bold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
               <span className="h-[7px] w-[7px] rounded-full bg-brand-500 shadow-[0_0_8px_rgba(232,120,26,0.15)]" />
-              面向汽车 · 家电 · 卫浴 · 办公供应链
+              面向汽车 · 家电 · 卫浴 · 医疗 · 工业供应链
             </div>
           </Reveal>
 
           {/* Headline */}
           <h1 className="mt-[22px] font-sans text-[clamp(36px,4.5vw,60px)] font-semibold leading-[1.15] tracking-[-0.01em] text-ink">
             <Reveal delay={1} className="inline-block">
-              汽车内饰{" "}
+              多领域{" "}
             </Reveal>
             <Reveal delay={2} className="inline-block">
               <em className="not-italic relative font-black text-brand-700">
@@ -92,7 +92,7 @@ export function HeroSection() {
             <p className="mt-4 max-w-[540px] text-[15px] leading-[1.8] text-muted">
               特澳 TEAO
               专注齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push
-              锁扣及定制缓冲机构研发制造。 支持扭矩、角度、方向和安装结构按图定制，从打样到量产一体化交付。
+              锁扣及定制缓冲机构研发制造。产品广泛应用于汽车、家电、卫浴、医疗、工业等领域，支持扭矩、角度、方向和安装结构按图定制，从打样到量产一体化交付。
             </p>
           </Reveal>
 
@@ -137,7 +137,7 @@ export function HeroSection() {
                 发送图纸获取选型建议
               </Button>
               <Button
-                href="tel:400-XXX-XXXX"
+                href="tel:0769-82937929"
                 variant="outline"
                 className="gap-1.5"
               >
@@ -256,7 +256,7 @@ export function HeroSection() {
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
             </svg>
             <div>
-              <b className="block text-lg font-bold">400-XXX-XXXX</b>
+              <b className="block text-lg font-bold">0769-82937929</b>
               <span className="text-[11px] opacity-85">
                 工作日 8:30–18:00 在线
               </span>

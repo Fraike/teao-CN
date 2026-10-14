@@ -1,0 +1,922 @@
+[
+  {
+    "id": "gear-damper",
+    "label": "齿轮阻尼器",
+    "path": "/gear-damper/",
+    "description": "齿轮阻尼器通过齿轮机构与阻尼油配合，控制机构开启、关闭的速度，减少闭合冲击与噪音。应用于汽车内饰、家用电器和工业机械，可在标准扭矩范围内定制。",
+    "image": "/images/live-site/64fffbafea385.png",
+    "pages": [
+      {
+        "number": 1,
+        "path": "/gear-damper/",
+        "products": [
+          {
+            "path": "/gear-damper/齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html",
+            "title": "齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁",
+            "model": "RD-T021",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260202/698015e7d2b4a.png",
+            "image": "/images/live-site/698015e7d2b4a.png",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-t069-rd-v069shuangxiang-shiyongyuqicheneishijiayongdianqigongyejixieRD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械.html",
+            "title": "RD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T069 / RD-V069",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/68917c0ee738c.jpg",
+            "image": "/images/live-site/68917c0ee738c.jpg",
+            "specifications": [
+              "尺寸:Φ14.7",
+              "模数:0.8",
+              "压力角:20°c"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-t040shiyongyuqichezuniqijiadianzuniqiqicheyongsuliaozunichilun-jianzhenzuniqi-shuangxiangsuliaozhuanlunsujiaozongchengjianhuanchongqi.html",
+            "title": "RD-T040适用于汽车阻尼器、家电阻尼器、汽车用塑料阻尼齿轮 减震阻尼器 双向塑料转轮塑胶总成件缓冲器",
+            "model": "RD-T040",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/689176d6491ce.png",
+            "image": "/images/live-site/689176d6491ce.png",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°c"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-t036-shiyongyuqicheneishijiayongdianqigongyejixie.html",
+            "title": "RD-T036 适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T036",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/6891756b60fe9.png",
+            "image": "/images/live-site/6891756b60fe9.png",
+            "specifications": [
+              "尺寸:Φ16.25",
+              "模数:1.25",
+              "安装方式:螺钉"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-t029-shiyongqicheneishi-jiayongdianqi-gongyejixie.html",
+            "title": "RD-T029 适用汽车内饰  家用电器 工业机械",
+            "model": "RD-T029",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/689172ed237d4.png",
+            "image": "/images/live-site/689172ed237d4.png",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-10guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html",
+            "title": "RD-10广泛适用于汽车内饰、家用电器 、工业机械、咖啡机、打印机",
+            "model": "RD-10",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/68915a76aecdc.png",
+            "image": "/images/live-site/68915a76aecdc.png",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°c"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-t025guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html",
+            "title": "RD-T025广泛适用于汽车内饰、家用电器 、工业机械、咖啡机、打印机",
+            "model": "RD-T025",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892d2bc0a589.png",
+            "image": "/images/live-site/6892d2bc0a589.png",
+            "specifications": [
+              "尺寸:10.4MM",
+              "模数:0.8",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd--t019shiyongqichedianyanqiqicheyanjinghe-neishidianqiqichefangai-jiayongdianqi-gongyejixie.html",
+            "title": "RD- T019适用汽车点烟器、汽车眼镜盒、 内饰、电器汽车翻盖、 家用电器、 工业机械",
+            "model": "RD- T019",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892d2ee0eebc.png",
+            "image": "/images/live-site/6892d2ee0eebc.png",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/gear-damper/rd-t015b-shiyongqicheneishi-jiayongdianqi-gongyejixie.html",
+            "title": "RD-T015B 适用汽车内饰  家用电器 工业机械",
+            "model": "RD-T015B",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892d31240e7f.png",
+            "image": "/images/live-site/6892d31240e7f.png",
+            "specifications": [
+              "尺寸:Φ27.5",
+              "模数:0.8",
+              "安装方式:螺钉"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-rd-t068-v068.html",
+            "title": "RD-T068/ RD-v068双向 适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T068 / RD-v068",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785db626c019.JPG",
+            "image": "/images/live-site/6785db626c019.JPG",
+            "specifications": [
+              "尺寸:Φ14.7",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-rd-t038-v038.html",
+            "title": "RD-T038/ RD-v038双向 适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T038 / RD-v038",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785db7592907.JPG",
+            "image": "/images/live-site/6785db7592907.JPG",
+            "specifications": [
+              "尺寸:Φ11",
+              "模数:1.0",
+              "安装方式:螺钉"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper- RD-T038A/V038A.html",
+            "title": "RD-T038A/V038A 适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T038A",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785db94944ff.JPG",
+            "image": "/images/live-site/6785db94944ff.JPG",
+            "specifications": [
+              "尺寸:Φ16.25",
+              "模数:1.25",
+              "安装方式:螺钉"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-09/snapshots/gear-damper.html"
+      },
+      {
+        "number": 2,
+        "path": "/gear-damper/index_2.html",
+        "products": [
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T028.html",
+            "title": "RD-T028适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T028",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dbe266deb.JPG",
+            "image": "/images/live-site/15c43f62f3-6785dbe266deb.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T024.html",
+            "title": "RD-T024适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T024",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dbf815dd6.JPG",
+            "image": "/images/live-site/a7497ea021-6785dbf815dd6.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T022.html",
+            "title": "RD-T022双向 适用于汽车内饰、家用电器、工业机械",
+            "model": "RD-T022",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc1f4cb6f.JPG",
+            "image": "/images/live-site/e7184b0ae7-6785dc1f4cb6f.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD- T011.html",
+            "title": "RD- T011适用汽车点烟器、汽车眼镜盒、 内饰、电器汽车翻盖、 家用电器、 工业机械",
+            "model": "RD- T011",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc3d54db2.JPG",
+            "image": "/images/live-site/75770c4fa3-6785dc3d54db2.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T010.html",
+            "title": "RD-T010广泛适用于汽车内饰、家用电器 、工业机械、咖啡机、打印机",
+            "model": "RD-T010",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d40a9d733.JPG",
+            "image": "/images/live-site/37df01aab6-6785d40a9d733.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°c"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-vane-damper-RD-T009.html",
+            "title": "RD-T009 适用汽车点烟器、汽车眼镜盒、 内饰、电器汽车翻盖、 家用电器、 工业机械",
+            "model": "RD-T009",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc50815c9.JPG",
+            "image": "/images/live-site/0e9575b602-6785dc50815c9.JPG",
+            "specifications": [
+              "尺寸:Φ14.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T008.html",
+            "title": "RD-T008适用于汽车眼镜盒、 内饰、电器汽车翻盖、 家用电器、 工业机械",
+            "model": "RD-T008",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc66dad6c.JPG",
+            "image": "/images/live-site/a600d779a1-6785dc66dad6c.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T003.html",
+            "title": "RD-T003适用于电器汽车翻盖、汽车内饰、 家用电器、 工业机械",
+            "model": "RD-T003",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc7881698.JPG",
+            "image": "/images/live-site/e4876ad597-6785dc7881698.JPG",
+            "specifications": [
+              "尺寸:Φ7.2",
+              "模数:0.6",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T002.html",
+            "title": "RD-T002适用于电器汽车翻盖、汽车内饰、 家用电器、 工业机械",
+            "model": "RD-T002",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc8cc264c.JPG",
+            "image": "/images/live-site/fdcab97d34-6785dc8cc264c.JPG",
+            "specifications": [
+              "尺寸:φ7.8",
+              "模数:0.6",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-rd-t001.html",
+            "title": "RD-T001适用于家电、汽车、橱柜、座椅、电器汽车翻盖、汽车内饰、 家用电器、 工业机械",
+            "model": "RD-T001",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dc9ecc0a4.JPG",
+            "image": "/images/live-site/55761beeda-6785dc9ecc0a4.JPG",
+            "specifications": [
+              "尺寸:φ7.8",
+              "模数:0.6",
+              "齿外径:7.8",
+              "压力角:20°"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-10L.html",
+            "title": "RD-10L 适用于左件单向制动离合器、汽车升降式杯托、汽车内饰、家用电器、工业机械",
+            "model": "RD-10L",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250114/6785f974e3555.png",
+            "image": "/images/live-site/3fe3998154-6785f974e3555.png",
+            "specifications": [
+              "尺寸:Φ13",
+              "模数:1.0",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-10R.html",
+            "title": "RD-10R 适用于右件单向制动离合器、汽车升降式杯托、汽车内饰、家用电器、工业机械",
+            "model": "RD-10R",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785daef0f26e.JPG",
+            "image": "/images/live-site/23a67a8ec9-6785daef0f26e.JPG",
+            "specifications": [
+              "尺寸:Φ13",
+              "模数:1.0",
+              "安装方式:螺钉"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/gear-damper-2.html"
+      },
+      {
+        "number": 3,
+        "path": "/gear-damper/index_3.html",
+        "products": [
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T023.html",
+            "title": "RD-T023适用于眼镜盒、杯托、家电、智能锁",
+            "model": "RD-T023",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d0ae6efc8.JPG",
+            "image": "/images/live-site/53e18ef2d4-6785d0ae6efc8.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-RD-T015.html",
+            "title": "RD-T015 适用汽车内饰  家用电器 工业机械",
+            "model": "RD-T015",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d3ac73352.JPG",
+            "image": "/images/live-site/e10a24d01b-6785d3ac73352.JPG",
+            "specifications": [
+              "压力角:20°",
+              "阻值范围:0.5-5Ncm",
+              "齿数:11"
+            ]
+          },
+          {
+            "path": "/gear-damper/gear-rotary-damper-rd-t039.html",
+            "title": "RD-T039适用于汽车阻尼器、家电阻尼器、汽车用塑料阻尼齿轮 减震阻尼器 双向塑料转轮塑胶总成件缓冲器",
+            "model": "RD-T039",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d7fd68749.JPG",
+            "image": "/images/live-site/6070e2faef-6785d7fd68749.JPG",
+            "specifications": [
+              "尺寸:Φ10.4",
+              "模数:0.8",
+              "压力角:20°"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/gear-damper-3.html"
+      }
+    ]
+  },
+  {
+    "id": "axial-damper",
+    "label": "圆筒阻尼器",
+    "path": "/axial-dampers/",
+    "description": "圆筒阻尼器通过硅油黏度与阻尼结构控制旋转动作，适用于安全把手、汽车门把手、中控扶手、衣帽钩等部件，也可用于家电与其他机构。",
+    "image": "/images/live-site/90045378b9-6530dd203df7d.png",
+    "pages": [
+      {
+        "number": 1,
+        "path": "/axial-dampers/",
+        "products": [
+          {
+            "path": "/axial-dampers/圆桶齿轮轴阻尼器  RD-T020扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html",
+            "title": "圆桶齿轮轴阻尼器 RD-T020扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手",
+            "model": "RD-T020",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260202/6980146406dc7.png",
+            "image": "/images/live-site/b12cc19b02-6980146406dc7.png",
+            "specifications": [
+              "尺寸:Φ12.9",
+              "孔尺寸:φ4.1"
+            ]
+          },
+          {
+            "path": "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html",
+            "title": "圆桶 齿轮 轴阻尼器  RD-T013E扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手",
+            "model": "RD-T013E",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260202/698015599092f.png",
+            "image": "/images/live-site/654d134bac-698015599092f.png",
+            "specifications": [
+              "尺寸:Φ13",
+              "孔尺寸:φ4.1"
+            ]
+          },
+          {
+            "path": "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html",
+            "title": "圆桶 齿轮 轴阻尼器  RD-T013D汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫",
+            "model": "RD-T013D",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260202/6980159e8d500.png",
+            "image": "/images/live-site/655dda974d-6980159e8d500.png",
+            "specifications": [
+              "尺寸:Φ13",
+              "孔尺寸:φ4.1"
+            ]
+          },
+          {
+            "path": "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013C汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html",
+            "title": "圆桶 齿轮 轴阻尼器 RD-T013C汽车内饰、家用电器、工业机械、车顶把手、吸尘器、扫地机器人",
+            "model": "RD-T013C",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260202/698014b43eb98.png",
+            "image": "/images/live-site/845bf799a0-698014b43eb98.png",
+            "specifications": [
+              "尺寸:Φ13",
+              "孔尺寸:φ4.1"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-RD-T012E.html",
+            "title": "圆筒阻尼器 RD-T012E适用于汽车内饰衣帽钩、中控扶手、咖啡机、家电、汽车阻尼器",
+            "model": "RD-T012E",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260202/6980150931ad1.jpg",
+            "image": "/images/live-site/d56d042422-6980150931ad1.jpg",
+            "specifications": [
+              "尺寸:Φ12",
+              "外径:φ12"
+            ]
+          },
+          {
+            "path": "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html",
+            "title": "RD-V088（铜轴心）适用于马桶阻尼器、智能卫浴",
+            "model": "RD-V088",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/689197e1aaba2.jpg",
+            "image": "/images/live-site/538cc2ab96-689197e1aaba2.jpg",
+            "specifications": [
+              "尺寸:Φ20",
+              "轴尺寸:φ12",
+              "高度:37.2"
+            ]
+          },
+          {
+            "path": "/axial-dampers/rd-v088wutongzhouxinshiyongyumatongzuniqizhinengweiyu.html",
+            "title": "RD-V088（无铜轴心）适用于马桶阻尼器、智能卫浴",
+            "model": "RD-V088",
+            "imageSource": "https://www.chinateao.com/data/upload/20260123/6973168d1ee95.JPG",
+            "image": "/images/live-site/eb3e9aac2b-6973168d1ee95.JPG",
+            "specifications": [
+              "尺寸:Φ20",
+              "轴尺寸:φ12",
+              "高度:37.2"
+            ]
+          },
+          {
+            "path": "/axial-dampers/rd-t013ashiyongyuqicheneishijiayongdianqigongyejixiechedingbashouxichenqisaodijiqirenanquanlashou.html",
+            "title": "RD-T013A适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手",
+            "model": "RD-T013A",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250724/68819a0cf0ddf.jpg",
+            "image": "/images/live-site/adb4679b94-68819a0cf0ddf.jpg",
+            "specifications": []
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper- RD-T138.html",
+            "title": "RD-T138适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器、工业机械",
+            "model": "RD-T138",
+            "imageSource": "https://www.chinateao.com/data/upload/20250722/687f256680eaf.JPG",
+            "image": "/images/live-site/ffcea935a7-687f256680eaf.JPG",
+            "specifications": [
+              "Size:Φ16"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-RD-R018.html",
+            "title": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
+            "model": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785fa0f2831f.JPG",
+            "image": "/images/live-site/658646f1f5-6785fa0f2831f.JPG",
+            "specifications": [
+              "尺寸:φ8",
+              "孔尺寸:φ5.3"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-RD-T017.html",
+            "title": "RD-T017适用于汽车内饰衣帽钩、中控扶手、咖啡机、家电",
+            "model": "RD-T017",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d20ea208a.JPG",
+            "image": "/images/live-site/7c6df3b7bc-6785d20ea208a.JPG",
+            "specifications": [
+              "尺寸:Φ10",
+              "模数:φ3.3"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-RD-T013B.html",
+            "title": "RD-T013B适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手",
+            "model": "RD-T013B",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d933afdee.JPG",
+            "image": "/images/live-site/dd6a310181-6785d933afdee.JPG",
+            "specifications": [
+              "尺寸:Φ12.9",
+              "孔尺寸:φ4.1"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/axial-dampers.html"
+      },
+      {
+        "number": 2,
+        "path": "/axial-dampers/index_2.html",
+        "products": [
+          {
+            "path": "/axial-dampers/axial-barrel-damper-rd-t012d.html",
+            "title": "RD-T012D 广泛适用于汽车内饰、中控扶手、咖啡机、汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
+            "model": "RD-T012D",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250114/6786023556986.png",
+            "image": "/images/live-site/6331b2f01b-6786023556986.png",
+            "specifications": [
+              "尺寸:Φ12",
+              "孔内径:φ4.3"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-rd-t012c.html",
+            "title": "RD-T012C 适用于中控扶手、咖啡机、汽车内饰、家用电器、工业机械、车顶把手、吸尘器汽车安全拉手 顶棚拉",
+            "model": "RD-T012C",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d96c7a315.JPG",
+            "image": "/images/live-site/4b4ba3eec1-6785d96c7a315.JPG",
+            "specifications": [
+              "尺寸:Φ12",
+              "孔内径:φ4.2"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-rd-t012b.html",
+            "title": "RD-T012B适用于汽车把手套缓冲器 新型垃圾箱阻尼器 内嵌式插座翻盖圆形阻尼轮适用于汽车把手、垃圾箱、家电等",
+            "model": "RD-T012B",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250724/68818bfe643f9.jpg",
+            "image": "/images/live-site/4bf035b037-68818bfe643f9.jpg",
+            "specifications": [
+              "尺寸:Φ12",
+              "直径:φ4.2"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-RD-T012A.html",
+            "title": "RD-T012A适用于汽车安全拉手、顶棚拉手适用干汽车内饰,家用电器、工业机械、车顶把手、吸尘器",
+            "model": "RD-T012A",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785df340d67d.JPG",
+            "image": "/images/live-site/576d87c30e-6785df340d67d.JPG",
+            "specifications": [
+              "尺寸:Φ12",
+              "孔直径:φ4.2"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper- RD-V088.html",
+            "title": "RD-V088适用于马桶阻尼器、智能卫浴",
+            "model": "RD-V088",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785de0649285.JPG",
+            "image": "/images/live-site/031acca0b9-6785de0649285.JPG",
+            "specifications": [
+              "尺寸:Φ20",
+              "轴尺寸:φ12",
+              "高度:37.2"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/axial-dampers-2.html"
+      }
+    ]
+  },
+  {
+    "id": "glove-box-damper",
+    "label": "手套箱阻尼器",
+    "path": "/Glove Box Dampers/",
+    "description": "手套箱阻尼器为开启过程提供缓冲阻力，使手套箱平稳、缓慢开启。适用于不同类型和尺寸的汽车手套箱，选型时需结合安装结构与运动行程。",
+    "image": "/images/live-site/dfd940d3b6-6530dd3ee7190.png",
+    "pages": [
+      {
+        "number": 1,
+        "path": "/Glove Box Dampers/",
+        "products": [
+          {
+            "path": "/Glove Box Dampers/rd-V130-shiyongyuqicheshoutaoxiang-shounahe.html",
+            "title": "RD-V130 适用于汽车手套箱、 收纳盒",
+            "model": "RD-V130",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/6891a4b6dc890.jpg",
+            "image": "/images/live-site/5ceb05b2cb-6891a4b6dc890.jpg",
+            "specifications": [
+              "有效行程:50MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html",
+            "title": "RD-V127 适用于汽车手套箱、 收纳盒",
+            "model": "RD-V127",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/6891a28667886.jpg",
+            "image": "/images/live-site/6b7e54f073-6891a28667886.jpg",
+            "specifications": [
+              "有效行程:60mm"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html",
+            "title": "RD-V107适用于家电内饰阻尼器、汽车手套箱、汽车收纳盒",
+            "model": "RD-V107",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/68919dc441eb2.jpg",
+            "image": "/images/live-site/18950c6bd3-68919dc441eb2.jpg",
+            "specifications": [
+              "有效行程:60MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/rd-t183shiyongyuqichezawuxiangsuojigouqichefushouxiang.html",
+            "title": "RD-T183适用于汽车杂物箱锁机构、汽车扶手箱",
+            "model": "RD-T183",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/689178a4312ef.png",
+            "image": "/images/live-site/5f91f0e1f0-689178a4312ef.png",
+            "specifications": [
+              "有效行程:10MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/air-damper-rd-v118.html",
+            "title": "空气阻尼器 汽车扶手箱阻尼器 RD-V118",
+            "model": "RD-V118",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d5108d1c9.JPG",
+            "image": "/images/live-site/ae2e4cb7a6-6785d5108d1c9.JPG",
+            "specifications": [
+              "有效行程:60MM",
+              "Component module:"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/organizer-rd-t181.html",
+            "title": "RD-T181适用于汽车杂物箱锁机构、汽车扶手箱",
+            "model": "RD-T181",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dcfe14f1c.JPG",
+            "image": "/images/live-site/ff16255eb4-6785dcfe14f1c.JPG",
+            "specifications": [
+              "有效行程:10MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/organizer- RD-T180A.html",
+            "title": "RD-T180A适用于汽车杂物箱锁机构、汽车扶手箱",
+            "model": "RD-T180A",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dd131c6c6.JPG",
+            "image": "/images/live-site/8d9d376b5f-6785dd131c6c6.JPG",
+            "specifications": [
+              "有效行程:10MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/organizer- RD-T180.html",
+            "title": "RD-T180适用于汽车杂物箱锁机构、汽车扶手箱",
+            "model": "RD-T180",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dd25a535d.JPG",
+            "image": "/images/live-site/dc6e207e6b-6785dd25a535d.JPG",
+            "specifications": [
+              "有效行程:12MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/liner-damper- RD-V129.html",
+            "title": "RD-V129 适用于汽车手套箱、 收纳盒",
+            "model": "RD-V129",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dd4673fbe.JPG",
+            "image": "/images/live-site/a6ee2e5dcb-6785dd4673fbe.JPG",
+            "specifications": [
+              "有效行程:50MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/liner-damper- RD-V128.html",
+            "title": "RD-V128 适用于汽车手套箱、 收纳盒",
+            "model": "RD-V128",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dd5713214.JPG",
+            "image": "/images/live-site/c48f3a8d05-6785dd5713214.JPG",
+            "specifications": [
+              "有效行程:60MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/gear-rotary-vane-damper-RD-V127.html",
+            "title": "RD-V127适用于汽车手套箱、 收纳盒",
+            "model": "RD-V127",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250114/678601981b8d7.png",
+            "image": "/images/live-site/55c46991e6-678601981b8d7.png",
+            "specifications": [
+              "有效行程:75MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/liner-damper- RD-V126.html",
+            "title": "RD-V126适用于汽车扶手箱",
+            "model": "RD-V126",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dd92b5261.JPG",
+            "image": "/images/live-site/e6365546fa-6785dd92b5261.JPG",
+            "specifications": [
+              "有效行程:60MM",
+              "feature:Can control the lights in the glove box"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/glove-box-dampers.html"
+      },
+      {
+        "number": 2,
+        "path": "/Glove Box Dampers/index_2.html",
+        "products": [
+          {
+            "path": "/Glove Box Dampers/axial-barrel-damper-rd-v108a.html",
+            "title": "RD-V108A 适用于家电内饰阻尼器、汽车手套箱",
+            "model": "RD-V108A",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785dda440773.JPG",
+            "image": "/images/live-site/2a502c0cba-6785dda440773.JPG",
+            "specifications": [
+              "有效行程:60MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/air-damper- RD-V108.html",
+            "title": "RD-V108适用于家电内饰阻尼器、汽车手套箱、汽车收纳盒",
+            "model": "RD-V108",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250114/6786010114051.jpg",
+            "image": "/images/live-site/8dc0cb2ca0-6786010114051.jpg",
+            "specifications": [
+              "有效行程:60MM"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/axial-barrel-damper- RD-V08.html",
+            "title": "空气拉杆阻尼器 RD-V08适用于汽车扶手箱、杂物箱",
+            "model": "RD-V08",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d2cb47c82.JPG",
+            "image": "/images/live-site/a16d9dfb72-6785d2cb47c82.JPG",
+            "specifications": [
+              "有效行程:60MM",
+              "安装方式:卡扣"
+            ]
+          },
+          {
+            "path": "/Glove Box Dampers/air-damper-RD-V109.html",
+            "title": "线性 空气拉绳阻尼RD-V109广泛适用汽车内饰、汽车手套箱",
+            "model": "RD-V109",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d44774ff7.JPG",
+            "image": "/images/live-site/2714977d17-6785d44774ff7.JPG",
+            "specifications": [
+              "拉力:80MM/秒 20N"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/glove-box-dampers-2.html"
+      }
+    ]
+  },
+  {
+    "id": "latch",
+    "label": "锁扣",
+    "path": "/latches/",
+    "description": "锁扣用于盖板及翻盖机构的锁定与解锁，结构小巧，便于安装。可用于汽车眼镜盒、杯架、储物盒、充电接口及家用电器等场景。",
+    "image": "/images/live-site/bcc31f5e9a-6530dd5d0d032.png",
+    "pages": [
+      {
+        "number": 1,
+        "path": "/latches/",
+        "products": [
+          {
+            "path": "/latches/rd-09wushengsuokoumensuo-shiyongyuqicheneishi-jiayongdianqigongyejixie.html",
+            "title": "RD-09无声锁扣门锁 适用于汽车内饰 、家用电器、工业机械",
+            "model": "RD-09",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/6891a2f16b4ec.jpg",
+            "image": "/images/live-site/c533e91f33-6891a2f16b4ec.jpg",
+            "specifications": [
+              "声音:无声"
+            ]
+          },
+          {
+            "path": "/latches/rd-12shiyongyuqicheanyasuokou-lajitongfandankaiguan-danhuangkakouxiang.html",
+            "title": "RD-12适用于汽车按压锁扣 垃圾桶反弹开关 弹簧卡扣箱",
+            "model": "RD-12",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/68915dfdc8ad2.jpg",
+            "image": "/images/live-site/ae97c38cd3-68915dfdc8ad2.jpg",
+            "specifications": [
+              "材质:POM"
+            ]
+          },
+          {
+            "path": "/latches/rd-01shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html",
+            "title": "RD-01适用于锁螺丝塑料门扣插销 尼龙门扣闩 塑料门吸碰珠机械门锁配件插扣件",
+            "model": "RD-01",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/68915859d772d.jpg",
+            "image": "/images/live-site/af72bc3670-68915859d772d.jpg",
+            "specifications": [
+              "材质:PA66"
+            ]
+          },
+          {
+            "path": "/latches/jiakechongzisuoqi-xiaofangguimenfandanqimenpengguixi-yinxingmensuliaodantiaoanyashipengzhu.html",
+            "title": "RD-18甲壳虫自锁器 消防柜门反弹器门碰柜吸 隐形门塑料弹跳按压式碰珠",
+            "model": "RD-18",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250723/688078e37c510.jpg",
+            "image": "/images/live-site/bb3f6c25c7-688078e37c510.jpg",
+            "specifications": [
+              "材质:ABC"
+            ]
+          },
+          {
+            "path": "/latches/rd-05shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html",
+            "title": "RD-05适用于锁螺丝塑料门扣插销 尼龙门扣闩 塑料门吸碰珠机械门锁配件插扣件",
+            "model": "RD-05",
+            "imageSource": "https://www.chinateao.com/data/upload/20250723/688040e7bf189.JPG",
+            "image": "/images/live-site/7c83b349dd-688040e7bf189.JPG",
+            "specifications": [
+              "材质:PA66"
+            ]
+          },
+          {
+            "path": "/latches/push-push-latch- RD-08.html",
+            "title": "RD-08无声锁扣门锁 适用于汽车内饰 、家用电器、工业机械",
+            "model": "RD-08",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d77c606d3.JPG",
+            "image": "/images/live-site/04eb30f288-6785d77c606d3.JPG",
+            "specifications": [
+              "声音:无声"
+            ]
+          },
+          {
+            "path": "/latches/push-push-latch-RD-03.html",
+            "title": "RD-03适用于汽车按压锁扣 垃圾桶反弹开关 弹簧卡扣箱",
+            "model": "RD-03",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d79fdb7f7.JPG",
+            "image": "/images/live-site/51034d86ed-6785d79fdb7f7.JPG",
+            "specifications": [
+              "材质:POM"
+            ]
+          },
+          {
+            "path": "/latches/push-push-latch- RD-02.html",
+            "title": "RD-02适用于锁螺丝塑料门扣插销 尼龙门扣闩 塑料门吸碰珠机械门锁配件插扣件",
+            "model": "RD-02",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785d7c20119d.JPG",
+            "image": "/images/live-site/50ff52bb29-6785d7c20119d.JPG",
+            "specifications": [
+              "材质:PA66"
+            ]
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/latches.html"
+      }
+    ]
+  },
+  {
+    "id": "other",
+    "label": "其他零部件",
+    "path": "/qitaqichelingbujian/",
+    "description": "配合阻尼器、锁扣使用的功能性零部件，用于缓冲、平稳启闭和定位等机构。产品覆盖汽车、家电及工业设备应用，支持结合具体结构评估。",
+    "image": "/images/live-site/38aaa0009c-68c7afa49b219.jpg",
+    "pages": [
+      {
+        "number": 1,
+        "path": "/qitaqichelingbujian/",
+        "products": [
+          {
+            "path": "/qitaqichelingbujian/rd-v112.html",
+            "title": "RD-V112",
+            "model": "RD-V112",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250805/68919e2fe4545.jpg",
+            "image": "/images/live-site/221edbb5ff-68919e2fe4545.jpg",
+            "specifications": []
+          },
+          {
+            "path": "/qitaqichelingbujian/rd-tr02-jiaolian-shiyongyumenheye.html",
+            "title": "RD-TR02 铰链 适用于门合页",
+            "model": "RD-TR02 铰链 适用于门合页",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892d383adeb0.jpg",
+            "image": "/images/live-site/c739a28d36-6892d383adeb0.jpg",
+            "specifications": []
+          },
+          {
+            "path": "/qitaqichelingbujian/rd-tr01-jiaolian-shiyongyumenheye.html",
+            "title": "RD-TR01 铰链 适用于门合页",
+            "model": "RD-TR01 铰链 适用于门合页",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892e51818efb.jpg",
+            "image": "/images/live-site/efda045aa0-6892e51818efb.jpg",
+            "specifications": []
+          },
+          {
+            "path": "/qitaqichelingbujian/rd-15kaiguanshiyongyuqicheneishi-jiayongdianqigongyejixie.html",
+            "title": "RD-15开关适用于汽车内饰 、家用电器、工业机械",
+            "model": "RD-15",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892e53863bbd.jpg",
+            "image": "/images/live-site/4ee8fa40d5-6892e53863bbd.jpg",
+            "specifications": [
+              "开关:开关"
+            ]
+          },
+          {
+            "path": "/qitaqichelingbujian/rd-t216-jiaolian-shiyongyumenheye.html",
+            "title": "RD-T216 铰链 适用于门合页",
+            "model": "RD-T216",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250806/6892e55e5fc91.jpg",
+            "image": "/images/live-site/d04353309e-6892e55e5fc91.jpg",
+            "specifications": []
+          },
+          {
+            "path": "/qitaqichelingbujian/danzhu-rd-13-shiyongyuqicheneishi-chuwuhe-xianweikaiguan.html",
+            "title": "弹珠  RD-13  适用于汽车内饰 储物盒 限位开关",
+            "model": "RD-13",
+            "imageSource": "https://www.chinateao.com/data/watermark/20250114/6785df0304ce9.png",
+            "image": "/images/live-site/4f782b3a47-6785df0304ce9.png",
+            "specifications": []
+          },
+          {
+            "path": "/qitaqichelingbujian/push-push-latch-RD-11.html",
+            "title": "RD-11适用于汽车内饰、眼镜盒",
+            "model": "RD-11",
+            "imageSource": "https://www.chinateao.com/data/upload/20250114/6785de1f25516.JPG",
+            "image": "/images/live-site/4f2d1b2669-6785de1f25516.JPG",
+            "specifications": []
+          }
+        ],
+        "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/other.html"
+      }
+    ]
+  }
+]

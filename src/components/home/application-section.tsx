@@ -43,7 +43,7 @@ function ChargePortIcon() {
 const appCards = [
   {
     icon: <CupIcon />,
-    title: "汽车杯托",
+    title: "汽车杯托 / 储物盒",
     description: "解决弹开过快、末端撞击和手感突兀问题，让开合节奏一致且安静。",
     recommend: "推荐：齿轮阻尼器 RD-T 系列",
   },
@@ -55,15 +55,15 @@ const appCards = [
   },
   {
     icon: <StorageIcon />,
-    title: "眼镜盒 / 储物盒",
-    description: "小空间开合结构的最佳选择，支持多种安装方式定制。",
-    recommend: "推荐：齿轮 / 轴向阻尼器",
+    title: "家电 / 卫浴盖板",
+    description: "洗衣机、马桶盖、电饭煲等开合结构的缓降静音，提升产品品质感。",
+    recommend: "推荐：轴向阻尼器 / 定制机构",
   },
   {
     icon: <ChargePortIcon />,
-    title: "充电口盖 / 家电卫浴",
-    description: "外饰盖板开启控制、马桶盖缓降、家电盖板的缓开缓闭体验优化。",
-    recommend: "推荐：轴向阻尼器 / 定制机构",
+    title: "医疗 / 工业机构",
+    description: "设备罩壳、检修面板、运动机构模块的可控缓冲与平稳运动方案。",
+    recommend: "推荐：齿轮 / 轴向阻尼器",
   },
 ];
 
@@ -92,11 +92,11 @@ export function ApplicationSection() {
 
               <div className="relative z-10">
                 <h3 className="text-[28px] leading-[1.25] font-semibold max-w-[450px]">
-                  汽车内饰开合机构的<br />
+                  多领域开合机构的<br />
                   <em className="not-italic text-brand-500 font-black">静音缓冲方案</em>
                 </h3>
                 <p className="mt-3 text-[14.5px] leading-[1.8] text-white/75 max-w-[440px]">
-                  解决杯托弹开撞击、手套箱下落过快、眼镜盒异响、充电口盖回弹等问题。稳定扭矩输出，适配 -30度C ～ +80度C 温度区间。
+                  解决杯托弹开撞击、手套箱下落过快、家电盖板缓降、马桶盖缓冲、医疗设备平稳运动等问题。稳定扭矩输出，适配 -30°C ～ +80°C 温度区间。
                 </p>
               </div>
 
