@@ -10,10 +10,25 @@ import { inspectionCards, engineeringCapabilities, labGroups, iatfNote } from "@
 const inspectionIcons = [Gauge, Eye];
 const capabilityIcons = [Gauge, Clock, Thermometer, Target, Sliders, Waves];
 
+const qualityJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "东莞市特澳电子科技有限公司",
+  alternateName: "特澳 TEAO",
+  url: "https://www.chinateao.com/",
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: "IATF 16949 认证",
+    credentialCategory: "质量管理体系认证",
+  },
+};
+
 export default function QualityPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(qualityJsonLd) }} />
       <section className={`${container} py-14`}>
+        <h1 className="sr-only">质量控制 | IATF 16949 认证 · 100% 扭矩检测</h1>
         <SectionHead
           eyebrow="质量控制"
           title="每一件阻尼器,都有据可查"
