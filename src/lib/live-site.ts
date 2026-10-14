@@ -2,6 +2,8 @@ import categoryRoutes from "@/content/live-site/category-routes.json";
 
 export const LIVE_ORIGIN = "https://www.chinateao.com";
 export const PILOT_PRODUCT_PATH = "/gear-damper/gear-rotary-damper-rd-t038-v038.html";
+export const QUALITY_PATH = "/quality-control/";
+export const FAQ_PATH = "/faq/";
 export const liveCategories = categoryRoutes;
 
 export function developmentCategoryPath(id: string): string | null {
@@ -17,11 +19,13 @@ export function legacyPathFromSegments(segments: readonly string[]): string {
     } catch { return segment; }
   }).join("/");
 }
-export function getPilotPage(segments: readonly string[]): "category" | "product" | null {
+export function getPilotPage(segments: readonly string[]): "category" | "product" | "quality" | "faq" | null {
   const path = legacyPathFromSegments(segments);
   if (liveCategories.some(category => path + "/" === category.path)) return "category";
   if (liveCategories.some(category => Array.from({ length: category.pageCount - 1 }, (_, index) => category.path + `index_${index + 2}.html`).includes(path))) return "category";
   if (path === PILOT_PRODUCT_PATH) return "product";
+  if (path + "/" === QUALITY_PATH) return "quality";
+  if (path + "/" === FAQ_PATH) return "faq";
   return null;
 }
 

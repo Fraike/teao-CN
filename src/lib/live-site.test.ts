@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { getPilotPage, developmentCategoryPath, liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH } from "./live-site";
+import { getPilotPage, developmentCategoryPath, liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH, FAQ_PATH } from "./live-site";
 import { getCategoryRoute } from "./live-catalog";
 
 test("original category and html detail resolve without renaming", () => {
@@ -67,4 +67,18 @@ test("encoded metadata segments resolve like decoded page segments without doubl
     assert.equal(getPilotPage(segments), null);
     assert.equal(getCategoryRoute(segments), null);
   }
+});
+
+test("quality and faq sections resolve locally, with and without trailing slash", () => {
+  assert.equal(getPilotPage(["quality-control"]), "quality");
+  assert.equal(getPilotPage(["faq"]), "faq");
+  assert.equal(getPilotPage(["quality-control", "x"]), null);
+  assert.equal(liveHref("/quality-control/"), "/quality-control/");
+  assert.equal(liveHref("/quality-control"), "/quality-control");
+  assert.equal(liveHref("/faq/"), "/faq/");
+});
+
+test("unknown and near-miss paths still go to the live origin", () => {
+  assert.equal(liveHref("/quality/"), LIVE_ORIGIN + "/quality/");
+  assert.equal(liveHref("/faqs/"), LIVE_ORIGIN + "/faqs/");
 });
