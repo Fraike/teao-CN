@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { liveCategories } from "@/lib/live-site";
+import { liveCategories, liveHref } from "@/lib/live-site";
 
 const footerLinks = [
   {
@@ -11,9 +11,8 @@ const footerLinks = [
     title: "关于",
     links: [
       { label: "关于我们", href: "/about" },
-      { label: "应用领域", href: "/applications" },
-      { label: "制造实力", href: "/#factory" },
-      { label: "质量认证", href: "/#quality" },
+      { label: "应用领域", href: liveHref("/applications/") },
+      { label: "质量认证", href: "/quality-control/" },
     ],
   },
   {

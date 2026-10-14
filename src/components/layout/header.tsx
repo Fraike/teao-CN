@@ -1,144 +1,163 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { liveCategories } from "@/lib/live-site";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { liveCatalog } from "@/lib/live-catalog";
+import { liveHref } from "@/lib/live-site";
 
 const navItems = [
   { label: "首页", href: "/" },
-  {
-    label: "产品中心",
-    href: "/products/",
-    children: liveCategories.map(category => ({ label: category.label, href: category.path })),
-  },
-  { label: "应用领域", href: "/applications" },
-  { label: "制造实力", href: "/#factory" },
-  { label: "质量认证", href: "/#quality" },
+  { label: "产品中心", href: "/products/", mega: true },
+  { label: "应用领域", href: liveHref("/applications/") },
+  { label: "质量认证", href: "/quality-control/" },
   { label: "关于我们", href: "/about" },
   { label: "联系我们", href: "/contact" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleScroll = useCallback(() => {
-    setScrolled(window.scrollY > 10);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 18);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    const frame = requestAnimationFrame(handleScroll);
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+  }, [mobileOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full border-b transition-shadow duration-300 ${
-        scrolled
-          ? "border-line bg-white/95 shadow-md backdrop-blur-md"
-          : "border-transparent bg-white"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
-        {/* Logo */}
-        <Link href="/" className="flex shrink-0 items-center gap-3">
-          <Image
-            src="/images/logo-color.webp"
-            alt="TEAO 特澳"
-            width={52}
-            height={52}
-            priority
-            className="rounded"
-          />
-          <span className="text-lg font-black tracking-[0.12em] text-brand-500">
-            TEAO
-          </span>
-        </Link>
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <nav
+          className={`flex h-[73px] items-center justify-between px-5 lg:px-8 transition-all duration-300 ${
+            scrolled
+              ? "border-b border-line bg-white/90 shadow-[0_1px_3px_rgba(0,0,0,.04)] backdrop-blur-xl"
+              : "border-b border-transparent bg-white/70 backdrop-blur-lg"
+          }`}
+        >
+          {/* Brand */}
+          <Link href="/" className="flex shrink-0 items-center gap-3">
+            <Image
+              src="/images/logo-color.webp"
+              alt="TEAO 特澳"
+              width={44}
+              height={44}
+              priority
+              className="rounded"
+            />
+            <span className="text-lg font-black tracking-[0.12em] text-brand-500">TEAO</span>
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav aria-label="主导航" className="hidden items-center gap-1 xl:flex">
-          {navItems.map((item) => (
-            <div
-              key={item.label}
-              className="relative"
-              onMouseEnter={() =>
-                item.children && setOpenDropdown(item.label)
-              }
-              onMouseLeave={() => setOpenDropdown(null)}
-              onFocus={() => item.children && setOpenDropdown(item.label)}
-              onBlur={(event) => {
-                if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(null);
-              }}
-            >
-              <Link
-                href={item.href}
-                className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-3.5 py-2.5 text-[15px] font-semibold text-ink-soft transition-colors hover:text-brand-500"
-              >
-                {item.label}
-                {item.children && (
-                  <svg
-                    className={`mt-px h-3.5 w-3.5 transition-transform duration-200 ${
-                      openDropdown === item.label ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+          {/* Desktop navigation */}
+          <div className="hidden items-center gap-6 text-[15px] font-semibold text-ink-soft lg:flex">
+            {navItems.map((item) =>
+              item.mega ? (
+                <div key={item.label} className="group relative flex min-h-[73px] items-center">
+                  <Link
+                    href={item.href}
+                    className="relative flex items-center gap-1 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-0.5 after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 group-hover:after:scale-x-100 hover:text-brand-500 transition-colors"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                )}
-              </Link>
-
-              {/* Dropdown */}
-              {item.children && openDropdown === item.label && (
-                <div className="absolute left-1/2 top-full pt-2 -translate-x-1/2">
-                  <div className="min-w-[180px] rounded-xl border border-line bg-white p-1.5 shadow-lg">
-                    {item.children.map((child) => (
+                    {item.label}
+                    <ChevronDown size={14} />
+                  </Link>
+                  {/* Mega menu */}
+                  <div className="invisible absolute left-1/2 top-full grid w-[760px] -translate-x-1/2 translate-y-2.5 grid-cols-5 gap-2 rounded-2xl border border-line bg-white p-3 opacity-0 shadow-[0_20px_60px_rgba(0,0,0,.08)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    {liveCatalog.map((cat) => (
                       <Link
-                        key={child.label}
-                        href={child.href}
-                        onClick={() => setOpenDropdown(null)}
-                        className="block rounded-lg px-4 py-2.5 text-[15px] font-medium text-ink-soft transition-colors hover:bg-brand-50 hover:text-brand-700"
+                        key={cat.id}
+                        href={liveHref(cat.path)}
+                        className="flex min-h-[142px] flex-col justify-between rounded-xl border border-line/60 bg-surface p-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/40 hover:bg-white"
                       >
-                        {child.label}
+                        <div className="relative h-[76px] w-full">
+                          <Image
+                            src={cat.image}
+                            alt={cat.label}
+                            fill
+                            className="rounded-lg bg-white object-contain p-1.5"
+                            sizes="140px"
+                          />
+                        </div>
+                        <strong className="mt-3 text-xs leading-tight text-ink">{cat.label}</strong>
                       </Link>
                     ))}
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
-        </nav>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="relative after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-0.5 after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-brand-500 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+          </div>
 
-        {/* CTA */}
-        <Link
-          href="/contact"
-          className="inline-flex shrink-0 items-center rounded-full bg-brand-500 px-6 py-3 text-[15px] font-bold text-white transition-colors hover:bg-brand-700"
-        >
-          获取报价
-        </Link>
-        <details className="relative xl:hidden">
-          <summary className="cursor-pointer rounded-lg border border-line px-3 py-2 text-sm font-semibold">菜单</summary>
-          <nav onClick={(event) => {
-            if ((event.target as HTMLElement).closest("a")) event.currentTarget.closest("details")?.removeAttribute("open");
-          }} aria-label="手机导航" className="absolute right-0 top-14 max-h-[75vh] w-[min(300px,calc(100vw-40px))] overflow-y-auto rounded-xl border border-line bg-white p-4 shadow-lg">
-            {navItems.map(item => <div key={item.href} className="border-b border-line-soft py-2 last:border-0">
-              <Link href={item.href} className="block px-2 py-2 font-semibold">{item.label}</Link>
-              {item.children && <div className="ml-3 border-l border-line pl-3">{item.children.map(child => <Link key={child.href} href={child.href} className="block py-2 text-sm text-muted hover:text-brand-700">{child.label}</Link>)}</div>}
-            </div>)}
-          </nav>
-        </details>
-      </div>
-    </header>
+          {/* Actions */}
+          <div className="flex items-center gap-2.5">
+            <Link
+              href="/contact"
+              className="inline-flex h-9 items-center rounded-full bg-brand-500 px-4 text-[15px] font-bold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:h-[38px]"
+            >
+              获取报价
+            </Link>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="ml-1 p-1.5 text-ink-soft lg:hidden"
+              aria-label="切换菜单"
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="fixed inset-0 z-40 overflow-y-auto bg-white/95 pt-24 backdrop-blur-xl">
+          <div className="flex flex-col gap-2 px-6 pb-10">
+            {navItems.map((item) => (
+              <div key={item.label}>
+                <Link
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block border-b border-line py-3 text-lg font-semibold text-ink"
+                >
+                  {item.label}
+                </Link>
+                {item.mega && (
+                  <div className="grid grid-cols-2 gap-2 py-3">
+                    {liveCatalog.map((cat) => (
+                      <Link
+                        key={cat.id}
+                        href={liveHref(cat.path)}
+                        onClick={() => setMobileOpen(false)}
+                        className="rounded-lg border border-line px-3 py-2 text-sm text-muted transition-colors hover:border-brand-500/40 hover:text-brand-700"
+                      >
+                        {cat.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="mt-4 rounded-full bg-brand-500 py-3 text-center text-sm font-bold text-white"
+            >
+              获取报价
+            </Link>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
