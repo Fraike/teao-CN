@@ -21,7 +21,7 @@ export function LiveHeader() {
   return <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white">
     <div className="mx-auto flex h-[73px] max-w-7xl items-center justify-between gap-4 px-5 lg:px-8">
       <a href={liveHref("/")} aria-label="特澳首页" className="flex shrink-0 items-center gap-2">
-        <Image src="/images/logo-color.webp" width={44} height={44} alt="特澳 TEAO" priority />
+        <Image src="/images/logo-color.webp" width={96} height={36} alt="特澳 TEAO" priority className="h-9 w-auto object-contain" />
         <span className="text-xl font-black text-brand-700">TEAO <span className="text-base text-ink">特澳</span></span>
       </a>
       <nav aria-label="主导航" className="hidden items-center gap-5 xl:flex">

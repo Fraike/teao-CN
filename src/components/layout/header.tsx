@@ -42,16 +42,15 @@ export default function Header() {
           }`}
         >
           {/* Brand */}
-          <Link href="/" className="flex shrink-0 items-center gap-3">
+          <Link href="/" aria-label="特澳 TEAO 首页" className="relative block h-9 w-[96px] shrink-0">
             <Image
               src="/images/logo-color.webp"
               alt="TEAO 特澳"
-              width={44}
-              height={44}
+              fill
               priority
-              className="rounded"
+              sizes="96px"
+              className="object-contain object-left"
             />
-            <span className="text-lg font-black tracking-[0.12em] text-brand-500">TEAO</span>
           </Link>
 
           {/* Desktop navigation */}
