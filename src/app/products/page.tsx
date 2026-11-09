@@ -3,6 +3,7 @@ import { permanentRedirect } from "next/navigation";
 import { liveCatalog } from "@/lib/live-catalog";
 import { developmentCategoryPath, liveHref, LIVE_ORIGIN } from "@/lib/live-site";
 import { enrichProduct } from "@/lib/product-enrichment";
+import { compareModel } from "@/lib/product-sort";
 import { container } from "@/components/live-site/catalog";
 import ListingHero from "@/components/live-site/listing-hero";
 import ListingTabs from "@/components/live-site/listing-tabs";
@@ -21,9 +22,11 @@ export default async function ProductsPage({ searchParams }: { searchParams: Pro
   const categoryPath = typeof query.category === "string" ? developmentCategoryPath(query.category) : null;
   if (categoryPath) permanentRedirect(encodeURI(categoryPath));
 
-  const products = liveCatalog.flatMap(category =>
-    category.pages.flatMap(page => page.products.map(product => enrichProduct(category.id, product)))
-  );
+  const products = liveCatalog
+    .flatMap(category =>
+      category.pages.flatMap(page => page.products.map(product => enrichProduct(category.id, product)))
+    )
+    .sort((a, b) => compareModel(a.model, b.model));
 
   const listingJsonLd = {
     "@context": "https://schema.org",

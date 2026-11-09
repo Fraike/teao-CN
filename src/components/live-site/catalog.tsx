@@ -4,6 +4,7 @@ import products from "@/content/live-site/gear-products.json";
 import { liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH } from "@/lib/live-site";
 import { liveCatalog, type CatalogCategory, type CatalogPage, type CatalogProduct } from "@/lib/live-catalog";
 import { enrichProduct } from "@/lib/product-enrichment";
+import { compareModel } from "@/lib/product-sort";
 import ProductCard from "./product-card";
 import ListingHero from "./listing-hero";
 import ListingTabs from "./listing-tabs";
@@ -44,7 +45,13 @@ export function ProductCards({ related = false, items = products }: { related?: 
 }
 
 export function CategoryPage({ category = liveCatalog[0], page = category.pages[0] }: { category?: CatalogCategory; page?: CatalogPage } = {}) {
-  const enriched = page.products.map(product => enrichProduct(category.id, product));
+  const sorted = category.pages
+    .flatMap(item => item.products.map(product => enrichProduct(category.id, product)))
+    .sort((a, b) => compareModel(a.model, b.model));
+  const offset = category.pages
+    .slice(0, page.number - 1)
+    .reduce((sum, item) => sum + item.products.length, 0);
+  const enriched = sorted.slice(offset, offset + page.products.length);
   const totalCount = category.pages.reduce((sum, item) => sum + item.products.length, 0);
   const listingJsonLd = {
     "@context": "https://schema.org",
@@ -56,7 +63,7 @@ export function CategoryPage({ category = liveCatalog[0], page = category.pages[
       "@type": "ItemList",
       itemListElement: enriched.map((product, index) => ({
         "@type": "ListItem",
-        position: index + 1,
+        position: offset + index + 1,
         item: { "@type": "Product", name: product.model, description: product.title, url: liveHref(product.path) },
       })),
     },
