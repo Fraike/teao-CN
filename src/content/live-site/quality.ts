@@ -75,5 +75,5 @@ export const iatfNote = {
   description:
     "特澳以 IATF 16949 汽车行业质量管理体系运行,覆盖从设计、原材料采购到生产、检测与售后服务的全产品生命周期。通过客户反馈、内部审核与定期管理评审持续改进。",
   ctaLabel: "查看认证资质",
-  ctaHref: "/about",
+  ctaHref: "/about-us/",
 };
