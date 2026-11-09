@@ -8,9 +8,14 @@ import ApplicationsPage from "@/components/live-site/applications-page";
 import AutomotiveOverviewPage from "@/components/live-site/automotive-overview-page";
 import ApplicationScenesPage from "@/components/live-site/application-scenes-page";
 import SimpleApplicationPage from "@/components/live-site/simple-application-page";
-import { getPilotPage, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH } from "@/lib/live-site";
+import AboutPage from "@/components/live-site/about-page";
+import ContactPage from "@/components/live-site/contact-page";
+import NewsPage from "@/components/live-site/news-page";
+import NewsArticlePage from "@/components/live-site/news-article-page";
+import { getPilotPage, getNewsSlug, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH } from "@/lib/live-site";
 import { getCategoryRoute } from "@/lib/live-catalog";
 import { automotiveInteriorScenes, automotiveExteriorScenes, simpleApplications } from "@/content/live-site/applications";
+import { newsArticles } from "@/content/live-site/news";
 
 const QUALITY_META: Metadata = {
   title: { absolute: "质量控制 | IATF 16949 认证 · 100% 扭矩检测 | 特澳 TEAO" },
@@ -65,6 +70,32 @@ const INDUSTRIAL_APPLICATION_META: Metadata = {
   alternates: canon(INDUSTRIAL_APPLICATION_PATH), robots: noindex,
 };
 
+const ABOUT_META: Metadata = {
+  title: { absolute: "关于特澳 | 20+年阻尼器定制厂家" },
+  description: "特澳 TEAO 成立于 2001 年，专注阻尼器与锁扣机构研发制造 20 余年。IATF 16949 认证，8000 万件年产能，模具·注塑·装配·检测一体化源头工厂。",
+  alternates: canon(ABOUT_PATH), robots: { index: true, follow: true },
+};
+const CONTACTS_META: Metadata = {
+  title: { absolute: "联系我们" },
+  description: "联系特澳 TEAO 销售工程团队 — 提供图纸、样品或应用场景描述，工程师将在 2 小时内响应，为您提供选型建议与报价方案。",
+  alternates: canon(CONTACTS_PATH), robots: { index: true, follow: true },
+};
+const NEWS_META: Metadata = {
+  title: { absolute: "新闻 | 特澳 TEAO" },
+  description: "特澳最新动态、阻尼器工程进展、质量管理与技术资源。",
+  alternates: canon(NEWS_PATH), robots: { index: true, follow: true },
+};
+function newsArticleMeta(slug: string): Metadata {
+  const article = newsArticles.find(item => item.slug === slug)!;
+  return {
+    title: { absolute: `${article.title} | 特澳 TEAO` },
+    description: article.summary,
+    alternates: canon(`/news/${article.slug}.html`),
+    robots: { index: true, follow: true },
+    openGraph: { title: article.title, description: article.summary, type: "article", publishedTime: article.publishedAt },
+  };
+}
+
 type Props = { params: Promise<{ legacyPath: string[] }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -80,6 +111,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (type === "home-life") return HOME_LIFE_META;
   if (type === "office-equipment") return OFFICE_EQUIPMENT_META;
   if (type === "industrial-application") return INDUSTRIAL_APPLICATION_META;
+  if (type === "about") return ABOUT_META;
+  if (type === "contacts") return CONTACTS_META;
+  if (type === "news") return NEWS_META;
+  const newsSlug = getNewsSlug(segments);
+  if (type === "news-article" && newsSlug) return newsArticleMeta(newsSlug);
   const product = type === "product";
   const categoryRoute = getCategoryRoute(segments);
   return {
@@ -103,6 +139,14 @@ export default async function LegacyPage({ params }: Props) {
   if (type === "home-life") return <SimpleApplicationPage app={simpleApplications[0]} />;
   if (type === "office-equipment") return <SimpleApplicationPage app={simpleApplications[1]} />;
   if (type === "industrial-application") return <SimpleApplicationPage app={simpleApplications[2]} />;
+  if (type === "about") return <AboutPage />;
+  if (type === "contacts") return <ContactPage />;
+  if (type === "news") return <NewsPage />;
+  const newsSlug = getNewsSlug(segments);
+  if (type === "news-article" && newsSlug) {
+    const article = newsArticles.find(item => item.slug === newsSlug)!;
+    return <NewsArticlePage article={article} />;
+  }
   const route = getCategoryRoute(segments);
   if (route) return <CategoryPage category={route.category} page={route.page} />;
   if (type === "product") return <ProductDetail />;
