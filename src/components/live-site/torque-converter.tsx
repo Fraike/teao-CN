@@ -50,8 +50,14 @@ export default function TorqueConverter() {
           <div className="h-px flex-1 bg-line" />
         </div>
 
+        <p className="sr-only" aria-live="polite">
+          {results
+            ? `已按 ${value} ${TORQUE_UNITS.find(item => item.key === unit)?.label ?? unit} 换算`
+            : "请输入扭矩数值"}
+        </p>
+
         {results ? (
-          <div aria-live="polite" className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
             {results.map((result) => {
               const teaUnit = isTeaoTorqueUnit(result.key);
               return (
