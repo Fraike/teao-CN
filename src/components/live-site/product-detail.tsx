@@ -162,10 +162,24 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 </div>
               )}
 
+              {stats.length > 0 && (
+                <div className={`grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line ${rangeBar ? "mt-4" : "mt-8"}`}>
+                  {stats.map((item, index) => (
+                    <div
+                      key={item.label}
+                      className={`bg-white px-4 py-3 ${index === stats.length - 1 && stats.length % 2 === 1 ? "col-span-2" : ""}`}
+                    >
+                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-light">{item.label}</p>
+                      <p className="mt-1 text-[15px] font-black tabular-nums text-ink">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center gap-2 rounded-full bg-ink px-8 py-4 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_14px_30px_rgba(30,30,32,0.2)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-sm font-bold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
                 >
                   获取报价
                   <ArrowUpRight size={16} />
@@ -185,20 +199,6 @@ export default function ProductDetail({ product, category }: { product: ProductC
           </div>
         </div>
       </section>
-
-      {/* Dark performance band */}
-      {stats.length > 0 && (
-        <section className="bg-ink">
-          <div className={`${container} flex flex-wrap`}>
-            {stats.map(item => (
-              <div key={item.label} className="min-w-[150px] flex-1 border-l border-white/10 px-5 py-6 first:border-l-0 first:pl-0">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/45">{item.label}</p>
-                <p className="mt-2 text-lg font-black tracking-[-0.02em] tabular-nums text-white lg:text-xl">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
 
       {product.dimensionDrawing && (
         <section className={`${container} py-14`}>
@@ -257,11 +257,11 @@ export default function ProductDetail({ product, category }: { product: ProductC
           <SectionTitle index={nextSection()} title="型号对比" description="同系列不同变体的关键尺寸差异,便于快速选型。" />
           <div className="overflow-x-auto rounded-2xl border border-line bg-white">
             <table className="w-full min-w-[620px] text-left text-sm">
-              <thead className="bg-ink text-white">
+              <thead className="border-b border-brand-500/20 bg-brand-50 text-brand-700">
                 <tr>
-                  <th scope="col" className="px-5 py-4 text-[10px] font-black uppercase tracking-[0.14em] text-white/60">参数</th>
+                  <th scope="col" className="px-5 py-4 text-[10px] font-black uppercase tracking-[0.14em] text-brand-700/70">参数</th>
                   {product.variants.variants.map(model => (
-                    <th key={model} scope="col" className="px-5 py-4 text-right text-[12px] font-bold tabular-nums">{model}</th>
+                    <th key={model} scope="col" className="px-5 py-4 text-right text-[12px] font-black tabular-nums">{model}</th>
                   ))}
                 </tr>
               </thead>
