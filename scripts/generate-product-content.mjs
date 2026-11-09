@@ -116,6 +116,7 @@ for (const category of catalog) {
         : null;
 
       products[product.path] = {
+        path: product.path,
         slug: english.slug,
         categoryId: category.id,
         model: product.model,
@@ -134,6 +135,9 @@ for (const category of catalog) {
         specifications: spec?.specs ?? [],
         materials,
         applications,
+        applicationScenarios: (parseJson(english.application_scenarios) ?? [])
+          .filter(item => item?.image && existingImage(item.image))
+          .map(item => ({ image: item.image, label: item.label ?? "" })),
         dimensionDrawing: existingImage(english.dimension_drawing),
         performanceCharts:
           existingImage(performanceCharts.rotation) || existingImage(performanceCharts.temperature)

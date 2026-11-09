@@ -1991,14 +1991,6 @@
     "mounting": null,
     "specs": [
       {
-        "label": "外径",
-        "value": "5.6 mm"
-      },
-      {
-        "label": "高度",
-        "value": "7 mm"
-      },
-      {
         "label": "操作力",
         "value": "6~12 N"
       }

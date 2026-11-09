@@ -4,14 +4,39 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { createClient } from "@libsql/client";
 import { canonicalKeys } from "./lib/model-keys.mjs";
 
 const root = resolve(import.meta.dirname, "..");
-const enPath = resolve(root, "../teao-website/data/products-export.json");
+const dbPath = resolve(root, "../teao-website/data/teao.db");
 const cnPath = resolve(root, "src/content/live-site/categories.json");
 const outPath = resolve(root, "src/content/live-site/product-specs.json");
 
-const en = JSON.parse(readFileSync(enPath, "utf8"));
+const parseJson = value => {
+  if (value == null || value === "") return null;
+  try {
+    return JSON.parse(value);
+  } catch {
+    return null;
+  }
+};
+
+// 与详情页共用同一个数据源(英文站数据库),避免列表与详情口径漂移。
+const db = createClient({ url: `file:${dbPath}` });
+const result = await db.execute("select * from products");
+db.close();
+
+const en = result.rows.map(row => ({
+  model: row.model,
+  name: row.name,
+  扭矩: parseJson(row.torque),
+  规格: parseJson(row.specifications) ?? {},
+  安装方式: row.assembly_method,
+  声音类型: row.sound_type,
+  力值范围: row.force_range,
+  硬力值: row.hard_force,
+}));
+
 const cn = JSON.parse(readFileSync(cnPath, "utf8"));
 
 const enIndex = new Map();

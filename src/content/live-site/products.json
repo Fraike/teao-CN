@@ -1,5 +1,6 @@
 {
   "/gear-damper/齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html": {
+    "path": "/gear-damper/齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html",
     "slug": "rd-t021",
     "categoryId": "gear-damper",
     "model": "RD-T021",
@@ -82,6 +83,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t021/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t021/curve.webp",
@@ -153,6 +155,7 @@
     }
   },
   "/gear-damper/rd-t040shiyongyuqichezuniqijiadianzuniqiqicheyongsuliaozunichilun-jianzhenzuniqi-shuangxiangsuliaozhuanlunsujiaozongchengjianhuanchongqi.html": {
+    "path": "/gear-damper/rd-t040shiyongyuqichezuniqijiadianzuniqiqicheyongsuliaozunichilun-jianzhenzuniqi-shuangxiangsuliaozhuanlunsujiaozongchengjianhuanchongqi.html",
     "slug": "rd-t040",
     "categoryId": "gear-damper",
     "model": "RD-T040",
@@ -231,6 +234,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t040/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t040/curve.webp",
@@ -239,6 +243,7 @@
     "variants": null
   },
   "/gear-damper/rd-t036-shiyongyuqicheneishijiayongdianqigongyejixie.html": {
+    "path": "/gear-damper/rd-t036-shiyongyuqicheneishijiayongdianqigongyejixie.html",
     "slug": "rd-t036",
     "categoryId": "gear-damper",
     "model": "RD-T036",
@@ -321,6 +326,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t036/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t036/curve.webp",
@@ -378,6 +384,7 @@
     }
   },
   "/gear-damper/rd-t029-shiyongqicheneishi-jiayongdianqi-gongyejixie.html": {
+    "path": "/gear-damper/rd-t029-shiyongqicheneishi-jiayongdianqi-gongyejixie.html",
     "slug": "rd-t029",
     "categoryId": "gear-damper",
     "model": "RD-T029",
@@ -456,6 +463,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t029/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t029/curve.webp",
@@ -464,6 +472,7 @@
     "variants": null
   },
   "/gear-damper/rd-10guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html": {
+    "path": "/gear-damper/rd-10guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html",
     "slug": "rd-10",
     "categoryId": "gear-damper",
     "model": "RD-10",
@@ -537,11 +546,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-10/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/gear-damper/rd-t025guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html": {
+    "path": "/gear-damper/rd-t025guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html",
     "slug": "rd-t025",
     "categoryId": "gear-damper",
     "model": "RD-T025",
@@ -624,6 +635,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t025/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t025/curve.webp",
@@ -695,6 +707,7 @@
     }
   },
   "/gear-damper/rd--t019shiyongqichedianyanqiqicheyanjinghe-neishidianqiqichefangai-jiayongdianqi-gongyejixie.html": {
+    "path": "/gear-damper/rd--t019shiyongqichedianyanqiqicheyanjinghe-neishidianqiqichefangai-jiayongdianqi-gongyejixie.html",
     "slug": "rd-t019",
     "categoryId": "gear-damper",
     "model": "RD- T019",
@@ -777,6 +790,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t019/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t019/curve.webp",
@@ -785,6 +799,7 @@
     "variants": null
   },
   "/gear-damper/rd-t015b-shiyongqicheneishi-jiayongdianqi-gongyejixie.html": {
+    "path": "/gear-damper/rd-t015b-shiyongqicheneishi-jiayongdianqi-gongyejixie.html",
     "slug": "rd-t015b",
     "categoryId": "gear-damper",
     "model": "RD-T015B",
@@ -867,6 +882,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t015b/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t015b/curve.webp",
@@ -875,6 +891,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-rd-t068-v068.html": {
+    "path": "/gear-damper/gear-rotary-damper-rd-t068-v068.html",
     "slug": "rd-t068",
     "categoryId": "gear-damper",
     "model": "RD-T068 / RD-v068",
@@ -961,6 +978,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t068/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t068/curve.webp",
@@ -969,6 +987,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-rd-t038-v038.html": {
+    "path": "/gear-damper/gear-rotary-damper-rd-t038-v038.html",
     "slug": "rd-t038",
     "categoryId": "gear-damper",
     "model": "RD-T038 / RD-v038",
@@ -1055,6 +1074,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t038/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t038/curve.webp",
@@ -1112,6 +1132,7 @@
     }
   },
   "/gear-damper/gear-rotary-damper-RD-T028.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T028.html",
     "slug": "rd-t028",
     "categoryId": "gear-damper",
     "model": "RD-T028",
@@ -1194,6 +1215,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t028/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t028/curve.webp",
@@ -1202,6 +1224,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-T024.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T024.html",
     "slug": "rd-t024",
     "categoryId": "gear-damper",
     "model": "RD-T024",
@@ -1288,6 +1311,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t024/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t024/curve.webp",
@@ -1296,6 +1320,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-T022.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T022.html",
     "slug": "rd-t022",
     "categoryId": "gear-damper",
     "model": "RD-T022",
@@ -1390,6 +1415,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t022/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t022/curve.webp",
@@ -1461,6 +1487,7 @@
     }
   },
   "/gear-damper/gear-rotary-damper-RD- T011.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD- T011.html",
     "slug": "rd-t011",
     "categoryId": "gear-damper",
     "model": "RD- T011",
@@ -1547,6 +1574,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t011/size.webp",
     "performanceCharts": {
       "rotation": null,
@@ -1555,6 +1583,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-T010.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T010.html",
     "slug": "rd-t010",
     "categoryId": "gear-damper",
     "model": "RD-T010",
@@ -1644,6 +1673,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t010/size.webp",
     "performanceCharts": {
       "rotation": null,
@@ -1715,6 +1745,7 @@
     }
   },
   "/gear-damper/gear-rotary-vane-damper-RD-T009.html": {
+    "path": "/gear-damper/gear-rotary-vane-damper-RD-T009.html",
     "slug": "rd-t009",
     "categoryId": "gear-damper",
     "model": "RD-T009",
@@ -1805,6 +1836,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t009/size.webp",
     "performanceCharts": {
       "rotation": null,
@@ -1813,6 +1845,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-T008.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T008.html",
     "slug": "rd-t008",
     "categoryId": "gear-damper",
     "model": "RD-T008",
@@ -1906,6 +1939,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t008/size.webp",
     "performanceCharts": {
       "rotation": null,
@@ -1977,6 +2011,7 @@
     }
   },
   "/gear-damper/gear-rotary-damper-RD-T003.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T003.html",
     "slug": "rd-t003",
     "categoryId": "gear-damper",
     "model": "RD-T003",
@@ -2063,6 +2098,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t003/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t003/curve.webp",
@@ -2071,6 +2107,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-T002.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T002.html",
     "slug": "rd-t002",
     "categoryId": "gear-damper",
     "model": "RD-T002",
@@ -2157,6 +2194,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t002/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t002/curve.webp",
@@ -2165,6 +2203,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-rd-t001.html": {
+    "path": "/gear-damper/gear-rotary-damper-rd-t001.html",
     "slug": "rd-t001",
     "categoryId": "gear-damper",
     "model": "RD-T001",
@@ -2255,6 +2294,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t001/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t001/curve.webp",
@@ -2263,6 +2303,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-10L.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-10L.html",
     "slug": "rd-10",
     "categoryId": "gear-damper",
     "model": "RD-10L",
@@ -2336,11 +2377,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-10/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-10R.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-10R.html",
     "slug": "rd-10",
     "categoryId": "gear-damper",
     "model": "RD-10R",
@@ -2414,11 +2457,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-10/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-RD-T023.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T023.html",
     "slug": "rd-t023",
     "categoryId": "gear-damper",
     "model": "RD-T023",
@@ -2501,6 +2546,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t023/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t023/curve.webp",
@@ -2572,6 +2618,7 @@
     }
   },
   "/gear-damper/gear-rotary-damper-RD-T015.html": {
+    "path": "/gear-damper/gear-rotary-damper-RD-T015.html",
     "slug": "rd-t015",
     "categoryId": "gear-damper",
     "model": "RD-T015",
@@ -2674,6 +2721,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t015/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t015/curve.webp",
@@ -2682,6 +2730,7 @@
     "variants": null
   },
   "/gear-damper/gear-rotary-damper-rd-t039.html": {
+    "path": "/gear-damper/gear-rotary-damper-rd-t039.html",
     "slug": "rd-t039",
     "categoryId": "gear-damper",
     "model": "RD-T039",
@@ -2776,6 +2825,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t039/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t039/curve.webp",
@@ -2847,6 +2897,7 @@
     }
   },
   "/axial-dampers/圆桶齿轮轴阻尼器  RD-T020扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html": {
+    "path": "/axial-dampers/圆桶齿轮轴阻尼器  RD-T020扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html",
     "slug": "rd-t020",
     "categoryId": "axial-damper",
     "model": "RD-T020",
@@ -2916,6 +2967,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t020/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t020/curve.webp",
@@ -2924,6 +2976,7 @@
     "variants": null
   },
   "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html": {
+    "path": "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html",
     "slug": "rd-t013e",
     "categoryId": "axial-damper",
     "model": "RD-T013E",
@@ -2993,6 +3046,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t013e/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t013e/curve.webp",
@@ -3001,6 +3055,7 @@
     "variants": null
   },
   "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html": {
+    "path": "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html",
     "slug": "rd-t013d",
     "categoryId": "axial-damper",
     "model": "RD-T013D",
@@ -3070,6 +3125,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t013d/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t013d/curve.webp",
@@ -3078,6 +3134,7 @@
     "variants": null
   },
   "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013C汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html": {
+    "path": "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013C汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html",
     "slug": "rd-t013c",
     "categoryId": "axial-damper",
     "model": "RD-T013C",
@@ -3147,6 +3204,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t013c/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t013c/curve.webp",
@@ -3155,6 +3213,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-RD-T012E.html": {
+    "path": "/axial-dampers/axial-barrel-damper-RD-T012E.html",
     "slug": "rd-t012e",
     "categoryId": "axial-damper",
     "model": "RD-T012E",
@@ -3220,6 +3279,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t012e/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t012e/curve.webp",
@@ -3228,6 +3288,7 @@
     "variants": null
   },
   "/axial-dampers/rd-t013ashiyongyuqicheneishijiayongdianqigongyejixiechedingbashouxichenqisaodijiqirenanquanlashou.html": {
+    "path": "/axial-dampers/rd-t013ashiyongyuqicheneishijiayongdianqigongyejixiechedingbashouxichenqisaodijiqirenanquanlashou.html",
     "slug": "rd-t013a",
     "categoryId": "axial-damper",
     "model": "RD-T013A",
@@ -3301,6 +3362,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t013a/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t013a/curve.webp",
@@ -3309,6 +3371,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper- RD-T138.html": {
+    "path": "/axial-dampers/axial-barrel-damper- RD-T138.html",
     "slug": "rd-t138",
     "categoryId": "axial-damper",
     "model": "RD-T138",
@@ -3378,6 +3441,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t138/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t138/curve.webp",
@@ -3386,6 +3450,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-RD-T017.html": {
+    "path": "/axial-dampers/axial-barrel-damper-RD-T017.html",
     "slug": "rd-t017",
     "categoryId": "axial-damper",
     "model": "RD-T017",
@@ -3463,6 +3528,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t017/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t017/curve.webp",
@@ -3471,6 +3537,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-RD-T013B.html": {
+    "path": "/axial-dampers/axial-barrel-damper-RD-T013B.html",
     "slug": "rd-t013b",
     "categoryId": "axial-damper",
     "model": "RD-T013B",
@@ -3544,6 +3611,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t013b/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t013b/curve.webp",
@@ -3552,6 +3620,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-rd-t012d.html": {
+    "path": "/axial-dampers/axial-barrel-damper-rd-t012d.html",
     "slug": "rd-t012d",
     "categoryId": "axial-damper",
     "model": "RD-T012D",
@@ -3621,6 +3690,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t012d/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t012d/curve.webp",
@@ -3629,6 +3699,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-rd-t012c.html": {
+    "path": "/axial-dampers/axial-barrel-damper-rd-t012c.html",
     "slug": "rd-t012c",
     "categoryId": "axial-damper",
     "model": "RD-T012C",
@@ -3702,6 +3773,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t012c/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t012c/curve.webp",
@@ -3710,6 +3782,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-rd-t012b.html": {
+    "path": "/axial-dampers/axial-barrel-damper-rd-t012b.html",
     "slug": "rd-t012b",
     "categoryId": "axial-damper",
     "model": "RD-T012B",
@@ -3783,6 +3856,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t012b/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-t012b/curve.webp",
@@ -3791,6 +3865,7 @@
     "variants": null
   },
   "/axial-dampers/axial-barrel-damper-RD-T012A.html": {
+    "path": "/axial-dampers/axial-barrel-damper-RD-T012A.html",
     "slug": "rd-t012a",
     "categoryId": "axial-damper",
     "model": "RD-T012A",
@@ -3868,6 +3943,7 @@
       "办公设备",
       "家用电器"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t012a/size.webp",
     "performanceCharts": {
       "rotation": null,
@@ -3876,6 +3952,7 @@
     "variants": null
   },
   "/Glove Box Dampers/rd-V130-shiyongyuqicheshoutaoxiang-shounahe.html": {
+    "path": "/Glove Box Dampers/rd-V130-shiyongyuqicheshoutaoxiang-shounahe.html",
     "slug": "rd-v130",
     "categoryId": "glove-box-damper",
     "model": "RD-V130",
@@ -3936,6 +4013,12 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [
+      {
+        "image": "/images/applications/applications-gif/Glove box.gif",
+        "label": "Glove Box"
+      }
+    ],
     "dimensionDrawing": "/images/products/rd-v130/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v130/photo_1.webp",
@@ -3958,6 +4041,7 @@
     }
   },
   "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html": {
+    "path": "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html",
     "slug": "rd-v127",
     "categoryId": "glove-box-damper",
     "model": "RD-V127",
@@ -4030,6 +4114,7 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v127/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v127/curve.webp",
@@ -4038,6 +4123,7 @@
     "variants": null
   },
   "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html": {
+    "path": "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html",
     "slug": "rd-v107",
     "categoryId": "glove-box-damper",
     "model": "RD-V107",
@@ -4102,6 +4188,7 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v107/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v107/curve.webp",
@@ -4110,6 +4197,7 @@
     "variants": null
   },
   "/Glove Box Dampers/air-damper-rd-v118.html": {
+    "path": "/Glove Box Dampers/air-damper-rd-v118.html",
     "slug": "rd-v118",
     "categoryId": "glove-box-damper",
     "model": "RD-V118",
@@ -4182,6 +4270,7 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v118/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v118/curve.webp",
@@ -4190,6 +4279,7 @@
     "variants": null
   },
   "/Glove Box Dampers/organizer-rd-t181.html": {
+    "path": "/Glove Box Dampers/organizer-rd-t181.html",
     "slug": "rd-t181",
     "categoryId": "glove-box-damper",
     "model": "RD-T181",
@@ -4260,11 +4350,13 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t181/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/Glove Box Dampers/organizer- RD-T180A.html": {
+    "path": "/Glove Box Dampers/organizer- RD-T180A.html",
     "slug": "rd-t180a",
     "categoryId": "glove-box-damper",
     "model": "RD-T180A",
@@ -4331,11 +4423,13 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t180a/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/Glove Box Dampers/organizer- RD-T180.html": {
+    "path": "/Glove Box Dampers/organizer- RD-T180.html",
     "slug": "rd-t180",
     "categoryId": "glove-box-damper",
     "model": "RD-T180",
@@ -4406,11 +4500,13 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t180/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/Glove Box Dampers/liner-damper- RD-V129.html": {
+    "path": "/Glove Box Dampers/liner-damper- RD-V129.html",
     "slug": "rd-v129",
     "categoryId": "glove-box-damper",
     "model": "RD-V129",
@@ -4487,11 +4583,13 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v129/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/Glove Box Dampers/gear-rotary-vane-damper-RD-V127.html": {
+    "path": "/Glove Box Dampers/gear-rotary-vane-damper-RD-V127.html",
     "slug": "rd-v127",
     "categoryId": "glove-box-damper",
     "model": "RD-V127",
@@ -4564,6 +4662,7 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v127/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v127/curve.webp",
@@ -4572,6 +4671,7 @@
     "variants": null
   },
   "/Glove Box Dampers/liner-damper- RD-V126.html": {
+    "path": "/Glove Box Dampers/liner-damper- RD-V126.html",
     "slug": "rd-v126",
     "categoryId": "glove-box-damper",
     "model": "RD-V126",
@@ -4636,6 +4736,7 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v126/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v126/curve.webp",
@@ -4658,6 +4759,7 @@
     }
   },
   "/Glove Box Dampers/air-damper-RD-V109.html": {
+    "path": "/Glove Box Dampers/air-damper-RD-V109.html",
     "slug": "rd-v109",
     "categoryId": "glove-box-damper",
     "model": "RD-V109",
@@ -4746,6 +4848,7 @@
       "汽车内饰",
       "手套箱"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-v109/size.webp",
     "performanceCharts": {
       "rotation": "/images/products/rd-v109/curve.webp",
@@ -4754,6 +4857,7 @@
     "variants": null
   },
   "/latches/rd-09wushengsuokoumensuo-shiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
+    "path": "/latches/rd-09wushengsuokoumensuo-shiyongyuqicheneishi-jiayongdianqigongyejixie.html",
     "slug": "rd-09",
     "categoryId": "latch",
     "model": "RD-09",
@@ -4839,11 +4943,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-09/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/latches/rd-12shiyongyuqicheanyasuokou-lajitongfandankaiguan-danhuangkakouxiang.html": {
+    "path": "/latches/rd-12shiyongyuqicheanyasuokou-lajitongfandankaiguan-danhuangkakouxiang.html",
     "slug": "rd-12",
     "categoryId": "latch",
     "model": "RD-12",
@@ -4925,11 +5031,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-12/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/latches/rd-01shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html": {
+    "path": "/latches/rd-01shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html",
     "slug": "rd-01",
     "categoryId": "latch",
     "model": "RD-01",
@@ -5007,11 +5115,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-01/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/latches/jiakechongzisuoqi-xiaofangguimenfandanqimenpengguixi-yinxingmensuliaodantiaoanyashipengzhu.html": {
+    "path": "/latches/jiakechongzisuoqi-xiaofangguimenfandanqimenpengguixi-yinxingmensuliaodantiaoanyashipengzhu.html",
     "slug": "rd-18",
     "categoryId": "latch",
     "model": "RD-18",
@@ -5089,11 +5199,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-18/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/latches/push-push-latch- RD-08.html": {
+    "path": "/latches/push-push-latch- RD-08.html",
     "slug": "rd-08",
     "categoryId": "latch",
     "model": "RD-08",
@@ -5179,11 +5291,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-08/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/latches/push-push-latch-RD-03.html": {
+    "path": "/latches/push-push-latch-RD-03.html",
     "slug": "rd-03",
     "categoryId": "latch",
     "model": "RD-03",
@@ -5273,11 +5387,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-03/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/latches/push-push-latch- RD-02.html": {
+    "path": "/latches/push-push-latch- RD-02.html",
     "slug": "rd-02",
     "categoryId": "latch",
     "model": "RD-02",
@@ -5367,11 +5483,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-02/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/qitaqichelingbujian/rd-v112.html": {
+    "path": "/qitaqichelingbujian/rd-v112.html",
     "slug": "rd-v112",
     "categoryId": "other",
     "model": "RD-V112",
@@ -5436,6 +5554,7 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": null,
     "performanceCharts": {
       "rotation": "/images/products/rd-v112/curve.webp",
@@ -5444,6 +5563,7 @@
     "variants": null
   },
   "/qitaqichelingbujian/rd-tr02-jiaolian-shiyongyumenheye.html": {
+    "path": "/qitaqichelingbujian/rd-tr02-jiaolian-shiyongyumenheye.html",
     "slug": "rd-tr02",
     "categoryId": "other",
     "model": "RD-TR02 铰链 适用于门合页",
@@ -5491,6 +5611,7 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": null,
     "performanceCharts": {
       "rotation": "/images/products/rd-tr02/curve.webp",
@@ -5499,6 +5620,7 @@
     "variants": null
   },
   "/qitaqichelingbujian/rd-tr01-jiaolian-shiyongyumenheye.html": {
+    "path": "/qitaqichelingbujian/rd-tr01-jiaolian-shiyongyumenheye.html",
     "slug": "rd-tr01",
     "categoryId": "other",
     "model": "RD-TR01 铰链 适用于门合页",
@@ -5546,11 +5668,13 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-tr01/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/qitaqichelingbujian/rd-15kaiguanshiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
+    "path": "/qitaqichelingbujian/rd-15kaiguanshiyongyuqicheneishi-jiayongdianqigongyejixie.html",
     "slug": "rd-15",
     "categoryId": "other",
     "model": "RD-15",
@@ -5616,11 +5740,13 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-15/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/qitaqichelingbujian/rd-t216-jiaolian-shiyongyumenheye.html": {
+    "path": "/qitaqichelingbujian/rd-t216-jiaolian-shiyongyumenheye.html",
     "slug": "rd-t216",
     "categoryId": "other",
     "model": "RD-T216",
@@ -5664,11 +5790,13 @@
       "汽车零部件",
       "工业设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-t216/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/qitaqichelingbujian/danzhu-rd-13-shiyongyuqicheneishi-chuwuhe-xianweikaiguan.html": {
+    "path": "/qitaqichelingbujian/danzhu-rd-13-shiyongyuqicheneishi-chuwuhe-xianweikaiguan.html",
     "slug": "rd-13",
     "categoryId": "other",
     "model": "RD-13",
@@ -5699,14 +5827,6 @@
     },
     "specifications": [
       {
-        "label": "外径",
-        "value": "5.6 mm"
-      },
-      {
-        "label": "高度",
-        "value": "7 mm"
-      },
-      {
         "label": "操作力",
         "value": "6~12 N"
       }
@@ -5726,11 +5846,18 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [
+      {
+        "image": "/images/applications/applications-gif/Glove box.gif",
+        "label": "Glove Box"
+      }
+    ],
     "dimensionDrawing": "/images/products/rd-13/size.webp",
     "performanceCharts": null,
     "variants": null
   },
   "/qitaqichelingbujian/push-push-latch-RD-11.html": {
+    "path": "/qitaqichelingbujian/push-push-latch-RD-11.html",
     "slug": "rd-11",
     "categoryId": "other",
     "model": "RD-11",
@@ -5804,6 +5931,7 @@
       "智能家居",
       "办公设备"
     ],
+    "applicationScenarios": [],
     "dimensionDrawing": "/images/products/rd-11/size.webp",
     "performanceCharts": null,
     "variants": null

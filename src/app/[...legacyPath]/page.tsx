@@ -13,8 +13,9 @@ import ContactPage from "@/components/live-site/contact-page";
 import NewsPage from "@/components/live-site/news-page";
 import NewsArticlePage from "@/components/live-site/news-article-page";
 import ConvertPage from "@/components/live-site/convert-page";
-import { getPilotPage, getNewsSlug, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
-import { getCategoryRoute } from "@/lib/live-catalog";
+import { getPilotPage, getNewsSlug, legacyPathFromSegments, LIVE_ORIGIN, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
+import { getCategoryRoute, liveCatalog } from "@/lib/live-catalog";
+import { getProductContent } from "@/lib/product-content";
 import { automotiveInteriorScenes, automotiveExteriorScenes, simpleApplications } from "@/content/live-site/applications";
 import { newsArticles } from "@/content/live-site/news";
 
@@ -131,12 +132,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const newsSlug = getNewsSlug(segments);
   if (type === "news-article" && newsSlug) return newsArticleMeta(newsSlug);
   if (type === "convert") return CONVERT_META;
-  const product = type === "product";
+  if (type === "product") {
+    const path = legacyPathFromSegments(segments);
+    const content = getProductContent(path);
+    if (!content) notFound();
+    const category = liveCatalog.find(item => item.id === content.categoryId)!;
+    return {
+      title: { absolute: `${content.model} ${category.label} | 特澳 TEAO` },
+      description: content.summary,
+      alternates: { canonical: LIVE_ORIGIN + encodeURI(path) },
+      // These are review samples; remove only after content verification and release review.
+      robots: { index: false, follow: true },
+      openGraph: {
+        title: `${content.model} ${category.label}`,
+        description: content.summary,
+        images: content.images.slice(0, 1).map(image => ({ url: image.url })),
+      },
+    };
+  }
   const categoryRoute = getCategoryRoute(segments);
   return {
-    title: { absolute: product ? "RD-T038 / RD-V038 双向齿轮阻尼器 | 特澳 TEAO" : `${categoryRoute!.category.label}产品与选型${categoryRoute!.page.number > 1 ? ` - 第 ${categoryRoute!.page.number} 页` : ""} | 特澳 TEAO` },
-    description: product ? "RD-T038 / RD-V038 双向齿轮阻尼器，螺钉安装，无角度限制。查看产品实拍、材质、阻尼测试及性能曲线，联系特澳获取选型建议。" : categoryRoute!.category.description,
-    alternates: { canonical: LIVE_ORIGIN + encodeURI(product ? PILOT_PRODUCT_PATH : categoryRoute!.page.path) },
+    title: { absolute: `${categoryRoute!.category.label}产品与选型${categoryRoute!.page.number > 1 ? ` - 第 ${categoryRoute!.page.number} 页` : ""} | 特澳 TEAO` },
+    description: categoryRoute!.category.description,
+    alternates: { canonical: LIVE_ORIGIN + encodeURI(categoryRoute!.page.path) },
     // These are review samples; remove only after content verification and release review.
     robots: { index: false, follow: true },
   };
@@ -165,6 +183,11 @@ export default async function LegacyPage({ params }: Props) {
   if (type === "convert") return <ConvertPage />;
   const route = getCategoryRoute(segments);
   if (route) return <CategoryPage category={route.category} page={route.page} />;
-  if (type === "product") return <ProductDetail />;
+  if (type === "product") {
+    const content = getProductContent(legacyPathFromSegments(segments));
+    if (!content) notFound();
+    const category = liveCatalog.find(item => item.id === content.categoryId)!;
+    return <ProductDetail product={content} category={category} />;
+  }
   notFound();
 }
