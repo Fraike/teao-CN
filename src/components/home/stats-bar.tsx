@@ -10,7 +10,8 @@ function AnimatedCounter({
   target: number;
   suffix?: string;
 }) {
-  const [count, setCount] = useState(0);
+  // SSR 直接输出真实数值,避免无 JS 时显示 0;进入视口后再从 0 播放动画。
+  const [count, setCount] = useState(target);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
 
@@ -22,6 +23,7 @@ function AnimatedCounter({
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
+          setCount(0);
           const duration = 1600;
           const start = performance.now();
 

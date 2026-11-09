@@ -195,9 +195,9 @@ export function HeroSection() {
         <aside className="hidden lg:flex lg:flex-col lg:gap-3 lg:self-stretch lg:justify-center">
           {/* Inquiry card */}
           <div className="rounded-[14px] border border-line bg-white/85 p-[26px] shadow-[0_8px_28px_rgba(0,0,0,0.08)] backdrop-blur-[16px]">
-            <h3 className="text-center text-lg font-bold text-ink">
+            <h2 className="text-center text-lg font-bold text-ink">
               工程师在线评估
-            </h3>
+            </h2>
             <p className="mb-4 mt-1 text-center text-[12.5px] leading-[1.65] text-muted">
               提交产品类型、应用场景、目标扭矩或上传图纸，工程师将在 2
               小时内给出选型与打样建议。
@@ -225,17 +225,17 @@ export function HeroSection() {
             </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="rounded-[10px] border border-line-soft bg-surface p-3 text-center">
-                <label className="block text-[10.5px] font-bold uppercase tracking-[0.05em] text-muted-light">
+                <span className="block text-[10.5px] font-bold uppercase tracking-[0.05em] text-muted-light">
                   需要提供
-                </label>
+                </span>
                 <strong className="block text-[13px] font-semibold text-ink">
                   图纸 / 样品 / 年用量
                 </strong>
               </div>
               <div className="rounded-[10px] border border-line-soft bg-surface p-3 text-center">
-                <label className="block text-[10.5px] font-bold uppercase tracking-[0.05em] text-muted-light">
+                <span className="block text-[10.5px] font-bold uppercase tracking-[0.05em] text-muted-light">
                   回复方式
-                </label>
+                </span>
                 <strong className="block text-[13px] font-semibold text-ink">
                   电话 / 微信 / 邮件
                 </strong>

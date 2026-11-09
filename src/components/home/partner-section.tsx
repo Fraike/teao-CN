@@ -1,4 +1,4 @@
-"use client";
+import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
 
 const partners = [
@@ -57,26 +57,14 @@ export function PartnerSection() {
                     className={`grid min-h-[82px] place-items-center bg-white px-2.5 py-3.5 transition-all duration-[250ms] hover:bg-[#FAF8F5] ${borderR} ${borderB}
                       [&:nth-child(3n)]:border-r-0 lg:[&:nth-child(3n)]:border-r lg:[&:nth-child(3n)]:border-line-soft lg:[&:nth-child(4n)]:border-r-0`}
                   >
-                    <img
-                      src={`https://teao-damper.com/images/partners/${partner.en}.webp`}
+                    <Image
+                      src={`/images/partners/${partner.en}.webp`}
                       alt={partner.name}
+                      width={140}
+                      height={46}
+                      sizes="140px"
                       loading="lazy"
-                      className="max-w-[82%] max-h-[46px] object-contain transition-all duration-300 ease-out"
-                      style={{
-                        filter: "grayscale(20%) brightness(0.94)",
-                      }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLImageElement).style.filter =
-                          "grayscale(0%) brightness(1)";
-                        (e.currentTarget as HTMLImageElement).style.transform =
-                          "scale(1.08)";
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLImageElement).style.filter =
-                          "grayscale(20%) brightness(0.94)";
-                        (e.currentTarget as HTMLImageElement).style.transform =
-                          "scale(1)";
-                      }}
+                      className="max-h-[46px] w-auto max-w-[82%] object-contain opacity-90 grayscale-[20%] transition-all duration-300 ease-out hover:scale-105 hover:opacity-100 hover:grayscale-0"
                     />
                   </div>
                 );

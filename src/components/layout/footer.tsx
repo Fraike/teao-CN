@@ -151,16 +151,17 @@ export default function Footer() {
       <div className="border-t border-line bg-white/70">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 px-5 py-5 text-xs text-muted sm:flex-row sm:justify-between lg:px-8">
           <p>&copy; {new Date().getFullYear()} 东莞市特澳电子科技有限公司 版权所有</p>
-          <p>
+          <div className="flex items-center gap-4">
+            <Link href="/sitemap/" className="transition-colors hover:text-brand-700">网站地图</Link>
             <a
               href="https://beian.miit.gov.cn/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-ink-soft"
             >
-              粤ICP备XXXXXXXX号
+              粤ICP备13044030号-2
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
