@@ -1,5 +1,6 @@
 import categoryRoutes from "@/content/live-site/category-routes.json";
 import { newsArticles } from "@/content/live-site/news";
+import productPaths from "@/content/live-site/product-paths.json";
 
 export const LIVE_ORIGIN = "https://www.chinateao.com";
 export const PILOT_PRODUCT_PATH = "/gear-damper/gear-rotary-damper-rd-t038-v038.html";
@@ -17,6 +18,7 @@ export const CONTACTS_PATH = "/contacts/";
 export const NEWS_PATH = "/news/";
 export const CONVERT_PATH = "/convert/";
 export const NEWS_ARTICLE_SLUGS = newsArticles.map(article => article.slug);
+const PRODUCT_PATH_SET = new Set(productPaths);
 export const liveCategories = categoryRoutes;
 
 export function developmentCategoryPath(id: string): string | null {
@@ -62,7 +64,7 @@ export function getPilotPage(segments: readonly string[]): "category" | "product
   const path = legacyPathFromSegments(segments);
   if (liveCategories.some(category => path + "/" === category.path)) return "category";
   if (liveCategories.some(category => Array.from({ length: category.pageCount - 1 }, (_, index) => category.path + `index_${index + 2}.html`).includes(path))) return "category";
-  if (path === PILOT_PRODUCT_PATH) return "product";
+  if (PRODUCT_PATH_SET.has(path)) return "product";
   if (path + "/" === QUALITY_PATH) return "quality";
   if (path + "/" === FAQ_PATH) return "faq";
   const applicationPage = APPLICATION_PAGE_PATHS[path + "/"];

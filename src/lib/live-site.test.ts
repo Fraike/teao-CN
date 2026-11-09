@@ -139,3 +139,27 @@ test("convert near-misses stay on the live origin", () => {
   assert.equal(getPilotPage(["zh-hans", "torque", "gear-damper.html"]), null);
   assert.equal(liveHref("/converters/"), LIVE_ORIGIN + "/converters/");
 });
+
+test("matched product detail paths resolve locally", () => {
+  const plain = "/gear-damper/rd-t036-shiyongyuqicheneishijiayongdianqigongyejixie.html";
+  const chinese = "/gear-damper/齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html";
+  const spaced = "/gear-damper/gear-rotary-damper-RD- T011.html";
+  assert.equal(getPilotPage(plain.split("/").filter(Boolean)), "product");
+  assert.equal(getPilotPage(chinese.split("/").filter(Boolean)), "product");
+  assert.equal(getPilotPage(spaced.split("/").filter(Boolean)), "product");
+  assert.equal(liveHref(plain), plain);
+  assert.equal(liveHref(chinese), chinese);
+});
+
+test("encoded product paths resolve like decoded ones", () => {
+  const segments = ["gear-damper", encodeURIComponent("齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html")];
+  assert.equal(getPilotPage(segments), "product");
+});
+
+test("unmatched product paths and near-misses still go to the live origin", () => {
+  const unmatched = "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html";
+  assert.equal(getPilotPage(unmatched.split("/").filter(Boolean)), null);
+  assert.equal(liveHref(unmatched), LIVE_ORIGIN + unmatched);
+  assert.equal(getPilotPage(["gear-damper", "index_200.html"]), null);
+  assert.equal(getPilotPage(["gear-damper", "missing.html"]), null);
+});
