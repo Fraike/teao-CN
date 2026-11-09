@@ -2,7 +2,7 @@
 // 运行: node scripts/generate-product-content.mjs
 // 输出: src/content/live-site/products.json 与 product-paths.json(提交到仓库)
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { createClient } from "@libsql/client";
 import { canonicalKeys } from "./lib/model-keys.mjs";
@@ -23,6 +23,13 @@ const overlayPath = resolve(root, "src/content/live-site/product-specs.json");
 const outPath = resolve(root, "src/content/live-site/products.json");
 const pathsPath = resolve(root, "src/content/live-site/product-paths.json");
 const dbPath = resolve(root, "../teao-website/data/teao.db");
+const englishPublic = resolve(root, "../teao-website/public");
+
+/** 只保留英文站 public 下真实存在的文件,避免渲染 404 图片。 */
+function existingImage(url) {
+  if (!url || !url.startsWith("/")) return null;
+  return existsSync(resolve(englishPublic, url.slice(1))) ? url : null;
+}
 
 const catalog = JSON.parse(readFileSync(catalogPath, "utf8"));
 const overlay = JSON.parse(readFileSync(overlayPath, "utf8"));
@@ -71,10 +78,14 @@ for (const category of catalog) {
 
       const images = (parseJson(english.images) ?? [])
         .map(item => (typeof item === "string" ? { url: item } : item))
+        .map(item => (item?.url ? { url: existingImage(item.url), alt: item.alt ?? product.model } : null))
         .filter(item => item?.url)
-        .map(item => ({ url: item.url, alt: item.alt ?? product.model }));
+        .map(item => ({ url: item.url, alt: item.alt }));
 
-      if (images.length === 0 && english.image) images.push({ url: english.image, alt: product.model });
+      const heroImage = existingImage(english.image);
+      if (images.length === 0) {
+        images.push({ url: heroImage ?? product.image, alt: product.model });
+      }
 
       const materials = (parseJson(english.materials) ?? [])
         .map(item => ({
@@ -123,8 +134,11 @@ for (const category of catalog) {
         specifications: spec?.specs ?? [],
         materials,
         applications,
-        dimensionDrawing: english.dimension_drawing || null,
-        performanceCharts: performanceCharts.rotation || performanceCharts.temperature ? performanceCharts : null,
+        dimensionDrawing: existingImage(english.dimension_drawing),
+        performanceCharts:
+          existingImage(performanceCharts.rotation) || existingImage(performanceCharts.temperature)
+            ? { rotation: existingImage(performanceCharts.rotation), temperature: existingImage(performanceCharts.temperature) }
+            : null,
         variants,
       };
       paths.push(product.path);
