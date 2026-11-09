@@ -10,16 +10,17 @@ const footerLinks = [
   {
     title: "关于",
     links: [
-      { label: "关于我们", href: "/about" },
+      { label: "关于我们", href: "/about-us/" },
       { label: "应用领域", href: liveHref("/applications/") },
       { label: "质量认证", href: "/quality-control/" },
+      { label: "新闻", href: "/news/" },
     ],
   },
   {
     title: "联系",
     links: [
-      { label: "联系我们", href: "/contact" },
-      { label: "获取报价", href: "/contact" },
+      { label: "联系我们", href: "/contacts/" },
+      { label: "获取报价", href: "/contacts/" },
     ],
   },
 ];

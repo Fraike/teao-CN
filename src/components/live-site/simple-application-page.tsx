@@ -19,7 +19,7 @@ export default function SimpleApplicationPage({ app }: { app: SimpleApplication 
         <Reveal delay={1}>
           <h2 className="mb-4 text-2xl font-bold">{app.title}领域的阻尼应用</h2>
           <p className="mb-7 text-muted leading-relaxed">{app.description}。欢迎提供应用位置、目标扭矩与安装空间,特澳可推荐标准阻尼平台或按结构空间定制方案。</p>
-          <Button href="/contact">获取报价 →</Button>
+          <Button href="/contacts/">获取报价 →</Button>
         </Reveal>
       </div>
     </section>

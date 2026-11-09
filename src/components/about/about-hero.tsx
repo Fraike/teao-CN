@@ -90,7 +90,7 @@ export function AboutHero() {
               }`}
             >
               <Link
-                href="/contact"
+                href="/contacts/"
                 className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white shadow-[0_4px_14px_rgba(232,120,26,0.35)] transition-all hover:bg-brand-700 hover:shadow-[0_6px_20px_rgba(232,120,26,0.45)] hover:-translate-y-0.5"
               >
                 立即询价

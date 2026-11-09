@@ -203,7 +203,7 @@ export default async function ProductDetailPage({
 
               {/* CTA Buttons */}
               <div className="mt-10 flex flex-wrap gap-4">
-                <Button href="/contact">发送图纸获取报价</Button>
+                <Button href="/contacts/">发送图纸获取报价</Button>
                 <Button href="tel:021-57684226" variant="outline">
                   电话咨询
                 </Button>

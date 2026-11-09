@@ -101,7 +101,7 @@ export function ApplicationSection() {
               </div>
 
               <Link
-                href="/contact"
+                href="/contacts/"
                 className="relative z-10 inline-flex items-center gap-1.5 border-[1.5px] border-white/28 bg-white/6 px-[22px] py-3 text-[13px] font-bold rounded-lg transition-all duration-250 hover:border-white/50 hover:bg-white/12 w-fit"
               >
                 提交应用需求 &rarr;

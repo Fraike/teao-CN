@@ -44,7 +44,7 @@ export async function ProductGrid() {
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-line-soft">
                     <Link href={cat.path} className="text-[11px] font-medium text-brand-700 hover:underline">查看分类</Link>
                     <Link
-                      href="/contact"
+                      href="/contacts/"
                       className="inline-flex items-center gap-1 text-xs font-bold text-brand-700 transition-all duration-200 hover:gap-[7px]"
                     >
                       获取报价 &rarr;

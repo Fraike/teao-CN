@@ -12,8 +12,9 @@ const navItems = [
   { label: "产品中心", href: "/products/", mega: true },
   { label: "应用领域", href: liveHref("/applications/") },
   { label: "质量认证", href: "/quality-control/" },
-  { label: "关于我们", href: "/about" },
-  { label: "联系我们", href: "/contact" },
+  { label: "新闻", href: "/news/" },
+  { label: "关于我们", href: "/about-us/" },
+  { label: "联系我们", href: "/contacts/" },
 ];
 
 export default function Header() {
@@ -102,7 +103,7 @@ export default function Header() {
           {/* Actions */}
           <div className="flex items-center gap-2.5">
             <Link
-              href="/contact"
+              href="/contacts/"
               className="inline-flex h-9 items-center rounded-full bg-brand-500 px-4 text-[15px] font-bold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:h-[38px]"
             >
               获取报价
@@ -149,7 +150,7 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact"
+              href="/contacts/"
               onClick={() => setMobileOpen(false)}
               className="mt-4 rounded-full bg-brand-500 py-3 text-center text-sm font-bold text-white"
             >

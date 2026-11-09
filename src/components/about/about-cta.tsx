@@ -42,7 +42,7 @@ export function AboutCTA() {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
-                  href="/contact"
+                  href="/contacts/"
                   className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 text-base font-extrabold text-white shadow-[0_6px_24px_rgba(232,120,26,0.4)] transition-all hover:bg-brand-700 hover:shadow-[0_8px_30px_rgba(232,120,26,0.5)] hover:-translate-y-0.5"
                 >
                   立即询价
