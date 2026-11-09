@@ -31,6 +31,44 @@ export interface ApplicationScene {
   groups: SceneProductGroup[];
 }
 
+export interface ApplicationHotspot {
+  id: string;    // 对应 ApplicationScene.id
+  label: string;
+  left: string;  // 相对图片容器的百分比
+  top: string;
+}
+
+export interface ApplicationMap {
+  image: string;
+  alt: string;
+  aspect: string; // 与图片原始比例一致,保证热点定位准确
+  hotspots: ApplicationHotspot[];
+}
+
+export const automotiveInteriorMap: ApplicationMap = {
+  image: "/images/applications/generated/automotive-interior-map.webp",
+  alt: "汽车内饰阻尼器应用位置图",
+  aspect: "1672 / 941",
+  hotspots: [
+    { id: "grab-handle", label: "顶棚拉手", left: "9%", top: "6%" },
+    { id: "overhead-console", label: "顶棚控制台", left: "48%", top: "13%" },
+    { id: "sunshade", label: "遮阳板", left: "67%", top: "7%" },
+    { id: "inner-door-handle", label: "内门把手", left: "85%", top: "57%" },
+    { id: "glove-box", label: "手套箱", left: "69%", top: "68%" },
+    { id: "center-console-lid", label: "中控扶手箱盖", left: "51%", top: "82%" },
+  ],
+};
+
+export const automotiveExteriorMap: ApplicationMap = {
+  image: "/images/applications/generated/automotive-exterior-clean.webp",
+  alt: "汽车外饰阻尼器应用位置图",
+  aspect: "1778 / 885",
+  hotspots: [
+    { id: "exterior-door-handle", label: "外门把手", left: "50%", top: "53%" },
+    { id: "charging-port-cover", label: "充电口盖", left: "80%", top: "50%" },
+  ],
+};
+
 const GIF = "/images/applications/applications-gif";
 
 export const applicationCards: ApplicationCard[] = [

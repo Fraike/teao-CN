@@ -1,11 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
-import { container } from "./catalog";
+import { container } from "./container";
+import { automotiveInteriorMap, automotiveExteriorMap } from "@/content/live-site/applications";
 
 const zoneEntries = [
-  { title: "汽车内饰", description: "中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。", href: "/applications/automotive-interior/internal/" },
-  { title: "汽车外饰", description: "外门把手与新能源充电口盖的阻尼应用。", href: "/applications/automotive-interior/external/" },
+  {
+    title: "汽车内饰",
+    description: "中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板。",
+    href: "/applications/automotive-interior/internal/",
+    image: automotiveInteriorMap.image,
+    count: 6,
+  },
+  {
+    title: "汽车外饰",
+    description: "平嵌式外门把手与新能源汽车充电口盖。",
+    href: "/applications/automotive-interior/external/",
+    image: automotiveExteriorMap.image,
+    count: 2,
+  },
 ];
 
 const automotiveOverviewJsonLd = {
@@ -32,15 +47,36 @@ export default function AutomotiveOverviewPage() {
         <SectionHead
           eyebrow="汽车内外饰"
           title="车内车外,静音顺滑"
-          description="电动车与高端座舱更安静,开合、回弹的机械声更容易被察觉。选对阻尼器,让每一次动作更精致。"
+          description="电动车与高端座舱更安静,开合、回弹的机械声更容易被察觉。选择区域,查看对应位置的应用与推荐型号。"
         />
-        <div className="grid gap-6 md:grid-cols-2">
+
+        <div className="grid gap-6 lg:grid-cols-2">
           {zoneEntries.map((entry, i) => (
             <Reveal key={entry.href} delay={((i % 2) + 1) as 1 | 2}>
-              <Link href={entry.href} className="group block rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.06)]">
-                <h2 className="mb-3 text-2xl font-bold">{entry.title}</h2>
-                <p className="mb-5 text-muted leading-relaxed">{entry.description}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-bold text-brand-500">进入 →</span>
+              <Link
+                href={entry.href}
+                className="group relative block overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_44px_rgba(30,30,32,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_24px_60px_rgba(232,120,26,0.14)]"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-surface">
+                  <Image
+                    src={entry.image}
+                    alt={`${entry.title}阻尼器应用位置`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 600px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
+                    {entry.count} 个应用位置
+                  </span>
+                  <div className="absolute inset-x-5 bottom-5 text-white">
+                    <h2 className="text-2xl font-black tracking-tight">{entry.title}</h2>
+                    <p className="mt-1 max-w-[420px] text-[13px] leading-relaxed text-white/80">{entry.description}</p>
+                  </div>
+                  <span className="absolute right-5 bottom-5 grid h-10 w-10 place-items-center rounded-full bg-white text-brand-700 shadow-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                    <ArrowUpRight size={18} />
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}

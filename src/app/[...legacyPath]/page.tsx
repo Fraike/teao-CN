@@ -16,7 +16,7 @@ import ConvertPage from "@/components/live-site/convert-page";
 import { getPilotPage, getNewsSlug, legacyPathFromSegments, LIVE_ORIGIN, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
 import { getCategoryRoute, liveCatalog } from "@/lib/live-catalog";
 import { getProductContent } from "@/lib/product-content";
-import { automotiveInteriorScenes, automotiveExteriorScenes, simpleApplications } from "@/content/live-site/applications";
+import { automotiveInteriorScenes, automotiveExteriorScenes, automotiveInteriorMap, automotiveExteriorMap, simpleApplications } from "@/content/live-site/applications";
 import { newsArticles } from "@/content/live-site/news";
 
 const QUALITY_META: Metadata = {
@@ -167,8 +167,8 @@ export default async function LegacyPage({ params }: Props) {
   if (type === "faq") return <FaqPage />;
   if (type === "applications") return <ApplicationsPage />;
   if (type === "automotive-interior") return <AutomotiveOverviewPage />;
-  if (type === "interior") return <ApplicationScenesPage eyebrow="汽车内饰" title="汽车内饰阻尼器应用" description="中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用场景。" scenes={automotiveInteriorScenes} />;
-  if (type === "exterior") return <ApplicationScenesPage eyebrow="汽车外饰" title="汽车外饰阻尼器应用" description="外门把手与新能源汽车充电口盖的阻尼应用场景。" scenes={automotiveExteriorScenes} />;
+  if (type === "interior") return <ApplicationScenesPage eyebrow="汽车内饰" title="汽车内饰阻尼器应用" description="点击座舱图中的标记,查看中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。" scenes={automotiveInteriorScenes} map={automotiveInteriorMap} />;
+  if (type === "exterior") return <ApplicationScenesPage eyebrow="汽车外饰" title="汽车外饰阻尼器应用" description="点击车身图中的标记,查看外门把手与新能源汽车充电口盖的阻尼应用。" scenes={automotiveExteriorScenes} map={automotiveExteriorMap} />;
   if (type === "home-life") return <SimpleApplicationPage app={simpleApplications[0]} />;
   if (type === "office-equipment") return <SimpleApplicationPage app={simpleApplications[1]} />;
   if (type === "industrial-application") return <SimpleApplicationPage app={simpleApplications[2]} />;
