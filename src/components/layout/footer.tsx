@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { liveCategories, liveHref } from "@/lib/live-site";
+import { contact } from "@/content/live-site/contact";
 
 const footerLinks = [
   {
@@ -32,10 +33,13 @@ const footerLinks = [
 ];
 
 const contactInfo = [
-  { label: "电话", value: "0769-82937929" },
-  { label: "手机", value: "18617094202" },
-  { label: "邮箱", value: "karl@shanghaiteao.com" },
-  { label: "地址", value: "广东省东莞市黄江镇黄江北三街2号" },
+  { label: "联系人", value: contact.primaryName },
+  { label: "手机", value: contact.primaryMobile },
+  { label: "微信", value: contact.wechat },
+  { label: "备用手机", value: contact.secondaryMobile },
+  { label: "电话", value: contact.phone },
+  { label: "邮箱", value: contact.email },
+  { label: "地址", value: contact.address },
 ];
 
 export default function Footer() {

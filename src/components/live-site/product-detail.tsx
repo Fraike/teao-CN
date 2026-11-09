@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Gauge, Wrench } from "lucide-react";
 import { liveHref, LIVE_ORIGIN } from "@/lib/live-site";
+import { contact, telHref } from "@/content/live-site/contact";
 import { getForceBar, getTorqueBar } from "@/lib/product-display";
 import { enrichProduct } from "@/lib/product-enrichment";
 import {
@@ -185,7 +186,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                   <ArrowUpRight size={16} />
                 </Link>
                 <a
-                  href="tel:076982937929"
+                  href={telHref(contact.primaryMobile)}
                   className="inline-flex items-center rounded-full border border-line bg-white px-8 py-4 text-sm font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   电话咨询

@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { contact, telHref } from "@/content/live-site/contact";
 
 const trustBadges = [
   { label: "IATF 16949", color: "var(--color-green)" },
@@ -137,7 +138,7 @@ export function HeroSection() {
                 发送图纸获取选型建议
               </Button>
               <Button
-                href="tel:0769-82937929"
+                href={telHref(contact.primaryMobile)}
                 variant="outline"
                 className="gap-1.5"
               >
@@ -154,7 +155,7 @@ export function HeroSection() {
                 电话咨询
               </Button>
               <Button
-                href="#wechat"
+                href="/contacts/#wechat"
                 variant="outline"
                 className="gap-1.5"
               >
@@ -256,9 +257,9 @@ export function HeroSection() {
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
             </svg>
             <div>
-              <b className="block text-lg font-bold">0769-82937929</b>
+              <b className="block text-lg font-bold">{contact.primaryName} {contact.primaryMobile}</b>
               <span className="text-[11px] opacity-85">
-                工作日 8:30–18:00 在线
+                微信 {contact.wechat} · 工作日 8:30–18:00
               </span>
             </div>
           </div>

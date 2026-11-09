@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
+import { contact, telHref } from "@/content/live-site/contact";
 
 // 高德地图「分享 → 嵌入地图 → 地点模式」生成,免 Key。POI ID: B0LGOC7Y8N
 const AMAP_EMBED_SRC =
@@ -18,80 +20,54 @@ const productTypes = [
 const contactItems = [
   {
     icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
       </svg>
     ),
-    label: "业务热线",
-    value: "0769-82937929",
-    href: "tel:0769-82937929",
+    label: `主要联系人 · ${contact.primaryName}`,
+    value: contact.primaryMobile,
+    href: telHref(contact.primaryMobile),
   },
   {
     icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+      </svg>
+    ),
+    label: "备用手机",
+    value: contact.secondaryMobile,
+    href: telHref(contact.secondaryMobile),
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+    ),
+    label: "业务热线",
+    value: contact.phone,
+    href: telHref(contact.phone),
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
         <polyline points="22,6 12,13 2,6" />
       </svg>
     ),
     label: "邮箱",
-    value: "karl@shanghaiteao.com",
-    href: "mailto:karl@shanghaiteao.com",
+    value: contact.email,
+    href: `mailto:${contact.email}`,
   },
   {
     icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-      </svg>
-    ),
-    label: "微信咨询",
-    value: "扫码添加销售工程师",
-    href: null,
-  },
-  {
-    icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
         <circle cx="12" cy="10" r="3" />
       </svg>
     ),
     label: "地址",
-    value: "广东省东莞市黄江镇黄江北三街2号",
+    value: contact.address,
     href: null,
   },
 ];
@@ -138,6 +114,28 @@ export default function ContactPage() {
                   </Reveal>
                 ))}
               </div>
+
+              <Reveal delay={2}>
+                <div id="wechat" className="mt-5 flex flex-col items-center gap-5 rounded-2xl border border-line bg-white p-6 sm:flex-row sm:items-center">
+                  <Image
+                    src={contact.wechatQr}
+                    alt={`${contact.primaryName}微信二维码`}
+                    width={132}
+                    height={132}
+                    className="shrink-0 rounded-xl border border-line-soft bg-white p-1.5"
+                  />
+                  <div className="text-center sm:text-left">
+                    <p className="text-[11px] font-black uppercase tracking-[0.14em] text-brand-700">微信咨询</p>
+                    <p className="mt-2 text-xl font-black text-ink">{contact.primaryName} · 销售工程师</p>
+                    <p className="mt-2 text-sm text-muted">
+                      微信 <span className="font-bold text-ink-soft">{contact.wechat}</span>
+                      <span className="mx-2 text-line">|</span>
+                      手机 <a href={telHref(contact.primaryMobile)} className="font-bold text-ink-soft hover:text-brand-700">{contact.primaryMobile}</a>
+                    </p>
+                    <p className="mt-2 text-xs text-muted-light">扫码添加微信,获取选型建议与报价。</p>
+                  </div>
+                </div>
+              </Reveal>
             </div>
 
             {/* ── Right: Inquiry Form Card ── */}

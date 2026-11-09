@@ -48,7 +48,7 @@ export function CTASection() {
                 <b className="font-black text-brand-500">我们先帮你判断结构和扭矩方向</b>
               </h2>
               <p className="mt-4 max-w-[620px] text-[14.5px] leading-[1.8] text-white/60">
-                无论是标准品选型还是非标定制，提交以下任一信息即可启动工程师评估流程。正式版本将接入电话、微信二维码、文件上传、邮件通知等完整询盘链路。
+                无论是标准品选型还是非标定制，提交以下任一信息即可启动工程师评估流程。也可直接电话、微信或邮件联系销售工程师。
               </p>
             </Reveal>
 

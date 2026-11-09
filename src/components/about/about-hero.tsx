@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { trustBadges } from "@/content/about";
+import { contact, telHref } from "@/content/live-site/contact";
 
 const sellingPoints = [
   { label: "20+ 年", desc: "阻尼器研发制造经验" },
@@ -99,13 +100,13 @@ export function AboutHero() {
                 </svg>
               </Link>
               <a
-                href="tel:18617094202"
+                href={telHref(contact.primaryMobile)}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 bg-white px-6 py-3 text-sm font-bold text-brand-700 transition-all hover:border-brand-500 hover:bg-brand-50"
               >
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                186-1709-4202
+                {contact.primaryMobile}
               </a>
             </div>
 

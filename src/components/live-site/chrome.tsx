@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { liveCategories, liveHref, liveNavigation, type LiveNavItem } from "@/lib/live-site";
+import { contact, telHref } from "@/content/live-site/contact";
 
 function NavList({ items }: { items: LiveNavItem[] }) {
   return <ul className="space-y-1">{items.map(item => <li key={item.path}>
@@ -33,7 +34,7 @@ export function LiveHeader() {
         </details> : <a key={item.path} href={liveHref(item.path)} className="py-5 text-sm font-semibold hover:text-brand-700">{item.label}</a>)}
       </nav>
       <div className="hidden items-center gap-4 xl:flex"><a href={liveHref("/convert/")} className="text-xs text-muted hover:text-brand-700">扭矩换算</a></div>
-      <a href="tel:076982937929" className="ml-auto hidden text-sm font-bold text-brand-700 sm:block xl:ml-0">0769-82937929</a>
+      <a href={telHref(contact.primaryMobile)} className="ml-auto hidden text-sm font-bold text-brand-700 sm:block xl:ml-0">{contact.primaryMobile}</a>
       <details className="relative xl:hidden">
         <summary className="cursor-pointer rounded border border-line px-3 py-2 text-sm font-semibold">菜单</summary>
         <nav aria-label="手机导航" className="absolute right-0 top-14 max-h-[75vh] w-[min(320px,calc(100vw-40px))] overflow-y-auto rounded-lg border border-line bg-white p-4 shadow-lg"><NavList items={liveNavigation} /><a className="mt-2 block border-t border-line px-3 py-3 text-sm" href={liveHref("/convert/")}>扭矩换算</a></nav>
@@ -48,7 +49,7 @@ export function LiveFooter() {
       <div><p className="text-xl font-bold">东莞特澳</p><p className="mt-3 text-sm leading-7 text-muted">阻尼器、缓冲器与锁扣机构<br />研发、生产与定制服务</p></div>
       <div><h2 className="mb-3 font-bold">快速链接</h2><NavList items={liveNavigation.filter(item => item.path !== "/products/").map(({ label, path }) => ({ label, path }))} /></div>
       <div><h2 className="mb-3 font-bold">产品</h2><NavList items={liveCategories} /></div>
-      <div className="space-y-3 text-sm"><h2 className="text-base font-bold">联系我们</h2><p><a href="tel:18928247197">189 2824 7197</a></p><p><a href="tel:076982937929">0769 8293 7929</a></p><p><a href="mailto:info@chinateao.com">info@chinateao.com</a></p><p className="text-muted">广东省东莞市黄江镇黄江北街2号</p><a className="inline-block text-brand-700" href={liveHref("/contacts/")}>联系销售团队</a></div>
+      <div className="space-y-3 text-sm"><h2 className="text-base font-bold">联系我们</h2><p><a href={telHref(contact.primaryMobile)}>{contact.primaryName} {contact.primaryMobile}</a></p><p><a href={telHref(contact.primaryMobile)}>0769 8293 7929</a></p><p><a href={`mailto:${contact.email}`}>{contact.email}</a></p><p className="text-muted">广东省东莞市黄江镇黄江北街2号</p><a className="inline-block text-brand-700" href={liveHref("/contacts/")}>联系销售团队</a></div>
     </div>
     <div className="mx-auto mb-8 max-w-md px-5"><SearchForm /></div>
     <div className="border-t border-line px-5 py-5 text-center text-xs text-muted">© {new Date().getFullYear()} 东莞市特澳电子科技有限公司 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备13044030号-2</a></div>
