@@ -1,0 +1,1999 @@
+{
+  "/gear-damper/齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html": {
+    "model": "RD-T021",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "卡扣",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "8 mm"
+      }
+    ]
+  },
+  "/gear-damper/rd-t069-rd-v069shuangxiang-shiyongyuqicheneishijiayongdianqigongyejixieRD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械.html": {
+    "model": "RD-T069 / RD-V069",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ14.7"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      }
+    ]
+  },
+  "/gear-damper/rd-t040shiyongyuqichezuniqijiadianzuniqiqicheyongsuliaozunichilun-jianzhenzuniqi-shuangxiangsuliaozhuanlunsujiaozongchengjianhuanchongqi.html": {
+    "model": "RD-T040",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/rd-t036-shiyongyuqicheneishijiayongdianqigongyejixie.html": {
+    "model": "RD-T036",
+    "torque": {
+      "min": 200,
+      "max": 1500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ16.25"
+      },
+      {
+        "label": "模数",
+        "value": "1.25"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ]
+  },
+  "/gear-damper/rd-t029-shiyongqicheneishi-jiayongdianqi-gongyejixie.html": {
+    "model": "RD-T029",
+    "torque": {
+      "min": 20,
+      "max": 200,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ]
+  },
+  "/gear-damper/rd-10guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html": {
+    "model": "RD-10",
+    "torque": null,
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/rd-t025guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html": {
+    "model": "RD-T025",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "卡扣",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "10.4MM"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7.9 mm"
+      }
+    ]
+  },
+  "/gear-damper/rd--t019shiyongqichedianyanqiqicheyanjinghe-neishidianqiqichefangai-jiayongdianqi-gongyejixie.html": {
+    "model": "RD- T019",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "14"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ]
+  },
+  "/gear-damper/rd-t015b-shiyongqicheneishi-jiayongdianqi-gongyejixie.html": {
+    "model": "RD-T015B",
+    "torque": {
+      "min": 50,
+      "max": 700,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ27.5"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-rd-t068-v068.html": {
+    "model": "RD-T068 / RD-v068",
+    "torque": {
+      "min": 200,
+      "max": 3500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ14.7"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "12"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-rd-t038-v038.html": {
+    "model": "RD-T038 / RD-v038",
+    "torque": {
+      "min": 200,
+      "max": 1500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ11"
+      },
+      {
+        "label": "模数",
+        "value": "1.0"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper- RD-T038A/V038A.html": {
+    "model": "RD-T038A",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ16.25"
+      },
+      {
+        "label": "模数",
+        "value": "1.25"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T028.html": {
+    "model": "RD-T028",
+    "torque": {
+      "min": 50,
+      "max": 500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T024.html": {
+    "model": "RD-T024",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T022.html": {
+    "model": "RD-T022",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "卡扣",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7.6 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD- T011.html": {
+    "model": "RD- T011",
+    "torque": {
+      "min": 20,
+      "max": 400,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T010.html": {
+    "model": "RD-T010",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7.6 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-vane-damper-RD-T009.html": {
+    "model": "RD-T009",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ14.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "16"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T008.html": {
+    "model": "RD-T008",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T003.html": {
+    "model": "RD-T003",
+    "torque": {
+      "min": 20,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ7.2"
+      },
+      {
+        "label": "模数",
+        "value": "0.6"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "10"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T002.html": {
+    "model": "RD-T002",
+    "torque": {
+      "min": 20,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "φ7.8"
+      },
+      {
+        "label": "模数",
+        "value": "0.6"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-rd-t001.html": {
+    "model": "RD-T001",
+    "torque": {
+      "min": 20,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "φ7.8"
+      },
+      {
+        "label": "模数",
+        "value": "0.6"
+      },
+      {
+        "label": "齿外径",
+        "value": "7.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-10L.html": {
+    "model": "RD-10L",
+    "torque": null,
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "模数",
+        "value": "1.0"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-10R.html": {
+    "model": "RD-10R",
+    "torque": null,
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "模数",
+        "value": "1.0"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T023.html": {
+    "model": "RD-T023",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "卡扣",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "8 mm"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-RD-T015.html": {
+    "model": "RD-T015",
+    "torque": {
+      "min": 50,
+      "max": 500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "阻值范围",
+        "value": "0.5-5Ncm"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "尺寸",
+        "value": "φ15"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/gear-damper/gear-rotary-damper-rd-t039.html": {
+    "model": "RD-T039",
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": "螺钉",
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ]
+  },
+  "/axial-dampers/圆桶齿轮轴阻尼器  RD-T020扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html": {
+    "model": "RD-T020",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12.9"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "12.9 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18 mm"
+      }
+    ]
+  },
+  "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html": {
+    "model": "RD-T013E",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "17 mm"
+      }
+    ]
+  },
+  "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html": {
+    "model": "RD-T013D",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ]
+  },
+  "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013C汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html": {
+    "model": "RD-T013C",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T012E.html": {
+    "model": "RD-T012E",
+    "torque": {
+      "min": 200,
+      "max": 850,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "外径",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "17.5 mm"
+      }
+    ]
+  },
+  "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html": {
+    "model": "RD-V088",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ20"
+      },
+      {
+        "label": "轴尺寸",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "37.2"
+      }
+    ]
+  },
+  "/axial-dampers/rd-v088wutongzhouxinshiyongyumatongzuniqizhinengweiyu.html": {
+    "model": "RD-V088",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ20"
+      },
+      {
+        "label": "轴尺寸",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "37.2"
+      }
+    ]
+  },
+  "/axial-dampers/rd-t013ashiyongyuqicheneishijiayongdianqigongyejixiechedingbashouxichenqisaodijiqirenanquanlashou.html": {
+    "model": "RD-T013A",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "φ12.85"
+      },
+      {
+        "label": "外径",
+        "value": "12.85 mm"
+      },
+      {
+        "label": "高度",
+        "value": "17 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper- RD-T138.html": {
+    "model": "RD-T138",
+    "torque": {
+      "min": 800,
+      "max": 5000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "Size",
+        "value": "Φ16"
+      },
+      {
+        "label": "尺寸",
+        "value": "φ16"
+      },
+      {
+        "label": "外径",
+        "value": "16 mm"
+      },
+      {
+        "label": "高度",
+        "value": "38 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-RD-R018.html": {
+    "model": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "φ8"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ5.3"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T017.html": {
+    "model": "RD-T017",
+    "torque": {
+      "min": 50,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ10"
+      },
+      {
+        "label": "模数",
+        "value": "φ3.3"
+      },
+      {
+        "label": "外径",
+        "value": "10 mm"
+      },
+      {
+        "label": "高度",
+        "value": "9.8 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T013B.html": {
+    "model": "RD-T013B",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12.9"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "12.9 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-rd-t012d.html": {
+    "model": "RD-T012D",
+    "torque": {
+      "min": 200,
+      "max": 850,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "孔内径",
+        "value": "φ4.3"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.1 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-rd-t012c.html": {
+    "model": "RD-T012C",
+    "torque": {
+      "min": 200,
+      "max": 850,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "孔内径",
+        "value": "φ4.2"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-rd-t012b.html": {
+    "model": "RD-T012B",
+    "torque": {
+      "min": 150,
+      "max": 800,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "直径",
+        "value": "φ4.2"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T012A.html": {
+    "model": "RD-T012A",
+    "torque": {
+      "min": 150,
+      "max": 800,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "孔直径",
+        "value": "φ4.2"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper- RD-V088.html": {
+    "model": "RD-V088",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "尺寸",
+        "value": "Φ20"
+      },
+      {
+        "label": "轴尺寸",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "37.2"
+      }
+    ]
+  },
+  "/Glove Box Dampers/rd-V130-shiyongyuqicheshoutaoxiang-shounahe.html": {
+    "model": "RD-V130",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "50MM"
+      },
+      {
+        "label": "长度",
+        "value": "155 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html": {
+    "model": "RD-V127",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60mm"
+      },
+      {
+        "label": "长度",
+        "value": "133 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html": {
+    "model": "RD-V107",
+    "torque": {
+      "min": 3,
+      "max": 3,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "外径",
+        "value": "26.7 mm"
+      },
+      {
+        "label": "长度",
+        "value": "99.5 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/rd-t183shiyongyuqichezawuxiangsuojigouqichefushouxiang.html": {
+    "model": "RD-T183",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "10MM"
+      }
+    ]
+  },
+  "/Glove Box Dampers/air-damper-rd-v118.html": {
+    "model": "RD-V118",
+    "torque": {
+      "min": 3.5,
+      "max": 3.5,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "外径",
+        "value": "28 mm"
+      },
+      {
+        "label": "长度",
+        "value": "100 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/organizer-rd-t181.html": {
+    "model": "RD-T181",
+    "torque": null,
+    "force": {
+      "min": 13,
+      "max": 13,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "10MM"
+      },
+      {
+        "label": "操作力",
+        "value": "13 N"
+      }
+    ]
+  },
+  "/Glove Box Dampers/organizer- RD-T180A.html": {
+    "model": "RD-T180A",
+    "torque": null,
+    "force": {
+      "min": 8,
+      "max": 12,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "10MM"
+      },
+      {
+        "label": "操作力",
+        "value": "8~12 N"
+      }
+    ]
+  },
+  "/Glove Box Dampers/organizer- RD-T180.html": {
+    "model": "RD-T180",
+    "torque": null,
+    "force": {
+      "min": 12,
+      "max": 12,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "12MM"
+      },
+      {
+        "label": "操作力",
+        "value": "12 N"
+      }
+    ]
+  },
+  "/Glove Box Dampers/liner-damper- RD-V129.html": {
+    "model": "RD-V129",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "50MM"
+      },
+      {
+        "label": "长度",
+        "value": "133 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/liner-damper- RD-V128.html": {
+    "model": "RD-V128",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      }
+    ]
+  },
+  "/Glove Box Dampers/gear-rotary-vane-damper-RD-V127.html": {
+    "model": "RD-V127",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "75MM"
+      },
+      {
+        "label": "长度",
+        "value": "133 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/liner-damper- RD-V126.html": {
+    "model": "RD-V126",
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "feature",
+        "value": "Can control the lights in the glove box"
+      },
+      {
+        "label": "长度",
+        "value": "123.5 mm"
+      }
+    ]
+  },
+  "/Glove Box Dampers/axial-barrel-damper-rd-v108a.html": {
+    "model": "RD-V108A",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      }
+    ]
+  },
+  "/Glove Box Dampers/air-damper- RD-V108.html": {
+    "model": "RD-V108",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      }
+    ]
+  },
+  "/Glove Box Dampers/axial-barrel-damper- RD-V08.html": {
+    "model": "RD-V08",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      }
+    ]
+  },
+  "/Glove Box Dampers/air-damper-RD-V109.html": {
+    "model": "RD-V109",
+    "torque": {
+      "min": 0.6,
+      "max": 3,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "拉力",
+        "value": "80MM/秒 20N"
+      },
+      {
+        "label": "外径",
+        "value": "18.5 mm"
+      },
+      {
+        "label": "长度",
+        "value": "130 mm"
+      }
+    ]
+  },
+  "/latches/rd-09wushengsuokoumensuo-shiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
+    "model": "RD-09",
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 6,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "声音",
+        "value": "无声"
+      },
+      {
+        "label": "高度",
+        "value": "30.2 mm"
+      },
+      {
+        "label": "长度",
+        "value": "15.8 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "16 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6 N"
+      }
+    ]
+  },
+  "/latches/rd-12shiyongyuqicheanyasuokou-lajitongfandankaiguan-danhuangkakouxiang.html": {
+    "model": "RD-12",
+    "torque": null,
+    "force": {
+      "min": 5,
+      "max": 8,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "材质",
+        "value": "POM"
+      },
+      {
+        "label": "高度",
+        "value": "22.4 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11.1 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "9.9 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "5~8 N"
+      }
+    ]
+  },
+  "/latches/rd-01shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html": {
+    "model": "RD-01",
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 6,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "材质",
+        "value": "PA66"
+      },
+      {
+        "label": "高度",
+        "value": "17.6 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "6.9 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6 N"
+      }
+    ]
+  },
+  "/latches/jiakechongzisuoqi-xiaofangguimenfandanqimenpengguixi-yinxingmensuliaodantiaoanyashipengzhu.html": {
+    "model": "RD-18",
+    "torque": null,
+    "force": {
+      "min": 9,
+      "max": 12,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "材质",
+        "value": "ABC"
+      },
+      {
+        "label": "高度",
+        "value": "17 mm"
+      },
+      {
+        "label": "长度",
+        "value": "68.5 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "43 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "9~12 N"
+      }
+    ]
+  },
+  "/latches/rd-05shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html": {
+    "model": "RD-05",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "材质",
+        "value": "PA66"
+      }
+    ]
+  },
+  "/latches/push-push-latch- RD-08.html": {
+    "model": "RD-08",
+    "torque": null,
+    "force": {
+      "min": 3.5,
+      "max": 3.5,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "声音",
+        "value": "无声"
+      },
+      {
+        "label": "高度",
+        "value": "15.2 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "7.4 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "3.5 N"
+      }
+    ]
+  },
+  "/latches/push-push-latch-RD-03.html": {
+    "model": "RD-03",
+    "torque": null,
+    "force": {
+      "min": 3.5,
+      "max": 3.5,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "材质",
+        "value": "POM"
+      },
+      {
+        "label": "高度",
+        "value": "15.2 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "7.4 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "3.5 N"
+      }
+    ]
+  },
+  "/latches/push-push-latch- RD-02.html": {
+    "model": "RD-02",
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 6,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "材质",
+        "value": "PA66"
+      },
+      {
+        "label": "高度",
+        "value": "16.3 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "6.9 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6 N"
+      }
+    ]
+  },
+  "/qitaqichelingbujian/rd-v112.html": {
+    "model": "RD-V112",
+    "torque": {
+      "min": 10,
+      "max": 40,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "高度",
+        "value": "12 mm"
+      },
+      {
+        "label": "长度",
+        "value": "45 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "15 mm"
+      }
+    ]
+  },
+  "/qitaqichelingbujian/rd-tr02-jiaolian-shiyongyumenheye.html": {
+    "model": "RD-TR02 铰链 适用于门合页",
+    "torque": {
+      "min": 2,
+      "max": 7,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": []
+  },
+  "/qitaqichelingbujian/rd-tr01-jiaolian-shiyongyumenheye.html": {
+    "model": "RD-TR01 铰链 适用于门合页",
+    "torque": {
+      "min": 2,
+      "max": 7,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": []
+  },
+  "/qitaqichelingbujian/rd-15kaiguanshiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
+    "model": "RD-15",
+    "torque": null,
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "开关",
+        "value": "开关"
+      },
+      {
+        "label": "操作力",
+        "value": "30 N"
+      },
+      {
+        "label": "有效行程",
+        "value": "14 mm"
+      }
+    ]
+  },
+  "/qitaqichelingbujian/rd-t216-jiaolian-shiyongyumenheye.html": {
+    "model": "RD-T216",
+    "torque": {
+      "min": 10,
+      "max": 30,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": []
+  },
+  "/qitaqichelingbujian/danzhu-rd-13-shiyongyuqicheneishi-chuwuhe-xianweikaiguan.html": {
+    "model": "RD-13",
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 12,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "外径",
+        "value": "5.6 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6~12 N"
+      }
+    ]
+  },
+  "/qitaqichelingbujian/push-push-latch-RD-11.html": {
+    "model": "RD-11",
+    "torque": null,
+    "force": {
+      "min": 11,
+      "max": 11,
+      "unit": "N"
+    },
+    "mounting": null,
+    "specs": [
+      {
+        "label": "外径",
+        "value": "14.1 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "11 N"
+      }
+    ]
+  }
+}
