@@ -103,6 +103,12 @@ export default function Header() {
           {/* Actions */}
           <div className="flex items-center gap-2.5">
             <Link
+              href="/convert/"
+              className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-[15px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"
+            >
+              扭矩换算
+            </Link>
+            <Link
               href="/contacts/"
               className="inline-flex h-9 items-center rounded-full bg-brand-500 px-4 text-[15px] font-bold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:h-[38px]"
             >
@@ -150,9 +156,16 @@ export default function Header() {
               </div>
             ))}
             <Link
+              href="/convert/"
+              onClick={() => setMobileOpen(false)}
+              className="mt-4 rounded-full border border-line py-3 text-center text-sm font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+            >
+              扭矩换算
+            </Link>
+            <Link
               href="/contacts/"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 rounded-full bg-brand-500 py-3 text-center text-sm font-bold text-white"
+              className="mt-2 rounded-full bg-brand-500 py-3 text-center text-sm font-bold text-white"
             >
               获取报价
             </Link>

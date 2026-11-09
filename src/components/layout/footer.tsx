@@ -17,6 +17,12 @@ const footerLinks = [
     ],
   },
   {
+    title: "工程工具",
+    links: [
+      { label: "扭矩换算", href: "/convert/" },
+    ],
+  },
+  {
     title: "联系",
     links: [
       { label: "联系我们", href: "/contacts/" },
@@ -57,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {footerLinks.map((group) => (
               <div key={group.title}>
                 <h3 className="mb-3 text-sm font-bold text-ink">

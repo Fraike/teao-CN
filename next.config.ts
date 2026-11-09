@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/about", destination: "/about-us/", statusCode: 301 },
       { source: "/contact", destination: "/contacts/", statusCode: 301 },
+      { source: "/torque-converter", destination: "/convert/", statusCode: 301 },
+      { source: "/zh-hans/torque/:slug.html", destination: "/convert/", statusCode: 301 },
     ];
   },
   // Preserve the live site's directory slashes and .html URLs verbatim.
