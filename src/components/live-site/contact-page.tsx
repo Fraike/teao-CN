@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
-
-export const metadata: Metadata = {
-  title: "联系我们",
-  description:
-    "联系特澳 TEAO 销售工程团队 — 提供图纸、样品或应用场景描述，工程师将在 2 小时内响应，为您提供选型建议与报价方案。",
-};
 
 const productTypes = [
   "齿轮阻尼器",
