@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Car, Bath, Monitor, Cog } from "lucide-react";
+import { Car, Bath, Monitor, Cog, ArrowUpRight } from "lucide-react";
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
 import { container } from "./catalog";
@@ -39,16 +39,28 @@ export default function ApplicationsPage() {
             const Icon = cardIcons[i];
             return (
               <Reveal key={card.key} delay={((i % 2) + 1) as 1 | 2}>
-                <Link href={card.href} className="group block overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.06)]">
+                <Link
+                  href={card.href}
+                  className="group relative block overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_44px_rgba(30,30,32,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_24px_60px_rgba(232,120,26,0.14)]"
+                >
                   <div className="relative aspect-[16/10] overflow-hidden bg-surface">
-                    <Image src={card.image} alt={card.title} fill sizes="(max-width: 768px) 100vw, 600px" className="object-cover" />
-                  </div>
-                  <div className="p-7">
-                    <Icon className="mb-4 h-10 w-10 text-brand-500" />
-                    <h2 className="mb-3 text-2xl font-bold">{card.title}</h2>
-                    <p className="text-muted leading-relaxed">{card.description}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-[13px] font-bold text-brand-500">
-                      查看应用 →
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                    <span className="absolute left-5 top-5 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-brand-700 backdrop-blur">
+                      <Icon size={18} />
+                    </span>
+                    <div className="absolute inset-x-5 bottom-5 text-white">
+                      <h2 className="text-2xl font-black tracking-tight">{card.title}</h2>
+                      <p className="mt-1 max-w-[420px] text-[13px] leading-relaxed text-white/80">{card.description}</p>
+                    </div>
+                    <span className="absolute right-5 bottom-5 grid h-10 w-10 place-items-center rounded-full bg-white text-brand-700 shadow-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                      <ArrowUpRight size={18} />
                     </span>
                   </div>
                 </Link>

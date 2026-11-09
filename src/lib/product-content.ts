@@ -43,6 +43,17 @@ export function getProductContent(path: string): ProductContent | null {
   return content[path] ?? null;
 }
 
+const byModel = new Map<string, ProductContent>();
+for (const record of Object.values(content)) {
+  const key = record.model.toUpperCase().replace(/\s+/g, "").split("/")[0];
+  if (!byModel.has(key)) byModel.set(key, record);
+}
+
+export function getProductContentByModel(model: string): ProductContent | null {
+  const key = String(model ?? "").toUpperCase().replace(/\s+/g, "").split("/")[0];
+  return byModel.get(key) ?? null;
+}
+
 export function getRelatedProducts(categoryId: string, excludePath: string, limit = 4, excludeModel?: string): CatalogProduct[] {
   const category = liveCatalog.find(item => item.id === categoryId);
   if (!category) return [];
