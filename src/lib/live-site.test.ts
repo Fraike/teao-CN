@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { getPilotPage, developmentCategoryPath, liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH, getNewsSlug, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH } from "./live-site";
+import { getPilotPage, developmentCategoryPath, liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH, getNewsSlug, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "./live-site";
 import { getCategoryRoute } from "./live-catalog";
 
 test("original category and html detail resolve without renaming", () => {
@@ -124,4 +124,18 @@ test("known news articles resolve, unknown slugs and pagination do not", () => {
   assert.equal(getNewsSlug(["news", "index_2.html"]), null);
   assert.equal(liveHref("/news/teao-expands-capacity.html"), "/news/teao-expands-capacity.html");
   assert.equal(liveHref("/news/unknown-article.html"), LIVE_ORIGIN + "/news/unknown-article.html");
+});
+
+test("convert resolves locally with and without trailing slash", () => {
+  assert.equal(getPilotPage(["convert"]), "convert");
+  assert.equal(liveHref("/convert/"), "/convert/");
+  assert.equal(liveHref("/convert"), "/convert");
+  assert.equal(CONVERT_PATH, "/convert/");
+});
+
+test("convert near-misses stay on the live origin", () => {
+  assert.equal(getPilotPage(["convert", "x"]), null);
+  assert.equal(getPilotPage(["torque-converter"]), null);
+  assert.equal(getPilotPage(["zh-hans", "torque", "gear-damper.html"]), null);
+  assert.equal(liveHref("/converters/"), LIVE_ORIGIN + "/converters/");
 });

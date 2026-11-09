@@ -15,6 +15,7 @@ export const INDUSTRIAL_APPLICATION_PATH = "/applications/industrial-application
 export const ABOUT_PATH = "/about-us/";
 export const CONTACTS_PATH = "/contacts/";
 export const NEWS_PATH = "/news/";
+export const CONVERT_PATH = "/convert/";
 export const NEWS_ARTICLE_SLUGS = newsArticles.map(article => article.slug);
 export const liveCategories = categoryRoutes;
 
@@ -57,7 +58,7 @@ export function getNewsSlug(segments: readonly string[]): string | null {
   return NEWS_ARTICLE_SLUGS.includes(slug) ? slug : null;
 }
 
-export function getPilotPage(segments: readonly string[]): "category" | "product" | "quality" | "faq" | "about" | "contacts" | "news" | "news-article" | ApplicationPageType | null {
+export function getPilotPage(segments: readonly string[]): "category" | "product" | "quality" | "faq" | "about" | "contacts" | "news" | "news-article" | "convert" | ApplicationPageType | null {
   const path = legacyPathFromSegments(segments);
   if (liveCategories.some(category => path + "/" === category.path)) return "category";
   if (liveCategories.some(category => Array.from({ length: category.pageCount - 1 }, (_, index) => category.path + `index_${index + 2}.html`).includes(path))) return "category";
@@ -70,6 +71,7 @@ export function getPilotPage(segments: readonly string[]): "category" | "product
   if (path + "/" === CONTACTS_PATH) return "contacts";
   if (path + "/" === NEWS_PATH) return "news";
   if (getNewsSlug(segments)) return "news-article";
+  if (path + "/" === CONVERT_PATH) return "convert";
   return null;
 }
 
