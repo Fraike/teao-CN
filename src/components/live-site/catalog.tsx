@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import products from "@/content/live-site/gear-products.json";
-import { liveCategories, liveHref, PILOT_PRODUCT_PATH } from "@/lib/live-site";
+import { liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH } from "@/lib/live-site";
 import { liveCatalog, type CatalogCategory, type CatalogPage, type CatalogProduct } from "@/lib/live-catalog";
+import { enrichProduct } from "@/lib/product-enrichment";
+import ProductCard from "./product-card";
+import ListingHero from "./listing-hero";
+import ListingTabs from "./listing-tabs";
+import ListingPagination from "./listing-pagination";
+import InquiryCTA from "./inquiry-cta";
+import { container } from "./container";
 
-export const container = "mx-auto w-full max-w-7xl px-5 lg:px-8";
+export { container };
 
 export function Breadcrumb({ product = false, category = liveCatalog[0] }: { product?: boolean; category?: CatalogCategory }) {
   return <nav aria-label="面包屑" className={`${container} flex flex-wrap gap-2 py-5 text-xs text-muted`}>
@@ -37,22 +44,49 @@ export function ProductCards({ related = false, items = products }: { related?: 
 }
 
 export function CategoryPage({ category = liveCatalog[0], page = category.pages[0] }: { category?: CatalogCategory; page?: CatalogPage } = {}) {
-  return <><Breadcrumb category={category} /><div className={`${container} pb-8`}><CategoryNav active={category.path} /></div>
-    <section className="border-y border-line bg-white"><div className={`${container} grid items-center gap-8 py-10 md:grid-cols-[1fr_1.15fr] lg:py-14`}>
-      <div className="relative aspect-[1.5] max-h-[320px]"><Image src={category.image} alt={`特澳${category.label}系列`} fill sizes="(max-width: 768px) 90vw, 500px" className="object-contain" priority /></div>
-      <div><h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{category.label}</h1>
-        <p className="mt-5 max-w-xl text-base leading-8 text-muted">{category.description}</p>
-        <div className="mt-6 flex flex-wrap gap-3"><a href="#products" className="rounded-md bg-brand-500 px-6 py-3 text-sm font-bold text-white">浏览产品</a><a href={liveHref("/contacts/")} className="rounded-md border border-line px-6 py-3 text-sm font-bold">咨询选型</a></div>
-      </div>
-    </div></section>
-    <section id="products" className={`${container} scroll-mt-24 py-12`}>
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-3"><h2 className="text-2xl font-bold">产品型号</h2><p className="text-sm text-muted">第 {page.number} 页 / 共 {category.pages.length} 页 · 本页 {page.products.length} 款</p></div>
-      <ProductCards items={page.products} />
-      {category.pages.length > 1 && <nav aria-label="产品分页" className="mt-10 flex flex-wrap justify-center gap-2">
-        {page.number > 1 && <Link href={category.pages[page.number - 2].path} className="rounded border border-line bg-white px-4 py-2">上一页</Link>}
-        {category.pages.map(item => item.number === page.number ? <span key={item.path} aria-current="page" className="rounded border border-brand-500 bg-brand-500 px-4 py-2 text-white">{item.number}</span> : <Link key={item.path} href={item.path} className="rounded border border-line bg-white px-4 py-2 hover:border-brand-500">{item.number}</Link>)}
-        {page.number < category.pages.length && <Link href={category.pages[page.number].path} className="rounded border border-line bg-white px-4 py-2">下一页</Link>}
-      </nav>}
-    </section>
-  </>;
+  const enriched = page.products.map(product => enrichProduct(category.id, product));
+  const totalCount = category.pages.reduce((sum, item) => sum + item.products.length, 0);
+  const listingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${category.label}产品`,
+    description: category.description,
+    url: LIVE_ORIGIN + encodeURI(page.path),
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: enriched.map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: { "@type": "Product", name: product.model, description: product.title, url: liveHref(product.path) },
+      })),
+    },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingJsonLd) }} />
+      <ListingHero title={category.label} description={category.description} crumb={category.label} />
+      <ListingTabs active={category.path} />
+      <section id="products" className={`${container} scroll-mt-24 pb-12 pt-8`}>
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-black uppercase tracking-[0.16em] text-muted-light">产品</span>
+            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-ink px-2 text-xs font-extrabold text-white">{totalCount}</span>
+          </div>
+          <p className="text-xs text-muted">第 {page.number} / {category.pages.length} 页 · 本页 {page.products.length} 款</p>
+        </div>
+
+        <div className="grid grid-cols-1 items-stretch gap-3 sm:grid-cols-2 lg:gap-5">
+          {enriched.map(product => <ProductCard key={product.path} product={product} />)}
+        </div>
+
+        <ListingPagination
+          page={page.number}
+          totalPages={category.pages.length}
+          hrefFor={(number) => category.pages[number - 1].path}
+        />
+      </section>
+      <InquiryCTA />
+    </>
+  );
 }

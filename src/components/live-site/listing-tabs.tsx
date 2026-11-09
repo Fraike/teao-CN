@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { liveCategories, liveHref } from "@/lib/live-site";
-import { container } from "./catalog";
+import { container } from "./container";
 
 export default function ListingTabs({ active }: { active?: string }) {
   const pill = (isActive: boolean) =>

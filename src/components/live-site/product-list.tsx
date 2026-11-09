@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import ProductCard from "./product-card";
-import ProductCardMobile from "./product-card-mobile";
 import ListingPagination from "./listing-pagination";
 import type { EnrichedProduct } from "@/lib/product-enrichment";
 
@@ -65,11 +64,8 @@ export default function ProductList({
 
       {visible.length > 0 ? (
         <>
-          <div className="hidden grid-cols-2 items-stretch gap-5 lg:grid">
+          <div className="grid grid-cols-1 items-stretch gap-3 sm:grid-cols-2 lg:gap-5">
             {visible.map(product => <ProductCard key={product.path} product={product} />)}
-          </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:hidden">
-            {visible.map(product => <ProductCardMobile key={product.path} product={product} />)}
           </div>
           <ListingPagination page={current} totalPages={totalPages} onChange={changePage} />
         </>

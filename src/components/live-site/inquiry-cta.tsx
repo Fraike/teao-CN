@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { container } from "./catalog";
+import { container } from "./container";
 
 export default function InquiryCTA() {
   return (
