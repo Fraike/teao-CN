@@ -1,0 +1,5811 @@
+{
+  "/gear-damper/齿轮阻尼器RD-T021适用于眼镜盒、杯托、家电、智能锁.html": {
+    "slug": "rd-t021",
+    "categoryId": "gear-damper",
+    "model": "RD-T021",
+    "name": "RD-T021 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t021/main.webp",
+        "alt": "RD-T021 main"
+      }
+    ],
+    "characteristics": [
+      "卡扣",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "卡扣",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "8 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t021/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t021/curve.webp",
+      "temperature": "/images/products/rd-t021/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T021",
+        "RD-T021A",
+        "RD-T021C",
+        "RD-T021D"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "12MM",
+            "14.4MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.4MM",
+            "4.25MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "8.0MM",
+            "10.3MM",
+            "8.1MM",
+            "9.2MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/rd-t040shiyongyuqichezuniqijiadianzuniqiqicheyongsuliaozunichilun-jianzhenzuniqi-shuangxiangsuliaozhuanlunsujiaozongchengjianhuanchongqi.html": {
+    "slug": "rd-t040",
+    "categoryId": "gear-damper",
+    "model": "RD-T040",
+    "name": "RD-T040 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t040/main.webp",
+        "alt": "RD-T040 main"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "85 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t040/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t040/curve.webp",
+      "temperature": "/images/products/rd-t040/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/rd-t036-shiyongyuqicheneishijiayongdianqigongyejixie.html": {
+    "slug": "rd-t036",
+    "categoryId": "gear-damper",
+    "model": "RD-T036",
+    "name": "RD-T036 齿轮阻尼器",
+    "summary": "扭矩 200 – 1500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t036/main.webp",
+        "alt": "RD-T036 main"
+      }
+    ],
+    "characteristics": [
+      "螺钉",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "900 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ16.25"
+      },
+      {
+        "label": "模数",
+        "value": "1.25"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t036/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t036/curve.webp",
+      "temperature": "/images/products/rd-t036/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T036 RD-V036",
+        "RD-T036A RD-V036A"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "13.0MM",
+            "16 25MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "6.0MM",
+            "6.0MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "18.5MM",
+            "18.5MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "1.0",
+            "1 25"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/rd-t029-shiyongqicheneishi-jiayongdianqi-gongyejixie.html": {
+    "slug": "rd-t029",
+    "categoryId": "gear-damper",
+    "model": "RD-T029",
+    "name": "RD-T029 齿轮阻尼器",
+    "summary": "扭矩 20 – 200 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t029/main.webp",
+        "alt": "RD-T029 main"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 200,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "350 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t029/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t029/curve.webp",
+      "temperature": "/images/products/rd-t029/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/rd-10guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html": {
+    "slug": "rd-10",
+    "categoryId": "gear-damper",
+    "model": "RD-10",
+    "name": "RD-10 齿轮阻尼器",
+    "summary": "扭矩可定制,支持按应用调校",
+    "images": [
+      {
+        "url": "/images/products/rd-10/main.webp",
+        "alt": "RD-10 main"
+      },
+      {
+        "url": "/images/products/rd-10/photo_1.webp",
+        "alt": "RD-10 photo_1"
+      },
+      {
+        "url": "/images/products/rd-10/photo_2.webp",
+        "alt": "RD-10 photo_2"
+      },
+      {
+        "url": "/images/products/rd-10/photo_3.webp",
+        "alt": "RD-10 photo_3"
+      },
+      {
+        "url": "/images/products/rd-10/photo_4.webp",
+        "alt": "RD-10 photo_4"
+      }
+    ],
+    "characteristics": [
+      "11 齿"
+    ],
+    "torque": null,
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "轴芯",
+        "material": "POM"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-10/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/gear-damper/rd-t025guangfanshiyongyuqicheneishijiayongdianqi-gongyejixiekafeijidayinji.html": {
+    "slug": "rd-t025",
+    "categoryId": "gear-damper",
+    "model": "RD-T025",
+    "name": "RD-T025 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t025/main.webp",
+        "alt": "RD-T025 main"
+      }
+    ],
+    "characteristics": [
+      "卡扣",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "卡扣",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "10.4MM"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7.9 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t025/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t025/curve.webp",
+      "temperature": "/images/products/rd-t025/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T025",
+        "RD-T025A",
+        "RD-T025B",
+        "RD-T025C"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "12MM",
+            "14.4MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.4MM",
+            "4.25MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "7.9MM",
+            "10.3MM",
+            "8.0MM",
+            "9.1MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/rd--t019shiyongqichedianyanqiqicheyanjinghe-neishidianqiqichefangai-jiayongdianqi-gongyejixie.html": {
+    "slug": "rd-t019",
+    "categoryId": "gear-damper",
+    "model": "RD- T019",
+    "name": "RD- T019 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t019/main.webp",
+        "alt": "RD-T019 main"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "14 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "30 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "14"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "卡簧",
+        "material": "RD"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t019/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t019/curve.webp",
+      "temperature": "/images/products/rd-t019/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/rd-t015b-shiyongqicheneishi-jiayongdianqi-gongyejixie.html": {
+    "slug": "rd-t015b",
+    "categoryId": "gear-damper",
+    "model": "RD-T015B",
+    "name": "RD-T015B 齿轮阻尼器",
+    "summary": "扭矩 50 – 700 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t015b/main.webp",
+        "alt": "RD-T015B main"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 50,
+      "max": 700,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "300 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 60000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ27.5"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "卡簧",
+        "material": "RD"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t015b/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t015b/curve.webp",
+      "temperature": "/images/products/rd-t015b/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-rd-t068-v068.html": {
+    "slug": "rd-t068",
+    "categoryId": "gear-damper",
+    "model": "RD-T068 / RD-v068",
+    "name": "RD-T068 / RD-v068 齿轮阻尼器",
+    "summary": "扭矩 200 – 3500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t068/photo_1.webp",
+        "alt": "RD-T068 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t068/photo_2.webp",
+        "alt": "RD-T068 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t068/photo_3.webp",
+        "alt": "RD-T068 photo_3"
+      }
+    ],
+    "characteristics": [
+      "T068",
+      "12 齿"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 3500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ14.7"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "12"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t068/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t068/curve.webp",
+      "temperature": "/images/products/rd-t068/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-rd-t038-v038.html": {
+    "slug": "rd-t038",
+    "categoryId": "gear-damper",
+    "model": "RD-T038 / RD-v038",
+    "name": "RD-T038 / RD-v038 齿轮阻尼器",
+    "summary": "扭矩 200 – 1500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t038/main.webp",
+        "alt": "RD-T038 main"
+      },
+      {
+        "url": "/images/products/rd-t038/photo_2.webp",
+        "alt": "RD-T038 photo_2"
+      }
+    ],
+    "characteristics": [
+      "螺钉",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "900 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ11"
+      },
+      {
+        "label": "模数",
+        "value": "1.0"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t038/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t038/curve.webp",
+      "temperature": "/images/products/rd-t038/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T038 RD-V038",
+        "RD-T038A RD-V038A"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "13.0MM",
+            "16.25MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "6.0MM",
+            "6.0MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "18.5MM",
+            "18.5MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "1.0",
+            "1.25"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/gear-rotary-damper-RD-T028.html": {
+    "slug": "rd-t028",
+    "categoryId": "gear-damper",
+    "model": "RD-T028",
+    "name": "RD-T028 齿轮阻尼器",
+    "summary": "扭矩 50 – 500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t028/main.webp",
+        "alt": "RD-T028 main"
+      },
+      {
+        "url": "/images/products/rd-t028/photo.webp",
+        "alt": "RD-T028 photo"
+      }
+    ],
+    "characteristics": [
+      "T028",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 50,
+      "max": 500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t028/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t028/curve.webp",
+      "temperature": "/images/products/rd-t028/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-T024.html": {
+    "slug": "rd-t024",
+    "categoryId": "gear-damper",
+    "model": "RD-T024",
+    "name": "RD-T024 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t024/main.webp",
+        "alt": "RD-T024 main"
+      },
+      {
+        "url": "/images/products/rd-t024/photo_1.webp",
+        "alt": "RD-T024 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t024/photo_2.webp",
+        "alt": "RD-T024 photo_2"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "250 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t024/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t024/curve.webp",
+      "temperature": "/images/products/rd-t024/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-T022.html": {
+    "slug": "rd-t022",
+    "categoryId": "gear-damper",
+    "model": "RD-T022",
+    "name": "RD-T022 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t022/main.webp",
+        "alt": "RD-T022 main"
+      },
+      {
+        "url": "/images/products/rd-t022/photo_1.webp",
+        "alt": "RD-T022 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t022/photo_2.webp",
+        "alt": "RD-T022 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t022/photo_3.webp",
+        "alt": "RD-T022 photo_3"
+      }
+    ],
+    "characteristics": [
+      "卡扣",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "卡扣",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7.6 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t022/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t022/curve.webp",
+      "temperature": null
+    },
+    "variants": {
+      "variants": [
+        "RD-T022",
+        "RD-T022A",
+        "RD-T023M",
+        "RD-T022C"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "12MM",
+            "14.4MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.4MM",
+            "4.25MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "7.6MM",
+            "10.0MM",
+            "7.8MM",
+            "8.5MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/gear-rotary-damper-RD- T011.html": {
+    "slug": "rd-t011",
+    "categoryId": "gear-damper",
+    "model": "RD- T011",
+    "name": "RD- T011 齿轮阻尼器",
+    "summary": "扭矩 20 – 400 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t011/main.webp",
+        "alt": "RD-T011 main"
+      },
+      {
+        "url": "/images/products/rd-t011/photo_2.webp",
+        "alt": "RD-T011 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t011/photo_3.webp",
+        "alt": "RD-T011 photo_3"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 400,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "100 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t011/size.webp",
+    "performanceCharts": {
+      "rotation": null,
+      "temperature": "/images/products/rd-t011/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-T010.html": {
+    "slug": "rd-t010",
+    "categoryId": "gear-damper",
+    "model": "RD-T010",
+    "name": "RD-T010 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t010/main.webp",
+        "alt": "RD-T010 main"
+      },
+      {
+        "url": "/images/products/rd-t010/photo_2.webp",
+        "alt": "RD-T010 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t010/photo_3.webp",
+        "alt": "RD-T010 photo_3"
+      }
+    ],
+    "characteristics": [
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7.6 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t010/size.webp",
+    "performanceCharts": {
+      "rotation": null,
+      "temperature": "/images/products/rd-t010/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T010",
+        "RD-T010A",
+        "RD-T010C",
+        "RD-T010D"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "11",
+            "13"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "10.4MM",
+            "12MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.45MM",
+            "3.4MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "7.6MM",
+            "10MM",
+            "7.8MM",
+            "7.8MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/gear-rotary-vane-damper-RD-T009.html": {
+    "slug": "rd-t009",
+    "categoryId": "gear-damper",
+    "model": "RD-T009",
+    "name": "RD-T009 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t009/main.webp",
+        "alt": "RD-T009 main"
+      },
+      {
+        "url": "/images/products/rd-t009/photo_2.webp",
+        "alt": "RD-T009 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t009/photo_3.webp",
+        "alt": "RD-T009 photo_3"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "16 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "100 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ14.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "16"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "卡簧",
+        "material": "RD"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t009/size.webp",
+    "performanceCharts": {
+      "rotation": null,
+      "temperature": "/images/products/rd-t009/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-T008.html": {
+    "slug": "rd-t008",
+    "categoryId": "gear-damper",
+    "model": "RD-T008",
+    "name": "RD-T008 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t008/main.webp",
+        "alt": "RD-T008 main"
+      },
+      {
+        "url": "/images/products/rd-t008/photo_2.webp",
+        "alt": "RD-T008 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t008/photo_3.webp",
+        "alt": "RD-T008 photo_3"
+      }
+    ],
+    "characteristics": [
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t008/size.webp",
+    "performanceCharts": {
+      "rotation": null,
+      "temperature": "/images/products/rd-t008/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T008",
+        "RD-T008A",
+        "RD-T008C",
+        "RD-T008D"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "12MM",
+            "14.4MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.4MM",
+            "4.25MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "7.0MM",
+            "10MM",
+            "7.8MM",
+            "8.6MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/gear-rotary-damper-RD-T003.html": {
+    "slug": "rd-t003",
+    "categoryId": "gear-damper",
+    "model": "RD-T003",
+    "name": "RD-T003 齿轮阻尼器",
+    "summary": "扭矩 20 – 150 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t003/main.webp",
+        "alt": "RD-T003 main"
+      },
+      {
+        "url": "/images/products/rd-t003/photo_2.webp",
+        "alt": "RD-T003 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t003/photo_3.webp",
+        "alt": "RD-T003 photo_3"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "10 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "100 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ7.2"
+      },
+      {
+        "label": "模数",
+        "value": "0.6"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "10"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t003/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t003/curve.webp",
+      "temperature": "/images/products/rd-t003/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-T002.html": {
+    "slug": "rd-t002",
+    "categoryId": "gear-damper",
+    "model": "RD-T002",
+    "name": "RD-T002 齿轮阻尼器",
+    "summary": "扭矩 20 – 150 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t002/main.webp",
+        "alt": "RD-T002 main"
+      },
+      {
+        "url": "/images/products/rd-t002/photo_2.webp",
+        "alt": "RD-T002 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t002/photo_3.webp",
+        "alt": "RD-T002 photo_3"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "35 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "φ7.8"
+      },
+      {
+        "label": "模数",
+        "value": "0.6"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t002/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t002/curve.webp",
+      "temperature": "/images/products/rd-t002/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-rd-t001.html": {
+    "slug": "rd-t001",
+    "categoryId": "gear-damper",
+    "model": "RD-T001",
+    "name": "RD-T001 齿轮阻尼器",
+    "summary": "扭矩 20 – 150 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t001/main.webp",
+        "alt": "RD-T001 main"
+      },
+      {
+        "url": "/images/products/rd-t001/photo_2.webp",
+        "alt": "RD-T001 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t001/photo_3.webp",
+        "alt": "RD-T001 photo_3"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "50 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "φ7.8"
+      },
+      {
+        "label": "模数",
+        "value": "0.6"
+      },
+      {
+        "label": "齿外径",
+        "value": "7.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t001/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t001/curve.webp",
+      "temperature": "/images/products/rd-t001/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-10L.html": {
+    "slug": "rd-10",
+    "categoryId": "gear-damper",
+    "model": "RD-10L",
+    "name": "RD-10L 齿轮阻尼器",
+    "summary": "扭矩可定制,支持按应用调校",
+    "images": [
+      {
+        "url": "/images/products/rd-10/main.webp",
+        "alt": "RD-10 main"
+      },
+      {
+        "url": "/images/products/rd-10/photo_1.webp",
+        "alt": "RD-10 photo_1"
+      },
+      {
+        "url": "/images/products/rd-10/photo_2.webp",
+        "alt": "RD-10 photo_2"
+      },
+      {
+        "url": "/images/products/rd-10/photo_3.webp",
+        "alt": "RD-10 photo_3"
+      },
+      {
+        "url": "/images/products/rd-10/photo_4.webp",
+        "alt": "RD-10 photo_4"
+      }
+    ],
+    "characteristics": [
+      "11 齿"
+    ],
+    "torque": null,
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "模数",
+        "value": "1.0"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ],
+    "materials": [
+      {
+        "part": "轴芯",
+        "material": "POM"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-10/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-10R.html": {
+    "slug": "rd-10",
+    "categoryId": "gear-damper",
+    "model": "RD-10R",
+    "name": "RD-10R 齿轮阻尼器",
+    "summary": "扭矩可定制,支持按应用调校",
+    "images": [
+      {
+        "url": "/images/products/rd-10/main.webp",
+        "alt": "RD-10 main"
+      },
+      {
+        "url": "/images/products/rd-10/photo_1.webp",
+        "alt": "RD-10 photo_1"
+      },
+      {
+        "url": "/images/products/rd-10/photo_2.webp",
+        "alt": "RD-10 photo_2"
+      },
+      {
+        "url": "/images/products/rd-10/photo_3.webp",
+        "alt": "RD-10 photo_3"
+      },
+      {
+        "url": "/images/products/rd-10/photo_4.webp",
+        "alt": "RD-10 photo_4"
+      }
+    ],
+    "characteristics": [
+      "11 齿"
+    ],
+    "torque": null,
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "模数",
+        "value": "1.0"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      }
+    ],
+    "materials": [
+      {
+        "part": "轴芯",
+        "material": "POM"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-10/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-RD-T023.html": {
+    "slug": "rd-t023",
+    "categoryId": "gear-damper",
+    "model": "RD-T023",
+    "name": "RD-T023 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t023/main.webp",
+        "alt": "RD-T023 main"
+      }
+    ],
+    "characteristics": [
+      "卡扣",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "卡扣",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "8 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t023/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t023/curve.webp",
+      "temperature": "/images/products/rd-t023/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T023",
+        "RD-T023A",
+        "RD-T023B",
+        "RD-T023C"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "12MM",
+            "14.4MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.4MM",
+            "4.25MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "8.0MM",
+            "10.3MM",
+            "8.1MM",
+            "9.2MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/gear-damper/gear-rotary-damper-RD-T015.html": {
+    "slug": "rd-t015",
+    "categoryId": "gear-damper",
+    "model": "RD-T015",
+    "name": "RD-T015 齿轮阻尼器",
+    "summary": "扭矩 50 – 500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t015/main.webp",
+        "alt": "RD-T015 main"
+      },
+      {
+        "url": "/images/products/rd-t015/photo_1.webp",
+        "alt": "RD-T015 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t015/photo_2.webp",
+        "alt": "RD-T015 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t015/photo_3.webp",
+        "alt": "RD-T015 photo_3"
+      },
+      {
+        "url": "/images/products/rd-t015/photo_4.webp",
+        "alt": "RD-T015 photo_4"
+      }
+    ],
+    "characteristics": [
+      "双向",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 50,
+      "max": 500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "300 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 60000
+    },
+    "specifications": [
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "阻值范围",
+        "value": "0.5-5Ncm"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "尺寸",
+        "value": "φ15"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "卡簧",
+        "material": "RD"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t015/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t015/curve.webp",
+      "temperature": "/images/products/rd-t015/curve2.webp"
+    },
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper-rd-t039.html": {
+    "slug": "rd-t039",
+    "categoryId": "gear-damper",
+    "model": "RD-T039",
+    "name": "RD-T039 齿轮阻尼器",
+    "summary": "扭矩 20 – 300 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t039/main.webp",
+        "alt": "RD-T039 main"
+      },
+      {
+        "url": "/images/products/rd-t039/photo_1.webp",
+        "alt": "RD-T039 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t039/photo_2.webp",
+        "alt": "RD-T039 photo_2"
+      },
+      {
+        "url": "/images/products/rd-t039/photo_3.webp",
+        "alt": "RD-T039 photo_3"
+      }
+    ],
+    "characteristics": [
+      "螺钉",
+      "11 齿"
+    ],
+    "torque": {
+      "min": 20,
+      "max": 300,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": "螺钉",
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10.4"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°"
+      },
+      {
+        "label": "齿数",
+        "value": "11"
+      },
+      {
+        "label": "外径",
+        "value": "10.4 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t039/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t039/curve.webp",
+      "temperature": "/images/products/rd-t039/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "RD-T039",
+        "RD-T039A",
+        "RD-T039B",
+        "RD-T039C"
+      ],
+      "rows": [
+        {
+          "param": "齿数",
+          "values": [
+            "11",
+            "11",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "param": "齿外径",
+          "values": [
+            "10.4MM",
+            "10.4MM",
+            "12MM",
+            "14.4MM"
+          ]
+        },
+        {
+          "param": "齿高",
+          "values": [
+            "3.0MM",
+            "5.5MM",
+            "3.4MM",
+            "4 25MM"
+          ]
+        },
+        {
+          "param": "总高",
+          "values": [
+            "15.5MM",
+            "18MM",
+            "15.7MM",
+            "16.7MM"
+          ]
+        },
+        {
+          "param": "模数",
+          "values": [
+            "0.8",
+            "0.8",
+            "0.8",
+            "0.8"
+          ]
+        },
+        {
+          "param": "压力角",
+          "values": [
+            "20°",
+            "20°",
+            "20°",
+            "20°"
+          ]
+        }
+      ]
+    }
+  },
+  "/axial-dampers/圆桶齿轮轴阻尼器  RD-T020扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html": {
+    "slug": "rd-t020",
+    "categoryId": "axial-damper",
+    "model": "RD-T020",
+    "name": "RD-T020 圆筒阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t020/main.webp",
+        "alt": "RD-T020 main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "1000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12.9"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "12.9 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t020/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t020/curve.webp",
+      "temperature": "/images/products/rd-t020/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D扫地机器人、安全拉手、汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫地机器人、安全拉手.html": {
+    "slug": "rd-t013e",
+    "categoryId": "axial-damper",
+    "model": "RD-T013E",
+    "name": "RD-T013E 圆筒阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t013e/main.webp",
+        "alt": "RD-T013E main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "1000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "17 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t013e/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t013e/curve.webp",
+      "temperature": null
+    },
+    "variants": null
+  },
+  "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013D汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html": {
+    "slug": "rd-t013d",
+    "categoryId": "axial-damper",
+    "model": "RD-T013D",
+    "name": "RD-T013D 圆筒阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t013d/main.webp",
+        "alt": "RD-T013D main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "1000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t013d/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t013d/curve.webp",
+      "temperature": "/images/products/rd-t013d/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/圆桶 齿轮 轴阻尼器  RD-T013C汽车内饰、家用电器、工业机械、车顶把手、吸尘器扫.html": {
+    "slug": "rd-t013c",
+    "categoryId": "axial-damper",
+    "model": "RD-T013C",
+    "name": "RD-T013C 圆筒阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t013c/main.webp",
+        "alt": "RD-T013C main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "1000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ13"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "13 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t013c/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t013c/curve.webp",
+      "temperature": "/images/products/rd-t013c/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T012E.html": {
+    "slug": "rd-t012e",
+    "categoryId": "axial-damper",
+    "model": "RD-T012E",
+    "name": "RD-T012E 圆筒阻尼器",
+    "summary": "扭矩 200 – 850 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t012e/main.webp",
+        "alt": "RD-T012E main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 850,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "650 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "外径",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "17.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t012e/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t012e/curve.webp",
+      "temperature": "/images/products/rd-t012e/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/rd-t013ashiyongyuqicheneishijiayongdianqigongyejixiechedingbashouxichenqisaodijiqirenanquanlashou.html": {
+    "slug": "rd-t013a",
+    "categoryId": "axial-damper",
+    "model": "RD-T013A",
+    "name": "RD-T013A 圆筒阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t013a/main.webp",
+        "alt": "RD-T013A main"
+      },
+      {
+        "url": "/images/products/rd-t013a/photo_1.webp",
+        "alt": "RD-T013A photo_1"
+      },
+      {
+        "url": "/images/products/rd-t013a/photo_2.webp",
+        "alt": "RD-T013A photo_2"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "1000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "φ12.85"
+      },
+      {
+        "label": "外径",
+        "value": "12.85 mm"
+      },
+      {
+        "label": "高度",
+        "value": "17 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t013a/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t013a/curve.webp",
+      "temperature": "/images/products/rd-t013a/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper- RD-T138.html": {
+    "slug": "rd-t138",
+    "categoryId": "axial-damper",
+    "model": "RD-T138",
+    "name": "RD-T138 圆筒阻尼器",
+    "summary": "扭矩 800 – 5000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t138/main.webp",
+        "alt": "RD-T138 main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 800,
+      "max": 5000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "2000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "Size",
+        "value": "Φ16"
+      },
+      {
+        "label": "尺寸",
+        "value": "φ16"
+      },
+      {
+        "label": "外径",
+        "value": "16 mm"
+      },
+      {
+        "label": "高度",
+        "value": "38 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t138/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t138/curve.webp",
+      "temperature": "/images/products/rd-t138/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T017.html": {
+    "slug": "rd-t017",
+    "categoryId": "axial-damper",
+    "model": "RD-T017",
+    "name": "RD-T017 圆筒阻尼器",
+    "summary": "扭矩 50 – 150 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t017/main.webp",
+        "alt": "RD-T017 main"
+      },
+      {
+        "url": "/images/products/rd-t017/photo_1.webp",
+        "alt": "RD-T017 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t017/photo_3.webp",
+        "alt": "RD-T017 photo_3"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 50,
+      "max": 150,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "90 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ10"
+      },
+      {
+        "label": "模数",
+        "value": "φ3.3"
+      },
+      {
+        "label": "外径",
+        "value": "10 mm"
+      },
+      {
+        "label": "高度",
+        "value": "9.8 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t017/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t017/curve.webp",
+      "temperature": "/images/products/rd-t017/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T013B.html": {
+    "slug": "rd-t013b",
+    "categoryId": "axial-damper",
+    "model": "RD-T013B",
+    "name": "RD-T013B 圆筒阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t013b/photo_1.webp",
+        "alt": "RD-T013B photo_1"
+      },
+      {
+        "url": "/images/products/rd-t013b/photo_2.webp",
+        "alt": "RD-T013B photo_2"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "1000 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12.9"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ4.1"
+      },
+      {
+        "label": "外径",
+        "value": "12.9 mm"
+      },
+      {
+        "label": "高度",
+        "value": "18.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t013b/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t013b/curve.webp",
+      "temperature": "/images/products/rd-t013b/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-rd-t012d.html": {
+    "slug": "rd-t012d",
+    "categoryId": "axial-damper",
+    "model": "RD-T012D",
+    "name": "RD-T012D 圆筒阻尼器",
+    "summary": "扭矩 200 – 850 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t012d/main.webp",
+        "alt": "RD-T012D main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 850,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "800 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "孔内径",
+        "value": "φ4.3"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.1 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t012d/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t012d/curve.webp",
+      "temperature": "/images/products/rd-t012d/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-rd-t012c.html": {
+    "slug": "rd-t012c",
+    "categoryId": "axial-damper",
+    "model": "RD-T012C",
+    "name": "RD-T012C 圆筒阻尼器",
+    "summary": "扭矩 200 – 850 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t012c/photo_1.webp",
+        "alt": "RD-T012C photo_1"
+      },
+      {
+        "url": "/images/products/rd-t012c/photo_2.webp",
+        "alt": "RD-T012C photo_2"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 850,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "800 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "孔内径",
+        "value": "φ4.2"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t012c/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t012c/curve.webp",
+      "temperature": "/images/products/rd-t012c/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-rd-t012b.html": {
+    "slug": "rd-t012b",
+    "categoryId": "axial-damper",
+    "model": "RD-T012B",
+    "name": "RD-T012B 圆筒阻尼器",
+    "summary": "扭矩 150 – 800 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t012b/photo_1.webp",
+        "alt": "RD-T012B photo_1"
+      },
+      {
+        "url": "/images/products/rd-t012b/photo_2.webp",
+        "alt": "RD-T012B photo_2"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 150,
+      "max": 800,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "500 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "直径",
+        "value": "φ4.2"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t012b/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-t012b/curve.webp",
+      "temperature": "/images/products/rd-t012b/curve2.webp"
+    },
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T012A.html": {
+    "slug": "rd-t012a",
+    "categoryId": "axial-damper",
+    "model": "RD-T012A",
+    "name": "RD-T012A 圆筒阻尼器",
+    "summary": "扭矩 150 – 800 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t012a/main.webp",
+        "alt": "RD-T012A main"
+      },
+      {
+        "url": "/images/products/rd-t012a/photo_1.webp",
+        "alt": "RD-T012A photo_1"
+      },
+      {
+        "url": "/images/products/rd-t012a/photo_2.webp",
+        "alt": "RD-T012A photo_2"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 150,
+      "max": 800,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "450 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ12"
+      },
+      {
+        "label": "孔直径",
+        "value": "φ4.2"
+      },
+      {
+        "label": "外径",
+        "value": "12 mm"
+      },
+      {
+        "label": "高度",
+        "value": "15.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "办公设备",
+      "家用电器"
+    ],
+    "dimensionDrawing": "/images/products/rd-t012a/size.webp",
+    "performanceCharts": {
+      "rotation": null,
+      "temperature": "/images/products/rd-t012a/curve2.webp"
+    },
+    "variants": null
+  },
+  "/Glove Box Dampers/rd-V130-shiyongyuqicheshoutaoxiang-shounahe.html": {
+    "slug": "rd-v130",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V130",
+    "name": "RD-V130 手套箱阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/uploads/1779349724095-o03w55l0k2.webp",
+        "alt": "RD-V130 photo_1"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "900 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "50MM"
+      },
+      {
+        "label": "长度",
+        "value": "155 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "外壳",
+        "material": "PA6"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v130/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v130/photo_1.webp",
+      "temperature": "/images/products/rd-v130/photo_2.webp"
+    },
+    "variants": {
+      "variants": [
+        "V130",
+        "V130A"
+      ],
+      "rows": [
+        {
+          "param": "Lock",
+          "values": [
+            "No",
+            "Yes (glove box light switch)"
+          ]
+        }
+      ]
+    }
+  },
+  "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html": {
+    "slug": "rd-v127",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V127",
+    "name": "RD-V127 手套箱阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v127/main.webp",
+        "alt": "RD-V127 main"
+      },
+      {
+        "url": "/images/products/rd-v127/photo_1.webp",
+        "alt": "RD-V127 photo_1"
+      },
+      {
+        "url": "/images/products/rd-v127/photo_3.webp",
+        "alt": "RD-V127 photo_3"
+      },
+      {
+        "url": "/images/products/rd-v127/photo_4.webp",
+        "alt": "RD-V127 photo_4"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "500 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60mm"
+      },
+      {
+        "label": "长度",
+        "value": "133 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "外壳",
+        "material": "PBT"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v127/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v127/curve.webp",
+      "temperature": "/images/products/rd-v127/curve2.webp"
+    },
+    "variants": null
+  },
+  "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html": {
+    "slug": "rd-v107",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V107",
+    "name": "RD-V107 手套箱阻尼器",
+    "summary": "扭矩 3000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v107/main.webp",
+        "alt": "RD-V107 main"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "3 Kgf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "外径",
+        "value": "26.7 mm"
+      },
+      {
+        "label": "长度",
+        "value": "99.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "上盖",
+        "material": "PP"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "拉杆",
+        "material": "POM"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v107/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v107/curve.webp",
+      "temperature": "/images/products/rd-v107/curve2.webp"
+    },
+    "variants": null
+  },
+  "/Glove Box Dampers/air-damper-rd-v118.html": {
+    "slug": "rd-v118",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V118",
+    "name": "RD-V118 手套箱阻尼器",
+    "summary": "扭矩 3500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v118/main.webp",
+        "alt": "RD-V118 main"
+      },
+      {
+        "url": "/images/products/rd-v118/photo_1.webp",
+        "alt": "RD-V118 photo_1"
+      },
+      {
+        "url": "/images/products/rd-v118/photo_2.webp",
+        "alt": "RD-V118 photo_2"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 3500,
+      "max": 3500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "外径",
+        "value": "28 mm"
+      },
+      {
+        "label": "长度",
+        "value": "100 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "上盖",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "拉杆",
+        "material": "PP"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v118/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v118/curve.webp",
+      "temperature": "/images/products/rd-v118/curve2.webp"
+    },
+    "variants": null
+  },
+  "/Glove Box Dampers/organizer-rd-t181.html": {
+    "slug": "rd-t181",
+    "categoryId": "glove-box-damper",
+    "model": "RD-T181",
+    "name": "RD-T181 手套箱阻尼器",
+    "summary": "操作力 13 N",
+    "images": [
+      {
+        "url": "/images/products/rd-t181/main.webp",
+        "alt": "RD-T181 main"
+      },
+      {
+        "url": "/images/products/rd-t181/photo_1.webp",
+        "alt": "RD-T181 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t181/photo_2.webp",
+        "alt": "RD-T181 photo_2"
+      }
+    ],
+    "characteristics": [],
+    "torque": null,
+    "force": {
+      "min": 13,
+      "max": 13,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "13 N",
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "10MM"
+      },
+      {
+        "label": "操作力",
+        "value": "13 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "轴芯",
+        "material": "PA66"
+      },
+      {
+        "part": "外壳",
+        "material": "PC"
+      },
+      {
+        "part": "齿外径",
+        "material": "POM"
+      },
+      {
+        "part": "扭簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "拉杆套",
+        "material": "POM"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-t181/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/organizer- RD-T180A.html": {
+    "slug": "rd-t180a",
+    "categoryId": "glove-box-damper",
+    "model": "RD-T180A",
+    "name": "RD-T180A 手套箱阻尼器",
+    "summary": "操作力 8 – 12 N",
+    "images": [
+      {
+        "url": "/images/products/rd-t180a/main.webp",
+        "alt": "RD-T180A main"
+      },
+      {
+        "url": "/images/products/rd-t180a/photo_1.webp",
+        "alt": "RD-T180A photo_1"
+      },
+      {
+        "url": "/images/products/rd-t180a/photo_2.webp",
+        "alt": "RD-T180A photo_2"
+      }
+    ],
+    "characteristics": [],
+    "torque": null,
+    "force": {
+      "min": 8,
+      "max": 12,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "8 N",
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "10MM"
+      },
+      {
+        "label": "操作力",
+        "value": "8~12 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "轴芯",
+        "material": "PA66"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "外壳",
+        "material": "PC"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-t180a/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/organizer- RD-T180.html": {
+    "slug": "rd-t180",
+    "categoryId": "glove-box-damper",
+    "model": "RD-T180",
+    "name": "RD-T180 手套箱阻尼器",
+    "summary": "操作力 12 N",
+    "images": [
+      {
+        "url": "/images/products/rd-t180/main.webp",
+        "alt": "RD-T180 main"
+      },
+      {
+        "url": "/images/products/rd-t180/photo_1.webp",
+        "alt": "RD-T180 photo_1"
+      },
+      {
+        "url": "/images/products/rd-t180/photo_2.webp",
+        "alt": "RD-T180 photo_2"
+      }
+    ],
+    "characteristics": [],
+    "torque": null,
+    "force": {
+      "min": 12,
+      "max": 12,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "12 N",
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "12MM"
+      },
+      {
+        "label": "操作力",
+        "value": "12 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "齿条轴",
+        "material": "PA66"
+      },
+      {
+        "part": "下盖",
+        "material": "PC"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-t180/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/liner-damper- RD-V129.html": {
+    "slug": "rd-v129",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V129",
+    "name": "RD-V129 手套箱阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v129/main.webp",
+        "alt": "RD-V129 main"
+      },
+      {
+        "url": "/images/products/rd-v129/photo_1.webp",
+        "alt": "RD-V129 photo_1"
+      },
+      {
+        "url": "/images/products/rd-v129/photo_2.webp",
+        "alt": "RD-V129 photo_2"
+      },
+      {
+        "url": "/images/products/rd-v129/photo_3.webp",
+        "alt": "RD-V129 photo_3"
+      },
+      {
+        "url": "/images/products/rd-v129/photo_4.webp",
+        "alt": "RD-V129 photo_4"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "500 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "50MM"
+      },
+      {
+        "label": "长度",
+        "value": "133 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "外壳",
+        "material": "PBT"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v129/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/gear-rotary-vane-damper-RD-V127.html": {
+    "slug": "rd-v127",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V127",
+    "name": "RD-V127 手套箱阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v127/main.webp",
+        "alt": "RD-V127 main"
+      },
+      {
+        "url": "/images/products/rd-v127/photo_1.webp",
+        "alt": "RD-V127 photo_1"
+      },
+      {
+        "url": "/images/products/rd-v127/photo_3.webp",
+        "alt": "RD-V127 photo_3"
+      },
+      {
+        "url": "/images/products/rd-v127/photo_4.webp",
+        "alt": "RD-V127 photo_4"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "500 gf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "75MM"
+      },
+      {
+        "label": "长度",
+        "value": "133 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "外壳",
+        "material": "PBT"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v127/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v127/curve.webp",
+      "temperature": "/images/products/rd-v127/curve2.webp"
+    },
+    "variants": null
+  },
+  "/Glove Box Dampers/liner-damper- RD-V126.html": {
+    "slug": "rd-v126",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V126",
+    "name": "RD-V126 手套箱阻尼器",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v126/main.webp",
+        "alt": "RD-V126 main"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "feature",
+        "value": "Can control the lights in the glove box"
+      },
+      {
+        "label": "长度",
+        "value": "123.5 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "PC"
+      },
+      {
+        "part": "齿轮",
+        "material": "POM"
+      },
+      {
+        "part": "外壳",
+        "material": "PBT"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v126/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v126/curve.webp",
+      "temperature": "/images/products/rd-v126/curve2.webp"
+    },
+    "variants": {
+      "variants": [
+        "V126",
+        "V126A"
+      ],
+      "rows": [
+        {
+          "param": "Lock",
+          "values": [
+            "No",
+            "Yes (glove box light switch)"
+          ]
+        }
+      ]
+    }
+  },
+  "/Glove Box Dampers/air-damper-RD-V109.html": {
+    "slug": "rd-v109",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V109",
+    "name": "RD-V109 手套箱阻尼器",
+    "summary": "扭矩 600 – 3000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v109/main.webp",
+        "alt": "RD-V109 main"
+      },
+      {
+        "url": "/images/products/rd-v109/photo_1.webp",
+        "alt": "RD-V109 photo_1"
+      },
+      {
+        "url": "/images/products/rd-v109/photo_2.webp",
+        "alt": "RD-V109 photo_2"
+      },
+      {
+        "url": "/images/products/rd-v109/photo_3.webp",
+        "alt": "RD-V109 photo_3"
+      }
+    ],
+    "characteristics": [
+      "单向"
+    ],
+    "torque": {
+      "min": 600,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "拉力",
+        "value": "80MM/秒 20N"
+      },
+      {
+        "label": "有效行程",
+        "value": "68 mm"
+      },
+      {
+        "label": "外径",
+        "value": "18.5 mm"
+      },
+      {
+        "label": "长度",
+        "value": "130 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "上盖",
+        "material": "POM"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "O 型圈",
+        "material": "硅胶"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "拉绳",
+        "material": "芳纶"
+      }
+    ],
+    "applications": [
+      "汽车内饰",
+      "手套箱"
+    ],
+    "dimensionDrawing": "/images/products/rd-v109/size.webp",
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v109/curve.webp",
+      "temperature": "/images/products/rd-v109/curve2.webp"
+    },
+    "variants": null
+  },
+  "/latches/rd-09wushengsuokoumensuo-shiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
+    "slug": "rd-09",
+    "categoryId": "latch",
+    "model": "RD-09",
+    "name": "RD-09 锁扣",
+    "summary": "操作力 6 N",
+    "images": [
+      {
+        "url": "/images/products/rd-09/main.webp",
+        "alt": "RD-09 main"
+      },
+      {
+        "url": "/images/products/rd-09/photo_1.webp",
+        "alt": "RD-09 photo_1"
+      },
+      {
+        "url": "/images/products/rd-09/photo_2.webp",
+        "alt": "RD-09 photo_2"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 6,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "3.5",
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "声音",
+        "value": "无声"
+      },
+      {
+        "label": "高度",
+        "value": "30.2 mm"
+      },
+      {
+        "label": "长度",
+        "value": "15.8 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "16 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "锁芯",
+        "material": "POM"
+      },
+      {
+        "part": "锁舌",
+        "material": "POM"
+      },
+      {
+        "part": "钢销",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-09/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/rd-12shiyongyuqicheanyasuokou-lajitongfandankaiguan-danhuangkakouxiang.html": {
+    "slug": "rd-12",
+    "categoryId": "latch",
+    "model": "RD-12",
+    "name": "RD-12 锁扣",
+    "summary": "操作力 5 – 8 N",
+    "images": [
+      {
+        "url": "/images/products/rd-12/main.webp",
+        "alt": "RD-12 main"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 5,
+      "max": 8,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "材质",
+        "value": "POM"
+      },
+      {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
+        "label": "高度",
+        "value": "22.4 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11.1 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "9.9 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "5~8 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "锁芯",
+        "material": "POM"
+      },
+      {
+        "part": "锁舌",
+        "material": "POM"
+      },
+      {
+        "part": "钢销",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-12/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/rd-01shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html": {
+    "slug": "rd-01",
+    "categoryId": "latch",
+    "model": "RD-01",
+    "name": "RD-01 锁扣",
+    "summary": "操作力 6 N",
+    "images": [
+      {
+        "url": "/images/products/rd-01/main.webp",
+        "alt": "RD-01 main"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 6,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "6",
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "材质",
+        "value": "PA66"
+      },
+      {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
+        "label": "高度",
+        "value": "17.6 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "6.9 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "锁芯",
+        "material": "PA66"
+      },
+      {
+        "part": "锁块",
+        "material": "PC"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-01/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/jiakechongzisuoqi-xiaofangguimenfandanqimenpengguixi-yinxingmensuliaodantiaoanyashipengzhu.html": {
+    "slug": "rd-18",
+    "categoryId": "latch",
+    "model": "RD-18",
+    "name": "RD-18 锁扣",
+    "summary": "操作力 9 – 12 N",
+    "images": [
+      {
+        "url": "/images/products/rd-18/main.webp",
+        "alt": "RD-18 main"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 9,
+      "max": 12,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "12 N",
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "材质",
+        "value": "ABC"
+      },
+      {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
+        "label": "高度",
+        "value": "17 mm"
+      },
+      {
+        "label": "长度",
+        "value": "68.5 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "43 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "9~12 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PC"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "锁舌",
+        "material": "PC"
+      },
+      {
+        "part": "钢销",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-18/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/push-push-latch- RD-08.html": {
+    "slug": "rd-08",
+    "categoryId": "latch",
+    "model": "RD-08",
+    "name": "RD-08 锁扣",
+    "summary": "操作力 3.5 N",
+    "images": [
+      {
+        "url": "/images/products/rd-08/main.webp",
+        "alt": "RD-08 main"
+      },
+      {
+        "url": "/images/products/rd-08/photo_1.webp",
+        "alt": "RD-08 photo_1"
+      },
+      {
+        "url": "/images/products/rd-08/photo_2.webp",
+        "alt": "RD-08 photo_2"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 3.5,
+      "max": 3.5,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "3.5",
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "声音",
+        "value": "无声"
+      },
+      {
+        "label": "高度",
+        "value": "15.2 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "7.4 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "3.5 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "锁芯",
+        "material": "POM"
+      },
+      {
+        "part": "锁舌",
+        "material": "POM"
+      },
+      {
+        "part": "钢销",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-08/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/push-push-latch-RD-03.html": {
+    "slug": "rd-03",
+    "categoryId": "latch",
+    "model": "RD-03",
+    "name": "RD-03 锁扣",
+    "summary": "操作力 3.5 N",
+    "images": [
+      {
+        "url": "/images/products/rd-03/main.webp",
+        "alt": "RD-03 main"
+      },
+      {
+        "url": "/images/products/rd-03/photo_1.webp",
+        "alt": "RD-03 photo_1"
+      },
+      {
+        "url": "/images/products/rd-03/photo_2.webp",
+        "alt": "RD-03 photo_2"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 3.5,
+      "max": 3.5,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "3.5",
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "材质",
+        "value": "POM"
+      },
+      {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
+        "label": "高度",
+        "value": "15.2 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "7.4 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "3.5 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "锁芯",
+        "material": "POM"
+      },
+      {
+        "part": "锁舌",
+        "material": "POM"
+      },
+      {
+        "part": "钢销",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-03/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/push-push-latch- RD-02.html": {
+    "slug": "rd-02",
+    "categoryId": "latch",
+    "model": "RD-02",
+    "name": "RD-02 锁扣",
+    "summary": "操作力 6 N",
+    "images": [
+      {
+        "url": "/images/products/rd-02/main.webp",
+        "alt": "RD-02 main"
+      },
+      {
+        "url": "/images/products/rd-02/photo_1.webp",
+        "alt": "RD-02 photo_1"
+      },
+      {
+        "url": "/images/products/rd-02/photo_2.webp",
+        "alt": "RD-02 photo_2"
+      },
+      {
+        "url": "/images/products/rd-02/photo_3.webp",
+        "alt": "RD-02 photo_3"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 6,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "6",
+    "soundType": "有声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "材质",
+        "value": "PA66"
+      },
+      {
+        "label": "声音",
+        "value": "有声"
+      },
+      {
+        "label": "高度",
+        "value": "16.3 mm"
+      },
+      {
+        "label": "长度",
+        "value": "11 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "6.9 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "金属"
+      },
+      {
+        "part": "锁芯",
+        "material": "PA66"
+      },
+      {
+        "part": "钢销",
+        "material": "金属"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-02/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/qitaqichelingbujian/rd-v112.html": {
+    "slug": "rd-v112",
+    "categoryId": "other",
+    "model": "RD-V112",
+    "name": "RD-V112 其他零部件",
+    "summary": "扭矩 10000 – 40000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v112/main.webp",
+        "alt": "RD-V112 main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 10000,
+      "max": 40000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "25 Kgf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "高度",
+        "value": "12 mm"
+      },
+      {
+        "label": "长度",
+        "value": "45 mm"
+      },
+      {
+        "label": "宽度",
+        "value": "15 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "淬火钢"
+      },
+      {
+        "part": "上盖",
+        "material": "淬火钢"
+      },
+      {
+        "part": "轴芯",
+        "material": "淬火钢"
+      },
+      {
+        "part": "金属轴",
+        "material": "淬火钢"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": null,
+    "performanceCharts": {
+      "rotation": "/images/products/rd-v112/curve.webp",
+      "temperature": null
+    },
+    "variants": null
+  },
+  "/qitaqichelingbujian/rd-tr02-jiaolian-shiyongyumenheye.html": {
+    "slug": "rd-tr02",
+    "categoryId": "other",
+    "model": "RD-TR02 铰链 适用于门合页",
+    "name": "RD-TR02 铰链 适用于门合页 其他零部件",
+    "summary": "扭矩 2000 – 7000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-tr02/main.webp",
+        "alt": "RD-TR02 main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 2000,
+      "max": 7000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "3 Kgf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "淬火钢"
+      },
+      {
+        "part": "轴芯",
+        "material": "淬火钢"
+      },
+      {
+        "part": "金属轴",
+        "material": "淬火钢"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": null,
+    "performanceCharts": {
+      "rotation": "/images/products/rd-tr02/curve.webp",
+      "temperature": null
+    },
+    "variants": null
+  },
+  "/qitaqichelingbujian/rd-tr01-jiaolian-shiyongyumenheye.html": {
+    "slug": "rd-tr01",
+    "categoryId": "other",
+    "model": "RD-TR01 铰链 适用于门合页",
+    "name": "RD-TR01 铰链 适用于门合页 其他零部件",
+    "summary": "扭矩 2000 – 7000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-tr01/main.webp",
+        "alt": "RD-TR01 main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 2000,
+      "max": 7000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "3 Kgf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "淬火钢"
+      },
+      {
+        "part": "轴芯",
+        "material": "淬火钢"
+      },
+      {
+        "part": "金属轴",
+        "material": "淬火钢"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-tr01/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/qitaqichelingbujian/rd-15kaiguanshiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
+    "slug": "rd-15",
+    "categoryId": "other",
+    "model": "RD-15",
+    "name": "RD-15 其他零部件",
+    "summary": "操作力 30 N",
+    "images": [
+      {
+        "url": "/images/products/rd-15/main.webp",
+        "alt": "RD-15 main"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 30,
+      "max": 30,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "开关",
+        "value": "开关"
+      },
+      {
+        "label": "操作力",
+        "value": "30 N"
+      },
+      {
+        "label": "有效行程",
+        "value": "14 mm"
+      }
+    ],
+    "materials": [
+      {
+        "part": "上盖",
+        "material": "PA66"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      },
+      {
+        "part": "钢销",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-15/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/qitaqichelingbujian/rd-t216-jiaolian-shiyongyumenheye.html": {
+    "slug": "rd-t216",
+    "categoryId": "other",
+    "model": "RD-T216",
+    "name": "RD-T216 其他零部件",
+    "summary": "扭矩 10000 – 30000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t216/main.webp",
+        "alt": "RD-T216 main"
+      }
+    ],
+    "characteristics": [
+      "双向"
+    ],
+    "torque": {
+      "min": 10000,
+      "max": 30000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": "11 Kgf.cm",
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": "双向",
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [],
+    "materials": [
+      {
+        "part": "轴芯",
+        "material": "淬火钢"
+      },
+      {
+        "part": "金属轴",
+        "material": "淬火钢"
+      }
+    ],
+    "applications": [
+      "汽车零部件",
+      "工业设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-t216/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/qitaqichelingbujian/danzhu-rd-13-shiyongyuqicheneishi-chuwuhe-xianweikaiguan.html": {
+    "slug": "rd-13",
+    "categoryId": "other",
+    "model": "RD-13",
+    "name": "RD-13 其他零部件",
+    "summary": "操作力 6 – 12 N",
+    "images": [
+      {
+        "url": "/images/products/rd-13/main.webp",
+        "alt": "RD-13 main"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 6,
+      "max": 12,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": "6",
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "外径",
+        "value": "5.6 mm"
+      },
+      {
+        "label": "高度",
+        "value": "7 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "6~12 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-13/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/qitaqichelingbujian/push-push-latch-RD-11.html": {
+    "slug": "rd-11",
+    "categoryId": "other",
+    "model": "RD-11",
+    "name": "RD-11 其他零部件",
+    "summary": "操作力 11 N",
+    "images": [
+      {
+        "url": "/images/products/rd-11/main.webp",
+        "alt": "RD-11 main"
+      },
+      {
+        "url": "/images/products/rd-11/photo_1.webp",
+        "alt": "RD-11 photo_1"
+      },
+      {
+        "url": "/images/products/rd-11/photo_2.webp",
+        "alt": "RD-11 photo_2"
+      },
+      {
+        "url": "/images/products/rd-11/photo_3.webp",
+        "alt": "RD-11 photo_3"
+      }
+    ],
+    "characteristics": [
+      "紧凑设计"
+    ],
+    "torque": null,
+    "force": {
+      "min": 11,
+      "max": 11,
+      "unit": "N"
+    },
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": "无声",
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": {
+      "cycles": 50000
+    },
+    "specifications": [
+      {
+        "label": "外径",
+        "value": "14.1 mm"
+      },
+      {
+        "label": "操作力",
+        "value": "11 N"
+      }
+    ],
+    "materials": [
+      {
+        "part": "下座",
+        "material": "PP"
+      },
+      {
+        "part": "上盖",
+        "material": "TPE"
+      },
+      {
+        "part": "轴芯",
+        "material": "POM"
+      },
+      {
+        "part": "弹簧",
+        "material": "不锈钢"
+      }
+    ],
+    "applications": [
+      "汽车内外饰",
+      "智能家居",
+      "办公设备"
+    ],
+    "dimensionDrawing": "/images/products/rd-11/size.webp",
+    "performanceCharts": null,
+    "variants": null
+  }
+}

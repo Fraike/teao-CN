@@ -1382,8 +1382,8 @@
   "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html": {
     "model": "RD-V107",
     "torque": {
-      "min": 3,
-      "max": 3,
+      "min": 3000,
+      "max": 3000,
       "unit": "gf·cm"
     },
     "force": null,
@@ -1418,8 +1418,8 @@
   "/Glove Box Dampers/air-damper-rd-v118.html": {
     "model": "RD-V118",
     "torque": {
-      "min": 3.5,
-      "max": 3.5,
+      "min": 3500,
+      "max": 3500,
       "unit": "gf·cm"
     },
     "force": null,
@@ -1618,8 +1618,8 @@
   "/Glove Box Dampers/air-damper-RD-V109.html": {
     "model": "RD-V109",
     "torque": {
-      "min": 0.6,
-      "max": 3,
+      "min": 600,
+      "max": 3000,
       "unit": "gf·cm"
     },
     "force": null,
@@ -1628,6 +1628,10 @@
       {
         "label": "拉力",
         "value": "80MM/秒 20N"
+      },
+      {
+        "label": "有效行程",
+        "value": "68 mm"
       },
       {
         "label": "外径",
@@ -1686,6 +1690,10 @@
         "value": "POM"
       },
       {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
         "label": "高度",
         "value": "22.4 mm"
       },
@@ -1718,6 +1726,10 @@
         "value": "PA66"
       },
       {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
         "label": "高度",
         "value": "17.6 mm"
       },
@@ -1748,6 +1760,10 @@
       {
         "label": "材质",
         "value": "ABC"
+      },
+      {
+        "label": "声音",
+        "value": "静音"
       },
       {
         "label": "高度",
@@ -1826,6 +1842,10 @@
         "value": "POM"
       },
       {
+        "label": "声音",
+        "value": "静音"
+      },
+      {
         "label": "高度",
         "value": "15.2 mm"
       },
@@ -1858,6 +1878,10 @@
         "value": "PA66"
       },
       {
+        "label": "声音",
+        "value": "有声"
+      },
+      {
         "label": "高度",
         "value": "16.3 mm"
       },
@@ -1878,8 +1902,8 @@
   "/qitaqichelingbujian/rd-v112.html": {
     "model": "RD-V112",
     "torque": {
-      "min": 10,
-      "max": 40,
+      "min": 10000,
+      "max": 40000,
       "unit": "gf·cm"
     },
     "force": null,
@@ -1902,8 +1926,8 @@
   "/qitaqichelingbujian/rd-tr02-jiaolian-shiyongyumenheye.html": {
     "model": "RD-TR02 铰链 适用于门合页",
     "torque": {
-      "min": 2,
-      "max": 7,
+      "min": 2000,
+      "max": 7000,
       "unit": "gf·cm"
     },
     "force": null,
@@ -1913,8 +1937,8 @@
   "/qitaqichelingbujian/rd-tr01-jiaolian-shiyongyumenheye.html": {
     "model": "RD-TR01 铰链 适用于门合页",
     "torque": {
-      "min": 2,
-      "max": 7,
+      "min": 2000,
+      "max": 7000,
       "unit": "gf·cm"
     },
     "force": null,
@@ -1924,7 +1948,11 @@
   "/qitaqichelingbujian/rd-15kaiguanshiyongyuqicheneishi-jiayongdianqigongyejixie.html": {
     "model": "RD-15",
     "torque": null,
-    "force": null,
+    "force": {
+      "min": 30,
+      "max": 30,
+      "unit": "N"
+    },
     "mounting": null,
     "specs": [
       {
@@ -1944,8 +1972,8 @@
   "/qitaqichelingbujian/rd-t216-jiaolian-shiyongyumenheye.html": {
     "model": "RD-T216",
     "torque": {
-      "min": 10,
-      "max": 30,
+      "min": 10000,
+      "max": 30000,
       "unit": "gf·cm"
     },
     "force": null,

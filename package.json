@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "data:product-specs": "node scripts/generate-product-specs.mjs",
+    "data:product-content": "node scripts/generate-product-content.mjs",
     "db:seed": "npx tsx src/db/seed.ts",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push"

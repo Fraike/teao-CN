@@ -4,6 +4,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { canonicalKeys } from "./lib/model-keys.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const enPath = resolve(root, "../teao-website/data/products-export.json");
@@ -12,22 +13,6 @@ const outPath = resolve(root, "src/content/live-site/product-specs.json");
 
 const en = JSON.parse(readFileSync(enPath, "utf8"));
 const cn = JSON.parse(readFileSync(cnPath, "utf8"));
-
-/** "RD-T069 / RD-V069" -> ["RDT069","RDV069"] */
-function modelKeys(value) {
-  return (String(value ?? "").toUpperCase().replace(/\s+/g, "").match(/RD-?[A-Z0-9]+/g) ?? [])
-    .map(token => token.replace(/-/g, ""));
-}
-
-// 同一产品的左右/方向变体归并到主型号;不做 RD-T038A -> RD-T038 这类跨型号猜测。
-const ALIASES = new Map([
-  ["RD10L", "RD10"],
-  ["RD10R", "RD10"],
-]);
-
-function canonicalKeys(value) {
-  return modelKeys(value).map(key => ALIASES.get(key) ?? key);
-}
 
 const enIndex = new Map();
 for (const product of en) {
@@ -56,6 +41,7 @@ const SPEC_LABELS = new Map([
   ["Total Length", "长度"],
   ["Total Width", "宽度"],
   ["Stroke", "有效行程"],
+  ["行程", "有效行程"],
   ["Force", "操作力"],
   ["操作力", "操作力"],
 ]);
@@ -82,10 +68,19 @@ function parseForce(value) {
   return Number.isFinite(min) && Number.isFinite(max) ? { min, max, unit: "N" } : null;
 }
 
-function normalizeUnit(unit) {
-  const text = String(unit ?? "").toLowerCase();
-  if (text.includes("n") && !text.includes("gf") && !text.includes("cm")) return "N";
-  return "gf·cm";
+/** 把英文单位统一成中文展示口径;kgf·cm 必须 ×1000 才能换算成 gf·cm。 */
+function normalizeTorque(torque) {
+  if (torque?.min == null || torque?.max == null) return { torque: null, force: null };
+  const unit = String(torque.unit ?? "").toLowerCase().replace(/\s+/g, "");
+  const min = Number(torque.min);
+  const max = Number(torque.max);
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return { torque: null, force: null };
+
+  if (unit === "n") return { torque: null, force: { min, max, unit: "N" } };
+  if (unit === "kgf.cm" || unit === "kgf·cm") {
+    return { torque: { min: min * 1000, max: max * 1000, unit: "gf·cm" }, force: null };
+  }
+  return { torque: { min, max, unit: "gf·cm" }, force: null };
 }
 
 const output = {};
@@ -113,14 +108,17 @@ for (const category of cn) {
       let mounting = null;
 
       if (match) {
-        if (match.扭矩?.min != null && match.扭矩?.max != null) {
-          const unit = normalizeUnit(match.扭矩.unit);
-          if (unit === "N") force = { min: Number(match.扭矩.min), max: Number(match.扭矩.max), unit };
-          else torque = { min: Number(match.扭矩.min), max: Number(match.扭矩.max), unit };
-        }
+        const normalized = normalizeTorque(match.扭矩);
+        torque = normalized.torque;
+        force = normalized.force;
         mounting = toMounting(match.安装方式);
-        if (!force) force = parseForce(match.规格?.["操作力"]) ?? parseForce(match.力值范围);
-        if (!force && match.声音类型 && category.id === "latch") {
+        if (!force) {
+          force = parseForce(match.规格?.["操作力"])
+            ?? parseForce(match.规格?.Force)
+            ?? parseForce(match.硬力值)
+            ?? parseForce(match.力值范围);
+        }
+        if (match.声音类型 && category.id === "latch") {
           pushChip({ label: "声音", value: match.声音类型 === "silent" ? "静音" : "有声" });
         }
 

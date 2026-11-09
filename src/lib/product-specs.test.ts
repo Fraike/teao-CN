@@ -30,6 +30,21 @@ test("overlay coverage matches the English source", () => {
   const torque = entries.filter(([, entry]) => entry.torque).length;
   const force = entries.filter(([, entry]) => entry.force).length;
   assert.equal(torque, 47);
-  assert.equal(force, 12);
-  assert.equal(entries.length - torque - force, 16);
+  assert.equal(force, 13);
+  assert.equal(entries.length - torque - force, 15);
+});
+
+test("kgf·cm values are converted to gf·cm, not relabelled", () => {
+  const byModel = (model: string) => entries.find(([, entry]) => entry.model === model)?.[1];
+  assert.deepEqual(byModel("RD-V112")?.torque, { min: 10000, max: 40000, unit: "gf·cm" });
+  assert.deepEqual(byModel("RD-V107")?.torque, { min: 3000, max: 3000, unit: "gf·cm" });
+  assert.deepEqual(byModel("RD-T216")?.torque, { min: 10000, max: 30000, unit: "gf·cm" });
+});
+
+test("force falls back to the English Force spec and keeps the sound chip", () => {
+  const byModel = (model: string) => entries.find(([, entry]) => entry.model === model)?.[1];
+  assert.deepEqual(byModel("RD-15")?.force, { min: 30, max: 30, unit: "N" });
+  const latch = byModel("RD-01");
+  assert.ok(latch?.force);
+  assert.ok(latch?.specs.some((chip: { label: string }) => chip.label === "声音"));
 });
