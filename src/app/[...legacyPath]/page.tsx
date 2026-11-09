@@ -12,7 +12,8 @@ import AboutPage from "@/components/live-site/about-page";
 import ContactPage from "@/components/live-site/contact-page";
 import NewsPage from "@/components/live-site/news-page";
 import NewsArticlePage from "@/components/live-site/news-article-page";
-import { getPilotPage, getNewsSlug, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH } from "@/lib/live-site";
+import ConvertPage from "@/components/live-site/convert-page";
+import { getPilotPage, getNewsSlug, LIVE_ORIGIN, PILOT_PRODUCT_PATH, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
 import { getCategoryRoute } from "@/lib/live-catalog";
 import { automotiveInteriorScenes, automotiveExteriorScenes, simpleApplications } from "@/content/live-site/applications";
 import { newsArticles } from "@/content/live-site/news";
@@ -85,6 +86,19 @@ const NEWS_META: Metadata = {
   description: "特澳最新动态、阻尼器工程进展、质量管理与技术资源。",
   alternates: canon(NEWS_PATH), robots: { index: true, follow: true },
 };
+const CONVERT_META: Metadata = {
+  title: { absolute: "扭矩单位换算器 | N·m、kgf·cm、gf·cm 在线换算 | 特澳 TEAO" },
+  description: "免费在线扭矩单位换算工具,支持 N·m、cN·m、mN·m、kgf·cm、kgf·m、gf·cm、lbf·in、lbf·ft、ozf·in 九种单位即时互转,适用于阻尼器扭矩选型、参数对比与运动控制设计。",
+  keywords: ["扭矩换算", "扭矩单位换算", "N·m 转 kgf·cm", "gf·cm 转 mN·m", "阻尼器扭矩", "扭矩换算器"],
+  alternates: canon(CONVERT_PATH),
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "扭矩单位换算器 | 特澳 TEAO",
+    description: "九种常用扭矩单位即时换算,适用于阻尼器扭矩选型与参数对比。",
+    type: "website",
+  },
+};
+
 function newsArticleMeta(slug: string): Metadata {
   const article = newsArticles.find(item => item.slug === slug)!;
   return {
@@ -116,6 +130,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (type === "news") return NEWS_META;
   const newsSlug = getNewsSlug(segments);
   if (type === "news-article" && newsSlug) return newsArticleMeta(newsSlug);
+  if (type === "convert") return CONVERT_META;
   const product = type === "product";
   const categoryRoute = getCategoryRoute(segments);
   return {
@@ -147,6 +162,7 @@ export default async function LegacyPage({ params }: Props) {
     const article = newsArticles.find(item => item.slug === newsSlug)!;
     return <NewsArticlePage article={article} />;
   }
+  if (type === "convert") return <ConvertPage />;
   const route = getCategoryRoute(segments);
   if (route) return <CategoryPage category={route.category} page={route.page} />;
   if (type === "product") return <ProductDetail />;
