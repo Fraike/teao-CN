@@ -1,6 +1,11 @@
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
 
+// 高德地图「分享 → 嵌入地图 → 地点模式」生成,免 Key。POI ID: B0LGOC7Y8N
+const AMAP_EMBED_SRC =
+  "https://www.amap.com/ssr/embed/place?id=B0LGOC7Y8N&name=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%89%B9%E6%BE%B3%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&lng=113.996607&lat=22.881794&address=%E9%BB%84%E6%B1%9F%E9%95%87%E9%BB%84%E6%B1%9F%E5%8C%97%E4%B8%89%E8%A1%972%E5%8F%B7&zoom=16&source=poi_detail&platform=pc";
+const AMAP_PLACE_URL = `https://uri.amap.com/marker?position=113.996607,22.881794&name=${encodeURIComponent("东莞市特澳电子科技有限公司")}&src=teao&coordinate=gaode&callnative=0`;
+
 const productTypes = [
   "齿轮阻尼器",
   "轴向阻尼器",
@@ -196,6 +201,40 @@ export default function ContactPage() {
                 </p>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Location map */}
+      <section className="border-t border-line bg-white">
+        <div className="mx-auto w-[min(1240px,calc(100%-48px))] py-16 lg:py-20">
+          <SectionHead
+            eyebrow="公司位置"
+            title="到访特澳"
+            description="广东省东莞市黄江镇黄江北三街2号。来访前请提前联系销售团队,以便安排接待与产线参观。"
+          />
+          <Reveal>
+            <div className="relative overflow-hidden rounded-2xl border border-line bg-surface">
+              <iframe
+                src={AMAP_EMBED_SRC}
+                title="东莞市特澳电子科技有限公司位置地图"
+                className="block h-[320px] w-full border-0 sm:h-[420px]"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          </Reveal>
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+            <p className="text-sm text-muted">广东省东莞市黄江镇黄江北三街2号</p>
+            <a
+              href={AMAP_PLACE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white px-5 py-2.5 text-sm font-bold text-ink-soft transition-all hover:border-brand-500 hover:bg-brand-50 hover:text-brand-700"
+            >
+              在高德地图中查看 →
+            </a>
           </div>
         </div>
       </section>
