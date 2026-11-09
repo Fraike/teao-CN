@@ -177,7 +177,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "85 gf.cm",
+    "hardTorque": "85 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -265,7 +265,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "900 gf.cm",
+    "hardTorque": "900 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -349,7 +349,7 @@
           "param": "齿外径",
           "values": [
             "13.0MM",
-            "16 25MM"
+            "16.25 mm"
           ]
         },
         {
@@ -406,7 +406,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "350 gf.cm",
+    "hardTorque": "350 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -729,7 +729,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "30 gf.cm",
+    "hardTorque": "30 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -821,7 +821,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "300 gf.cm",
+    "hardTorque": "300 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -1013,7 +1013,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "900 gf.cm",
+    "hardTorque": "900 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -1254,7 +1254,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "250 gf.cm",
+    "hardTorque": "250 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -1517,7 +1517,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "100 gf.cm",
+    "hardTorque": "100 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -1775,7 +1775,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "100 gf.cm",
+    "hardTorque": "100 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -2041,7 +2041,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "100 gf.cm",
+    "hardTorque": "100 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -2137,7 +2137,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "35 gf.cm",
+    "hardTorque": "35 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -2233,7 +2233,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "50 gf.cm",
+    "hardTorque": "50 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -2656,7 +2656,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "300 gf.cm",
+    "hardTorque": "300 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -2863,7 +2863,7 @@
             "3.0MM",
             "5.5MM",
             "3.4MM",
-            "4 25MM"
+            "4.25 mm"
           ]
         },
         {
@@ -2918,7 +2918,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "1000 gf.cm",
+    "hardTorque": "1000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -2997,7 +2997,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "1000 gf.cm",
+    "hardTorque": "1000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3076,7 +3076,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "1000 gf.cm",
+    "hardTorque": "1000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3155,7 +3155,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "1000 gf.cm",
+    "hardTorque": "1000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3234,7 +3234,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "650 gf.cm",
+    "hardTorque": "650 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3317,7 +3317,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "1000 gf.cm",
+    "hardTorque": "1000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3392,7 +3392,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "2000 gf.cm",
+    "hardTorque": "2000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3479,7 +3479,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "90 gf.cm",
+    "hardTorque": "90 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3562,7 +3562,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "1000 gf.cm",
+    "hardTorque": "1000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3641,7 +3641,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "800 gf.cm",
+    "hardTorque": "800 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3724,7 +3724,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "800 gf.cm",
+    "hardTorque": "800 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3807,7 +3807,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "500 gf.cm",
+    "hardTorque": "500 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3894,7 +3894,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "450 gf.cm",
+    "hardTorque": "450 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -3973,7 +3973,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "900 gf.cm",
+    "hardTorque": "900 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -4016,7 +4016,7 @@
     "applicationScenarios": [
       {
         "image": "/images/applications/applications-gif/Glove box.gif",
-        "label": "Glove Box"
+        "label": "手套箱"
       }
     ],
     "dimensionDrawing": "/images/products/rd-v130/size.webp",
@@ -4033,8 +4033,8 @@
         {
           "param": "Lock",
           "values": [
-            "No",
-            "Yes (glove box light switch)"
+            "无",
+            "有(glove box light switch)"
           ]
         }
       ]
@@ -4074,7 +4074,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "500 gf.cm",
+    "hardTorque": "500 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -4144,7 +4144,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "3 Kgf.cm",
+    "hardTorque": "3000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -4543,7 +4543,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "500 gf.cm",
+    "hardTorque": "500 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -4622,7 +4622,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "500 gf.cm",
+    "hardTorque": "500 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -4751,8 +4751,8 @@
         {
           "param": "Lock",
           "values": [
-            "No",
-            "Yes (glove box light switch)"
+            "无",
+            "有(glove box light switch)"
           ]
         }
       ]
@@ -4887,7 +4887,7 @@
       "unit": "N"
     },
     "hardTorque": null,
-    "hardForce": "3.5",
+    "hardForce": "3.5 N",
     "soundType": "无声",
     "bufferDirection": null,
     "assemblyMethod": null,
@@ -4985,7 +4985,7 @@
       },
       {
         "label": "声音",
-        "value": "静音"
+        "value": "无声"
       },
       {
         "label": "高度",
@@ -5059,7 +5059,7 @@
       "unit": "N"
     },
     "hardTorque": null,
-    "hardForce": "6",
+    "hardForce": "6 N",
     "soundType": "无声",
     "bufferDirection": null,
     "assemblyMethod": null,
@@ -5073,7 +5073,7 @@
       },
       {
         "label": "声音",
-        "value": "静音"
+        "value": "无声"
       },
       {
         "label": "高度",
@@ -5157,7 +5157,7 @@
       },
       {
         "label": "声音",
-        "value": "静音"
+        "value": "无声"
       },
       {
         "label": "高度",
@@ -5235,7 +5235,7 @@
       "unit": "N"
     },
     "hardTorque": null,
-    "hardForce": "3.5",
+    "hardForce": "3.5 N",
     "soundType": "无声",
     "bufferDirection": null,
     "assemblyMethod": null,
@@ -5327,7 +5327,7 @@
       "unit": "N"
     },
     "hardTorque": null,
-    "hardForce": "3.5",
+    "hardForce": "3.5 N",
     "soundType": "无声",
     "bufferDirection": null,
     "assemblyMethod": null,
@@ -5341,7 +5341,7 @@
       },
       {
         "label": "声音",
-        "value": "静音"
+        "value": "无声"
       },
       {
         "label": "高度",
@@ -5427,7 +5427,7 @@
       "unit": "N"
     },
     "hardTorque": null,
-    "hardForce": "6",
+    "hardForce": "6 N",
     "soundType": "有声",
     "bufferDirection": null,
     "assemblyMethod": null,
@@ -5510,7 +5510,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "25 Kgf.cm",
+    "hardTorque": "25000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": null,
@@ -5584,7 +5584,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "3 Kgf.cm",
+    "hardTorque": "3000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -5641,7 +5641,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "3 Kgf.cm",
+    "hardTorque": "3000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -5767,7 +5767,7 @@
       "unit": "gf·cm"
     },
     "force": null,
-    "hardTorque": "11 Kgf.cm",
+    "hardTorque": "11000 gf·cm",
     "hardForce": null,
     "soundType": null,
     "bufferDirection": "双向",
@@ -5818,7 +5818,7 @@
       "unit": "N"
     },
     "hardTorque": null,
-    "hardForce": "6",
+    "hardForce": "6 N",
     "soundType": null,
     "bufferDirection": null,
     "assemblyMethod": null,
@@ -5849,7 +5849,7 @@
     "applicationScenarios": [
       {
         "image": "/images/applications/applications-gif/Glove box.gif",
-        "label": "Glove Box"
+        "label": "手套箱"
       }
     ],
     "dimensionDrawing": "/images/products/rd-13/size.webp",

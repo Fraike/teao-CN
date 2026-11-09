@@ -47,6 +47,33 @@ function formatRange(min, max, unit) {
   return min === max ? `${min} ${unit}` : `${min} – ${max} ${unit}`;
 }
 
+/** 硬扭矩统一成 gf·cm(kgf·cm ×1000),避免同页两组数值单位不可比。 */
+function normalizeHardTorque(value) {
+  if (!value) return null;
+  const match = String(value).match(/([\d.]+)\s*(kgf\.?cm|gf\.?cm)/i);
+  if (!match) return String(value).replace(/gf\.cm/i, "gf·cm");
+  const amount = Number(match[1]);
+  return /kgf/i.test(match[2]) ? `${amount * 1000} gf·cm` : `${amount} gf·cm`;
+}
+
+/** 硬力值统一带单位,避免页面上出现「12 N N」。 */
+function normalizeHardForce(value) {
+  if (!value) return null;
+  const text = String(value).trim();
+  return /n$/i.test(text) ? text : `${text} N`;
+}
+
+/** 变体表格里的值有源数据缺小数点(16 25MM)与英文 Yes/No,在这里修正。 */
+function normalizeVariantValue(value) {
+  const text = String(value ?? "");
+  const decimal = text.match(/^(\d+)\s(\d{2})\s*MM$/i);
+  if (decimal) return `${decimal[1]}.${decimal[2]} mm`;
+  if (/^no$/i.test(text)) return "无";
+  if (/^yes\s*\((.+)\)$/i.test(text)) return `有(${text.replace(/^yes\s*\(|\)$/gi, "")})`;
+  if (/^yes$/i.test(text)) return "有";
+  return text;
+}
+
 const db = createClient({ url: `file:${dbPath}` });
 const result = await db.execute("select * from products");
 db.close();
@@ -110,7 +137,7 @@ for (const category of catalog) {
             variants: rawVariants.variants,
             rows: (rawVariants.rows ?? []).map(row => ({
               param: translateVariantParam(row.param),
-              values: row.values,
+              values: row.values.map(normalizeVariantValue),
             })),
           }
         : null;
@@ -126,8 +153,8 @@ for (const category of catalog) {
         characteristics: (parseJson(english.characteristics) ?? []).map(translateCharacteristic),
         torque,
         force,
-        hardTorque: english.hard_torque || null,
-        hardForce: english.hard_force || null,
+        hardTorque: normalizeHardTorque(english.hard_torque),
+        hardForce: normalizeHardForce(english.hard_force),
         soundType: translateSound(english.sound_type),
         bufferDirection: translateDirection(english.buffer_direction),
         assemblyMethod: spec?.mounting ?? translateAssembly(english.assembly_method),
@@ -137,7 +164,7 @@ for (const category of catalog) {
         applications,
         applicationScenarios: (parseJson(english.application_scenarios) ?? [])
           .filter(item => item?.image && existingImage(item.image))
-          .map(item => ({ image: item.image, label: item.label ?? "" })),
+          .map(item => ({ image: item.image, label: translateApplication(item.label ?? "") })),
         dimensionDrawing: existingImage(english.dimension_drawing),
         performanceCharts:
           existingImage(performanceCharts.rotation) || existingImage(performanceCharts.temperature)

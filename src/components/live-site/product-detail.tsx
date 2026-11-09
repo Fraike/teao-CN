@@ -19,15 +19,15 @@ import InquiryCTA from "./inquiry-cta";
 import { container } from "./container";
 
 export default function ProductDetail({ product, category }: { product: ProductContent; category: CatalogCategory }) {
-  const related = getRelatedProducts(category.id, product.path).map(item => enrichProduct(category.id, item));
+  const related = getRelatedProducts(category.id, product.path, 4, product.model).map(item => enrichProduct(category.id, item));
   const faq = buildProductFaq(product);
   const torqueBar = getTorqueBar(product.torque);
   const forceBar = getForceBar(product.force);
 
   const stats = [
     product.durability ? { label: "耐久性", value: formatCycles(product.durability.cycles) } : null,
-    product.hardTorque ? { label: "硬扭矩", value: product.hardTorque.replace("gf.cm", "gf·cm") } : null,
-    product.hardForce ? { label: "按压力", value: `${product.hardForce} N` } : null,
+    product.hardTorque ? { label: "硬扭矩", value: product.hardTorque } : null,
+    product.hardForce ? { label: "按压力", value: product.hardForce } : null,
     product.soundType ? { label: "声音", value: product.soundType } : null,
     product.bufferDirection ? { label: "阻尼方向", value: product.bufferDirection } : null,
     product.assemblyMethod ? { label: "安装方式", value: product.assemblyMethod } : null,
@@ -183,7 +183,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
       )}
 
       <section className={`${container} pb-12`}>
-        <div className={`grid gap-6 ${product.materials.length > 0 ? "lg:grid-cols-2" : ""}`}>
+        <div className={`grid gap-6 ${product.specifications.length > 0 && product.materials.length > 0 ? "lg:grid-cols-2" : ""}`}>
           {product.specifications.length > 0 && (
             <div className="rounded-2xl border border-line bg-white p-5 lg:p-6">
               <h2 className="mb-4 text-xl font-extrabold text-ink">技术规格</h2>

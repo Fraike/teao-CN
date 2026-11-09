@@ -43,12 +43,15 @@ export function getProductContent(path: string): ProductContent | null {
   return content[path] ?? null;
 }
 
-export function getRelatedProducts(categoryId: string, excludePath: string, limit = 4): CatalogProduct[] {
+export function getRelatedProducts(categoryId: string, excludePath: string, limit = 4, excludeModel?: string): CatalogProduct[] {
   const category = liveCatalog.find(item => item.id === categoryId);
   if (!category) return [];
+  const normalize = (value: string) => value.toUpperCase().replace(/\s+/g, "");
+  const blocked = excludeModel ? normalize(excludeModel) : null;
   return category.pages
     .flatMap(page => page.products)
     .filter(product => product.path !== excludePath)
+    .filter(product => !blocked || normalize(product.model) !== blocked)
     .slice(0, limit);
 }
 

@@ -144,7 +144,7 @@ for (const category of cn) {
             ?? parseForce(match.力值范围);
         }
         if (match.声音类型 && category.id === "latch") {
-          pushChip({ label: "声音", value: match.声音类型 === "silent" ? "静音" : "有声" });
+          pushChip({ label: "声音", value: match.声音类型 === "silent" ? "无声" : "有声" });
         }
 
         for (const [rawLabel, rawValue] of Object.entries(match.规格 ?? {})) {
