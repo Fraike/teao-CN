@@ -28,7 +28,7 @@ export default function DimensionDrawing({ src, alt }: { src: string; alt: strin
         type="button"
         onClick={() => setOpen(true)}
         aria-label={`放大查看 ${alt}`}
-        className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden rounded-xl border border-line bg-white transition-colors hover:border-brand-500"
+        className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden rounded-2xl border border-line bg-white transition-all hover:border-brand-500 hover:shadow-[0_14px_36px_rgba(232,120,26,0.1)]"
       >
         <Image src={src} alt={alt} fill sizes="(max-width: 1024px) 100vw, 680px" className="object-contain p-3" />
       </button>
