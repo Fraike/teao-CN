@@ -9,25 +9,24 @@ export default function ProductCard({ product }: { product: EnrichedProduct }) {
   const external = !href.startsWith("/");
 
   return (
-    <article className="group grid h-full grid-cols-[88px_1fr] items-center gap-3 rounded-2xl border border-line bg-white p-3 shadow-[0_2px_12px_rgba(17,24,39,0.02)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.10)] lg:grid-cols-[120px_1fr] lg:gap-5 lg:p-4 lg:shadow-[0_4px_24px_rgba(17,24,39,0.03)]">
-      <a href={href} className="relative h-[88px] w-[88px] shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-surface to-white lg:h-[120px] lg:w-[120px]">
+    <article className="group grid h-full grid-cols-[112px_1fr] items-center gap-3 rounded-2xl border border-line bg-white p-3 shadow-[0_2px_12px_rgba(17,24,39,0.02)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.10)] lg:grid-cols-[176px_1fr] lg:gap-5 lg:p-4 lg:shadow-[0_4px_24px_rgba(17,24,39,0.03)]">
+      <a href={href} className="relative h-[112px] w-[112px] shrink-0 overflow-hidden rounded-xl border border-line-soft bg-gradient-to-br from-surface to-white lg:h-[176px] lg:w-[176px]">
         <Image
           src={product.image}
           alt={product.title}
           fill
-          sizes="(max-width: 1023px) 88px, 120px"
+          sizes="(max-width: 1023px) 112px, 176px"
           loading="lazy"
-          className="object-contain p-2.5 transition-transform duration-500 group-hover:scale-105 lg:p-3"
+          className="object-contain p-1.5 transition-transform duration-500 group-hover:scale-105 lg:p-2"
         />
       </a>
 
       <div className="flex min-w-0 flex-col">
         <a href={href}>
-          <h3 className="line-clamp-1 text-[13px] font-bold leading-tight text-ink transition-colors group-hover:text-brand-700 lg:text-[14px]">
+          <h3 className="line-clamp-1 text-[15px] font-black leading-tight tracking-[-0.01em] text-ink transition-colors group-hover:text-brand-700 lg:text-base">
             {product.model}
           </h3>
         </a>
-        <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-muted lg:mt-1 lg:text-xs lg:leading-relaxed">{product.title}</p>
 
         <div className="mt-2 lg:mt-3">
           <RangeBlock product={product} />
