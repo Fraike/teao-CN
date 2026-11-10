@@ -76,11 +76,23 @@ const ABOUT_META: Metadata = {
   title: { absolute: "关于特澳 | 20+年阻尼器定制厂家" },
   description: "特澳 TEAO 成立于 2001 年，专注阻尼器与锁扣机构研发制造 20 余年。IATF 16949 认证，8000 万件年产能，模具·注塑·装配·检测一体化源头工厂。",
   alternates: canon(ABOUT_PATH), robots: { index: true, follow: true },
+  openGraph: {
+    title: "关于特澳 | 20+ 年阻尼器定制厂家",
+    description: "IATF 16949 认证源头工厂,模具·注塑·装配·检测一体化,8000 万件年产能。",
+    type: "website",
+    images: [{ url: "/images/company/factory-entrance.webp", alt: "特澳东莞生产基地" }],
+  },
 };
 const CONTACTS_META: Metadata = {
-  title: { absolute: "联系我们" },
-  description: "联系特澳 TEAO 销售工程团队 — 提供图纸、样品或应用场景描述，工程师将在 2 小时内响应，为您提供选型建议与报价方案。",
+  title: { absolute: "联系我们 | 特澳 TEAO 阻尼器定制厂家" },
+  description: "联系特澳 TEAO 销售工程团队:提供图纸、样品或应用场景描述,工程师将在 24 小时内响应,为您提供阻尼器选型建议与报价方案。",
   alternates: canon(CONTACTS_PATH), robots: { index: true, follow: true },
+  openGraph: {
+    title: "联系我们 | 特澳 TEAO",
+    description: "提交图纸、样品或应用场景描述,工程师将在 24 小时内响应。",
+    type: "website",
+    images: [{ url: "/images/company/contactUs.webp", width: 1694, height: 929, alt: "特澳销售与工程支持团队" }],
+  },
 };
 const NEWS_META: Metadata = {
   title: { absolute: "新闻 | 特澳 TEAO" },
