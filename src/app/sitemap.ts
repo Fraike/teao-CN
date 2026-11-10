@@ -1,81 +1,35 @@
 import type { MetadataRoute } from "next";
-import { db } from "@/db";
-import { products } from "@/db/schema";
-import { eq } from "drizzle-orm";
 import { newsArticles } from "@/content/live-site/news";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://www.chinateao.com";
+const BASE = "https://www.chinateao.com";
+// 固定发布日期:避免每次请求 lastModified 都变化。
+const LAST_MODIFIED = new Date("2026-11-10");
 
-  // Static pages
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/products`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contacts/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/about-us/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/news/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/convert/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/sitemap/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
+    { url: `${BASE}/`, lastModified: LAST_MODIFIED, changeFrequency: "daily", priority: 1 },
+    { url: `${BASE}/applications/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/applications/automotive-interior/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/applications/automotive-interior/internal/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/applications/automotive-interior/external/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/applications/home-life/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/applications/office-equipment/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/applications/industrial-application/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/quality-control/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/faq/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/news/`, lastModified: LAST_MODIFIED, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${BASE}/convert/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/about-us/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/contacts/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/sitemap/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.3 },
   ];
 
-  const newsPages: MetadataRoute.Sitemap = newsArticles.map((article) => ({
-    url: `${baseUrl}/news/${article.slug}.html`,
+  const newsPages: MetadataRoute.Sitemap = newsArticles.map(article => ({
+    url: `${BASE}/news/${article.slug}.html`,
     lastModified: new Date(article.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.5,
   }));
 
-  // Dynamic product detail pages
-  const allProducts = await db
-    .select({
-      slug: products.slug,
-      category: products.category,
-      updatedAt: products.updatedAt,
-    })
-    .from(products)
-    .where(eq(products.isActive, 1));
-
-  const productPages: MetadataRoute.Sitemap = allProducts.map((product) => ({
-    url: `${baseUrl}/products/${product.category}/${product.slug}`,
-    lastModified: product.updatedAt ?? new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
-
-  return [...staticPages, ...newsPages, ...productPages];
+  return [...staticPages, ...newsPages];
 }

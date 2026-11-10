@@ -18,8 +18,8 @@ const partners = [
 
 export function PartnerSection() {
   return (
-    <section className="section bg-white py-20" id="clients">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section className="bg-white py-20" id="clients">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[320px_1fr]">
           {/* ── Left: section copy ── */}
           <Reveal>

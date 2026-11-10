@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SectionHead } from "@/components/ui/section-head";
+import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { container } from "./catalog";
 import { newsArticles } from "@/content/live-site/news";
@@ -24,17 +24,18 @@ export default function NewsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(newsJsonLd) }} />
-      <section className={`${container} py-14`}>
-        <h1 className="sr-only">新闻 | 特澳 TEAO</h1>
-        <SectionHead
-          eyebrow="新闻"
-          title="公司动态与工程进展"
-          description="特澳最新动态、阻尼器工程进展、质量管理与技术资源。"
-        />
+      <PageHero
+        eyebrow="新闻"
+        title="公司动态与工程进展"
+        description="特澳最新动态、阻尼器工程进展、质量管理与技术资源。"
+        breadcrumb={[{ label: "首页", href: "/" }, { label: "新闻" }]}
+      />
+
+      <section className={`${container} py-16 lg:py-20`}>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {newsArticles.map((article, i) => (
             <Reveal key={article.slug} delay={(Math.min(i, 2) + 1) as 1 | 2 | 3}>
-              <Link href={`/news/${article.slug}.html`} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_52px_rgba(0,0,0,0.1)]">
+              <Link href={`/news/${article.slug}.html`} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
                   <Image src={article.image} alt={article.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
                 </div>

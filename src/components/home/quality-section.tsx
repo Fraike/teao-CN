@@ -6,13 +6,13 @@ const certs = [
     name: "IATF 16949",
     description: "汽车行业质量管理体系认证 — 覆盖产品设计、生产和服务全过程",
     badge: "IATF",
-    badgeBg: "bg-[#2D8A56]",
+    badgeBg: "bg-green",
   },
   {
     name: "ISO 14001",
     description: "环境管理体系认证 — 生产过程环保合规",
     badge: "ISO",
-    badgeBg: "bg-[#3B82C4]",
+    badgeBg: "bg-blue",
   },
   {
     name: "专利与技术积累",
@@ -47,8 +47,8 @@ const qcSteps = [
 
 export function QualitySection() {
   return (
-    <section className="section bg-[#F7F6F4] py-20" id="quality">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section className="bg-surface-warm py-20" id="quality">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <SectionHead
           eyebrow="质量认证"
           title={<>不只是证书墙 — <b className="font-black text-brand-700">展示质量怎么管</b></>}

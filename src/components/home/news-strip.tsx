@@ -7,8 +7,8 @@ import { newsArticles } from "@/content/live-site/news";
 
 export function NewsStrip() {
   return (
-    <section className="section border-t border-line bg-white py-20">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section className="border-t border-line bg-white py-20">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <SectionHead
           eyebrow="新闻动态"
           title="公司动态与工程进展"

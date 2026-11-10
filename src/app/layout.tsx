@@ -28,9 +28,17 @@ export const metadata: Metadata = {
     title: "特澳 TEAO — 阻尼器与锁扣机构定制厂家",
     description:
       "IATF 16949认证，20+年制造经验，专注阻尼器与锁扣机构，产品覆盖汽车、家电、卫浴、医疗、工业等领域。",
+    url: "https://www.chinateao.com/",
     siteName: "特澳 TEAO",
     locale: "zh_CN",
     type: "website",
+    images: [{ url: "/images/og/default.jpg", width: 1200, height: 630, alt: "特澳 TEAO — 阻尼器与锁扣定制厂家" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "特澳 TEAO — 阻尼器与锁扣机构定制厂家",
+    description: "IATF 16949 认证，20+ 年制造经验，阻尼器与锁扣机构定制源头厂家。",
+    images: ["/images/og/default.jpg"],
   },
 };
 

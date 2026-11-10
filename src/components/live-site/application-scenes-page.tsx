@@ -1,25 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { SectionHead } from "@/components/ui/section-head";
+import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
-import { liveHref } from "@/lib/live-site";
+import { liveHref, LIVE_ORIGIN } from "@/lib/live-site";
 import { formatRange, getProductContentByModel } from "@/lib/product-content";
 import { container } from "./container";
 import type { ApplicationMap, ApplicationScene } from "@/content/live-site/applications";
 import AutomotiveMap from "./automotive-map";
 
-export default function ApplicationScenesPage({ eyebrow, title, description, scenes, map }: {
+export default function ApplicationScenesPage({ eyebrow, title, description, scenes, map, canonicalPath }: {
   eyebrow: string;
   title: string;
   description: string;
   scenes: ApplicationScene[];
   map: ApplicationMap;
+  canonicalPath: string;
 }) {
+  const scenesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: LIVE_ORIGIN + canonicalPath,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: scenes.map((scene, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: scene.title,
+        url: LIVE_ORIGIN + canonicalPath + "#" + scene.id,
+      })),
+    },
+  };
   return (
-    <section className={`${container} py-14`}>
-      <h1 className="sr-only">{title} | 特澳 TEAO</h1>
-      <SectionHead eyebrow={eyebrow} title={title} description={description} />
+    <section className={`${container} py-16 lg:py-20`}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(scenesJsonLd) }} />
+      <PageHero
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+        breadcrumb={[
+          { label: "首页", href: "/" },
+          { label: "应用案例", href: "/applications/" },
+          { label: "汽车内外饰", href: "/applications/automotive-interior/" },
+          { label: title },
+        ]}
+      />
 
       <AutomotiveMap map={map} sceneIds={scenes.map(scene => scene.id)} />
 
@@ -32,7 +59,7 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
                 <div className="mb-5 flex items-center gap-3 border-b border-line-soft pb-4">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-sm font-black text-brand-700">{scene.no}</span>
                   <div className="min-w-0">
-                    <h2 className="text-[17px] font-bold leading-tight">{scene.title}</h2>
+                    <h2 className="text-xl font-black leading-tight tracking-[-0.02em]">{scene.title}</h2>
                     <p className="mt-0.5 text-[11px] text-muted-light">{modelCount} 个推荐型号</p>
                   </div>
                 </div>

@@ -30,8 +30,8 @@ const capabilities = [
 
 export function CapabilitySection() {
   return (
-    <section className="section bg-white py-20" id="factory">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section className="bg-white py-20" id="factory">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[420px_1fr]">
           {/* ── Left: photo + description ── */}
           <Reveal>

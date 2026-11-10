@@ -20,7 +20,7 @@ const sceneTags = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#FAF9F6]">
+    <section className="relative overflow-hidden bg-surface-warm">
       {/* Background overlays */}
       <div className="absolute inset-0 z-0">
         <div
@@ -44,7 +44,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-[2] mx-auto grid w-[min(1240px,calc(100%-48px))] items-center gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12">
+      <div className="relative z-[2] mx-auto grid w-full max-w-7xl px-5 lg:px-8 items-center gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12">
         {/* ── Left content ── */}
         <div>
           {/* Eyebrow tag */}

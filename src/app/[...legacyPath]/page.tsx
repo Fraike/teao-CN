@@ -16,100 +16,151 @@ import ConvertPage from "@/components/live-site/convert-page";
 import { getPilotPage, getNewsSlug, legacyPathFromSegments, LIVE_ORIGIN, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
 import { getCategoryRoute, liveCatalog } from "@/lib/live-catalog";
 import { getProductContent } from "@/lib/product-content";
+import { pageOpenGraph } from "@/lib/metadata";
 import { automotiveInteriorScenes, automotiveExteriorScenes, automotiveInteriorMap, automotiveExteriorMap, simpleApplications } from "@/content/live-site/applications";
 import { newsArticles } from "@/content/live-site/news";
+
+const indexable = { index: true, follow: true } as const;
+const canon = (p: string): Metadata["alternates"] => ({ canonical: LIVE_ORIGIN + p });
 
 const QUALITY_META: Metadata = {
   title: { absolute: "质量控制 | IATF 16949 认证 · 100% 扭矩检测 | 特澳 TEAO" },
   description: "IATF 16949 认证质量管理体系,100% 扭矩检测与 100% 外观检测。实验室支持扭矩、寿命、尺寸与环境验证,提供 PPAP 与扭矩测试报告。",
-  alternates: { canonical: LIVE_ORIGIN + QUALITY_PATH },
-  robots: { index: false, follow: true },
+  alternates: canon(QUALITY_PATH),
+  robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "质量控制 | IATF 16949 认证 · 100% 扭矩检测",
+    description: "IATF 16949 认证体系,100% 扭矩与外观检测,实验室支持扭矩、寿命、尺寸与环境验证。",
+    path: QUALITY_PATH,
+  }),
 };
 
 const FAQ_META: Metadata = {
   title: { absolute: "常见问题 | 阻尼器定制与选型 FAQ | 特澳 TEAO" },
   description: "关于特澳阻尼器定制、扭矩选型、打样、交期、质量认证与询盘的常见问题解答。",
-  alternates: { canonical: LIVE_ORIGIN + FAQ_PATH },
-  robots: { index: false, follow: true },
+  alternates: canon(FAQ_PATH),
+  robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "常见问题 | 阻尼器定制与选型",
+    description: "关于定制能力、扭矩选型、打样、交期、质量认证与询盘的常见问题解答。",
+    path: FAQ_PATH,
+  }),
 };
-
-const noindex = { index: false, follow: true } as const;
-const canon = (p: string): Metadata["alternates"] => ({ canonical: LIVE_ORIGIN + p });
 
 const APPLICATIONS_META: Metadata = {
   title: { absolute: "应用案例 | 阻尼器应用场景 | 特澳 TEAO" },
   description: "特澳阻尼器应用案例:汽车内外饰、家居、办公设备与工业设备。齿轮阻尼器、轴向阻尼器、锁扣与定制模块的典型应用。",
-  alternates: canon(APPLICATIONS_PATH), robots: noindex,
+  alternates: canon(APPLICATIONS_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "应用案例 | 阻尼器应用场景",
+    description: "汽车内外饰、家居、办公设备与工业设备的阻尼器应用与推荐型号。",
+    path: APPLICATIONS_PATH,
+  }),
 };
 const AUTOMOTIVE_INTERIOR_META: Metadata = {
   title: { absolute: "汽车内外饰阻尼器应用 | 特澳 TEAO" },
   description: "汽车内饰与外饰阻尼器应用:中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒、遮阳板、外门把手与充电口盖。",
-  alternates: canon(AUTOMOTIVE_INTERIOR_PATH), robots: noindex,
+  alternates: canon(AUTOMOTIVE_INTERIOR_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "汽车内外饰阻尼器应用",
+    description: "点击座舱与车身图上的标记,查看对应位置的应用与推荐型号。",
+    path: AUTOMOTIVE_INTERIOR_PATH,
+  }),
 };
 const INTERIOR_META: Metadata = {
   title: { absolute: "汽车内饰阻尼器应用 | 特澳 TEAO" },
   description: "汽车内饰阻尼器应用场景:中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的软开、缓降与回弹控制。",
-  alternates: canon(INTERIOR_PATH), robots: noindex,
+  alternates: canon(INTERIOR_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "汽车内饰阻尼器应用",
+    description: "中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。",
+    path: INTERIOR_PATH,
+  }),
 };
 const EXTERIOR_META: Metadata = {
   title: { absolute: "汽车外饰阻尼器应用 | 特澳 TEAO" },
   description: "汽车外饰阻尼器应用场景:平嵌式/常规外门把手与新能源汽车充电口盖的软开、软关与防撞击控制。",
-  alternates: canon(EXTERIOR_PATH), robots: noindex,
+  alternates: canon(EXTERIOR_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "汽车外饰阻尼器应用",
+    description: "外门把手与新能源汽车充电口盖的阻尼应用。",
+    path: EXTERIOR_PATH,
+  }),
 };
 const HOME_LIFE_META: Metadata = {
   title: { absolute: "家居阻尼器应用 | 特澳 TEAO" },
   description: "家居阻尼器应用:马桶盖阻尼、淋浴门缓冲、柜门缓闭与卫浴运动控制。",
-  alternates: canon(HOME_LIFE_PATH), robots: noindex,
+  alternates: canon(HOME_LIFE_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "家居阻尼器应用",
+    description: "马桶盖阻尼、淋浴门缓冲、柜门缓闭与卫浴运动控制。",
+    path: HOME_LIFE_PATH,
+  }),
 };
 const OFFICE_EQUIPMENT_META: Metadata = {
   title: { absolute: "办公设备阻尼器应用 | 特澳 TEAO" },
   description: "办公设备阻尼器应用:打印机盖、显示器支架、扫描仪盖板、工作站抽屉与受控开合面板。",
-  alternates: canon(OFFICE_EQUIPMENT_PATH), robots: noindex,
+  alternates: canon(OFFICE_EQUIPMENT_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "办公设备阻尼器应用",
+    description: "打印机盖、显示器支架、扫描仪盖板与受控开合面板的阻尼应用。",
+    path: OFFICE_EQUIPMENT_PATH,
+  }),
 };
 const INDUSTRIAL_APPLICATION_META: Metadata = {
   title: { absolute: "工业设备阻尼器应用 | 特澳 TEAO" },
   description: "工业设备阻尼器应用:检修门、设备外壳、维护面板、自动售货机机构与特殊运动模块。",
-  alternates: canon(INDUSTRIAL_APPLICATION_PATH), robots: noindex,
+  alternates: canon(INDUSTRIAL_APPLICATION_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "工业设备阻尼器应用",
+    description: "检修门、设备外壳、维护面板与特殊运动模块的阻尼应用。",
+    path: INDUSTRIAL_APPLICATION_PATH,
+  }),
 };
 
 const ABOUT_META: Metadata = {
   title: { absolute: "关于特澳 | 20+年阻尼器定制厂家" },
   description: "特澳 TEAO 成立于 2001 年，专注阻尼器与锁扣机构研发制造 20 余年。IATF 16949 认证，8000 万件年产能，模具·注塑·装配·检测一体化源头工厂。",
-  alternates: canon(ABOUT_PATH), robots: { index: true, follow: true },
-  openGraph: {
+  alternates: canon(ABOUT_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
     title: "关于特澳 | 20+ 年阻尼器定制厂家",
     description: "IATF 16949 认证源头工厂,模具·注塑·装配·检测一体化,8000 万件年产能。",
-    type: "website",
-    images: [{ url: "/images/company/factory-entrance.webp", alt: "特澳东莞生产基地" }],
-  },
+    path: ABOUT_PATH,
+    image: { url: "/images/company/factory-entrance.webp", width: 1400, height: 759, alt: "特澳东莞生产基地" },
+  }),
 };
 const CONTACTS_META: Metadata = {
   title: { absolute: "联系我们 | 特澳 TEAO 阻尼器定制厂家" },
   description: "联系特澳 TEAO 销售工程团队:提供图纸、样品或应用场景描述,工程师将在 24 小时内响应,为您提供阻尼器选型建议与报价方案。",
-  alternates: canon(CONTACTS_PATH), robots: { index: true, follow: true },
-  openGraph: {
+  alternates: canon(CONTACTS_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
     title: "联系我们 | 特澳 TEAO",
     description: "提交图纸、样品或应用场景描述,工程师将在 24 小时内响应。",
-    type: "website",
-    images: [{ url: "/images/company/contactUs.webp", width: 1694, height: 929, alt: "特澳销售与工程支持团队" }],
-  },
+    path: CONTACTS_PATH,
+    image: { url: "/images/company/contactUs.webp", width: 1694, height: 929, alt: "特澳销售与工程支持团队" },
+  }),
 };
 const NEWS_META: Metadata = {
   title: { absolute: "新闻 | 特澳 TEAO" },
   description: "特澳最新动态、阻尼器工程进展、质量管理与技术资源。",
-  alternates: canon(NEWS_PATH), robots: { index: true, follow: true },
+  alternates: canon(NEWS_PATH), robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "新闻 | 公司动态与工程进展",
+    description: "特澳最新动态、阻尼器工程进展、质量管理与技术资源。",
+    path: NEWS_PATH,
+  }),
 };
 const CONVERT_META: Metadata = {
   title: { absolute: "扭矩单位换算器 | N·m、kgf·cm、gf·cm 在线换算 | 特澳 TEAO" },
   description: "免费在线扭矩单位换算工具,支持 N·m、cN·m、mN·m、kgf·cm、kgf·m、gf·cm、lbf·in、lbf·ft、ozf·in 九种单位即时互转,适用于阻尼器扭矩选型、参数对比与运动控制设计。",
   keywords: ["扭矩换算", "扭矩单位换算", "N·m 转 kgf·cm", "gf·cm 转 mN·m", "阻尼器扭矩", "扭矩换算器"],
   alternates: canon(CONVERT_PATH),
-  robots: { index: true, follow: true },
-  openGraph: {
-    title: "扭矩单位换算器 | 特澳 TEAO",
+  robots: indexable,
+  openGraph: pageOpenGraph({
+    title: "扭矩单位换算器",
     description: "九种常用扭矩单位即时换算,适用于阻尼器扭矩选型与参数对比。",
-    type: "website",
-  },
+    path: CONVERT_PATH,
+  }),
 };
 
 function newsArticleMeta(slug: string): Metadata {
@@ -118,8 +169,13 @@ function newsArticleMeta(slug: string): Metadata {
     title: { absolute: `${article.title} | 特澳 TEAO` },
     description: article.summary,
     alternates: canon(`/news/${article.slug}.html`),
-    robots: { index: true, follow: true },
-    openGraph: { title: article.title, description: article.summary, type: "article", publishedTime: article.publishedAt },
+    robots: indexable,
+    openGraph: pageOpenGraph({
+      title: article.title,
+      description: article.summary,
+      path: `/news/${article.slug}.html`,
+      type: "article",
+    }),
   };
 }
 
@@ -179,11 +235,11 @@ export default async function LegacyPage({ params }: Props) {
   if (type === "faq") return <FaqPage />;
   if (type === "applications") return <ApplicationsPage />;
   if (type === "automotive-interior") return <AutomotiveOverviewPage />;
-  if (type === "interior") return <ApplicationScenesPage eyebrow="汽车内饰" title="汽车内饰阻尼器应用" description="点击座舱图中的标记,查看中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。" scenes={automotiveInteriorScenes} map={automotiveInteriorMap} />;
-  if (type === "exterior") return <ApplicationScenesPage eyebrow="汽车外饰" title="汽车外饰阻尼器应用" description="点击车身图中的标记,查看外门把手与新能源汽车充电口盖的阻尼应用。" scenes={automotiveExteriorScenes} map={automotiveExteriorMap} />;
-  if (type === "home-life") return <SimpleApplicationPage app={simpleApplications[0]} />;
-  if (type === "office-equipment") return <SimpleApplicationPage app={simpleApplications[1]} />;
-  if (type === "industrial-application") return <SimpleApplicationPage app={simpleApplications[2]} />;
+  if (type === "interior") return <ApplicationScenesPage eyebrow="汽车内饰" title="汽车内饰阻尼器应用" description="点击座舱图中的标记,查看中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。" scenes={automotiveInteriorScenes} map={automotiveInteriorMap} canonicalPath={INTERIOR_PATH} />;
+  if (type === "exterior") return <ApplicationScenesPage eyebrow="汽车外饰" title="汽车外饰阻尼器应用" description="点击车身图中的标记,查看外门把手与新能源汽车充电口盖的阻尼应用。" scenes={automotiveExteriorScenes} map={automotiveExteriorMap} canonicalPath={EXTERIOR_PATH} />;
+  if (type === "home-life") return <SimpleApplicationPage app={simpleApplications[0]} canonicalPath={HOME_LIFE_PATH} />;
+  if (type === "office-equipment") return <SimpleApplicationPage app={simpleApplications[1]} canonicalPath={OFFICE_EQUIPMENT_PATH} />;
+  if (type === "industrial-application") return <SimpleApplicationPage app={simpleApplications[2]} canonicalPath={INDUSTRIAL_APPLICATION_PATH} />;
   if (type === "about") return <AboutPage />;
   if (type === "contacts") return <ContactPage />;
   if (type === "news") return <NewsPage />;

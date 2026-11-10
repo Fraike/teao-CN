@@ -4,6 +4,7 @@ import { liveCatalog } from "@/lib/live-catalog";
 import { developmentCategoryPath, liveHref, LIVE_ORIGIN } from "@/lib/live-site";
 import { enrichProduct } from "@/lib/product-enrichment";
 import { compareModel } from "@/lib/product-sort";
+import { pageOpenGraph } from "@/lib/metadata";
 import { container } from "@/components/live-site/catalog";
 import ListingHero from "@/components/live-site/listing-hero";
 import ListingTabs from "@/components/live-site/listing-tabs";
@@ -15,6 +16,11 @@ export const metadata: Metadata = {
   description: "特澳产品中心：齿轮阻尼器、圆筒阻尼器、手套箱阻尼器、锁扣和其他零部件，按分类查看型号及产品资料。",
   alternates: { canonical: LIVE_ORIGIN + "/products/" },
   robots: { index: false, follow: true },
+  openGraph: pageOpenGraph({
+    title: "产品中心 | 阻尼器与锁扣型号",
+    description: "按分类查看齿轮阻尼器、圆筒阻尼器、手套箱阻尼器、锁扣与定制零部件。",
+    path: "/products/",
+  }),
 };
 
 export default async function ProductsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { SectionHead } from "@/components/ui/section-head";
+import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { container } from "./container";
 import { automotiveInteriorMap, automotiveExteriorMap } from "@/content/live-site/applications";
@@ -42,20 +42,20 @@ export default function AutomotiveOverviewPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(automotiveOverviewJsonLd) }} />
-      <section className={`${container} py-14`}>
-        <h1 className="sr-only">汽车内外饰阻尼器应用 | 特澳 TEAO</h1>
-        <SectionHead
-          eyebrow="汽车内外饰"
-          title="车内车外,静音顺滑"
-          description="电动车与高端座舱更安静,开合、回弹的机械声更容易被察觉。选择区域,查看对应位置的应用与推荐型号。"
-        />
+      <PageHero
+        eyebrow="汽车内外饰"
+        title="车内车外,静音顺滑"
+        description="电动车与高端座舱更安静,开合、回弹的机械声更容易被察觉。选择区域,查看对应位置的应用与推荐型号。"
+        breadcrumb={[{ label: "首页", href: "/" }, { label: "应用案例", href: "/applications/" }, { label: "汽车内外饰" }]}
+      />
 
+      <section className={`${container} py-16 lg:py-20`}>
         <div className="grid gap-6 lg:grid-cols-2">
           {zoneEntries.map((entry, i) => (
             <Reveal key={entry.href} delay={((i % 2) + 1) as 1 | 2}>
               <Link
                 href={entry.href}
-                className="group relative block overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_44px_rgba(30,30,32,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_24px_60px_rgba(232,120,26,0.14)]"
+                className="group relative block overflow-hidden rounded-2xl border border-line bg-white shadow-[0_16px_44px_rgba(30,30,32,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_24px_60px_rgba(232,120,26,0.14)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                   <Image

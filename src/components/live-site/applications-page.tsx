@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Car, Bath, Monitor, Cog, ArrowUpRight } from "lucide-react";
-import { SectionHead } from "@/components/ui/section-head";
+import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { container } from "./catalog";
 import { applicationCards } from "@/content/live-site/applications";
@@ -27,13 +27,14 @@ export default function ApplicationsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(applicationsJsonLd) }} />
-      <section className={`${container} py-14`}>
-        <h1 className="sr-only">应用案例 | 阻尼器应用场景 | 特澳 TEAO</h1>
-        <SectionHead
-          eyebrow="应用案例"
-          title="为每一种应用而设计"
-          description="特澳阻尼器服务于汽车、家居、办公设备与工业领域,覆盖开合、缓冲、缓降与回弹控制。"
-        />
+      <PageHero
+        eyebrow="应用案例"
+        title="为每一种应用而设计"
+        description="特澳阻尼器服务于汽车、家居、办公设备与工业领域,覆盖开合、缓冲、缓降与回弹控制。"
+        breadcrumb={[{ label: "首页", href: "/" }, { label: "应用案例" }]}
+      />
+
+      <section className={`${container} py-16 lg:py-20`}>
         <div className="grid gap-6 md:grid-cols-2">
           {applicationCards.map((card, i) => {
             const Icon = cardIcons[i];
@@ -41,7 +42,7 @@ export default function ApplicationsPage() {
               <Reveal key={card.key} delay={((i % 2) + 1) as 1 | 2}>
                 <Link
                   href={card.href}
-                  className="group relative block overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_44px_rgba(30,30,32,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_24px_60px_rgba(232,120,26,0.14)]"
+                  className="group relative block overflow-hidden rounded-2xl border border-line bg-white shadow-[0_16px_44px_rgba(30,30,32,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_24px_60px_rgba(232,120,26,0.14)]"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                     <Image

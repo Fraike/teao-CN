@@ -26,6 +26,9 @@ export async function generateMetadata({
   return {
     title: product.name,
     description: product.summary,
+    // 遗留的 DB 详情页:避免与 63 个正式产品 URL 重复收录。
+    robots: { index: false, follow: true },
+    alternates: { canonical: `https://www.chinateao.com/products/${product.category}/${product.slug}` },
     openGraph: {
       title: `${product.name} | 特澳 TEAO`,
       description: product.summary,
@@ -83,7 +86,7 @@ export default async function ProductDetailPage({
     <>
       {/* Breadcrumb */}
       <section className="bg-surface border-b border-line-soft">
-        <div className="mx-auto w-[min(1240px,calc(100%-48px))] py-4">
+        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8 py-4">
           <nav className="flex items-center gap-2 text-sm text-muted">
             <Link href="/" className="hover:text-brand-700 transition-colors">
               首页
@@ -111,10 +114,10 @@ export default async function ProductDetailPage({
 
       {/* Product Detail */}
       <section className="bg-white py-16">
-        <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Left: Product Image */}
-            <div className="grid place-items-center aspect-[1/0.85] bg-[#FAF8F5] rounded-2xl border border-line p-10 overflow-hidden">
+            <div className="grid place-items-center aspect-[1/0.85] bg-surface rounded-2xl border border-line p-10 overflow-hidden">
               <Image
                 src={product.image}
                 alt={product.name}

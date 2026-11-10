@@ -8,8 +8,8 @@ export async function ProductGrid() {
   const cats = liveCatalog;
 
   return (
-    <section className="section bg-white py-20" id="products">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section className="bg-white py-20" id="products">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <SectionHead
           eyebrow="产品中心"
           title={<>从标准型号到<b className="font-black text-brand-700">按图非标定制</b></>}

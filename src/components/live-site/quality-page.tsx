@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Gauge, Eye, Clock, Thermometer, Target, Sliders, Waves, Shield } from "lucide-react";
+import { PageHero } from "@/components/ui/page-hero";
 import { SectionHead } from "@/components/ui/section-head";
+import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { liveHref } from "@/lib/live-site";
 import { container } from "./catalog";
@@ -27,20 +29,21 @@ export default function QualityPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(qualityJsonLd) }} />
-      <section className={`${container} py-14`}>
-        <h1 className="sr-only">质量控制 | IATF 16949 认证 · 100% 扭矩检测</h1>
-        <SectionHead
-          eyebrow="质量控制"
-          title="每一件阻尼器,都有据可查"
-          description="IATF 16949 认证体系,100% 扭矩检测与 100% 外观检测,从原材料到成品的批次可追溯。"
-        />
+      <PageHero
+        eyebrow="质量控制"
+        title="每一件阻尼器,都有据可查"
+        description="IATF 16949 认证体系,100% 扭矩检测与 100% 外观检测,从原材料到成品的批次可追溯。"
+        breadcrumb={[{ label: "首页", href: "/" }, { label: "质量控制" }]}
+      />
+
+      <section className={`${container} py-16 lg:py-20`}>
         <div className="grid gap-6 lg:grid-cols-2">
           {inspectionCards.map((card, i) => {
             const Icon = inspectionIcons[i];
             return (
               <Reveal key={card.badge} delay={((i % 2) + 1) as 1 | 2}>
-                <div className="overflow-hidden rounded-2xl border border-line bg-white">
-                  <div className="relative h-[220px] overflow-hidden bg-surface">
+                <div className="overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                     <Image src={card.image} alt={card.title} fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover" />
                   </div>
                   <div className="p-7">
@@ -68,7 +71,7 @@ export default function QualityPage() {
       </section>
 
       <section className="border-y border-line bg-white">
-        <div className={`${container} py-14`}>
+        <div className={`${container} py-16 lg:py-20`}>
           <SectionHead eyebrow="工程能力" title="按你的需求调校每一款阻尼器" description="从扭矩、方向到安装结构,工程团队可按应用要求调整关键参数。" />
           <div className="grid gap-5 sm:grid-cols-2">
             {engineeringCapabilities.map((cap, i) => {
@@ -91,7 +94,7 @@ export default function QualityPage() {
         </div>
       </section>
 
-      <section className={`${container} py-14`}>
+      <section className={`${container} py-16 lg:py-20`}>
         <SectionHead eyebrow="实验室" title="经校准设备提供的清晰验证数据" description="特澳实验室支持扭矩、寿命、尺寸与环境验证,满足汽车级质量控制要求。" />
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {labGroups.map((group, gi) => (
@@ -121,7 +124,7 @@ export default function QualityPage() {
         </div>
       </section>
 
-      <section className={`${container} pb-14`}>
+      <section className={`${container} py-16 lg:py-20`}>
         <div className="flex items-start gap-5 rounded-2xl border border-line bg-gradient-to-br from-surface to-white p-8 sm:p-10">
           <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50">
             <Shield className="h-7 w-7 text-brand-700" />
@@ -137,13 +140,11 @@ export default function QualityPage() {
       </section>
 
       <section className="border-t border-line bg-white">
-        <div className={`${container} py-14 text-center`}>
+        <div className={`${container} py-16 lg:py-20 text-center`}>
           <Reveal>
             <h2 className="text-[28px] font-bold tracking-tight sm:text-[34px]">需要验证过的质量数据?</h2>
             <p className="mx-auto mb-8 mt-4 max-w-xl text-[15px] text-muted">可索取 PPAP 文档、扭矩测试报告与质量认证,用于你的项目评估。</p>
-            <a href={liveHref("/contacts/")} className="inline-flex items-center justify-center rounded-lg bg-brand-500 px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_16px_rgba(232,120,26,0.18)] transition-all hover:-translate-y-0.5">
-              索取质量文档 →
-            </a>
+            <Button href={liveHref("/contacts/")}>索取质量文档 →</Button>
           </Reveal>
         </div>
       </section>

@@ -69,8 +69,8 @@ const appCards = [
 
 export function ApplicationSection() {
   return (
-    <section className="section bg-[#F7F6F4] py-20" id="applications">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section className="bg-surface-warm py-20" id="applications">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <SectionHead
           eyebrow="应用领域"
           title={<>先看场景，<b className="font-black text-brand-700">再选产品</b></>}

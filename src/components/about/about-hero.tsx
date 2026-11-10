@@ -33,7 +33,7 @@ export function AboutHero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-[#FAF9F6]">
+    <section ref={ref} className="relative overflow-hidden bg-surface-warm">
       {/* Grid pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.18]"

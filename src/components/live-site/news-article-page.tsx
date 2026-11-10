@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PageHero } from "@/components/ui/page-hero";
 import { container } from "./catalog";
 import type { NewsArticle } from "@/content/live-site/news";
 
@@ -13,6 +14,7 @@ function articleJsonLd(article: NewsArticle) {
     headline: article.title,
     description: article.summary,
     datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
     image: `https://www.chinateao.com${article.image}`,
     mainEntityOfPage: url,
     author: { "@type": "Organization", name: COMPANY_NAME },
@@ -24,25 +26,26 @@ export default function NewsArticlePage({ article }: { article: NewsArticle }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(article)) }} />
-      <article className={`${container} py-14`}>
+
+      <PageHero
+        eyebrow={article.categoryLabel}
+        title={article.title}
+        description={article.summary}
+        breadcrumb={[
+          { label: "首页", href: "/" },
+          { label: "新闻", href: "/news/" },
+          { label: article.title },
+        ]}
+        actions={
+          <span className="rounded-full border border-line bg-white px-3 py-1.5 text-xs font-bold text-muted">
+            {article.publishedAt}
+          </span>
+        }
+      />
+
+      <article className={`${container} py-16 lg:py-20`}>
         <div className="mx-auto max-w-3xl">
-          <nav aria-label="面包屑" className="mb-8 flex flex-wrap items-center gap-2 text-xs text-muted">
-            <Link href="/" className="hover:text-brand-700">首页</Link>
-            <span>/</span>
-            <Link href="/news/" className="hover:text-brand-700">新闻</Link>
-            <span>/</span>
-            <span aria-current="page" className="min-w-0 truncate text-ink">{article.title}</span>
-          </nav>
-
-          <div className="mb-5 flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-ink px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.13em] text-white">{article.categoryLabel}</span>
-            <span className="rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-bold text-muted">{article.publishedAt}</span>
-          </div>
-
-          <h1 className="text-[32px] font-black leading-[1.15] tracking-tight text-ink sm:text-[40px]">{article.title}</h1>
-          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">{article.summary}</p>
-
-          <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-line bg-surface">
+          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-line bg-surface">
             <Image src={article.image} alt={article.title} fill priority sizes="(max-width: 768px) 100vw, 768px" className="object-contain p-6" />
           </div>
 

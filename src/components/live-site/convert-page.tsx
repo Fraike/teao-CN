@@ -1,3 +1,4 @@
+import { PageHero } from "@/components/ui/page-hero";
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
 import { CONVERT_PATH, LIVE_ORIGIN } from "@/lib/live-site";
@@ -32,21 +33,20 @@ export default function ConvertPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(convertJsonLd) }} />
-      <section className={`${container} pb-10 pt-14 text-center`}>
-        <h1 className="sr-only">扭矩换算 | 阻尼器扭矩单位换算工具</h1>
-        <SectionHead
-          eyebrow="工程工具"
-          title="扭矩单位换算"
-          description="九种常用扭矩单位即时互转,用于阻尼器选型与技术参数对齐。"
-        />
-      </section>
+      <PageHero
+        eyebrow="工程工具"
+        title="扭矩单位换算"
+        description="九种常用扭矩单位即时互转,用于阻尼器选型与技术参数对齐。"
+        breadcrumb={[{ label: "首页", href: "/" }, { label: "扭矩换算" }]}
+        align="center"
+      />
 
-      <section className={`${container} pb-16`}>
+      <section className={`${container} py-16 lg:py-20`}>
         <TorqueConverter />
       </section>
 
       <section className="border-y border-line bg-white">
-        <div className={`${container} py-14`}>
+        <div className={`${container} py-16 lg:py-20`}>
           <SectionHead
             eyebrow="使用说明"
             title="三步完成扭矩换算"
@@ -55,7 +55,7 @@ export default function ConvertPage() {
           <div className="grid gap-4 sm:grid-cols-3">
             {howToSteps.map((item, i) => (
               <Reveal key={item.step} delay={(i + 1) as 1 | 2 | 3}>
-                <div className="h-full rounded-xl border border-line bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/25">
+                <div className="h-full rounded-2xl border border-line bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   <span className="text-xs font-bold tracking-[0.14em] text-brand-700">{item.step}</span>
                   <h3 className="mt-2 font-bold text-ink">{item.title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted">{item.description}</p>

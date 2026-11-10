@@ -95,7 +95,7 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
-      <section className="border-b border-line bg-[#FAF9F6]">
+      <section className="border-b border-line bg-surface-warm">
         <div className={`${container} grid gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] lg:items-start lg:py-20`}>
           <div>
             <span className="inline-flex items-center gap-2 text-[11.5px] font-bold uppercase tracking-[0.14em] text-brand-700 before:content-[''] before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500">

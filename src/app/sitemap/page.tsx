@@ -4,6 +4,8 @@ import { liveCatalog } from "@/lib/live-catalog";
 import { liveCategories, liveHref, LIVE_ORIGIN } from "@/lib/live-site";
 import { newsArticles } from "@/content/live-site/news";
 import { container } from "@/components/live-site/container";
+import { PageHero } from "@/components/ui/page-hero";
+import { pageOpenGraph } from "@/lib/metadata";
 import productPaths from "@/content/live-site/product-paths.json";
 
 export const metadata: Metadata = {
@@ -11,6 +13,11 @@ export const metadata: Metadata = {
   description: "特澳 TEAO 全站导航:产品分类与型号、应用领域、质量控制、新闻、常见问题与联系方式。",
   alternates: { canonical: LIVE_ORIGIN + "/sitemap/" },
   robots: { index: true, follow: true },
+  openGraph: pageOpenGraph({
+    title: "网站地图 | 特澳 TEAO",
+    description: "按栏目浏览特澳官网的全部页面。",
+    path: "/sitemap/",
+  }),
 };
 
 const mainLinks = [
@@ -54,7 +61,7 @@ function Card({ title, count, children }: { title: string; count?: number; child
   return (
     <section className="rounded-2xl border border-line bg-white p-6">
       <div className="mb-4 flex items-baseline justify-between gap-3 border-b border-line-soft pb-3">
-        <h2 className="text-[13px] font-black uppercase tracking-[0.12em] text-ink">{title}</h2>
+        <h2 className="text-sm font-black tracking-[-0.01em] text-ink">{title}</h2>
         {typeof count === "number" && <span className="text-[11px] font-bold text-muted-light">{count} 项</span>}
       </div>
       {children}
@@ -62,19 +69,27 @@ function Card({ title, count, children }: { title: string; count?: number; child
   );
 }
 
+const sitemapJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "网站地图 | 特澳 TEAO",
+  description: "按栏目浏览特澳官网的全部页面。",
+  url: LIVE_ORIGIN + "/sitemap/",
+};
+
 export default function SiteMapPage() {
   return (
-    <div className={`${container} py-14`}>
-      <p className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
-        <span className="h-px w-[22px] bg-brand-500" />
-        网站地图
-      </p>
-      <h1 className="mt-3 text-[clamp(32px,4vw,46px)] font-black leading-[1.05] tracking-[-0.04em] text-ink">全站导航</h1>
-      <p className="mt-4 max-w-[620px] text-[15px] leading-relaxed text-muted">
-        按栏目浏览特澳官网的全部页面,包括产品分类与已承接型号、应用领域、新闻与技术工具。
-      </p>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sitemapJsonLd) }} />
+      <PageHero
+        eyebrow="网站地图"
+        title="全站导航"
+        description="按栏目浏览特澳官网的全部页面,包括产品分类与已承接型号、应用领域、新闻与技术工具。"
+        breadcrumb={[{ label: "首页", href: "/" }, { label: "网站地图" }]}
+      />
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+      <section className={`${container} py-16 lg:py-20`}>
+      <div className="grid gap-5 lg:grid-cols-3">
         <Card title="主要页面" count={mainLinks.length}>
           <LinkList items={mainLinks} />
         </Card>
@@ -116,6 +131,7 @@ export default function SiteMapPage() {
           </Card>
         </div>
       </div>
-    </div>
+      </section>
+    </>
   );
 }

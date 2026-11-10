@@ -11,8 +11,8 @@ const ctaBenefits = [
 
 export function CTASection() {
   return (
-    <section id="contact" className="section border-t border-line bg-gradient-to-b from-surface-warm to-white py-20">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
+    <section id="contact" className="border-t border-line bg-gradient-to-b from-surface-warm to-white py-20">
+      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_420px]">
           <div>
             <Reveal>

@@ -3,7 +3,9 @@
 @theme inline {
   /* Brand */
   --color-brand-50: #FFF3E8;
+  --color-brand-200: #F9D3B4;
   --color-brand-500: #E8781A;
+  --color-brand-600: #D46900;
   --color-brand-700: #C7610A;
   /* Neutrals */
   --color-ink: #1E1E20;
