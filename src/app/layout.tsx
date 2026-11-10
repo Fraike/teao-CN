@@ -4,6 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.chinateao.com"),
+  verification: {
+    other: {
+      "baidu-site-verification": "codeva-qhCdblA3mK",
+    },
+  },
   title: {
     template: "%s | 特澳 TEAO — 阻尼器与锁扣定制厂家",
     default: "特澳 TEAO — 阻尼器与锁扣机构定制厂家",
