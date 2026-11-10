@@ -2,8 +2,9 @@
 
 ## 上线与域名(暂缓,后续处理)
 
-- [ ] **部署站点到公网服务器**(当前只在本机运行;SSH 访问方法见 [docs/deployment/server-access.md](docs/deployment/server-access.md))
+- [x] **部署站点到公网服务器** `8.163.39.156`(PM2 + Nginx;详见 [docs/deployment/server-access.md](docs/deployment/server-access.md))
 - [ ] **绑定域名 `www.chinateao.com`**(DNS + HTTPS 证书)
+- [ ] HTTPS 上线后删除 `.env.local` 里的 `AUTH_COOKIE_SECURE=false`
 - [ ] 确认服务器位于中国大陆或香港(影响百度抓取速度)
 - [ ] 生产环境配置环境变量:`AUTH_SECRET`、`ADMIN_PASSWORD`、`DATABASE_URL`
 - [ ] 生产环境执行一次 `npm run db:push` 与 `npm run db:seed:admin`

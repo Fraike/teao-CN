@@ -41,9 +41,12 @@ export async function getSession(): Promise<{ username: string } | null> {
 }
 
 export async function setSession(token: string): Promise<void> {
+  const secure = process.env.AUTH_COOKIE_SECURE
+    ? process.env.AUTH_COOKIE_SECURE === "true"
+    : process.env.NODE_ENV === "production";
   (await cookies()).set(TOKEN_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure,
     sameSite: "lax",
     path: "/",
     maxAge: MAX_AGE,
