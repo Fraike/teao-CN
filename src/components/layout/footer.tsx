@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { liveCategories, liveHref } from "@/lib/live-site";
-import { contact, telHref } from "@/content/live-site/contact";
 
 const footerLinks = [
   {
@@ -41,27 +40,12 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-7 text-muted">
               东莞市特澳电子科技有限公司，专注阻尼器与锁扣机构研发制造。
             </p>
-
-            <div className="mt-5 flex items-center gap-4 rounded-2xl border border-line bg-white p-4">
-              <Image
-                src={contact.wechatQr}
-                alt={`${contact.primaryName}微信二维码`}
-                width={84}
-                height={84}
-                className="shrink-0 rounded-lg border border-line-soft bg-white p-1"
-              />
-              <div className="min-w-0">
-                <p className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
-                <p className="mt-0.5 text-lg font-black text-ink">{contact.primaryName}</p>
-                <a
-                  href={telHref(contact.primaryMobile)}
-                  className="block text-sm font-semibold text-ink-soft transition-colors hover:text-brand-700"
-                >
-                  {contact.primaryMobile}
-                </a>
-                <p className="text-[13px] text-muted">微信 {contact.wechat}</p>
-              </div>
-            </div>
+            <Link
+              href="/contacts/"
+              className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
+            >
+              获取报价
+            </Link>
           </div>
 
           {/* Links */}

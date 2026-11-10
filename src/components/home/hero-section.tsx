@@ -2,15 +2,12 @@ import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { contact, telHref } from "@/content/live-site/contact";
+import { liveCatalog } from "@/lib/live-catalog";
+import { liveHref } from "@/lib/live-site";
 
-const trustBadges = [
-  { label: "IATF 16949", color: "var(--color-green)" },
-  { label: "ISO 14001", color: "var(--color-blue)" },
-  { label: "8000万件年产能", color: "var(--color-brand-500)" },
-  { label: "100%扭矩全检", color: "var(--color-green)" },
-  { label: "支持图纸/样品定制", color: "var(--color-brand-500)" },
-];
+const heroProducts = ["gear-damper", "axial-damper", "latch"]
+  .map(id => liveCatalog.find(category => category.id === id))
+  .filter((category): category is NonNullable<typeof category> => Boolean(category));
 
 const sceneTags = [
   "汽车杯托",
@@ -81,85 +78,18 @@ export function HeroSection() {
           {/* Description */}
           <Reveal delay={2}>
             <p className="mt-4 max-w-[540px] text-[15px] leading-[1.8] text-muted">
-              特澳 TEAO
-              专注齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push
-              锁扣及定制缓冲机构研发制造。产品广泛应用于汽车、家电、卫浴、医疗、工业等领域，支持扭矩、角度、方向和安装结构按图定制，从打样到量产一体化交付。
+              专注阻尼器与锁扣机构研发制造,支持扭矩、方向与安装结构按图定制,从打样到量产一体化交付。
             </p>
-          </Reveal>
-
-          {/* Trust badges */}
-          <Reveal delay={3}>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {trustBadges.map((badge) => (
-                <span
-                  key={badge.label}
-                  className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white px-3.5 py-2 text-[12.5px] font-semibold text-ink-soft shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-200 hover:border-brand-500/25 hover:bg-brand-50 hover:-translate-y-px"
-                >
-                  <span
-                    className="h-[7px] w-[7px] flex-shrink-0 rounded-full"
-                    style={{ backgroundColor: badge.color }}
-                  />
-                  {badge.label}
-                </span>
-              ))}
-            </div>
           </Reveal>
 
           {/* CTA buttons */}
           <Reveal delay={4}>
             <div className="mt-7 flex flex-wrap gap-2.5">
-              <Button
-                href="#contact"
-                variant="primary"
-                className="gap-[7px]"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                  <polyline points="17 8 12 3 7 8" />
-                  <line x1="12" y1="3" x2="12" y2="15" />
-                </svg>
-                发送图纸获取选型建议
+              <Button href="#products" variant="primary">
+                查看产品型号
               </Button>
-              <Button
-                href={telHref(contact.primaryMobile)}
-                variant="outline"
-                className="gap-1.5"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                </svg>
-                电话咨询
-              </Button>
-              <Button
-                href="/contacts/#wechat"
-                variant="outline"
-                className="gap-1.5"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                </svg>
-                加微信
+              <Button href="/contacts/" variant="outline">
+                获取报价
               </Button>
             </div>
           </Reveal>
@@ -181,49 +111,47 @@ export function HeroSection() {
           </Reveal>
         </div>
 
-        {/* ── Right panel: hidden on mobile ── */}
-        <aside className="hidden lg:flex lg:flex-col lg:self-stretch lg:justify-center">
-          <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-[0_18px_50px_rgba(30,30,32,0.1)]">
-            <div className="relative aspect-[4/3]">
-              <Image
-                src="/images/company/automation-workshop.webp"
-                alt="特澳自动化装配线"
-                fill
-                sizes="400px"
-                className="object-cover"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.1em] text-brand-700 backdrop-blur">
-                自动化装配线 · 100% 扭矩全检
-              </span>
-            </div>
-            <div className="p-5">
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
-              <p className="mt-1 text-xl font-black text-ink">{contact.primaryName}</p>
-              <div className="mt-2 space-y-0.5 text-sm text-muted">
-                <a href={telHref(contact.primaryMobile)} className="block font-semibold text-ink-soft transition-colors hover:text-brand-700">
-                  {contact.primaryMobile}
-                </a>
-                <p>微信 {contact.wechat}</p>
-              </div>
-              <div className="mt-4 grid grid-cols-2 gap-2">
-                <a
-                  href={telHref(contact.primaryMobile)}
-                  className="inline-flex items-center justify-center rounded-full bg-brand-500 px-3 py-2.5 text-[12.5px] font-bold text-white transition-colors hover:bg-brand-700"
-                >
-                  电话咨询
-                </a>
-                <Link
-                  href="/contacts/#wechat"
-                  className="inline-flex items-center justify-center rounded-full border border-line bg-white px-3 py-2.5 text-[12.5px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
-                >
-                  加微信
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* ── Right panel: product collage ── */}
+        <aside className="relative hidden min-h-[460px] lg:block" aria-label="主要产品">
+          {heroProducts.map((category, index) => {
+            const placement = [
+              "right:6px; top:10px; width:min(420px,68%); height:300px; z-index:3;",
+              "left:0; bottom:96px; width:min(300px,48%); height:230px; z-index:2;",
+              "right:0; bottom:8px; width:min(360px,58%); height:210px; z-index:4;",
+            ][index];
+            return (
+              <Link
+                key={category.id}
+                href={liveHref(category.path)}
+                aria-label={`查看${category.label}`}
+                className="group absolute overflow-hidden rounded-2xl border border-white/70 bg-white/90 shadow-[0_24px_64px_rgba(232,120,26,0.08),0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_28px_70px_rgba(232,120,26,0.16)]"
+                style={parseStyle(placement)}
+              >
+                <Image
+                  src={category.image}
+                  alt={category.label}
+                  fill
+                  priority={index === 0}
+                  sizes="(max-width: 1024px) 50vw, 420px"
+                  className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-ink shadow-sm">
+                  {category.label}
+                </span>
+              </Link>
+            );
+          })}
         </aside>
       </div>
     </section>
   );
+}
+
+function parseStyle(styleStr: string): Record<string, string> {
+  const obj: Record<string, string> = {};
+  styleStr.split(";").forEach(pair => {
+    const [key, value] = pair.split(":").map(part => part.trim());
+    if (key && value) obj[key.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = value;
+  });
+  return obj;
 }
