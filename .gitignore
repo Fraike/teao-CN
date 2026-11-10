@@ -50,3 +50,6 @@ __pycache__/
 
 # local inquiry fallback
 /.data/
+
+# runtime uploads
+/public/uploads/

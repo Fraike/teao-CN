@@ -2,7 +2,7 @@
 
 ## 上线与域名(暂缓,后续处理)
 
-- [ ] **部署站点到公网服务器**(当前只在本机运行)
+- [ ] **部署站点到公网服务器**(当前只在本机运行;SSH 访问方法见 [docs/deployment/server-access.md](docs/deployment/server-access.md))
 - [ ] **绑定域名 `www.chinateao.com`**(DNS + HTTPS 证书)
 - [ ] 确认服务器位于中国大陆或香港(影响百度抓取速度)
 - [ ] 生产环境配置环境变量:`AUTH_SECRET`、`ADMIN_PASSWORD`、`DATABASE_URL`
