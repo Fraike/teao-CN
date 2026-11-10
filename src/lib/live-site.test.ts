@@ -115,14 +115,14 @@ test("about, contacts and news resolve locally with and without trailing slash",
 });
 
 test("known news articles resolve, unknown slugs and pagination do not", () => {
-  assert.equal(getPilotPage(["news", "teao-expands-capacity.html"]), "news-article");
-  assert.equal(getPilotPage(["news", "torque-requirements-guide.html"]), "news-article");
-  assert.equal(getNewsSlug(["news", "teao-expands-capacity.html"]), "teao-expands-capacity");
+  assert.equal(getPilotPage(["news", "yuantongzuniqidegongzuoyuanli.html"]), "news-article");
+  assert.equal(getPilotPage(["news", "teaodianzikejichaoshengbohanjieyizhenweirongzhujiuqianggulianjie.html"]), "news-article");
+  assert.equal(getNewsSlug(["news", "yuantongzuniqidegongzuoyuanli.html"]), "yuantongzuniqidegongzuoyuanli");
   assert.equal(getPilotPage(["news", "unknown-article.html"]), null);
   assert.equal(getPilotPage(["news", "index_2.html"]), null);
   assert.equal(getPilotPage(["news", "teao-expands-capacity"]), null);
   assert.equal(getNewsSlug(["news", "index_2.html"]), null);
-  assert.equal(liveHref("/news/teao-expands-capacity.html"), "/news/teao-expands-capacity.html");
+  assert.equal(liveHref("/news/yuantongzuniqidegongzuoyuanli.html"), "/news/yuantongzuniqidegongzuoyuanli.html");
   assert.equal(liveHref("/news/unknown-article.html"), LIVE_ORIGIN + "/news/unknown-article.html");
 });
 

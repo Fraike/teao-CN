@@ -99,7 +99,28 @@ export default function SiteMapPage() {
         </Card>
 
         <Card title="新闻" count={newsArticles.length}>
-          <LinkList items={newsArticles.map(article => ({ label: article.title, href: `/news/${article.slug}.html` }))} />
+          <div className="space-y-3">
+            {[...new Set(newsArticles.map(article => article.publishedAt.slice(0, 4)))].map(year => {
+              const items = newsArticles.filter(article => article.publishedAt.startsWith(year));
+              return (
+                <details key={year} open={year === newsArticles[0]?.publishedAt.slice(0, 4)}>
+                  <summary className="cursor-pointer list-none text-sm font-bold text-ink">
+                    {year}
+                    <span className="ml-1.5 text-[11px] font-semibold text-muted-light">({items.length})</span>
+                  </summary>
+                  <ul className="mt-2 space-y-1.5 pl-4">
+                    {items.map(article => (
+                      <li key={article.slug}>
+                        <Link href={`/news/${article.slug}.html`} className="text-[13px] leading-snug text-ink-soft transition-colors hover:text-brand-700">
+                          {article.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              );
+            })}
+          </div>
         </Card>
 
         <div className="lg:col-span-3">

@@ -24,7 +24,7 @@ export function NewsStrip() {
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                   <Image
-                    src={article.image}
+                    src={article.cover}
                     alt={article.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"

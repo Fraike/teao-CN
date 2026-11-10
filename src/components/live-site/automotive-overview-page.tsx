@@ -2,9 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
+import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
 import { container } from "./container";
 import { automotiveInteriorMap, automotiveExteriorMap } from "@/content/live-site/applications";
+
+const scenePhotos = [
+  { src: "/images/applications/scenes/cup-holder.webp", caption: "杯托阻尼 · 汽车内饰" },
+  { src: "/images/applications/scenes/glove-box.webp", caption: "手套箱缓降 · 汽车内饰" },
+  { src: "/images/applications/scenes/glasses-box.webp", caption: "眼镜盒软开 · 汽车内饰" },
+  { src: "/images/applications/scenes/coat-hook.webp", caption: "衣帽钩回弹缓冲 · 汽车内饰" },
+];
 
 const zoneEntries = [
   {
@@ -80,6 +88,36 @@ export default function AutomotiveOverviewPage() {
               </Link>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-surface-warm">
+        <div className={`${container} py-16 lg:py-20`}>
+          <SectionHead
+            eyebrow="应用实拍"
+            title="阻尼器在车内的真实位置"
+            description="杯托、手套箱、眼镜盒与衣帽钩等机构的阻尼应用实拍。"
+          />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {scenePhotos.map((photo, index) => (
+              <Reveal key={photo.src} delay={((index % 2) + 1) as 1 | 2}>
+                <figure className="overflow-hidden rounded-2xl border border-line bg-white">
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src={photo.src}
+                      alt={photo.caption}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="border-t border-line-soft px-5 py-3 text-[13px] font-bold text-ink">
+                    {photo.caption}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </>

@@ -175,6 +175,7 @@ function newsArticleMeta(slug: string): Metadata {
       description: article.summary,
       path: `/news/${article.slug}.html`,
       type: "article",
+      image: { url: article.cover, alt: article.title },
     }),
   };
 }

@@ -1,9 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import { PageHero } from "@/components/ui/page-hero";
-import { Reveal } from "@/components/ui/reveal";
-import { container } from "./catalog";
+import { container } from "./container";
 import { newsArticles } from "@/content/live-site/news";
+import NewsList from "./news-list";
+import InquiryCTA from "./inquiry-cta";
 
 const newsJsonLd = {
   "@context": "https://schema.org",
@@ -15,7 +14,7 @@ const newsJsonLd = {
     "@type": "ItemList",
     itemListElement: newsArticles.map((article, i) => ({
       "@type": "ListItem", position: i + 1,
-      item: { "@type": "Thing", name: article.title, url: `https://www.chinateao.com/news/${article.slug}.html` },
+      item: { "@type": "NewsArticle", name: article.title, url: `https://www.chinateao.com/news/${article.slug}.html` },
     })),
   },
 };
@@ -31,28 +30,11 @@ export default function NewsPage() {
         breadcrumb={[{ label: "首页", href: "/" }, { label: "新闻" }]}
       />
 
-      <section className={`${container} py-16 lg:py-20`}>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {newsArticles.map((article, i) => (
-            <Reveal key={article.slug} delay={(Math.min(i, 2) + 1) as 1 | 2 | 3}>
-              <Link href={`/news/${article.slug}.html`} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
-                  <Image src={article.image} alt={article.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <span className="mb-3 text-[10px] font-bold uppercase tracking-[0.12em] text-brand-700">{article.categoryLabel}</span>
-                  <h2 className="line-clamp-2 text-lg font-extrabold leading-[1.2] tracking-[-0.02em] text-ink transition-colors group-hover:text-brand-700">{article.title}</h2>
-                  <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{article.summary}</p>
-                  <div className="mt-auto flex items-center justify-between pt-4 text-xs text-muted">
-                    <span>{article.publishedAt}</span>
-                    <span className="font-bold text-brand-700 group-hover:underline">阅读全文 →</span>
-                  </div>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <div className={`${container} py-16 lg:py-20`}>
+        <NewsList />
+      </div>
+
+      <InquiryCTA />
     </>
   );
 }
