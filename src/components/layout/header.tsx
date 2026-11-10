@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { liveCatalog } from "@/lib/live-catalog";
 import { liveHref } from "@/lib/live-site";
+import GlobalSearch from "./global-search";
 
 const navItems = [
   { label: "首页", href: "/" },
@@ -101,6 +102,7 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-2.5">
+            <GlobalSearch />
             <Link
               href="/convert/"
               className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-[15px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"

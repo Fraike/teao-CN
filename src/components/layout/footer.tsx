@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { liveCategories, liveHref } from "@/lib/live-site";
 
+const ALIBABA_URL = "https://chinateao1688.1688.com/?spm=a261y.7663282.shopNavigation.2.165364a2Mi71w9&offerId=1009140776330&td_page_id=PC-UNLOGIN-DEFAULT-2026";
+// 微博地址待补:提供后填入即可显示该入口。
+const WEIBO_URL: string | null = null;
+
 const footerLinks = [
   {
     title: "产品",
@@ -40,6 +44,36 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-7 text-muted">
               东莞市特澳电子科技有限公司，专注阻尼器与锁扣机构研发制造。
             </p>
+
+            <div className="mt-5">
+              <p className="text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">关注我们</p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <a
+                  href={ALIBABA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                >
+                  阿里巴巴 1688
+                </a>
+                <Link
+                  href="/contacts/#wechat"
+                  className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                >
+                  微信
+                </Link>
+                {WEIBO_URL && (
+                  <a
+                    href={WEIBO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  >
+                    微博
+                  </a>
+                )}
+              </div>
+            </div>
             <Link
               href="/contacts/"
               className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
