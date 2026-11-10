@@ -24,7 +24,7 @@ const indexable = { index: true, follow: true } as const;
 const canon = (p: string): Metadata["alternates"] => ({ canonical: LIVE_ORIGIN + p });
 
 const QUALITY_META: Metadata = {
-  title: { absolute: "质量控制 | IATF 16949 认证 · 100% 扭矩检测 | 特澳 TEAO" },
+  title: { absolute: "质量控制 | IATF 16949 认证 | 特澳 TEAO" },
   description: "IATF 16949 认证质量管理体系,100% 扭矩检测与 100% 外观检测。实验室支持扭矩、寿命、尺寸与环境验证,提供 PPAP 与扭矩测试报告。",
   alternates: canon(QUALITY_PATH),
   robots: indexable,
@@ -151,8 +151,8 @@ const NEWS_META: Metadata = {
   }),
 };
 const CONVERT_META: Metadata = {
-  title: { absolute: "扭矩单位换算器 | N·m、kgf·cm、gf·cm 在线换算 | 特澳 TEAO" },
-  description: "免费在线扭矩单位换算工具,支持 N·m、cN·m、mN·m、kgf·cm、kgf·m、gf·cm、lbf·in、lbf·ft、ozf·in 九种单位即时互转,适用于阻尼器扭矩选型、参数对比与运动控制设计。",
+  title: { absolute: "扭矩换算 | 阻尼器扭矩单位换算 | 特澳 TEAO" },
+  description: "免费在线扭矩单位换算工具,支持 N·m、kgf·cm、gf·cm、mN·m、lbf·in 等九种单位即时互转,适用于阻尼器选型与参数对比。",
   keywords: ["扭矩换算", "扭矩单位换算", "N·m 转 kgf·cm", "gf·cm 转 mN·m", "阻尼器扭矩", "扭矩换算器"],
   alternates: canon(CONVERT_PATH),
   robots: indexable,
@@ -207,26 +207,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const content = getProductContent(path);
     if (!content) notFound();
     const category = liveCatalog.find(item => item.id === content.categoryId)!;
+    const productDescription = `${content.model} ${category.label}:${content.summary}。查看技术规格、材料、尺寸图、性能曲线与应用场景。`;
     return {
       title: { absolute: `${content.model} ${category.label} | 特澳 TEAO` },
-      description: content.summary,
+      description: productDescription,
       alternates: { canonical: LIVE_ORIGIN + encodeURI(path) },
-      // These are review samples; remove only after content verification and release review.
-      robots: { index: false, follow: true },
+      robots: indexable,
       openGraph: {
         title: `${content.model} ${category.label}`,
-        description: content.summary,
+        description: productDescription,
         images: content.images.slice(0, 1).map(image => ({ url: image.url })),
       },
     };
   }
   const categoryRoute = getCategoryRoute(segments);
+  const categoryDescription = categoryRoute!.category.description.slice(0, 76);
   return {
     title: { absolute: `${categoryRoute!.category.label}产品与选型${categoryRoute!.page.number > 1 ? ` - 第 ${categoryRoute!.page.number} 页` : ""} | 特澳 TEAO` },
-    description: categoryRoute!.category.description,
+    description: categoryDescription,
     alternates: { canonical: LIVE_ORIGIN + encodeURI(categoryRoute!.page.path) },
-    // These are review samples; remove only after content verification and release review.
-    robots: { index: false, follow: true },
+    robots: indexable,
+    openGraph: pageOpenGraph({
+      title: `${categoryRoute!.category.label}产品与选型`,
+      description: categoryDescription,
+      path: categoryRoute!.page.path,
+    }),
   };
 }
 

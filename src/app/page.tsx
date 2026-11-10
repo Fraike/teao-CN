@@ -14,7 +14,7 @@ import { contact } from "@/content/live-site/contact";
 export const metadata: Metadata = {
   title: { absolute: "特澳 TEAO — 阻尼器与锁扣机构定制厂家" },
   description:
-    "特澳 TEAO 专注阻尼器、齿轮阻尼器、轴向阻尼器、手套箱阻尼器、Push-Push 锁扣及定制缓冲机构。IATF 16949 认证，20+ 年制造经验，支持来图定制。",
+    "特澳 TEAO 专注阻尼器、齿轮阻尼器、轴向阻尼器、手套箱阻尼器与锁扣,支持来图定制。",
   alternates: { canonical: "https://www.chinateao.com/" },
   openGraph: {
     title: "特澳 TEAO — 阻尼器与锁扣机构定制厂家",

@@ -69,9 +69,20 @@ export function CategoryPage({ category = liveCatalog[0], page = category.pages[
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "首页", item: LIVE_ORIGIN + "/" },
+      { "@type": "ListItem", position: 2, name: "产品", item: LIVE_ORIGIN + "/products/" },
+      { "@type": "ListItem", position: 3, name: category.label, item: LIVE_ORIGIN + encodeURI(category.pages[0].path) },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <ListingHero title={category.label} description={category.description} crumb={category.label} />
       <ListingTabs active={category.path} />
       <section id="products" className={`${container} scroll-mt-24 pb-12 pt-8`}>

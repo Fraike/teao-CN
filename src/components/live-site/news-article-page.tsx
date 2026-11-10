@@ -33,6 +33,9 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
   const sameCategory = all.filter(item => item.category === article.category && item.slug !== article.slug);
   const others = all.filter(item => item.category !== article.category && item.slug !== article.slug);
   const related = [...sameCategory, ...others].slice(0, 3);
+  const takeaways = headings.length >= 2
+    ? headings.slice(0, 4).map(heading => heading.text)
+    : article.summary.split(/[。!?]/).map(item => item.trim()).filter(Boolean).slice(0, 3);
 
   return (
     <>
@@ -57,6 +60,20 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
       <div className={`${container} py-16 lg:py-20`}>
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
           <article>
+            {takeaways.length > 0 && (
+              <div className="mb-8 rounded-2xl border border-brand-500/20 bg-brand-50/60 p-5">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-brand-700">核心要点</p>
+                <ul className="mt-3 space-y-2">
+                  {takeaways.map(item => (
+                    <li key={item} className="flex items-start gap-2 text-[14px] leading-relaxed text-ink-soft">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {article.cover && (
               <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
                 <div className="relative aspect-[16/9]">
