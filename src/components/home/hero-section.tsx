@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { contact, telHref } from "@/content/live-site/contact";
 
 const trustBadges = [
@@ -9,17 +10,6 @@ const trustBadges = [
   { label: "8000万件年产能", color: "var(--color-brand-500)" },
   { label: "100%扭矩全检", color: "var(--color-green)" },
   { label: "支持图纸/样品定制", color: "var(--color-brand-500)" },
-];
-
-const quickProducts = [
-  {
-    label: "齿轮阻尼器",
-    image: "/images/products/gear-damper/GearDamperCategory.webp",
-  },
-  {
-    label: "轴向阻尼器",
-    image: "/images/products/axial-damper/AxialDamperCategory.webp",
-  },
 ];
 
 const sceneTags = [
@@ -192,75 +182,44 @@ export function HeroSection() {
         </div>
 
         {/* ── Right panel: hidden on mobile ── */}
-        <aside className="hidden lg:flex lg:flex-col lg:gap-3 lg:self-stretch lg:justify-center">
-          {/* Inquiry card */}
-          <div className="rounded-[14px] border border-line bg-white/85 p-[26px] shadow-[0_8px_28px_rgba(0,0,0,0.08)] backdrop-blur-[16px]">
-            <h2 className="text-center text-lg font-bold text-ink">
-              工程师在线评估
-            </h2>
-            <p className="mb-4 mt-1 text-center text-[12.5px] leading-[1.65] text-muted">
-              提交产品类型、应用场景、目标扭矩或上传图纸，工程师将在 2
-              小时内给出选型与打样建议。
-            </p>
-            <div className="mb-3.5 grid grid-cols-2 gap-2">
-              {quickProducts.map((prod) => (
-                <div
-                  key={prod.label}
-                  className="cursor-pointer rounded-[10px] border border-line-soft bg-white p-3 text-center transition-all duration-[250ms] hover:-translate-y-0.5 hover:border-brand-500/25 hover:bg-brand-50"
-                >
-                  <div className="mx-auto w-[85%] aspect-[1.1] relative">
-                    <Image
-                      src={prod.image}
-                      alt={prod.label}
-                      fill
-                      className="object-contain"
-                      sizes="160px"
-                    />
-                  </div>
-                  <p className="mt-1.5 text-xs font-semibold text-ink-soft">
-                    {prod.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="rounded-[10px] border border-line-soft bg-surface p-3 text-center">
-                <span className="block text-[10.5px] font-bold uppercase tracking-[0.05em] text-muted-light">
-                  需要提供
-                </span>
-                <strong className="block text-[13px] font-semibold text-ink">
-                  图纸 / 样品 / 年用量
-                </strong>
-              </div>
-              <div className="rounded-[10px] border border-line-soft bg-surface p-3 text-center">
-                <span className="block text-[10.5px] font-bold uppercase tracking-[0.05em] text-muted-light">
-                  回复方式
-                </span>
-                <strong className="block text-[13px] font-semibold text-ink">
-                  电话 / 微信 / 邮件
-                </strong>
-              </div>
-            </div>
-          </div>
-
-          {/* Hotline strip */}
-          <div className="flex items-center gap-2.5 rounded-[10px] bg-[linear-gradient(135deg,#E8781A,#F09630)] px-[18px] py-3.5 text-white">
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              className="flex-shrink-0"
-            >
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-            </svg>
-            <div>
-              <b className="block text-lg font-bold">{contact.primaryName} {contact.primaryMobile}</b>
-              <span className="text-[11px] opacity-85">
-                微信 {contact.wechat} · 工作日 8:30–18:00
+        <aside className="hidden lg:flex lg:flex-col lg:self-stretch lg:justify-center">
+          <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-[0_18px_50px_rgba(30,30,32,0.1)]">
+            <div className="relative aspect-[4/3]">
+              <Image
+                src="/images/company/automation-workshop.webp"
+                alt="特澳自动化装配线"
+                fill
+                sizes="400px"
+                className="object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.1em] text-brand-700 backdrop-blur">
+                自动化装配线 · 100% 扭矩全检
               </span>
+            </div>
+            <div className="p-5">
+              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
+              <p className="mt-1 text-xl font-black text-ink">{contact.primaryName}</p>
+              <div className="mt-2 space-y-0.5 text-sm text-muted">
+                <a href={telHref(contact.primaryMobile)} className="block font-semibold text-ink-soft transition-colors hover:text-brand-700">
+                  {contact.primaryMobile}
+                </a>
+                <p>微信 {contact.wechat}</p>
+              </div>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                <a
+                  href={telHref(contact.primaryMobile)}
+                  className="inline-flex items-center justify-center rounded-full bg-brand-500 px-3 py-2.5 text-[12.5px] font-bold text-white transition-colors hover:bg-brand-700"
+                >
+                  电话咨询
+                </a>
+                <Link
+                  href="/contacts/#wechat"
+                  className="inline-flex items-center justify-center rounded-full border border-line bg-white px-3 py-2.5 text-[12.5px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                >
+                  加微信
+                </Link>
+              </div>
             </div>
           </div>
         </aside>

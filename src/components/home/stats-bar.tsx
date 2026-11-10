@@ -81,7 +81,7 @@ function cellBorderClass(i: number, total: number) {
 /* ── Stat definitions ── */
 const stats = [
   { type: "counter" as const, target: 20, suffix: "+年", label: "阻尼器研发制造经验" },
-  { type: "counter" as const, target: 8000, suffix: "万+", label: "年产能（参考值）" },
+  { type: "counter" as const, target: 8000, suffix: "万+", label: "年产能" },
   { type: "static" as const, value: "IATF", label: "16949 质量体系认证" },
   { type: "counter" as const, target: 100, suffix: "%", label: "出厂扭矩检测覆盖" },
   { type: "counter" as const, target: 5, suffix: "大", label: "核心产品线" },

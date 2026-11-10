@@ -7,6 +7,7 @@ import { ApplicationSection } from "@/components/home/application-section";
 import { CapabilitySection } from "@/components/home/capability-section";
 import { QualitySection } from "@/components/home/quality-section";
 import { PartnerSection } from "@/components/home/partner-section";
+import { NewsStrip } from "@/components/home/news-strip";
 import { CTASection } from "@/components/home/cta-section";
 import { contact } from "@/content/live-site/contact";
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "特澳 TEAO",
     locale: "zh_CN",
     type: "website",
-    images: [{ url: "/images/logo-color.webp", width: 1024, height: 384, alt: "特澳 TEAO" }],
+    images: [{ url: "/images/og/home.png", width: 1200, height: 630, alt: "特澳 TEAO — 阻尼器与锁扣定制源头厂家" }],
   },
 };
 
@@ -77,6 +78,7 @@ export default function Home() {
       <CapabilitySection />
       <QualitySection />
       <PartnerSection />
+      <NewsStrip />
       <CTASection />
     </>
   );
