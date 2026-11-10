@@ -36,9 +36,6 @@ export async function ProductGrid() {
                   <h3 className="text-base font-bold text-ink">
                     <Link href={cat.path}>{cat.label}</Link>
                   </h3>
-                  <p className="mt-1.5 text-[12.5px] leading-[1.65] text-muted min-h-[38px]">
-                    {cat.description}
-                  </p>
 
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-line-soft">

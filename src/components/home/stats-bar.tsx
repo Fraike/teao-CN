@@ -88,38 +88,14 @@ const stats = [
 ];
 
 export function StatsBar() {
-  const revealRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = revealRef.current;
-    if (!el) return;
-
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("!opacity-100", "!translate-y-0");
-          obs.unobserve(el);
-        }
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
   return (
-    <section className="relative z-10 -mt-[18px]">
-      <div className="mx-auto w-[min(1240px,calc(100%-48px))]">
-        <div
-          ref={revealRef}
-          className="grid grid-cols-2 overflow-hidden rounded-[14px] border border-line bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)] opacity-0 translate-y-6 transition-[opacity,transform] duration-700 ease-out lg:grid-cols-5"
-        >
-          {stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className={`px-4 py-7 text-center transition-colors duration-[250ms] hover:bg-surface ${cellBorderClass(i, stats.length)}`}
-            >
+    <section className="border-y border-line bg-white">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 px-5 lg:px-8 lg:grid-cols-5">
+        {stats.map((stat, i) => (
+          <div
+            key={stat.label}
+            className={`px-4 py-7 text-center transition-colors duration-[250ms] hover:bg-surface ${cellBorderClass(i, stats.length)}`}
+          >
               <div className="flex items-baseline justify-center gap-[3px] text-[32px] font-bold leading-[1.1] tracking-[-0.02em] text-ink">
                 {stat.type === "counter" ? (
                   <AnimatedCounter target={stat.target} suffix={stat.suffix} />
@@ -132,7 +108,6 @@ export function StatsBar() {
               </span>
             </div>
           ))}
-        </div>
       </div>
     </section>
   );

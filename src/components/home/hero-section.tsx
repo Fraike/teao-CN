@@ -20,7 +20,7 @@ const sceneTags = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(170deg,#FBF9F6_0%,#F5F2ED_40%,#F0EDE8_100%)]">
+    <section className="relative overflow-hidden bg-[#FAF9F6]">
       {/* Background overlays */}
       <div className="absolute inset-0 z-0">
         <div
@@ -112,46 +112,34 @@ export function HeroSection() {
         </div>
 
         {/* ── Right panel: product collage ── */}
-        <aside className="relative hidden min-h-[460px] lg:block" aria-label="主要产品">
-          {heroProducts.map((category, index) => {
-            const placement = [
-              "right:6px; top:10px; width:min(420px,68%); height:300px; z-index:3;",
-              "left:0; bottom:96px; width:min(300px,48%); height:230px; z-index:2;",
-              "right:0; bottom:8px; width:min(360px,58%); height:210px; z-index:4;",
-            ][index];
-            return (
+        <aside className="hidden lg:flex lg:flex-col lg:justify-center" aria-label="主要产品">
+          <div className="grid grid-cols-2 gap-3">
+            {heroProducts.map((category, index) => (
               <Link
                 key={category.id}
                 href={liveHref(category.path)}
                 aria-label={`查看${category.label}`}
-                className="group absolute overflow-hidden rounded-2xl border border-white/70 bg-white/90 shadow-[0_24px_64px_rgba(232,120,26,0.08),0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_28px_70px_rgba(232,120,26,0.16)]"
-                style={parseStyle(placement)}
+                className={`group relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_10px_30px_rgba(30,30,32,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_18px_42px_rgba(232,120,26,0.12)] ${
+                  index === 0 ? "col-span-2 h-[220px]" : "h-[190px]"
+                }`}
               >
                 <Image
                   src={category.image}
                   alt={category.label}
                   fill
                   priority={index === 0}
-                  sizes="(max-width: 1024px) 50vw, 420px"
+                  sizes={index === 0 ? "560px" : "280px"}
                   className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-ink shadow-sm">
                   {category.label}
                 </span>
               </Link>
-            );
-          })}
+            ))}
+          </div>
         </aside>
       </div>
     </section>
   );
 }
 
-function parseStyle(styleStr: string): Record<string, string> {
-  const obj: Record<string, string> = {};
-  styleStr.split(";").forEach(pair => {
-    const [key, value] = pair.split(":").map(part => part.trim());
-    if (key && value) obj[key.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = value;
-  });
-  return obj;
-}
