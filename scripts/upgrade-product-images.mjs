@@ -58,8 +58,10 @@ for (const category of catalog) {
         .map(item => resolve(exportRoot, "images/product", flat(item)))
         .filter(file => existsSync(file));
 
+      // 只用无水印原图;watermark 图宁可跳过,也不放进站内。
       let best = null;
       for (const file of candidates) {
+        if (file.includes("/images/product/data_watermark_")) continue;
         const [width, height] = dimension(file);
         if (!width || !height) continue;
         const area = width * height;
