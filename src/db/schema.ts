@@ -40,3 +40,32 @@ export const products = sqliteTable("products", {
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
   updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
+
+export const admins = sqliteTable("admins", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  username: text("username").notNull().unique(),
+  passwordHash: text("password_hash").notNull(),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+});
+
+// 新闻内容。locale / translationKey 为后续「中英双站同发」预留:
+// 同一篇文章的不同语言版本共享 translationKey。
+export const news = sqliteTable("news", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  slug: text("slug").notNull().unique(),
+  locale: text("locale").notNull().default("zh"),
+  translationKey: text("translation_key"),
+  title: text("title").notNull(),
+  summary: text("summary").notNull().default(""),
+  content: text("content").notNull().default(""),
+  cover: text("cover").notNull().default(""),
+  category: text("category").notNull().default("company"),
+  categoryLabel: text("category_label").notNull().default("公司动态"),
+  isPublished: integer("is_published").notNull().default(0),
+  publishedAt: text("published_at").notNull(),
+  seoTitle: text("seo_title"),
+  seoDescription: text("seo_description"),
+  keywords: text("keywords"),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+});

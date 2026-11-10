@@ -114,16 +114,14 @@ test("about, contacts and news resolve locally with and without trailing slash",
   assert.equal(NEWS_PATH, "/news/");
 });
 
-test("known news articles resolve, unknown slugs and pagination do not", () => {
+test("any /news/*.html is routed locally so admin-created articles work", () => {
   assert.equal(getPilotPage(["news", "yuantongzuniqidegongzuoyuanli.html"]), "news-article");
-  assert.equal(getPilotPage(["news", "teaodianzikejichaoshengbohanjieyizhenweirongzhujiuqianggulianjie.html"]), "news-article");
-  assert.equal(getNewsSlug(["news", "yuantongzuniqidegongzuoyuanli.html"]), "yuantongzuniqidegongzuoyuanli");
-  assert.equal(getPilotPage(["news", "unknown-article.html"]), null);
-  assert.equal(getPilotPage(["news", "index_2.html"]), null);
-  assert.equal(getPilotPage(["news", "teao-expands-capacity"]), null);
-  assert.equal(getNewsSlug(["news", "index_2.html"]), null);
-  assert.equal(liveHref("/news/yuantongzuniqidegongzuoyuanli.html"), "/news/yuantongzuniqidegongzuoyuanli.html");
-  assert.equal(liveHref("/news/unknown-article.html"), LIVE_ORIGIN + "/news/unknown-article.html");
+  assert.equal(getPilotPage(["news", "new-article-from-admin.html"]), "news-article");
+  assert.equal(getNewsSlug(["news", "new-article-from-admin.html"]), "new-article-from-admin");
+  assert.equal(getPilotPage(["news", "slug-without-html"]), null);
+  assert.equal(getNewsSlug(["news", "slug-without-html"]), null);
+  assert.equal(liveHref("/news/new-article-from-admin.html"), "/news/new-article-from-admin.html");
+  assert.equal(liveHref("/news/"), "/news/");
 });
 
 test("convert resolves locally with and without trailing slash", () => {

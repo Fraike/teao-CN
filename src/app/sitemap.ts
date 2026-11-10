@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { newsArticles } from "@/content/live-site/news";
+import { getPublishedNews } from "@/lib/news-store";
 
 const BASE = "https://www.chinateao.com";
 // 固定发布日期:避免每次请求 lastModified 都变化。
 const LAST_MODIFIED = new Date("2026-11-10");
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, lastModified: LAST_MODIFIED, changeFrequency: "daily", priority: 1 },
     { url: `${BASE}/applications/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/sitemap/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.3 },
   ];
 
+  const newsArticles = await getPublishedNews();
   const newsPages: MetadataRoute.Sitemap = newsArticles.map(article => ({
     url: `${BASE}/news/${article.slug}.html`,
     lastModified: new Date(article.publishedAt),

@@ -4,16 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { newsArticles, newsCategories, type NewsCategory } from "@/content/live-site/news";
+import { newsCategories, type NewsCategory } from "@/content/live-site/news";
+import type { PublicNews } from "@/lib/news-store";
 import ListingPagination from "./listing-pagination";
 
-export default function NewsList({ pageSize = 12 }: { pageSize?: number }) {
+export default function NewsList({ articles, pageSize = 12 }: { articles: PublicNews[]; pageSize?: number }) {
   const [category, setCategory] = useState<NewsCategory | "all">("all");
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(
-    () => (category === "all" ? newsArticles : newsArticles.filter(item => item.category === category)),
-    [category]
+    () => (category === "all" ? articles : articles.filter(item => item.category === category)),
+    [articles, category]
   );
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   const current = Math.min(page, totalPages);
@@ -52,7 +53,7 @@ export default function NewsList({ pageSize = 12 }: { pageSize?: number }) {
           >
             <div className="relative aspect-[16/10] overflow-hidden bg-surface">
               <Image
-                src={article.cover}
+                src={article.cover || "/images/og/default.jpg"}
                 alt={article.title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -77,9 +78,7 @@ export default function NewsList({ pageSize = 12 }: { pageSize?: number }) {
         ))}
       </div>
 
-      {visible.length === 0 && (
-        <p className="py-16 text-center text-sm text-muted-light">该分类下暂无文章。</p>
-      )}
+      {visible.length === 0 && <p className="py-16 text-center text-sm text-muted-light">该分类下暂无文章。</p>}
 
       <ListingPagination page={current} totalPages={totalPages} onChange={next => setPage(next)} />
     </section>

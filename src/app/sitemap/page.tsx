@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { liveCatalog } from "@/lib/live-catalog";
 import { liveCategories, liveHref, LIVE_ORIGIN } from "@/lib/live-site";
-import { newsArticles } from "@/content/live-site/news";
+import { getPublishedNews } from "@/lib/news-store";
 import { container } from "@/components/live-site/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { pageOpenGraph } from "@/lib/metadata";
@@ -77,7 +77,8 @@ const sitemapJsonLd = {
   url: LIVE_ORIGIN + "/sitemap/",
 };
 
-export default function SiteMapPage() {
+export default async function SiteMapPage() {
+  const newsArticles = await getPublishedNews();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sitemapJsonLd) }} />

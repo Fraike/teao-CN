@@ -18,7 +18,7 @@ import { getCategoryRoute, liveCatalog } from "@/lib/live-catalog";
 import { getProductContent } from "@/lib/product-content";
 import { pageOpenGraph } from "@/lib/metadata";
 import { automotiveInteriorScenes, automotiveExteriorScenes, automotiveInteriorMap, automotiveExteriorMap, simpleApplications } from "@/content/live-site/applications";
-import { newsArticles } from "@/content/live-site/news";
+import { getNewsBySlug } from "@/lib/news-store";
 
 const indexable = { index: true, follow: true } as const;
 const canon = (p: string): Metadata["alternates"] => ({ canonical: LIVE_ORIGIN + p });
@@ -163,8 +163,9 @@ const CONVERT_META: Metadata = {
   }),
 };
 
-function newsArticleMeta(slug: string): Metadata {
-  const article = newsArticles.find(item => item.slug === slug)!;
+async function newsArticleMeta(slug: string): Promise<Metadata> {
+  const article = await getNewsBySlug(slug);
+  if (!article) notFound();
   return {
     title: { absolute: `${article.title} | 特澳 TEAO` },
     description: article.summary,
@@ -199,7 +200,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (type === "contacts") return CONTACTS_META;
   if (type === "news") return NEWS_META;
   const newsSlug = getNewsSlug(segments);
-  if (type === "news-article" && newsSlug) return newsArticleMeta(newsSlug);
+  if (type === "news-article" && newsSlug) return await newsArticleMeta(newsSlug);
   if (type === "convert") return CONVERT_META;
   if (type === "product") {
     const path = legacyPathFromSegments(segments);
@@ -246,7 +247,8 @@ export default async function LegacyPage({ params }: Props) {
   if (type === "news") return <NewsPage />;
   const newsSlug = getNewsSlug(segments);
   if (type === "news-article" && newsSlug) {
-    const article = newsArticles.find(item => item.slug === newsSlug)!;
+    const article = await getNewsBySlug(newsSlug);
+    if (!article) notFound();
     return <NewsArticlePage article={article} />;
   }
   if (type === "convert") return <ConvertPage />;

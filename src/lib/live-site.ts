@@ -1,5 +1,4 @@
 import categoryRoutes from "@/content/live-site/category-routes.json";
-import { newsArticles } from "@/content/live-site/news";
 import productPaths from "@/content/live-site/product-paths.json";
 
 export const LIVE_ORIGIN = "https://www.chinateao.com";
@@ -17,7 +16,6 @@ export const ABOUT_PATH = "/about-us/";
 export const CONTACTS_PATH = "/contacts/";
 export const NEWS_PATH = "/news/";
 export const CONVERT_PATH = "/convert/";
-export const NEWS_ARTICLE_SLUGS = newsArticles.map(article => article.slug);
 const PRODUCT_PATH_SET = new Set(productPaths);
 export const liveCategories = categoryRoutes;
 
@@ -57,7 +55,7 @@ export function getNewsSlug(segments: readonly string[]): string | null {
   const path = legacyPathFromSegments(segments);
   if (!path.startsWith("/news/") || !path.endsWith(".html")) return null;
   const slug = path.slice("/news/".length, -".html".length);
-  return NEWS_ARTICLE_SLUGS.includes(slug) ? slug : null;
+  return slug || null;
 }
 
 export function getPilotPage(segments: readonly string[]): "category" | "product" | "quality" | "faq" | "about" | "contacts" | "news" | "news-article" | "convert" | ApplicationPageType | null {

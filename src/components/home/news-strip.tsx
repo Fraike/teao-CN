@@ -3,9 +3,10 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHead } from "@/components/ui/section-head";
 import { Reveal } from "@/components/ui/reveal";
-import { newsArticles } from "@/content/live-site/news";
+import { getPublishedNews } from "@/lib/news-store";
 
-export function NewsStrip() {
+export async function NewsStrip() {
+  const newsArticles = (await getPublishedNews()).slice(0, 3);
   return (
     <section className="border-t border-line bg-white py-20">
       <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">

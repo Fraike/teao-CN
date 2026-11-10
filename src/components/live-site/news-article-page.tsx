@@ -3,14 +3,15 @@ import Link from "next/link";
 import { MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { LIVE_ORIGIN } from "@/lib/live-site";
+import { prepareArticleHtml } from "@/lib/article-html";
+import { getPublishedNews, type PublicNews } from "@/lib/news-store";
 import { contact, telHref } from "@/content/live-site/contact";
-import { newsArticles, type NewsArticle } from "@/content/live-site/news";
 import { container } from "./container";
 import InquiryCTA from "./inquiry-cta";
 
 const COMPANY_NAME = "东莞市特澳电子科技有限公司";
 
-function articleJsonLd(article: NewsArticle) {
+function articleJsonLd(article: PublicNews) {
   const url = `${LIVE_ORIGIN}/news/${article.slug}.html`;
   return {
     "@context": "https://schema.org",
@@ -19,30 +20,19 @@ function articleJsonLd(article: NewsArticle) {
     description: article.summary,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
-    image: LIVE_ORIGIN + article.cover,
+    image: article.cover ? LIVE_ORIGIN + article.cover : LIVE_ORIGIN + "/images/og/default.jpg",
     mainEntityOfPage: url,
     author: { "@type": "Organization", name: COMPANY_NAME },
     publisher: { "@type": "Organization", name: COMPANY_NAME },
   };
 }
 
-function relatedArticles(article: NewsArticle, limit = 3): NewsArticle[] {
-  const sameCategory = newsArticles.filter(item => item.category === article.category && item.slug !== article.slug);
-  const others = newsArticles.filter(item => item.category !== article.category && item.slug !== article.slug);
-  return [...sameCategory, ...others].slice(0, limit);
-}
-
-export default function NewsArticlePage({ article }: { article: NewsArticle }) {
-  const headingIds = new Map<number, string>();
-  const headings: { id: string; text: string }[] = [];
-  article.blocks.forEach((block, index) => {
-    if (block.type === "h2") {
-      const id = `h-${headings.length + 1}`;
-      headingIds.set(index, id);
-      headings.push({ id, text: block.text });
-    }
-  });
-  const related = relatedArticles(article);
+export default async function NewsArticlePage({ article }: { article: PublicNews }) {
+  const { html, headings } = prepareArticleHtml(article.content);
+  const all = await getPublishedNews();
+  const sameCategory = all.filter(item => item.category === article.category && item.slug !== article.slug);
+  const others = all.filter(item => item.category !== article.category && item.slug !== article.slug);
+  const related = [...sameCategory, ...others].slice(0, 3);
 
   return (
     <>
@@ -67,79 +57,15 @@ export default function NewsArticlePage({ article }: { article: NewsArticle }) {
       <div className={`${container} py-16 lg:py-20`}>
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
           <article>
-            <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src={article.cover}
-                  alt={article.title}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 880px"
-                  className="object-cover"
-                />
-              </div>
-            </figure>
+            {article.cover && (
+              <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
+                <div className="relative aspect-[16/9]">
+                  <Image src={article.cover} alt={article.title} fill priority sizes="(max-width: 1024px) 100vw, 880px" className="object-cover" />
+                </div>
+              </figure>
+            )}
 
-            <div className="mt-8">
-              {article.blocks.map((block, index) => {
-                if (block.type === "h2") {
-                  return (
-                    <h2
-                      key={`h2-${index}`}
-                      id={headingIds.get(index)}
-                      className="mt-12 scroll-mt-24 text-[22px] font-black leading-[1.3] tracking-[-0.02em] text-ink"
-                    >
-                      {block.text}
-                    </h2>
-                  );
-                }
-                if (block.type === "h3") {
-                  return (
-                    <h3 key={`h3-${index}`} className="mt-8 text-[17px] font-bold leading-[1.4] text-ink">
-                      {block.text}
-                    </h3>
-                  );
-                }
-                if (block.type === "img") {
-                  return (
-                    <figure key={`img-${index}`} className="mt-8">
-                      <Image
-                        src={block.src}
-                        alt={block.alt}
-                        width={block.width}
-                        height={block.height}
-                        sizes="(max-width: 1024px) 100vw, 880px"
-                        className="h-auto w-full rounded-2xl border border-line"
-                      />
-                      {block.caption && (
-                        <figcaption className="mt-2 text-center text-xs text-muted-light">{block.caption}</figcaption>
-                      )}
-                    </figure>
-                  );
-                }
-                if (block.type === "ul") {
-                  return (
-                    <ul key={`ul-${index}`} className="mt-5 list-disc space-y-2 pl-6 text-[15px] leading-8 text-ink-soft marker:text-brand-500">
-                      {block.items.map((item, itemIndex) => (
-                        <li key={`${index}-${itemIndex}`}>{item}</li>
-                      ))}
-                    </ul>
-                  );
-                }
-                if (block.type === "quote") {
-                  return (
-                    <blockquote key={`q-${index}`} className="mt-6 rounded-r-xl border-l-4 border-brand-500 bg-brand-50/60 px-5 py-4 text-[15px] leading-8 text-ink-soft">
-                      {block.text}
-                    </blockquote>
-                  );
-                }
-                return (
-                  <p key={`p-${index}`} className="mt-5 text-[15px] leading-[1.9] text-ink-soft">
-                    {block.text}
-                  </p>
-                );
-              })}
-            </div>
+            <div className="rich-text mt-8" dangerouslySetInnerHTML={{ __html: html }} />
 
             <div className="mt-12 border-t border-line pt-8">
               <Link href="/news/" className="text-sm font-medium text-muted transition-colors hover:text-brand-700">← 返回新闻列表</Link>
@@ -190,10 +116,7 @@ export default function NewsArticlePage({ article }: { article: NewsArticle }) {
                   微信 {contact.wechat}
                 </p>
               </div>
-              <Link
-                href="/contacts/"
-                className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-500 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-700"
-              >
+              <Link href="/contacts/" className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-500 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-700">
                 获取报价
               </Link>
             </div>
