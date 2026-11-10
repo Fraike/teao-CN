@@ -21,8 +21,8 @@ export function CorporateValues() {
           {corporateValues.map((value, i) => {
             const Icon = icons[i];
             return (
-              <Reveal key={value.name} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group cursor-default rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
+              <Reveal key={value.name} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
+                <div className="group flex h-full flex-col cursor-default rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   <Icon className="mb-5 h-7 w-7 text-brand-500" strokeWidth={1.5} />
                   <h3 className="text-lg font-extrabold tracking-[-0.02em] text-ink">{value.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>

@@ -167,12 +167,6 @@ export function AboutHero() {
                 <span className="ml-2 text-xs font-extrabold text-brand-600">20+ 条产线</span>
               </div>
             </div>
-
-            {/* Floating stat card */}
-            <div className="absolute -left-4 bottom-8 hidden rounded-xl border border-line bg-white px-5 py-4 shadow-[0_12px_32px_rgba(0,0,0,0.06)] lg:block">
-              <span className="block text-3xl font-black leading-none text-brand-500">8000万</span>
-              <span className="mt-1 block text-[11px] font-bold text-muted">年综合产能（件）</span>
-            </div>
           </div>
         </div>
       </div>

@@ -18,8 +18,8 @@ export function CoreCapabilities() {
           {competencies.map((item, i) => {
             const Icon = icons[i];
             return (
-              <Reveal key={item.title} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group overflow-hidden rounded-2xl border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.1)]">
+              <Reveal key={item.title} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
+                <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.1)]">
                   {/* Image */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                     <Image
@@ -50,7 +50,7 @@ export function CoreCapabilities() {
                     </div>
 
                     {/* Highlights */}
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <div className="mt-auto flex flex-wrap gap-2 pt-4">
                       {item.highlights.map((h) => (
                         <span
                           key={h}

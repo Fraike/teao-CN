@@ -12,7 +12,7 @@ const products = [
   { src: "/images/products/glove-box-damper/GloveBoxDamperSingle.webp", label: "手套箱阻尼器" },
 ];
 
-const trust = ["24 小时内响应", "免费技术评估", "不限数量打样"];
+const trust = ["24 小时内响应", "免费技术评估", { text: "不限数量打样", note: "20 个以下" }];
 
 export function AboutCTA() {
   return (
@@ -52,12 +52,17 @@ export function AboutCTA() {
               </div>
 
               <div className="mt-7 flex flex-wrap items-center gap-6 text-[13px] font-semibold text-muted">
-                {trust.map(item => (
-                  <span key={item} className="flex items-center gap-1.5">
-                    <Check size={15} className="text-brand-700" strokeWidth={3} />
-                    {item}
-                  </span>
-                ))}
+                {trust.map(item => {
+                  const label = typeof item === "string" ? item : item.text;
+                  const note = typeof item === "string" ? null : item.note;
+                  return (
+                    <span key={label} className="flex items-center gap-1.5">
+                      <Check size={15} className="text-brand-700" strokeWidth={3} />
+                      {label}
+                      {note && <span className="text-[11px] font-normal text-muted-light">({note})</span>}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </Reveal>

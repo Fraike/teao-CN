@@ -17,8 +17,8 @@ export function QualityPromise() {
           {qualityPromises.map((item, i) => {
             const Icon = icons[i];
             return (
-              <Reveal key={item.title} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group cursor-default rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
+              <Reveal key={item.title} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
+                <div className="group flex h-full flex-col cursor-default rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   {/* Step number */}
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-lg font-black text-brand-500 transition-all duration-300 group-hover:bg-brand-500 group-hover:text-white group-hover:shadow-[0_4px_12px_rgba(232,120,26,0.35)]">
                     {String(i + 1).padStart(2, "0")}
@@ -30,7 +30,7 @@ export function QualityPromise() {
                   <p className="mt-2 text-[13px] leading-relaxed text-muted">{item.description}</p>
 
                   {/* Bottom accent */}
-                  <div className="mt-5 h-1 w-0 rounded-full bg-brand-500 transition-all duration-500 group-hover:w-16" />
+                  <div className="mt-auto h-1 w-0 rounded-full bg-brand-500 pt-0 transition-all duration-500 group-hover:w-16" />
                 </div>
               </Reveal>
             );

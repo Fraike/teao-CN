@@ -15,7 +15,7 @@ export function CompanyTimeline() {
           {/* Right: timeline cards */}
           <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-5">
             {timeline.map((item, i) => (
-              <Reveal key={item.year} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
+              <Reveal key={item.year} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
                 <div className="group relative cursor-default rounded-2xl border border-line bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:bg-brand-50 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   {/* Top accent bar */}
                   <div className="mb-2 h-1 w-8 rounded-full bg-line transition-all duration-300 group-hover:w-12 group-hover:bg-brand-500" />
