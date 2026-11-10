@@ -2,9 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { liveCategories, liveHref } from "@/lib/live-site";
 
-const ALIBABA_URL = "https://chinateao1688.1688.com/?spm=a261y.7663282.shopNavigation.2.165364a2Mi71w9&offerId=1009140776330&td_page_id=PC-UNLOGIN-DEFAULT-2026";
-// 微博地址待补:提供后填入即可显示该入口。
-const WEIBO_URL: string | null = null;
+const ALIBABA_INTL_URL = "https://teaodamper.en.alibaba.com/index.html?spm=a2700.shop_cp.88.3.3c3166e8H8zAXQ&biz=cpscoupon&promotionCode=AB13&xp=Sez8PLFEziUprGY6uJO4hsylJyekhw1tgalUJqPIWm-9p6hqavyvjfsrDlaz_bsiJtkaDeNmMLiMcXQmA9rO6V5Rk_6DeFDDqFgCrDIvzKosMbeanHAIqwcTEART57S-&cps_sk=jnsdjomm&bm=cps&src=saf&pid=accio";
+const ALIBABA_CN_URL = "https://chinateao1688.1688.com/?spm=a261y.7663282.shopNavigation.2.165364a2Mi71w9&offerId=1009140776330&td_page_id=PC-UNLOGIN-DEFAULT-2026";
 
 const footerLinks = [
   {
@@ -49,29 +48,21 @@ export default function Footer() {
               <p className="text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">关注我们</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <a
-                  href={ALIBABA_URL}
+                  href={ALIBABA_INTL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
-                  阿里巴巴 1688
+                  阿里巴巴国际站
                 </a>
-                <Link
-                  href="/contacts/#wechat"
+                <a
+                  href={ALIBABA_CN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
-                  微信
-                </Link>
-                {WEIBO_URL && (
-                  <a
-                    href={WEIBO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
-                  >
-                    微博
-                  </a>
-                )}
+                  阿里巴巴国内站 1688
+                </a>
               </div>
             </div>
             <Link
