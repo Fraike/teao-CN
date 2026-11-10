@@ -33,7 +33,7 @@ export function AboutHero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-white">
+    <section ref={ref} className="relative overflow-hidden bg-[#FAF9F6]">
       {/* Grid pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.18]"
@@ -47,7 +47,7 @@ export function AboutHero() {
       {/* Decorative ring */}
       <div className="pointer-events-none absolute -right-[14vw] top-[10%] h-[42vw] w-[42vw] max-w-[620px] max-h-[620px] rounded-full border border-brand-500/12" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-24 pb-14 lg:px-8 lg:pt-32 lg:pb-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-14 pb-16 lg:px-8 lg:pt-16 lg:pb-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
           {/* Left: text */}
           <div>
@@ -61,7 +61,7 @@ export function AboutHero() {
             </div>
 
             <h1
-              className={`mt-5 max-w-[640px] text-[32px] leading-[1.08] font-extrabold tracking-[-0.03em] text-ink transition-all duration-700 delay-100 sm:text-[40px] lg:text-[48px] ${
+              className={`mt-5 max-w-[640px] text-[clamp(34px,4.2vw,52px)] leading-[1.05] font-black tracking-[-0.04em] text-ink transition-all duration-700 delay-100 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -92,7 +92,7 @@ export function AboutHero() {
             >
               <Link
                 href="/contacts/"
-                className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white shadow-[0_4px_14px_rgba(232,120,26,0.35)] transition-all hover:bg-brand-700 hover:shadow-[0_6px_20px_rgba(232,120,26,0.45)] hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_14px_rgba(232,120,26,0.35)] transition-all hover:bg-brand-700 hover:shadow-[0_6px_20px_rgba(232,120,26,0.45)] hover:-translate-y-0.5"
               >
                 立即询价
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export function AboutHero() {
               </Link>
               <a
                 href={telHref(contact.primaryMobile)}
-                className="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 bg-white px-6 py-3 text-sm font-bold text-brand-700 transition-all hover:border-brand-500 hover:bg-brand-50"
+                className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-sm font-bold text-ink-soft transition-all hover:border-brand-500 hover:text-brand-700"
               >
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -151,7 +151,7 @@ export function AboutHero() {
               isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-[0.97]"
             }`}
           >
-            <div className="relative aspect-[16/10] lg:aspect-[5/4] overflow-hidden rounded-2xl border border-line bg-[#1a1a1e] shadow-[0_16px_48px_rgba(0,0,0,0.06)]">
+            <div className="relative aspect-[16/10] lg:aspect-[5/4] overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_16px_48px_rgba(30,30,32,0.06)]">
               <Image
                 src="/images/company/factory-entrance.webp"
                 alt="特澳工厂"

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { GraduationCap, HeartPulse, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { peopleCulture } from "@/content/about";
+import { AboutHead } from "./about-head";
 
 const cultureIcons = [GraduationCap, HeartPulse, ShieldCheck];
 
@@ -16,27 +17,14 @@ export function PeopleCulture() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-12 lg:py-16">
+    <section className="relative overflow-hidden bg-surface-warm py-16 lg:py-20">
       {/* Decorative ring */}
       <div className="pointer-events-none absolute left-[-80px] top-[-140px] h-[320px] w-[320px] rounded-full border border-brand-500/10" />
 
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-7 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-11">
           {/* Left: text */}
-          <Reveal>
-            <div>
-              <span className="inline-flex items-center gap-2 text-[11.5px] font-bold text-brand-700 tracking-[0.14em] uppercase
-                before:content-[''] before:w-[22px] before:h-[2px] before:bg-brand-500 before:rounded">
-                {peopleCulture.eyebrow}
-              </span>
-              <h2 className="mt-2.5 text-[26px] leading-[1.08] font-extrabold tracking-[-0.03em] text-ink sm:text-[30px] lg:text-[38px]">
-                {peopleCulture.title}
-              </h2>
-              <p className="mt-4 max-w-[620px] text-[15px] leading-relaxed text-muted lg:text-[17px]">
-                {peopleCulture.description}
-              </p>
-            </div>
-          </Reveal>
+        <AboutHead eyebrow={peopleCulture.eyebrow} title={peopleCulture.title} description={peopleCulture.description} />
 
           {/* Right: image grid */}
           <Reveal delay={1}>
@@ -48,7 +36,7 @@ export function PeopleCulture() {
                 {cultureImages.map((image, index) => (
                   <figure
                     key={image.src}
-                    className={`relative aspect-[4/3] overflow-hidden rounded-xl border border-line bg-white shadow-[0_12px_30px_rgba(15,23,42,0.055)] ${
+                    className={`relative aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-white shadow-[0_12px_30px_rgba(30,30,32,0.05)] ${
                       index === 1 || index === 3 ? "translate-y-4" : ""
                     }`}
                   >
@@ -74,7 +62,7 @@ export function PeopleCulture() {
             const Icon = cultureIcons[index];
             return (
               <Reveal key={item.name} delay={Math.min(index + 2, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="h-full rounded-xl border border-line bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-md">
+                <div className="h-full rounded-2xl border border-line bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   <Icon className="h-6 w-6 text-brand-500" strokeWidth={1.7} />
                   <h3 className="mt-4 text-[17px] font-extrabold tracking-[-0.02em] text-ink">
                     {item.name}

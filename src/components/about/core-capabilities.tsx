@@ -4,36 +4,24 @@ import Image from "next/image";
 import { Settings, Wrench, Cog } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { competencies } from "@/content/about";
+import { AboutHead } from "./about-head";
 
 const icons = [Settings, Wrench, Cog];
 
 export function CoreCapabilities() {
   return (
-    <section className="bg-white py-14 lg:py-20">
+    <section className="bg-surface-warm py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <Reveal>
-          <div className="mb-10">
-            <span className="inline-flex items-center gap-2 text-[11.5px] font-bold text-brand-700 tracking-[0.14em] uppercase
-              before:content-[''] before:w-[22px] before:h-[2px] before:bg-brand-500 before:rounded">
-              核心能力
-            </span>
-            <h2 className="mt-2.5 text-[28px] font-extrabold tracking-[-0.03em] text-ink lg:text-[34px]">
-              从模具到交付 · 全链路自主可控
-            </h2>
-            <p className="mt-2 max-w-[580px] text-[14px] leading-relaxed text-muted">
-              模具开发、精密注塑、自动化装配、100%检测 — 每一个环节都在自有工厂内完成。
-            </p>
-          </div>
-        </Reveal>
+        <AboutHead eyebrow="核心能力" title="从模具到交付 · 全链路自主可控" description="模具开发、精密注塑、自动化装配、100% 检测 — 每一个环节都在自有工厂内完成。" />
 
         <div className="grid gap-6 lg:grid-cols-3">
           {competencies.map((item, i) => {
             const Icon = icons[i];
             return (
               <Reveal key={item.title} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group overflow-hidden rounded-2xl border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+                <div className="group overflow-hidden rounded-2xl border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.1)]">
                   {/* Image */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[#1a1a1e]">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-surface">
                     <Image
                       src={item.image}
                       alt={item.title}

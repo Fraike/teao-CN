@@ -3,31 +3,19 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
 import { systemCertificates, patentCertificates } from "@/content/about";
+import { AboutHead } from "./about-head";
 
 export function CertificationsSection() {
   return (
-    <section className="bg-surface-warm py-14 lg:py-20">
+    <section className="bg-surface-warm py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <Reveal>
-          <div className="mb-10">
-            <span className="inline-flex items-center gap-2 text-[11.5px] font-bold text-brand-700 tracking-[0.14em] uppercase
-              before:content-[''] before:w-[22px] before:h-[2px] before:bg-brand-500 before:rounded">
-              资质认证
-            </span>
-            <h2 className="mt-2.5 text-[28px] font-extrabold tracking-[-0.03em] text-ink lg:text-[34px]">
-              体系认证与专利技术
-            </h2>
-            <p className="mt-2 max-w-[580px] text-[14px] leading-relaxed text-muted">
-              IATF 16949 汽车行业质量管理体系 + ISO 14001 环境管理体系双重认证。
-            </p>
-          </div>
-        </Reveal>
+        <AboutHead eyebrow="资质认证" title="体系认证与专利技术" description="IATF 16949 汽车行业质量管理体系 + ISO 14001 环境管理体系双重认证。" />
 
         {/* System Certifications */}
         <div className="mb-10 grid gap-6 sm:grid-cols-2">
           {systemCertificates.map((cert, i) => (
             <Reveal key={cert.name} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-              <div className="group relative cursor-default overflow-hidden rounded-2xl border border-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+              <div className="group relative cursor-default overflow-hidden rounded-2xl border border-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.1)]">
                 <div className="flex items-start gap-5">
                   <div className="relative h-28 w-20 shrink-0 overflow-hidden rounded-lg border border-line shadow-sm transition-transform duration-500 group-hover:scale-105">
                     <Image
@@ -70,8 +58,8 @@ export function CertificationsSection() {
         <div className="grid gap-5 sm:grid-cols-3">
           {patentCertificates.map((pat, i) => (
             <Reveal key={pat.name} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5}>
-              <div className="group cursor-default overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-md">
-                <div className="relative aspect-[3/4] overflow-hidden bg-[#F0F0F0]">
+              <div className="group cursor-default overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
+                <div className="relative aspect-[3/4] overflow-hidden bg-surface">
                   <Image
                     src={pat.image}
                     alt={pat.name}

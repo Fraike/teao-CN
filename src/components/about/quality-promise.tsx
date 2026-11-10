@@ -3,34 +3,22 @@
 import { ClipboardCheck, Zap, ShieldCheck, Truck } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { qualityPromises } from "@/content/about";
+import { AboutHead } from "./about-head";
 
 const icons = [ClipboardCheck, Zap, ShieldCheck, Truck];
 
 export function QualityPromise() {
   return (
-    <section className="bg-white py-14 lg:py-20">
+    <section className="bg-white py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <Reveal>
-          <div className="mb-10">
-            <span className="inline-flex items-center gap-2 text-[11.5px] font-bold text-brand-700 tracking-[0.14em] uppercase
-              before:content-[''] before:w-[22px] before:h-[2px] before:bg-brand-500 before:rounded">
-              品质承诺
-            </span>
-            <h2 className="mt-2.5 text-[28px] font-extrabold tracking-[-0.03em] text-ink lg:text-[34px]">
-              每一件产品，都经得起检验
-            </h2>
-            <p className="mt-2 max-w-[580px] text-[14px] leading-relaxed text-muted">
-              从来料、过程到出货，四级品控体系确保每一件阻尼器都符合标准。
-            </p>
-          </div>
-        </Reveal>
+        <AboutHead eyebrow="品质承诺" title="每一件产品,都经得起检验" description="从来料、过程到出货,四级品控体系确保每一件阻尼器都符合标准。" />
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {qualityPromises.map((item, i) => {
             const Icon = icons[i];
             return (
               <Reveal key={item.title} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-                <div className="group cursor-default rounded-2xl border border-line-soft bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
+                <div className="group cursor-default rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   {/* Step number */}
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-lg font-black text-brand-500 transition-all duration-300 group-hover:bg-brand-500 group-hover:text-white group-hover:shadow-[0_4px_12px_rgba(232,120,26,0.35)]">
                     {String(i + 1).padStart(2, "0")}
