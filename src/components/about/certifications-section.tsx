@@ -17,12 +17,12 @@ export function CertificationsSection() {
             <Reveal key={cert.name} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
               <div className="group relative cursor-default overflow-hidden rounded-2xl border border-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.1)]">
                 <div className="flex items-start gap-5">
-                  <div className="relative h-28 w-20 shrink-0 overflow-hidden rounded-lg border border-line shadow-sm transition-transform duration-500 group-hover:scale-105">
+                  <div className="relative h-28 w-20 shrink-0 overflow-hidden rounded-lg border border-line bg-white p-1 shadow-sm transition-transform duration-500 group-hover:scale-105">
                     <Image
                       src={cert.image}
                       alt={cert.name}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       sizes="80px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -55,24 +55,24 @@ export function CertificationsSection() {
           </div>
         </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
           {patentCertificates.map((pat, i) => (
-            <Reveal key={pat.name} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
-              <div className="group flex h-full flex-col cursor-default overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface">
+            <Reveal key={pat.name} delay={Math.min(i + 2, 5) as 1 | 2 | 3 | 4 | 5} className="w-full sm:w-[calc(50%-8px)] lg:w-[300px]">
+              <figure className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_14px_36px_rgba(232,120,26,0.1)]">
+                <div className="relative aspect-[1/1.414] overflow-hidden bg-white p-3">
                   <Image
                     src={pat.image}
                     alt={pat.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, 33vw"
+                    className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 90vw, 300px"
                   />
                 </div>
-                <div className="p-4">
-                  <h4 className="text-sm font-extrabold text-ink">{pat.name}</h4>
-                  <p className="mt-1 text-[12px] leading-relaxed text-muted">{pat.description}</p>
-                </div>
-              </div>
+                <figcaption className="border-t border-line-soft px-4 py-3.5">
+                  <h4 className="text-[13px] font-extrabold text-ink">{pat.name}</h4>
+                  <p className="mt-1 text-[11.5px] leading-relaxed text-muted">{pat.description}</p>
+                </figcaption>
+              </figure>
             </Reveal>
           ))}
         </div>
