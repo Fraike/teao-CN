@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { trustBadges } from "@/content/about";
+import VideoPlayer from "./video-player";
 import { contact, telHref } from "@/content/live-site/contact";
 
 const sellingPoints = [
@@ -152,20 +152,7 @@ export function AboutHero() {
             }`}
           >
             <div className="relative aspect-[16/10] lg:aspect-[5/4] overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_16px_48px_rgba(30,30,32,0.06)]">
-              <Image
-                src="/images/company/factory-entrance.webp"
-                alt="特澳工厂"
-                fill
-                className="object-cover opacity-90"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
-              {/* Label */}
-              <div className="absolute bottom-4 left-4 rounded-lg bg-white/90 backdrop-blur-sm px-3 py-2 shadow-sm">
-                <span className="text-[11px] font-bold text-muted">东莞黄江厂房</span>
-                <span className="ml-2 text-xs font-extrabold text-brand-600">20+ 条产线</span>
-              </div>
+              <VideoPlayer poster="/images/company/factory-entrance.webp" src="/video/companyProfile.mp4" />
             </div>
           </div>
         </div>

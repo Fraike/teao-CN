@@ -81,6 +81,9 @@ pm2 restart teao-cn
 
 ## 7. 安全与待办
 
+> **推送与部署必须获得用户明确同意。** 本地 commit 可以,`git push` 与服务器部署/重启需逐次确认。
+
+
 - ⚠️ 当前 **HTTP 访问**,`.env.local` 临时设置了 `AUTH_COOKIE_SECURE=false` 才能在 http 下登录后台。**配置 HTTPS 后必须删除该行**。
 - 管理员密码只通过线下/聊天交付,未写入仓库;上线后建议更换。
 - 待办:绑定域名 `www.chinateao.com` + HTTPS 证书;百度站长平台完成验证、提交 sitemap、获取主动推送 token。
