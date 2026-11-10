@@ -44,7 +44,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-[2] mx-auto grid w-[min(1240px,calc(100%-48px))] items-center gap-10 py-14 lg:grid-cols-[1fr_400px]">
+      <div className="relative z-[2] mx-auto grid w-[min(1240px,calc(100%-48px))] items-center gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12">
         {/* ── Left content ── */}
         <div>
           {/* Eyebrow tag */}
@@ -77,7 +77,7 @@ export function HeroSection() {
 
           {/* Description */}
           <Reveal delay={2}>
-            <p className="mt-4 max-w-[540px] text-[15px] leading-[1.8] text-muted">
+            <p className="mt-4 max-w-[600px] text-[15px] leading-[1.8] text-muted">
               专注阻尼器与锁扣机构研发制造,支持扭矩、方向与安装结构按图定制,从打样到量产一体化交付。
             </p>
           </Reveal>
@@ -113,6 +113,10 @@ export function HeroSection() {
 
         {/* ── Right panel: product collage ── */}
         <aside className="hidden lg:flex lg:flex-col lg:justify-center" aria-label="主要产品">
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-[11px] font-black uppercase tracking-[0.16em] text-muted-light">核心产品</span>
+            <span className="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-bold text-brand-700">5 大产品线</span>
+          </div>
           <div className="grid grid-cols-2 gap-3">
             {heroProducts.map((category, index) => (
               <Link
@@ -120,7 +124,7 @@ export function HeroSection() {
                 href={liveHref(category.path)}
                 aria-label={`查看${category.label}`}
                 className={`group relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_10px_30px_rgba(30,30,32,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_18px_42px_rgba(232,120,26,0.12)] ${
-                  index === 0 ? "col-span-2 h-[220px]" : "h-[190px]"
+                  index === 0 ? "col-span-2 h-[250px]" : "h-[205px]"
                 }`}
               >
                 <Image
@@ -128,8 +132,8 @@ export function HeroSection() {
                   alt={category.label}
                   fill
                   priority={index === 0}
-                  sizes={index === 0 ? "560px" : "280px"}
-                  className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+                  sizes={index === 0 ? "600px" : "300px"}
+                  className="object-contain p-7 transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-ink shadow-sm">
                   {category.label}

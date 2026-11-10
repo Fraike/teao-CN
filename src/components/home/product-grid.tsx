@@ -19,36 +19,30 @@ export async function ProductGrid() {
         <div className="grid grid-cols-2 gap-3.5 lg:grid-cols-5">
           {cats.map((cat, i) => (
             <Reveal key={cat.id} delay={((i % 5) + 1) as 1 | 2 | 3 | 4 | 5}>
-              <article className="group rounded-[14px] border border-line bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 ease-out hover:shadow-[0_8px_28px_rgba(0,0,0,0.08)] hover:-translate-y-1">
+              <Link
+                href={cat.path}
+                className="group block h-full overflow-hidden rounded-2xl border border-line bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.1)]"
+              >
                 {/* Image */}
-                <div className="grid place-items-center aspect-[1/0.78] bg-[#FAF8F5] p-[22px] overflow-hidden">
+                <div className="relative aspect-[1/0.78] overflow-hidden bg-white p-5">
                   <Image
                     src={cat.image}
-                    width={280}
-                    height={220}
                     alt={cat.label}
-                    className="w-[88%] object-contain transition-transform duration-400 ease-out group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 1024px) 45vw, 220px"
+                    className="object-contain transition-transform duration-400 ease-out group-hover:scale-105"
                   />
                 </div>
 
                 {/* Body */}
-                <div className="px-5 pt-[18px] pb-[22px]">
-                  <h3 className="text-base font-bold text-ink">
-                    <Link href={cat.path}>{cat.label}</Link>
-                  </h3>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-line-soft">
-                    <Link href={cat.path} className="text-[11px] font-medium text-brand-700 hover:underline">查看分类</Link>
-                    <Link
-                      href="/contacts/"
-                      className="inline-flex items-center gap-1 text-xs font-bold text-brand-700 transition-all duration-200 hover:gap-[7px]"
-                    >
-                      获取报价 &rarr;
-                    </Link>
-                  </div>
+                <div className="px-5 pb-5">
+                  <h3 className="text-base font-bold text-ink transition-colors group-hover:text-brand-700">{cat.label}</h3>
+                  <span className="mt-2 inline-flex items-center gap-1 text-[12px] font-bold text-brand-700">
+                    查看分类
+                    <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                  </span>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>
