@@ -112,21 +112,23 @@ export function HeroSection() {
         </div>
 
         {/* ── Right panel: product collage ── */}
-        <aside className="hidden lg:flex lg:flex-col lg:justify-center" aria-label="主要产品">
-          <div className="mb-4 flex items-center justify-between">
-            <span className="text-[11px] font-black uppercase tracking-[0.16em] text-muted-light">核心产品</span>
-            <span className="rounded-full bg-brand-50 px-3 py-1 text-[11px] font-bold text-brand-700">5 大产品线</span>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
+        <aside className="relative hidden lg:block" aria-label="主要产品">
+          <div className="pointer-events-none absolute -inset-6 rounded-[40px] bg-[radial-gradient(ellipse_at_55%_35%,rgba(232,120,26,0.12),transparent_62%)]" />
+          <div className="relative grid grid-cols-2 gap-3">
             {heroProducts.map((category, index) => (
               <Link
                 key={category.id}
                 href={liveHref(category.path)}
                 aria-label={`查看${category.label}`}
-                className={`group relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_10px_30px_rgba(30,30,32,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_18px_42px_rgba(232,120,26,0.12)] ${
-                  index === 0 ? "col-span-2 h-[250px]" : "h-[205px]"
+                className={`group relative overflow-hidden rounded-2xl border border-line shadow-[0_10px_30px_rgba(30,30,32,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_18px_42px_rgba(232,120,26,0.12)] ${
+                  index === 0
+                    ? "col-span-2 h-[250px] bg-[linear-gradient(135deg,#FFF7EF_0%,#FFFFFF_62%)]"
+                    : "h-[205px] bg-white"
                 }`}
               >
+                <span className="absolute left-4 top-3 text-[10px] font-black tracking-[0.2em] text-brand-700/50">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <Image
                   src={category.image}
                   alt={category.label}
@@ -141,6 +143,9 @@ export function HeroSection() {
               </Link>
             ))}
           </div>
+          <p className="relative mt-4 text-right text-[11px] font-semibold tracking-[0.12em] text-muted-light">
+            核心产品 · 5 大产品线
+          </p>
         </aside>
       </div>
     </section>
