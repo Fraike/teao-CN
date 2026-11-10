@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { liveCatalog } from "@/lib/live-catalog";
 import { liveHref } from "@/lib/live-site";
 import GlobalSearch from "./global-search";
@@ -103,6 +103,17 @@ export default function Header() {
           {/* Actions */}
           <div className="flex items-center gap-2.5">
             <GlobalSearch />
+            <a
+              href="https://teao-damper.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="访问英文国际站"
+              title="英文国际站"
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-3.5 text-[13px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 lg:h-[38px]"
+            >
+              <Globe size={14} />
+              EN
+            </a>
             <Link
               href="/convert/"
               className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-[15px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"
@@ -163,6 +174,14 @@ export default function Header() {
             >
               扭矩换算
             </Link>
+            <a
+              href="https://teao-damper.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-line py-3 text-center text-sm font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+            >
+              English 国际站
+            </a>
             <Link
               href="/contacts/"
               onClick={() => setMobileOpen(false)}
