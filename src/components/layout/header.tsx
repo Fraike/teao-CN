@@ -109,10 +109,10 @@ export default function Header() {
               rel="noopener noreferrer"
               aria-label="访问英文国际站"
               title="英文国际站"
-              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-3.5 text-caption font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 lg:h-[38px]"
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-2.5 text-caption font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:px-3.5 lg:h-[38px]"
             >
               <Globe size={14} />
-              EN
+              <span className="hidden sm:inline">EN</span>
             </a>
             <Link
               href="/convert/"
@@ -122,7 +122,7 @@ export default function Header() {
             </Link>
             <Link
               href="/contacts/"
-              className="inline-flex h-9 items-center rounded-full bg-brand-500 px-3.5 text-body font-bold text-white lg:px-4 shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:h-[38px]"
+              className="inline-flex h-9 shrink-0 items-center whitespace-nowrap rounded-full bg-brand-500 px-3.5 text-body font-bold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:px-4 lg:h-[38px]"
             >
               获取报价
             </Link>
