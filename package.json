@@ -32,7 +32,6 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@fontpkg/mi-sans": "^4.3.0",
     "@fontpkg/mi-sans-vf": "^4.3.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
