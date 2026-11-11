@@ -54,7 +54,8 @@ cd /Users/mikewang/AI_Workspace/teao-CN
 rsync -az \
   --exclude node_modules --exclude .next --exclude .git \
   --exclude chinateao-export --exclude trash_review --exclude .superpowers \
-  --exclude 'data/*.db*' --exclude 'public/uploads' --exclude docs/site-audit \
+  --exclude 'data/*.db*' --exclude 'public/uploads' \
+  --exclude docs/site-audit --exclude docs/typography-review \
   -e "ssh -i $HOME/.ssh/teao_server" \
   ./ root@8.163.39.156:/opt/teao-cn/
 
