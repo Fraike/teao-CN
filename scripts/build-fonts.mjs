@@ -22,6 +22,17 @@ const sourceFont = resolve(root, "node_modules/@fontpkg/mi-sans-vf/MiSans VF.ttf
 const outRoot = resolve(root, "public/fonts/misans");
 const cssTarget = resolve(root, "src/app/fonts.css");
 
+const NOTICE = `MiSans
+Copyright © 2020-2023 Beijing Xiaomi Mobile Software Co., Ltd. All Rights Reserved.
+
+MiSans 由小米发布，允许免费商业使用。字体源文件经场景子集化后随本站分发，
+仅包含站点实际使用的字符。
+
+原始字体: MiSans VF v4.003 (Hanyi Fonts / Xiaomi)
+源文件来源: npm 包 @fontpkg/mi-sans-vf
+生成脚本: scripts/build-fonts.mjs
+`;
+
 const BASE_TEXT =
   " 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" +
   "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" +
@@ -87,7 +98,7 @@ async function buildGroup(name, chars) {
     testHtml: false,
     reporter: false,
     silent: true,
-    renameOutputFont: "[index].[ext]",
+    renameOutputFont: "[hash:6].[ext]", // 内容哈希命名，配合 immutable 长缓存
   });
 
   const cssFile = readdirSync(outDir).find(item => item.endsWith(".css"));
@@ -117,6 +128,7 @@ for (const [name, chars] of groups) {
 }
 
 writeFileSync(cssTarget, `/* 由 scripts/build-fonts.mjs 生成，请勿手改 */\n${parts.join("\n")}\n`);
+writeFileSync(resolve(outRoot, "NOTICE.txt"), NOTICE);
 console.log(`已写入 ${cssTarget}`);
 
 // cn-font-split 的 Rust FFI 线程会阻止进程退出

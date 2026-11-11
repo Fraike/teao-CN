@@ -15,6 +15,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        // 字体分片按内容哈希命名，可安全长缓存
+        source: "/fonts/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+    ];
+  },
   // Preserve the live site's directory slashes and .html URLs verbatim.
   // Do not impose one global slash convention on the existing development routes.
   skipTrailingSlashRedirect: true,
