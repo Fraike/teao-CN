@@ -4040,88 +4040,6 @@
       ]
     }
   },
-  "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html": {
-    "path": "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html",
-    "slug": "rd-v127",
-    "categoryId": "glove-box-damper",
-    "model": "RD-V127",
-    "name": "RD-V127 手套箱阻尼器",
-    "summary": "扭矩 200 – 1000 gf·cm",
-    "images": [
-      {
-        "url": "/images/products/rd-v127/main.webp",
-        "alt": "RD-V127 main"
-      },
-      {
-        "url": "/images/products/rd-v127/photo_1.webp",
-        "alt": "RD-V127 photo_1"
-      },
-      {
-        "url": "/images/products/rd-v127/photo_3.webp",
-        "alt": "RD-V127 photo_3"
-      },
-      {
-        "url": "/images/products/rd-v127/photo_4.webp",
-        "alt": "RD-V127 photo_4"
-      }
-    ],
-    "characteristics": [
-      "单向"
-    ],
-    "torque": {
-      "min": 200,
-      "max": 1000,
-      "unit": "gf·cm"
-    },
-    "force": null,
-    "hardTorque": "500 gf·cm",
-    "hardForce": null,
-    "soundType": null,
-    "bufferDirection": null,
-    "assemblyMethod": null,
-    "durability": {
-      "cycles": 50000
-    },
-    "specifications": [
-      {
-        "label": "有效行程",
-        "value": "60mm"
-      },
-      {
-        "label": "长度",
-        "value": "133 mm"
-      }
-    ],
-    "materials": [
-      {
-        "part": "下座",
-        "material": "PC"
-      },
-      {
-        "part": "上盖",
-        "material": "PC"
-      },
-      {
-        "part": "齿轮",
-        "material": "POM"
-      },
-      {
-        "part": "外壳",
-        "material": "PBT"
-      }
-    ],
-    "applications": [
-      "汽车内饰",
-      "手套箱"
-    ],
-    "applicationScenarios": [],
-    "dimensionDrawing": "/images/products/rd-v127/size.webp",
-    "performanceCharts": {
-      "rotation": "/images/products/rd-v127/curve.webp",
-      "temperature": "/images/products/rd-v127/curve2.webp"
-    },
-    "variants": null
-  },
   "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html": {
     "path": "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html",
     "slug": "rd-v107",
@@ -4668,7 +4586,28 @@
       "rotation": "/images/products/rd-v127/curve.webp",
       "temperature": "/images/products/rd-v127/curve2.webp"
     },
-    "variants": null
+    "variants": {
+      "variants": [
+        "60mm",
+        "75MM"
+      ],
+      "rows": [
+        {
+          "param": "有效行程",
+          "values": [
+            "60mm",
+            "75MM"
+          ]
+        },
+        {
+          "param": "长度",
+          "values": [
+            "133 mm",
+            "133 mm"
+          ]
+        }
+      ]
+    }
   },
   "/Glove Box Dampers/liner-damper- RD-V126.html": {
     "path": "/Glove Box Dampers/liner-damper- RD-V126.html",

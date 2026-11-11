@@ -1383,26 +1383,6 @@
       }
     ]
   },
-  "/Glove Box Dampers/rd-v127-shiyongyuqicheshoutaoxiang-shounahe.html": {
-    "model": "RD-V127",
-    "torque": {
-      "min": 200,
-      "max": 1000,
-      "unit": "gf·cm"
-    },
-    "force": null,
-    "mounting": null,
-    "specs": [
-      {
-        "label": "有效行程",
-        "value": "60mm"
-      },
-      {
-        "label": "长度",
-        "value": "133 mm"
-      }
-    ]
-  },
   "/Glove Box Dampers/rd-v107shiyongyujiadianneishizuniqiqicheshoutaoxiangqicheshounahe.html": {
     "model": "RD-V107",
     "torque": {
