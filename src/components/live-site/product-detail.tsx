@@ -23,10 +23,10 @@ function SectionTitle({ index, title, description }: { index: string; title: str
   return (
     <div className="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
       <div className="flex items-baseline gap-4">
-        <span className="text-[11px] font-black tracking-[0.18em] text-brand-700">{index}</span>
-        <h2 className="text-[22px] font-black tracking-[-0.02em] text-ink sm:text-[26px]">{title}</h2>
+        <span className="text-micro font-semibold tracking-[0.14em] text-brand-700">{index}</span>
+        <h2 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">{title}</h2>
       </div>
-      {description && <p className="max-w-[380px] text-xs leading-relaxed text-muted">{description}</p>}
+      {description && <p className="max-w-[380px] text-caption leading-relaxed text-muted">{description}</p>}
     </div>
   );
 }
@@ -105,7 +105,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
       {/* Hero */}
       <section className="border-b border-line bg-gradient-to-b from-surface-warm via-white to-white">
         <div className={container}>
-          <nav aria-label="面包屑" className="flex flex-wrap items-center gap-2 pt-6 text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-light">
+          <nav aria-label="面包屑" className="flex flex-wrap items-center gap-2 pt-6 text-micro font-semibold uppercase tracking-[0.08em] text-muted-light">
             <Link href="/" className="transition-colors hover:text-brand-700">首页</Link>
             <span className="text-line">/</span>
             <Link href="/products/" className="transition-colors hover:text-brand-700">产品</Link>
@@ -115,7 +115,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <span aria-current="page" className="text-ink-soft">{product.model}</span>
           </nav>
 
-          <div className="grid items-start gap-10 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-14">
+          <div className="grid items-start gap-10 py-10 lg:grid-cols-[1fr_1.05fr] lg:gap-14 lg:py-14">
             <div className="lg:sticky lg:top-24 lg:self-start">
               <ProductGallery images={product.images} altBase={product.model} />
             </div>
@@ -123,18 +123,18 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <div className="flex flex-col">
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-brand-500" />
-                <span className="text-[11px] font-black uppercase tracking-[0.18em] text-brand-700">{category.label}</span>
+                <span className="text-micro font-semibold uppercase tracking-[0.14em] text-brand-700">{category.label}</span>
               </div>
 
-              <h1 className="mt-4 text-[clamp(32px,4.2vw,52px)] font-black leading-[0.98] tracking-[-0.045em] text-ink">
+              <h1 className="mt-4 text-[clamp(30px,3.6vw,46px)] font-bold leading-[1.08] tracking-[-0.02em] text-ink">
                 {product.name}
               </h1>
-              <p className="mt-4 max-w-[560px] text-[16px] leading-relaxed text-muted">{product.summary}</p>
+              <p className="mt-4 max-w-[560px] text-metric leading-relaxed text-ink-soft">{product.summary}</p>
 
               {product.characteristics.length > 0 && (
                 <div className="mt-5 flex flex-wrap gap-2">
                   {product.characteristics.map(item => (
-                    <span key={item} className="rounded-full border border-line bg-white px-3 py-1 text-[11px] font-bold tracking-[0.02em] text-ink-soft">{item}</span>
+                    <span key={item} className="rounded-full border border-line bg-white px-3.5 py-1.5 text-caption font-semibold text-ink-soft">{item}</span>
                   ))}
                 </div>
               )}
@@ -142,11 +142,11 @@ export default function ProductDetail({ product, category }: { product: ProductC
               {rangeBar && (
                 <div className="mt-8 rounded-2xl border border-brand-500/20 bg-white p-5 shadow-[0_10px_30px_rgba(232,120,26,0.06)]">
                   <div className="mb-3 flex items-end justify-between gap-4">
-                    <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.12em] text-muted-light">
+                    <span className="inline-flex items-center gap-2 text-micro font-semibold uppercase tracking-[0.12em] text-muted-light">
                       {torqueBar ? <Gauge size={14} className="text-brand-500" /> : <Wrench size={14} className="text-brand-500" />}
                       {torqueBar ? "可调扭矩" : "操作力"}
                     </span>
-                    <span className="text-xl font-black tabular-nums tracking-[-0.02em] text-ink">
+                    <span className="text-xl font-bold tabular-nums tracking-[-0.02em] text-ink sm:text-2xl">
                       {product.torque ? formatRange(product.torque) : product.force ? formatRange(product.force) : ""}
                     </span>
                   </div>
@@ -156,7 +156,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                       style={{ left: `${rangeBar.start}%`, width: `${rangeBar.width}%` }}
                     />
                   </div>
-                  <div className="mt-2 flex justify-between text-[10px] font-semibold tabular-nums text-muted-light">
+                  <div className="mt-2 flex justify-between text-micro font-medium tabular-nums text-muted-light">
                     <span>0</span>
                     <span>{rangeBar.scaleMax} {(product.torque ?? product.force)!.unit}</span>
                   </div>
@@ -168,10 +168,10 @@ export default function ProductDetail({ product, category }: { product: ProductC
                   {stats.map((item, index) => (
                     <div
                       key={item.label}
-                      className={`bg-white px-4 py-3 ${index === stats.length - 1 && stats.length % 2 === 1 ? "col-span-2" : ""}`}
+                      className={`bg-white px-4 py-3.5 ${index === stats.length - 1 && stats.length % 2 === 1 ? "col-span-2" : ""}`}
                     >
-                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-light">{item.label}</p>
-                      <p className="mt-1 text-[15px] font-black tabular-nums text-ink">{item.value}</p>
+                      <p className="text-micro font-semibold uppercase tracking-[0.12em] text-muted-light">{item.label}</p>
+                      <p className="mt-1 text-metric font-bold tabular-nums text-ink">{item.value}</p>
                     </div>
                   ))}
                 </div>
@@ -180,20 +180,20 @@ export default function ProductDetail({ product, category }: { product: ProductC
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-sm font-bold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-body font-bold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
                 >
                   获取报价
                   <ArrowUpRight size={16} />
                 </Link>
                 <a
                   href={telHref(contact.primaryMobile)}
-                  className="inline-flex items-center rounded-full border border-line bg-white px-8 py-4 text-sm font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  className="inline-flex items-center rounded-full border border-line bg-white px-8 py-4 text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   电话咨询
                 </a>
               </div>
 
-              <p className="mt-5 text-[11px] leading-relaxed text-muted-light">
+              <p className="mt-5 text-caption leading-relaxed text-muted-light">
                 支持按应用调校扭矩、方向与安装结构;提供样品验证与 PPAP 文档。
               </p>
             </div>
@@ -219,12 +219,12 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <div className={`grid gap-6 ${product.specifications.length > 0 && product.materials.length > 0 ? "lg:grid-cols-2" : ""}`}>
               {product.specifications.length > 0 && (
                 <div className="rounded-2xl border border-line bg-white p-6">
-                  <h3 className="mb-4 text-[13px] font-black uppercase tracking-[0.12em] text-ink">规格</h3>
+                  <h3 className="mb-4 text-caption font-bold uppercase tracking-[0.12em] text-ink">规格</h3>
                   <table className="w-full">
                     <tbody>
                       {product.specifications.map(spec => (
                         <tr key={spec.label} className="border-t border-line-soft transition-colors first:border-t-0 hover:bg-surface/70">
-                          <th scope="row" className="py-3 pr-4 text-left text-[12px] font-medium uppercase tracking-[0.04em] text-muted">{spec.label}</th>
+                          <th scope="row" className="py-3 pr-4 text-left text-micro font-medium text-muted">{spec.label}</th>
                           <td className="py-3 text-right text-sm font-bold tabular-nums text-ink">{spec.value}</td>
                         </tr>
                       ))}
@@ -235,12 +235,12 @@ export default function ProductDetail({ product, category }: { product: ProductC
 
               {product.materials.length > 0 && (
                 <div className="rounded-2xl border border-line bg-white p-6">
-                  <h3 className="mb-4 text-[13px] font-black uppercase tracking-[0.12em] text-ink">材料清单</h3>
+                  <h3 className="mb-4 text-caption font-bold uppercase tracking-[0.12em] text-ink">材料清单</h3>
                   <table className="w-full">
                     <tbody>
                       {product.materials.map(item => (
                         <tr key={item.part} className="border-t border-line-soft transition-colors first:border-t-0 hover:bg-surface/70">
-                          <th scope="row" className="py-3 pr-4 text-left text-[12px] font-medium uppercase tracking-[0.04em] text-muted">{item.part}</th>
+                          <th scope="row" className="py-3 pr-4 text-left text-micro font-medium text-muted">{item.part}</th>
                           <td className="py-3 text-right text-sm font-bold tabular-nums text-ink">{item.material}</td>
                         </tr>
                       ))}
@@ -260,9 +260,9 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <table className="w-full min-w-[620px] text-left text-sm">
               <thead className="border-b border-brand-500/20 bg-brand-50 text-brand-700">
                 <tr>
-                  <th scope="col" className="px-5 py-4 text-[10px] font-black uppercase tracking-[0.14em] text-brand-700/70">参数</th>
+                  <th scope="col" className="px-5 py-4 text-micro font-semibold uppercase tracking-[0.14em] text-brand-700/70">参数</th>
                   {product.variants.variants.map(model => (
-                    <th key={model} scope="col" className="px-5 py-4 text-right text-[12px] font-black tabular-nums">{model}</th>
+                    <th key={model} scope="col" className="px-5 py-4 text-right text-caption font-bold tabular-nums">{model}</th>
                   ))}
                 </tr>
               </thead>
@@ -271,7 +271,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                   const uniform = row.values.every(value => value === row.values[0]);
                   return (
                     <tr key={row.param} className={`border-t border-line-soft ${uniform ? "text-muted-light" : "text-ink"}`}>
-                      <th scope="row" className="px-5 py-3 text-left text-[12px] font-medium uppercase tracking-[0.04em]">{row.param}</th>
+                      <th scope="row" className="px-5 py-3 text-left text-micro font-medium">{row.param}</th>
                       {row.values.map((value, index) => (
                         <td key={`${row.param}-${index}`} className="px-5 py-3 text-right font-semibold tabular-nums">{value}</td>
                       ))}
@@ -297,7 +297,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                   <div className="relative aspect-[2/1] rounded-xl bg-[radial-gradient(circle_at_30%_20%,rgba(232,120,26,0.05),transparent_45%)]">
                     <Image src={chart.src} alt={`${product.model} ${chart.label}`} fill sizes="(max-width: 1024px) 100vw, 600px" className="object-contain" />
                   </div>
-                  <figcaption className="mt-4 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.1em] text-muted">
+                  <figcaption className="mt-4 flex items-center gap-2 text-micro font-semibold uppercase tracking-[0.1em] text-muted">
                     <span className="h-px w-6 bg-brand-500" />
                     {chart.label}
                   </figcaption>
@@ -317,7 +317,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 <div className="relative aspect-[4/3] bg-surface">
                   <Image src={scene.image} alt={scene.label} fill unoptimized sizes="(max-width: 768px) 100vw, 400px" className="object-contain p-2" />
                 </div>
-                <figcaption className="border-t border-line-soft px-4 py-3 text-[13px] font-bold text-ink">{scene.label}</figcaption>
+                <figcaption className="border-t border-line-soft px-4 py-3 text-caption font-semibold text-ink">{scene.label}</figcaption>
               </figure>
             ))}
           </div>
@@ -331,7 +331,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
             {faq.map((item, index) => (
               <details key={item.question} className="group">
                 <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-5 text-sm font-bold text-ink lg:px-6">
-                  <span className="text-[11px] font-black tabular-nums text-brand-700">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="text-micro font-semibold tabular-nums text-brand-700">{String(index + 1).padStart(2, "0")}</span>
                   <span className="flex-1">{item.question}</span>
                   <span className="shrink-0 text-lg font-light text-brand-700 transition-transform group-open:rotate-45">+</span>
                 </summary>
@@ -347,8 +347,8 @@ export default function ProductDetail({ product, category }: { product: ProductC
           <div className={`${container} py-14`}>
             <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
               <div className="flex items-baseline gap-4">
-                <span className="text-[11px] font-black tracking-[0.18em] text-brand-700">{nextSection()}</span>
-                <h2 className="text-[22px] font-black tracking-[-0.02em] text-ink sm:text-[26px]">相关产品</h2>
+                <span className="text-micro font-semibold tracking-[0.14em] text-brand-700">{nextSection()}</span>
+                <h2 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">相关产品</h2>
               </div>
               <Link href={liveHref(category.path)} className="text-sm font-bold text-brand-700 hover:underline">
                 查看全部 {category.label} →

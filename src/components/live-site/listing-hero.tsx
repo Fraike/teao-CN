@@ -5,7 +5,7 @@ export default function ListingHero({ title, description, crumb }: { title: stri
   return (
     <section className="pb-8 pt-10 lg:pb-12 lg:pt-14">
       <div className={container}>
-        <nav aria-label="面包屑" className="flex flex-wrap items-center gap-2 text-sm text-muted">
+        <nav aria-label="面包屑" className="flex flex-wrap items-center gap-2 text-body text-muted">
           <Link href="/" className="transition-colors hover:text-brand-700">首页</Link>
           <span className="text-line">/</span>
           <Link href="/products/" className="transition-colors hover:text-brand-700">产品</Link>
@@ -16,8 +16,8 @@ export default function ListingHero({ title, description, crumb }: { title: stri
             </>
           )}
         </nav>
-        <h1 className="mt-5 text-[clamp(34px,4.5vw,52px)] font-black leading-[1.02] tracking-[-0.04em] text-ink">{title}</h1>
-        {description && <p className="mt-4 max-w-[640px] text-[16px] leading-relaxed text-muted">{description}</p>}
+        <h1 className="mt-5 text-[clamp(34px,4.5vw,52px)] font-bold leading-[1.1] tracking-[-0.02em] text-ink">{title}</h1>
+        {description && <p className="mt-4 max-w-[640px] text-body-lg leading-relaxed text-muted">{description}</p>}
       </div>
     </section>
   );

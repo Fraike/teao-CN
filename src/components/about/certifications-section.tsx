@@ -29,11 +29,11 @@ export function CertificationsSection() {
                   </div>
 
                   <div className="flex-1">
-                    <span className="inline-flex rounded-full bg-green/10 px-2.5 py-0.5 text-[10px] font-extrabold text-green tracking-wider">
+                    <span className="inline-flex rounded-full bg-green/10 px-2.5 py-0.5 text-micro font-extrabold text-green tracking-wider">
                       已获证
                     </span>
                     <h3 className="mt-2 text-lg font-extrabold text-ink">{cert.name}</h3>
-                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted">
+                    <p className="mt-1.5 text-caption leading-relaxed text-muted">
                       {cert.description}
                     </p>
                   </div>
@@ -46,10 +46,10 @@ export function CertificationsSection() {
         {/* Patent Certificates */}
         <Reveal>
           <div className="mb-6 text-center">
-            <span className="inline-flex rounded-full bg-brand-50 px-3 py-1 text-[11px] font-bold text-brand-700">
+            <span className="inline-flex rounded-full bg-brand-50 px-3 py-1 text-micro font-bold text-brand-700">
               国家专利证书
             </span>
-            <p className="mt-1.5 text-[13px] text-muted">
+            <p className="mt-1.5 text-caption text-muted">
               持续创新，已获得多项结构设计及功能专利
             </p>
           </div>
@@ -69,8 +69,8 @@ export function CertificationsSection() {
                   />
                 </div>
                 <figcaption className="border-t border-line-soft px-4 py-3.5">
-                  <h4 className="text-[13px] font-extrabold text-ink">{pat.name}</h4>
-                  <p className="mt-1 text-[11.5px] leading-relaxed text-muted">{pat.description}</p>
+                  <h4 className="text-caption font-extrabold text-ink">{pat.name}</h4>
+                  <p className="mt-1 text-micro leading-relaxed text-muted">{pat.description}</p>
                 </figcaption>
               </figure>
             </Reveal>

@@ -22,8 +22,8 @@ export function ServiceIndustries() {
                   <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-50 transition-all duration-300 group-hover:bg-brand-500">
                     <Icon className="h-6 w-6 text-brand-500 transition-colors duration-300 group-hover:text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mt-3 text-base font-extrabold text-ink">{industry.name}</h3>
-                  <p className="mt-2 text-[12.5px] leading-relaxed text-muted">
+                  <h3 className="mt-3 text-body-lg font-extrabold text-ink">{industry.name}</h3>
+                  <p className="mt-2 text-caption leading-relaxed text-muted">
                     {industry.description}
                   </p>
                 </div>

@@ -49,7 +49,7 @@ export function HeroSection() {
         <div>
           {/* Eyebrow tag */}
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-[12.5px] font-bold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
+            <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-caption font-bold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
               <span className="h-[7px] w-[7px] rounded-full bg-brand-500 shadow-[0_0_8px_rgba(232,120,26,0.15)]" />
               面向汽车 · 家电 · 卫浴 · 医疗 · 工业供应链
             </div>
@@ -77,7 +77,7 @@ export function HeroSection() {
 
           {/* Description */}
           <Reveal delay={2}>
-            <p className="mt-4 max-w-[600px] text-[15px] leading-[1.8] text-muted">
+            <p className="mt-4 max-w-[600px] text-body-lg leading-[1.8] text-muted">
               专注阻尼器与锁扣机构研发制造,支持扭矩、方向与安装结构按图定制,从打样到量产一体化交付。
             </p>
           </Reveal>
@@ -96,7 +96,7 @@ export function HeroSection() {
 
           {/* Scene tags */}
           <Reveal delay={5}>
-            <p className="mt-4 text-[12.5px] font-medium leading-[1.7] text-muted-light">
+            <p className="mt-4 text-caption font-medium leading-[1.7] text-muted-light">
               适用于：
               {sceneTags.map((tag) => (
                 <code
@@ -126,7 +126,7 @@ export function HeroSection() {
                     : "h-[205px] bg-white"
                 }`}
               >
-                <span className="absolute left-4 top-3 text-[10px] font-black tracking-[0.2em] text-brand-700/50">
+                <span className="absolute left-4 top-3 text-micro font-black tracking-[0.2em] text-brand-700/50">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <Image
@@ -137,13 +137,13 @@ export function HeroSection() {
                   sizes={index === 0 ? "600px" : "300px"}
                   className="object-contain p-7 transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-ink shadow-sm">
+                <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-micro font-bold text-ink shadow-sm">
                   {category.label}
                 </span>
               </Link>
             ))}
           </div>
-          <p className="relative mt-4 text-right text-[11px] font-semibold tracking-[0.12em] text-muted-light">
+          <p className="relative mt-4 text-right text-micro font-semibold tracking-[0.12em] text-muted-light">
             核心产品 · 5 大产品线
           </p>
         </aside>

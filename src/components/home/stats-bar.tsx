@@ -103,7 +103,7 @@ export function StatsBar() {
                   stat.value
                 )}
               </div>
-              <span className="mt-1.5 block text-[12.5px] font-semibold tracking-[0.02em] text-muted">
+              <span className="mt-1.5 block text-caption font-semibold tracking-[0.02em] text-muted">
                 {stat.label}
               </span>
             </div>

@@ -67,7 +67,7 @@ export function PeopleCulture() {
                   <h3 className="mt-4 text-[17px] font-extrabold tracking-[-0.02em] text-ink">
                     {item.name}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+                  <p className="mt-2 text-body leading-relaxed text-muted">{item.description}</p>
                 </div>
               </Reveal>
             );

@@ -40,12 +40,12 @@ export default function Footer() {
             <Link href="/" aria-label="特澳 TEAO 首页" className="relative block h-10 w-[106px]">
               <Image src="/images/logo-color.webp" alt="TEAO 特澳" fill sizes="106px" className="object-contain object-left" />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-7 text-muted">
+            <p className="mt-4 max-w-sm text-body leading-7 text-muted">
               东莞市特澳电子科技有限公司，专注阻尼器与锁扣机构研发制造。
             </p>
 
             <div className="mt-5">
-              <p className="text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">关注我们</p>
+              <p className="text-micro font-black uppercase tracking-[0.14em] text-muted-light">关注我们</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <a
                   href={ALIBABA_INTL_URL}
@@ -67,7 +67,7 @@ export default function Footer() {
             </div>
             <Link
               href="/contacts/"
-              className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
+              className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-body font-bold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
             >
               获取报价
             </Link>
@@ -77,11 +77,11 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:pt-2">
             {footerLinks.map(group => (
               <div key={group.title}>
-                <h3 className="mb-4 text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">{group.title}</h3>
+                <h3 className="mb-4 text-micro font-black uppercase tracking-[0.14em] text-muted-light">{group.title}</h3>
                 <ul className="space-y-2.5">
                   {group.links.map(link => (
                     <li key={link.label}>
-                      <Link href={link.href} className="text-sm text-ink-soft transition-colors hover:text-brand-700">
+                      <Link href={link.href} className="text-body text-ink-soft transition-colors hover:text-brand-700">
                         {link.label}
                       </Link>
                     </li>

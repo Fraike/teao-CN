@@ -56,7 +56,7 @@ export default function ProductList({
               }}
               placeholder="搜索型号…"
               aria-label="搜索产品型号"
-              className="h-9 w-full rounded-lg border border-line bg-white pl-9 pr-3 text-[13px] text-ink transition-all placeholder:text-muted-light focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
+              className="h-9 w-full rounded-lg border border-line bg-white pl-9 pr-3 text-caption text-ink transition-all placeholder:text-muted-light focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
             />
           </div>
         )}
@@ -70,7 +70,7 @@ export default function ProductList({
           <ListingPagination page={current} totalPages={totalPages} onChange={changePage} />
         </>
       ) : (
-        <div className="py-16 text-center text-sm text-muted-light">没有找到匹配的产品,试试其他型号关键词。</div>
+        <div className="py-16 text-center text-body text-muted-light">没有找到匹配的产品,试试其他型号关键词。</div>
       )}
     </section>
   );

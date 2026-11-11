@@ -58,13 +58,13 @@ export default function ConvertPage() {
                 <div className="h-full rounded-2xl border border-line bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   <span className="text-xs font-bold tracking-[0.14em] text-brand-700">{item.step}</span>
                   <h3 className="mt-2 font-bold text-ink">{item.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted">{item.description}</p>
+                  <p className="mt-1.5 text-body leading-relaxed text-muted">{item.description}</p>
                 </div>
               </Reveal>
             ))}
           </div>
 
-          <div className="mt-8 rounded-xl border border-line bg-surface p-5 text-center text-sm leading-relaxed text-muted">
+          <div className="mt-8 rounded-xl border border-line bg-surface p-5 text-center text-body leading-relaxed text-muted">
             <strong className="text-brand-700">特澳提示:</strong>
             不同厂商的阻尼器扭矩标注单位差异较大——gf·cm、N·m、mN·m、kgf·cm 等。对比产品参数时,可用本工具快速统一单位。
           </div>

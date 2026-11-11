@@ -1,0 +1,9 @@
+MiSans
+Copyright © 2020-2023 Beijing Xiaomi Mobile Software Co., Ltd. All Rights Reserved.
+
+MiSans 由小米发布，允许免费商业使用。字体源文件经场景子集化后随本站分发，
+仅包含站点实际使用的字符。
+
+原始字体: MiSans VF v4.003 (Hanyi Fonts / Xiaomi)
+源文件来源: npm 包 @fontpkg/mi-sans-vf
+生成脚本: scripts/build-fonts.mjs

@@ -62,10 +62,10 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
           <article>
             {takeaways.length > 0 && (
               <div className="mb-8 rounded-2xl border border-brand-500/20 bg-brand-50/60 p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-brand-700">核心要点</p>
+                <p className="text-micro font-black uppercase tracking-[0.14em] text-brand-700">核心要点</p>
                 <ul className="mt-3 space-y-2">
                   {takeaways.map(item => (
-                    <li key={item} className="flex items-start gap-2 text-[14px] leading-relaxed text-ink-soft">
+                    <li key={item} className="flex items-start gap-2 text-body leading-relaxed text-ink-soft">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
                       {item}
                     </li>
@@ -85,17 +85,17 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
             <div className="rich-text mt-8" dangerouslySetInnerHTML={{ __html: html }} />
 
             <div className="mt-12 border-t border-line pt-8">
-              <Link href="/news/" className="text-sm font-medium text-muted transition-colors hover:text-brand-700">← 返回新闻列表</Link>
+              <Link href="/news/" className="text-body font-medium text-muted transition-colors hover:text-brand-700">← 返回新闻列表</Link>
             </div>
           </article>
 
           <aside className="space-y-4 lg:sticky lg:top-24">
             {headings.length > 0 && (
               <nav aria-label="本文目录" className="rounded-2xl border border-line bg-white p-5">
-                <h2 className="mb-3 text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">本文目录</h2>
+                <h2 className="mb-3 text-micro font-black uppercase tracking-[0.14em] text-muted-light">本文目录</h2>
                 <ol className="space-y-2">
                   {headings.map((heading, index) => (
-                    <li key={heading.id} className="flex gap-2 text-[13px] leading-snug">
+                    <li key={heading.id} className="flex gap-2 text-caption leading-snug">
                       <span className="font-black tabular-nums text-brand-700">{String(index + 1).padStart(2, "0")}</span>
                       <a href={`#${heading.id}`} className="text-ink-soft transition-colors hover:text-brand-700">{heading.text}</a>
                     </li>
@@ -106,14 +106,14 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
 
             {related.length > 0 && (
               <div className="rounded-2xl border border-line bg-white p-5">
-                <h2 className="mb-3 text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">相关文章</h2>
+                <h2 className="mb-3 text-micro font-black uppercase tracking-[0.14em] text-muted-light">相关文章</h2>
                 <ul className="space-y-3">
                   {related.map(item => (
                     <li key={item.slug}>
-                      <Link href={`/news/${item.slug}.html`} className="text-[13px] font-semibold leading-snug text-ink-soft transition-colors hover:text-brand-700">
+                      <Link href={`/news/${item.slug}.html`} className="text-caption font-semibold leading-snug text-ink-soft transition-colors hover:text-brand-700">
                         {item.title}
                       </Link>
-                      <p className="mt-0.5 text-[11px] text-muted-light">{item.publishedAt}</p>
+                      <p className="mt-0.5 text-micro text-muted-light">{item.publishedAt}</p>
                     </li>
                   ))}
                 </ul>
@@ -121,9 +121,9 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
             )}
 
             <div className="rounded-2xl border border-line bg-surface-warm p-5">
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
+              <p className="text-micro font-black uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
               <p className="mt-1 text-lg font-black text-ink">{contact.primaryName}</p>
-              <div className="mt-2 space-y-1.5 text-[13px] text-muted">
+              <div className="mt-2 space-y-1.5 text-caption text-muted">
                 <a href={telHref(contact.primaryMobile)} className="flex items-center gap-2 transition-colors hover:text-brand-700">
                   <Phone size={14} className="text-brand-700" />
                   {contact.primaryMobile}
@@ -133,7 +133,7 @@ export default async function NewsArticlePage({ article }: { article: PublicNews
                   微信 {contact.wechat}
                 </p>
               </div>
-              <Link href="/contacts/" className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-500 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-700">
+              <Link href="/contacts/" className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-500 px-4 py-2.5 text-body font-bold text-white transition-colors hover:bg-brand-700">
                 获取报价
               </Link>
             </div>

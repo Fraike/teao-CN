@@ -31,7 +31,7 @@ export function CoreCapabilities() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <span className="rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-[11px] font-extrabold text-brand-700">
+                      <span className="rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-micro font-extrabold text-brand-700">
                         {item.subtitle}
                       </span>
                     </div>
@@ -43,7 +43,7 @@ export function CoreCapabilities() {
                       <Icon className="mt-0.5 h-6 w-6 shrink-0 text-brand-500" strokeWidth={1.5} />
                       <div>
                         <h3 className="text-lg font-extrabold text-ink">{item.title}</h3>
-                        <p className="mt-2 text-[13.5px] leading-relaxed text-muted">
+                        <p className="mt-2 text-caption leading-relaxed text-muted">
                           {item.description}
                         </p>
                       </div>
@@ -54,7 +54,7 @@ export function CoreCapabilities() {
                       {item.highlights.map((h) => (
                         <span
                           key={h}
-                          className="inline-flex items-center gap-1 rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-[11px] font-bold text-brand-700"
+                          className="inline-flex items-center gap-1 rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-micro font-bold text-brand-700"
                         >
                           <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />

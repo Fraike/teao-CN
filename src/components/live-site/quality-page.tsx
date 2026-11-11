@@ -54,7 +54,7 @@ export default function QualityPage() {
                       <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold text-brand-700">{card.badge}</span>
                     </div>
                     <h3 className="text-2xl font-bold">{card.title}</h3>
-                    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
+                    <ul className="mt-4 space-y-3 text-body leading-relaxed text-muted">
                       {card.points.map(point => (
                         <li key={point} className="flex items-start gap-2.5">
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
@@ -83,8 +83,8 @@ export default function QualityPage() {
                       <Icon className="h-5 w-5 text-brand-700" />
                     </span>
                     <div>
-                      <h4 className="text-[15px] font-bold text-ink">{cap.title}</h4>
-                      <p className="mt-1.5 text-sm leading-relaxed text-muted">{cap.description}</p>
+                      <h4 className="text-body-lg font-bold text-ink">{cap.title}</h4>
+                      <p className="mt-1.5 text-body leading-relaxed text-muted">{cap.description}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -104,14 +104,14 @@ export default function QualityPage() {
                 <ul className="space-y-4">
                   {group.items.map(item => (
                     <li key={item.equipment}>
-                      <div className="text-[13px] font-bold leading-snug text-ink">{item.equipment}</div>
-                      <div className="mt-2 grid grid-cols-2 gap-2 text-[11px]">
+                      <div className="text-caption font-bold leading-snug text-ink">{item.equipment}</div>
+                      <div className="mt-2 grid grid-cols-2 gap-2 text-micro">
                         <span className="rounded-lg bg-surface px-2.5 py-2 text-muted">
-                          <span className="block text-[9px] font-bold uppercase tracking-wider">量程</span>
+                          <span className="block text-micro font-bold uppercase tracking-wider">量程</span>
                           <span className="mt-0.5 block font-bold">{item.range}</span>
                         </span>
                         <span className="rounded-lg bg-surface px-2.5 py-2 text-muted">
-                          <span className="block text-[9px] font-bold uppercase tracking-wider">精度</span>
+                          <span className="block text-micro font-bold uppercase tracking-wider">精度</span>
                           <span className="mt-0.5 block font-bold">{item.accuracy}</span>
                         </span>
                       </div>
@@ -132,7 +132,7 @@ export default function QualityPage() {
           <div>
             <h3 className="text-xl font-bold">{iatfNote.title}</h3>
             <p className="mb-6 mt-3 leading-relaxed text-muted">{iatfNote.description}</p>
-            <Link href={iatfNote.ctaHref} className="inline-flex items-center justify-center rounded-lg border border-line bg-white px-7 py-3.5 text-sm font-bold text-ink-soft transition-all hover:border-brand-500 hover:bg-brand-50 hover:text-brand-700">
+            <Link href={iatfNote.ctaHref} className="inline-flex items-center justify-center rounded-lg border border-line bg-white px-7 py-3.5 text-body font-bold text-ink-soft transition-all hover:border-brand-500 hover:bg-brand-50 hover:text-brand-700">
               {iatfNote.ctaLabel} →
             </Link>
           </div>
@@ -143,7 +143,7 @@ export default function QualityPage() {
         <div className={`${container} py-16 lg:py-20 text-center`}>
           <Reveal>
             <h2 className="text-[28px] font-bold tracking-tight sm:text-[34px]">需要验证过的质量数据?</h2>
-            <p className="mx-auto mb-8 mt-4 max-w-xl text-[15px] text-muted">可索取 PPAP 文档、扭矩测试报告与质量认证,用于你的项目评估。</p>
+            <p className="mx-auto mb-8 mt-4 max-w-xl text-body-lg text-muted">可索取 PPAP 文档、扭矩测试报告与质量认证,用于你的项目评估。</p>
             <Button href={liveHref("/contacts/")}>索取质量文档 →</Button>
           </Reveal>
         </div>

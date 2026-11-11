@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const base = "grid h-9 min-w-9 place-items-center rounded-lg px-3 text-sm font-semibold transition-colors";
+const base = "grid h-9 min-w-9 place-items-center rounded-lg px-3 text-body font-semibold transition-colors";
 const idle = `${base} border border-line bg-white text-muted hover:border-brand-500 hover:text-brand-700`;
 const activeCls = `${base} bg-brand-500 text-white`;
 const disabled = `${base} border border-line bg-white text-muted opacity-30 pointer-events-none`;

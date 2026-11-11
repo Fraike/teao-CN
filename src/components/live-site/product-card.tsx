@@ -23,7 +23,7 @@ export default function ProductCard({ product }: { product: EnrichedProduct }) {
 
       <div className="flex min-w-0 flex-col">
         <a href={href}>
-          <h3 className="line-clamp-1 text-[15px] font-black leading-tight tracking-[-0.01em] text-ink transition-colors group-hover:text-brand-700 lg:text-base">
+          <h3 className="line-clamp-1 text-[16px] font-bold leading-tight tracking-[-0.01em] text-ink transition-colors group-hover:text-brand-700 lg:text-[17px]">
             {product.model}
           </h3>
         </a>
@@ -41,8 +41,8 @@ export default function ProductCard({ product }: { product: EnrichedProduct }) {
                   key={chip.label}
                   className={`inline-flex min-w-0 items-center gap-1 rounded-full border px-2 py-0.5 lg:gap-1.5 lg:px-2.5 lg:py-1 ${accent ? "border-brand-500/30 bg-brand-50" : "border-line bg-white"}`}
                 >
-                  <span className={`shrink-0 text-[9px] uppercase tracking-[0.04em] lg:text-[10px] ${accent ? "text-brand-700" : "text-muted-light"}`}>{chip.label}</span>
-                  <span className={`truncate text-[11px] lg:text-[12px] ${accent ? "font-semibold text-brand-700" : "text-ink-soft"}`}>{chip.value}</span>
+                  <span className={`shrink-0 text-[11px] uppercase tracking-[0.04em] ${accent ? "text-brand-700" : "text-muted-light"}`}>{chip.label}</span>
+                  <span className={`truncate text-[12px] lg:text-[12.5px] ${accent ? "font-semibold text-brand-700" : "text-ink-soft"}`}>{chip.value}</span>
                 </span>
               );
             })}
@@ -68,14 +68,14 @@ function RangeBlock({ product }: { product: EnrichedProduct }) {
     return (
       <div className="rounded-xl border border-brand-500/25 bg-gradient-to-br from-brand-50/70 to-brand-50 px-3 py-2 lg:px-3.5 lg:py-2.5">
         <div className="mb-1.5 flex items-center justify-between gap-2 lg:gap-3">
-          <span className="inline-flex items-center gap-1.5 text-[9px] font-medium uppercase tracking-[0.06em] text-muted-light lg:text-[10px]">
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.06em] text-muted-light">
             <Gauge size={12} className="text-brand-500 lg:h-[13px] lg:w-[13px]" />
             可调扭矩
           </span>
-          <span className="text-[10px] font-semibold tabular-nums text-ink lg:text-[11px]">{formatTorque(product.torque)}</span>
+          <span className="text-[12px] font-semibold tabular-nums text-ink lg:text-[12.5px]">{formatTorque(product.torque)}</span>
         </div>
         <Bar bar={torqueBar} />
-        <div className="mt-1 flex justify-between text-[9px] text-muted-light">
+        <div className="mt-1 flex justify-between text-[11px] text-muted-light">
           <span>0</span>
           <span>{torqueBar.scaleMax} {product.torque.unit}</span>
         </div>
@@ -87,16 +87,16 @@ function RangeBlock({ product }: { product: EnrichedProduct }) {
     return (
       <div className="rounded-xl border border-brand-500/25 bg-gradient-to-br from-brand-50/70 to-brand-50 px-3 py-2 lg:px-3.5 lg:py-2.5">
         <div className="mb-1.5 flex items-center justify-between gap-2 lg:gap-3">
-          <span className="inline-flex items-center gap-1.5 text-[9px] font-medium uppercase tracking-[0.06em] text-muted-light lg:text-[10px]">
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.06em] text-muted-light">
             <Wrench size={12} className="text-brand-500 lg:h-[13px] lg:w-[13px]" />
             操作力
           </span>
-          <span className="text-[10px] font-semibold tabular-nums text-ink lg:text-[11px]">
+          <span className="text-[12px] font-semibold tabular-nums text-ink lg:text-[12.5px]">
             {product.force.min === product.force.max ? `${product.force.min} ${product.force.unit}` : `${product.force.min} – ${product.force.max} ${product.force.unit}`}
           </span>
         </div>
         <Bar bar={forceBar} />
-        <div className="mt-1 flex justify-between text-[9px] text-muted-light">
+        <div className="mt-1 flex justify-between text-[11px] text-muted-light">
           <span>0</span>
           <span>{forceBar.scaleMax} {product.force.unit}</span>
         </div>
@@ -105,7 +105,7 @@ function RangeBlock({ product }: { product: EnrichedProduct }) {
   }
 
   return (
-    <div className="rounded-xl border border-dashed border-line bg-surface px-3 py-2 text-[10px] text-muted-light lg:px-3.5 lg:py-2.5 lg:text-[11px]">
+    <div className="rounded-xl border border-dashed border-line bg-surface px-3.5 py-2.5 text-[12px] text-muted-light">
       扭矩可定制
     </div>
   );

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @theme inline {
   /* Brand */
@@ -22,21 +23,28 @@
   --color-red: #D14343;
   --color-blue: #3B82C4;
   /* Font */
-  --font-sans: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
+  --font-sans: "MiSans VF", "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Type scale：全站只用这 5 档，禁止再散写 text-[Npx] */
+  --text-micro: 0.75rem;     /* 12px 最小字号：标签、元信息 */
+  --text-caption: 0.8125rem; /* 13px：eyebrow、chip */
+  --text-body: 0.9375rem;    /* 15px：默认 UI 文本 */
+  --text-body-lg: 1rem;      /* 16px：正文、描述 */
+  --text-metric: 1.125rem;   /* 18px：参数数值 */
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     background: var(--color-surface);
   }
   body {
     font-family: var(--font-sans);
     color: var(--color-ink);
-    line-height: 1.7;
-    font-size: 15px;
+    line-height: 1.75;
+    font-size: 1rem;
     overflow-x: hidden;
     background: var(--color-surface);
   }
@@ -49,7 +57,7 @@
 }
 
 /* ── Rich text (admin editor + public article body) ── */
-.rich-text { color: var(--color-ink-soft); font-size: 15px; line-height: 1.9; }
+.rich-text { color: var(--color-ink-soft); font-size: 1rem; line-height: 1.9; }
 .rich-text > * + * { margin-top: 1.1em; }
 .rich-text h2 { margin-top: 2.2em; font-size: 22px; font-weight: 900; letter-spacing: -0.02em; color: var(--color-ink); }
 .rich-text h3 { margin-top: 1.8em; font-size: 17px; font-weight: 700; color: var(--color-ink); }

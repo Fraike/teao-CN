@@ -23,10 +23,10 @@ export function CompanyTimeline() {
                   <b className="block text-xl font-black tracking-tight text-ink transition-colors duration-300 group-hover:text-brand-600">
                     {item.year}
                   </b>
-                  <h3 className="mt-1.5 text-sm font-extrabold leading-tight text-ink-soft">
+                  <h3 className="mt-1.5 text-body font-extrabold leading-tight text-ink-soft">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-[12.5px] leading-relaxed text-muted">
+                  <p className="mt-2 text-caption leading-relaxed text-muted">
                     {item.description}
                   </p>
 

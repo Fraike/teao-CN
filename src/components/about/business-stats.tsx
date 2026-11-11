@@ -70,8 +70,8 @@ export function BusinessStats() {
                 <span className="block text-[36px] font-black leading-none tracking-[-0.04em] text-brand-500 tabular-nums lg:text-[44px]">
                   {parsed ? <CountUp target={parsed.target} suffix={parsed.suffix} /> : stat.value}
                 </span>
-                <span className="mt-3 block text-sm font-bold leading-snug text-ink">{stat.label}</span>
-                <span className="mt-1 block text-[11px] font-semibold text-muted-light">{stat.unit}</span>
+                <span className="mt-3 block text-body font-bold leading-snug text-ink">{stat.label}</span>
+                <span className="mt-1 block text-micro font-semibold text-muted-light">{stat.unit}</span>
               </div>
             );
           })}

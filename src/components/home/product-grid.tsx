@@ -36,8 +36,8 @@ export async function ProductGrid() {
 
                 {/* Body */}
                 <div className="px-5 pb-5">
-                  <h3 className="text-base font-bold text-ink transition-colors group-hover:text-brand-700">{cat.label}</h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-[12px] font-bold text-brand-700">
+                  <h3 className="text-body-lg font-bold text-ink transition-colors group-hover:text-brand-700">{cat.label}</h3>
+                  <span className="mt-2 inline-flex items-center gap-1 text-caption font-bold text-brand-700">
                     查看分类
                     <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                   </span>

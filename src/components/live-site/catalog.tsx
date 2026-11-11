@@ -24,7 +24,7 @@ export function Breadcrumb({ product = false, category = liveCatalog[0] }: { pro
 
 export function CategoryNav({ active = "/gear-damper/" }: { active?: string }) {
   return <nav aria-label="产品类别" className="flex flex-wrap gap-2">{liveCategories.map(category =>
-    <a key={category.path} href={liveHref(category.path)} aria-current={category.path === active ? "page" : undefined} className={`rounded-md border px-4 py-3 text-sm font-semibold transition-colors ${category.path === active ? "border-brand-500 bg-brand-500 text-white" : "border-line bg-white hover:border-brand-500 hover:text-brand-700"}`}>{category.label}</a>
+    <a key={category.path} href={liveHref(category.path)} aria-current={category.path === active ? "page" : undefined} className={`rounded-md border px-4 py-3 text-body font-semibold transition-colors ${category.path === active ? "border-brand-500 bg-brand-500 text-white" : "border-line bg-white hover:border-brand-500 hover:text-brand-700"}`}>{category.label}</a>
   )}</nav>;
 }
 
@@ -36,9 +36,9 @@ export function ProductCards({ related = false, items = products }: { related?: 
         <Image src={product.image} alt={product.title} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 300px" className="object-contain p-4" draggable={false} />
       </a>
       <div className="p-5"><h3 className="text-lg font-bold"><a href={liveHref(product.path)}>{product.model}</a></h3>
-        <p className="mt-2 line-clamp-2 min-h-12 text-sm text-muted">{product.title}</p>
+        <p className="mt-2 line-clamp-2 min-h-12 text-body text-muted">{product.title}</p>
         {!related && <ul className="mt-4 space-y-1 border-t border-line-soft pt-3 text-xs text-ink-soft">{product.specifications.filter(spec => !spec.startsWith("压力角:") && !(product.path === PILOT_PRODUCT_PATH && (spec.startsWith("尺寸:") || spec.startsWith("模数:")))).map(spec => <li key={spec}>{spec}</li>)}</ul>}
-        <a href={liveHref(product.path)} className="mt-4 inline-block text-sm font-bold text-brand-700 underline-offset-4 hover:underline">{liveHref(product.path).startsWith("/") ? "查看产品详情" : "查看原站详情"}</a>
+        <a href={liveHref(product.path)} className="mt-4 inline-block text-body font-bold text-brand-700 underline-offset-4 hover:underline">{liveHref(product.path).startsWith("/") ? "查看产品详情" : "查看原站详情"}</a>
       </div>
     </article>)}
   </div>;

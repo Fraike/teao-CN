@@ -33,7 +33,7 @@ export default function TorqueConverter() {
               value={unit}
               onChange={(event) => setUnit(event.target.value)}
               aria-label="输入单位"
-              className="h-14 w-full cursor-pointer appearance-none rounded-xl border border-line bg-white pl-5 pr-10 text-sm font-bold text-ink-soft transition-all focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
+              className="h-14 w-full cursor-pointer appearance-none rounded-xl border border-line bg-white pl-5 pr-10 text-body font-bold text-ink-soft transition-all focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
             >
               {TORQUE_UNITS.map((item) => (
                 <option key={item.key} value={item.key}>{item.label}</option>
@@ -67,9 +67,9 @@ export default function TorqueConverter() {
                     teaUnit ? "border border-brand-500/40 bg-brand-50" : "border border-line bg-surface"
                   }`}
                 >
-                  <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.08em] text-muted-light lg:text-[11px]">
+                  <div className="mb-1 text-micro font-bold uppercase tracking-[0.08em] text-muted-light lg:text-micro">
                     {result.label}
-                    {teaUnit && <span className="ml-1.5 text-[9px] text-brand-700">TEAO</span>}
+                    {teaUnit && <span className="ml-1.5 text-micro text-brand-700">TEAO</span>}
                   </div>
                   <div className={`text-lg font-black tracking-[-0.03em] tabular-nums lg:text-xl ${teaUnit ? "text-brand-700" : "text-ink"}`}>
                     {formatTorqueValue(result.value)}
@@ -79,7 +79,7 @@ export default function TorqueConverter() {
             })}
           </div>
         ) : (
-          <div className="py-8 text-center text-sm text-muted-light">输入数值后查看换算结果</div>
+          <div className="py-8 text-center text-body text-muted-light">输入数值后查看换算结果</div>
         )}
       </div>
 

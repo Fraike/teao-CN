@@ -87,7 +87,7 @@ export default async function ProductDetailPage({
       {/* Breadcrumb */}
       <section className="bg-surface border-b border-line-soft">
         <div className="mx-auto w-full max-w-7xl px-5 lg:px-8 py-4">
-          <nav className="flex items-center gap-2 text-sm text-muted">
+          <nav className="flex items-center gap-2 text-body text-muted">
             <Link href="/" className="hover:text-brand-700 transition-colors">
               首页
             </Link>
@@ -148,7 +148,7 @@ export default async function ProductDetailPage({
                 <div className="mt-8">
                   <h2 className="text-lg font-bold text-ink mb-4">技术参数</h2>
                   <div className="rounded-xl border border-line overflow-hidden">
-                    <table className="w-full text-sm">
+                    <table className="w-full text-body">
                       <tbody>
                         {Object.entries(specs).map(([key, value], i) => (
                           <tr
@@ -177,7 +177,7 @@ export default async function ProductDetailPage({
                     {features.map((feat) => (
                       <li
                         key={feat}
-                        className="flex items-start gap-2.5 text-sm text-ink-soft"
+                        className="flex items-start gap-2.5 text-body text-ink-soft"
                       >
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0" />
                         {feat}

@@ -54,21 +54,21 @@ export default function AutomotiveMap({ map, sceneIds }: { map: ApplicationMap; 
               <span className={`grid h-4 w-4 shrink-0 place-items-center rounded-full bg-white/95 ${isActive ? "animate-pulse" : ""}`}>
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-700" />
               </span>
-              <span className="hidden whitespace-nowrap pr-0.5 text-[12px] font-bold lg:inline">{hotspot.label}</span>
+              <span className="hidden whitespace-nowrap pr-0.5 text-caption font-bold lg:inline">{hotspot.label}</span>
             </button>
           );
         })}
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-4 py-3">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-light">点击图中标记查看对应应用</p>
+        <p className="text-micro font-semibold uppercase tracking-[0.08em] text-muted-light">点击图中标记查看对应应用</p>
         <div className="flex gap-2 overflow-x-auto lg:hidden">
           {map.hotspots.map(hotspot => (
             <button
               key={hotspot.id}
               type="button"
               onClick={() => goToScene(hotspot.id)}
-              className={`shrink-0 rounded-full border px-3 py-1.5 text-[11px] font-bold transition-colors ${
+              className={`shrink-0 rounded-full border px-3 py-1.5 text-micro font-bold transition-colors ${
                 active === hotspot.id ? "border-brand-500 bg-brand-50 text-brand-700" : "border-line bg-white text-muted"
               }`}
             >

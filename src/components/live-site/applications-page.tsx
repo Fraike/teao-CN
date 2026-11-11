@@ -58,7 +58,7 @@ export default function ApplicationsPage() {
                     </span>
                     <div className="absolute inset-x-5 bottom-5 text-white">
                       <h2 className="text-2xl font-black tracking-tight">{card.title}</h2>
-                      <p className="mt-1 max-w-[420px] text-[13px] leading-relaxed text-white/80">{card.description}</p>
+                      <p className="mt-1 max-w-[420px] text-caption leading-relaxed text-white/80">{card.description}</p>
                     </div>
                     <span className="absolute right-5 bottom-5 grid h-10 w-10 place-items-center rounded-full bg-white text-brand-700 shadow-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                       <ArrowUpRight size={18} />

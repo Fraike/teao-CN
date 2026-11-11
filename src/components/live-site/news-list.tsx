@@ -32,7 +32,7 @@ export default function NewsList({ articles, pageSize = 12 }: { articles: Public
               setPage(1);
             }}
             aria-pressed={category === item.key}
-            className={`rounded-full border px-4 py-2 text-sm font-bold transition-colors ${
+            className={`rounded-full border px-4 py-2 text-body font-bold transition-colors ${
               category === item.key
                 ? "border-brand-500 bg-brand-500 text-white"
                 : "border-line bg-white text-muted hover:border-brand-500 hover:text-brand-700"
@@ -61,15 +61,15 @@ export default function NewsList({ articles, pageSize = 12 }: { articles: Public
               />
             </div>
             <div className="flex flex-1 flex-col p-5">
-              <div className="flex items-center gap-3 text-[11px] font-bold text-muted-light">
+              <div className="flex items-center gap-3 text-micro font-bold text-muted-light">
                 <span className="text-brand-700">{article.categoryLabel}</span>
                 <span>{article.publishedAt}</span>
               </div>
               <h2 className="mt-2 line-clamp-2 text-lg font-black leading-[1.25] tracking-[-0.02em] text-ink transition-colors group-hover:text-brand-700">
                 {article.title}
               </h2>
-              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{article.summary}</p>
-              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-[12px] font-bold text-brand-700">
+              <p className="mt-2 line-clamp-2 text-body leading-relaxed text-muted">{article.summary}</p>
+              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-caption font-bold text-brand-700">
                 阅读全文
                 <ArrowUpRight size={13} />
               </span>
@@ -78,7 +78,7 @@ export default function NewsList({ articles, pageSize = 12 }: { articles: Public
         ))}
       </div>
 
-      {visible.length === 0 && <p className="py-16 text-center text-sm text-muted-light">该分类下暂无文章。</p>}
+      {visible.length === 0 && <p className="py-16 text-center text-body text-muted-light">该分类下暂无文章。</p>}
 
       <ListingPagination page={current} totalPages={totalPages} onChange={next => setPage(next)} />
     </section>

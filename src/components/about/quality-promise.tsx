@@ -26,8 +26,8 @@ export function QualityPromise() {
 
                   <Icon className="h-7 w-7 text-brand-500" strokeWidth={1.5} />
 
-                  <h3 className="mt-3 text-base font-extrabold text-ink">{item.title}</h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-muted">{item.description}</p>
+                  <h3 className="mt-3 text-body-lg font-extrabold text-ink">{item.title}</h3>
+                  <p className="mt-2 text-caption leading-relaxed text-muted">{item.description}</p>
 
                   {/* Bottom accent */}
                   <div className="mt-auto h-1 w-0 rounded-full bg-brand-500 pt-0 transition-all duration-500 group-hover:w-16" />
@@ -41,13 +41,13 @@ export function QualityPromise() {
         <Reveal delay={3}>
           <div className="mt-8 overflow-hidden rounded-2xl border border-brand-200 bg-brand-50/70 p-6 text-center sm:p-8">
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <div className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-4 py-1.5 text-sm font-extrabold text-white">
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-4 py-1.5 text-body font-extrabold text-white">
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 交付承诺
               </div>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] font-semibold text-ink-soft">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-body font-semibold text-ink-soft">
                 <span className="flex items-center gap-1.5">
                   <svg className="h-4 w-4 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />

@@ -98,17 +98,17 @@ export default function ContactPage() {
       <section className="border-b border-line bg-surface-warm">
         <div className={`${container} grid gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] lg:items-start lg:py-20`}>
           <div>
-            <span className="inline-flex items-center gap-2 text-[11.5px] font-bold uppercase tracking-[0.14em] text-brand-700 before:content-[''] before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500">
+            <span className="inline-flex items-center gap-2 text-micro font-bold uppercase tracking-[0.14em] text-brand-700 before:content-[''] before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500">
               联系我们
             </span>
-            <h1 className="mt-4 max-w-[620px] text-[clamp(32px,4vw,50px)] font-black leading-[1.02] tracking-[-0.04em] text-ink">
+            <h1 className="mt-4 max-w-[620px] text-[clamp(32px,4vw,50px)] font-bold leading-[1.1] tracking-[-0.02em] text-ink">
               联系销售工程团队<br />
               <span className="text-brand-700">获取专业选型建议</span>
             </h1>
-            <p className="mt-4 max-w-[560px] text-[15px] leading-relaxed text-muted lg:text-[16px]">
+            <p className="mt-4 max-w-[560px] text-body-lg leading-relaxed text-muted lg:text-body-lg">
               无论标准品选型还是非标定制,提交图纸、样品信息或应用场景描述,工程师会在 24 小时内响应。
             </p>
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[13px] font-semibold text-ink-soft">
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-caption font-semibold text-ink-soft">
               {heroPoints.map(point => (
                 <span key={point} className="flex items-center gap-1.5">
                   <Check size={15} className="text-brand-700" strokeWidth={3} />
@@ -120,26 +120,26 @@ export default function ContactPage() {
 
           <Reveal>
             <div className="rounded-3xl border border-line bg-white p-6 shadow-[0_16px_44px_rgba(30,30,32,0.06)] lg:p-7">
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">直接联系</p>
+              <p className="text-micro font-black uppercase tracking-[0.14em] text-brand-700">直接联系</p>
               <p className="mt-1.5 text-2xl font-black text-ink">{contact.primaryName}</p>
-              <p className="text-[13px] font-semibold text-muted">销售工程师</p>
+              <p className="text-caption font-semibold text-muted">销售工程师</p>
 
               <div className="mt-4 space-y-2.5">
                 <a href={telHref(contact.primaryMobile)} className="flex items-center gap-3 rounded-xl border border-line bg-surface-warm px-4 py-3 transition-colors hover:border-brand-500/40 hover:bg-white">
                   <Phone size={17} className="shrink-0 text-brand-700" />
-                  <span className="text-sm font-bold text-ink">{contact.primaryMobile}</span>
+                  <span className="text-body font-bold text-ink">{contact.primaryMobile}</span>
                 </a>
                 <div className="flex items-center gap-3 rounded-xl border border-line bg-surface-warm px-4 py-3">
                   <MessageCircle size={17} className="shrink-0 text-brand-700" />
-                  <span className="text-sm font-bold text-ink">微信 {contact.wechat}</span>
+                  <span className="text-body font-bold text-ink">微信 {contact.wechat}</span>
                 </div>
                 <a href={`mailto:${contact.email}`} className="flex items-center gap-3 rounded-xl border border-line bg-surface-warm px-4 py-3 transition-colors hover:border-brand-500/40 hover:bg-white">
                   <Mail size={17} className="shrink-0 text-brand-700" />
-                  <span className="break-all text-sm font-semibold text-ink">{contact.email}</span>
+                  <span className="break-all text-body font-semibold text-ink">{contact.email}</span>
                 </a>
                 <div className="flex items-start gap-3 rounded-xl border border-line bg-surface-warm px-4 py-3">
                   <MapPin size={17} className="mt-0.5 shrink-0 text-brand-700" />
-                  <span className="text-[13px] font-semibold leading-relaxed text-ink">{contact.address}</span>
+                  <span className="text-caption font-semibold leading-relaxed text-ink">{contact.address}</span>
                 </div>
               </div>
             </div>
@@ -151,8 +151,8 @@ export default function ContactPage() {
       <section className={`${container} py-14 lg:py-20`}>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
           <div className="rounded-3xl border border-line bg-white p-6 shadow-[0_4px_24px_rgba(30,30,32,0.03)] sm:p-8">
-            <h2 className="text-2xl font-black tracking-[-0.03em] text-ink lg:text-3xl">发起询盘</h2>
-            <p className="mb-7 mt-2 text-sm leading-relaxed text-muted">
+            <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink lg:text-3xl">发起询盘</h2>
+            <p className="mb-7 mt-2 text-body leading-relaxed text-muted">
               填写应用场景、目标扭矩与年用量,工程师会在 24 小时内给出选型建议。
             </p>
             <ContactForm />
@@ -170,10 +170,10 @@ export default function ContactPage() {
                     className="object-cover"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.1em] text-brand-700 backdrop-blur">
+                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-micro font-black uppercase tracking-[0.1em] text-brand-700 backdrop-blur">
                     B2B 工程支持
                   </span>
-                  <p className="absolute inset-x-4 bottom-4 text-[13px] font-bold leading-snug text-white">
+                  <p className="absolute inset-x-4 bottom-4 text-caption font-bold leading-snug text-white">
                     从选型、打样到量产,一个工程团队跟到底
                   </p>
                 </div>
@@ -190,21 +190,21 @@ export default function ContactPage() {
                   className="shrink-0 rounded-xl border border-line-soft bg-white p-1"
                 />
                 <div className="min-w-0">
-                  <p className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">微信咨询</p>
-                  <p className="mt-0.5 text-[15px] font-black text-ink">{contact.primaryName}</p>
-                  <p className="text-[12px] text-muted">微信 {contact.wechat}</p>
-                  <p className="mt-1 text-[11px] text-muted-light">扫码添加,获取选型建议与报价</p>
+                  <p className="text-micro font-black uppercase tracking-[0.14em] text-brand-700">微信咨询</p>
+                  <p className="mt-0.5 text-body-lg font-black text-ink">{contact.primaryName}</p>
+                  <p className="text-caption text-muted">微信 {contact.wechat}</p>
+                  <p className="mt-1 text-micro text-muted-light">扫码添加,获取选型建议与报价</p>
                 </div>
               </div>
             </Reveal>
 
             <Reveal delay={2}>
               <div className="rounded-3xl border border-line bg-surface-warm p-5">
-                <h3 className="text-sm font-black text-ink">接下来会发生什么?</h3>
+                <h3 className="text-body font-black text-ink">接下来会发生什么?</h3>
                 <ol className="mt-4 space-y-3">
                   {steps.map((step, index) => (
-                    <li key={step} className="flex items-start gap-3 text-[12.5px] leading-relaxed text-muted">
-                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-[10px] font-black text-brand-700">
+                    <li key={step} className="flex items-start gap-3 text-caption leading-relaxed text-muted">
+                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-micro font-black text-brand-700">
                         {index + 1}
                       </span>
                       {step}
@@ -224,11 +224,11 @@ export default function ContactPage() {
           <div className="divide-y divide-line-soft rounded-2xl border border-line bg-white">
             {contactFaq.map(item => (
               <details key={item.q} className="group">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold text-ink">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-body font-semibold text-ink">
                   {item.q}
                   <span className="shrink-0 text-brand-700 transition-transform group-open:rotate-45">+</span>
                 </summary>
-                <p className="px-5 pb-5 text-sm leading-7 text-muted">{item.a}</p>
+                <p className="px-5 pb-5 text-body leading-7 text-muted">{item.a}</p>
               </details>
             ))}
           </div>
@@ -252,12 +252,12 @@ export default function ContactPage() {
             </div>
           </Reveal>
           <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-muted">{contact.address}</p>
+            <p className="text-body text-muted">{contact.address}</p>
             <a
               href={AMAP_PLACE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white px-5 py-2.5 text-sm font-bold text-ink-soft transition-all hover:border-brand-500 hover:bg-brand-50 hover:text-brand-700"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white px-5 py-2.5 text-body font-bold text-ink-soft transition-all hover:border-brand-500 hover:bg-brand-50 hover:text-brand-700"
             >
               在高德地图中查看 →
             </a>

@@ -48,7 +48,7 @@ function LinkList({ items }: { items: { label: string; href: string }[] }) {
     <ul className="space-y-2.5">
       {items.map(item => (
         <li key={item.href}>
-          <Link href={item.href} className="text-sm text-ink-soft transition-colors hover:text-brand-700">
+          <Link href={item.href} className="text-body text-ink-soft transition-colors hover:text-brand-700">
             {item.label}
           </Link>
         </li>
@@ -61,8 +61,8 @@ function Card({ title, count, children }: { title: string; count?: number; child
   return (
     <section className="rounded-2xl border border-line bg-white p-6">
       <div className="mb-4 flex items-baseline justify-between gap-3 border-b border-line-soft pb-3">
-        <h2 className="text-sm font-black tracking-[-0.01em] text-ink">{title}</h2>
-        {typeof count === "number" && <span className="text-[11px] font-bold text-muted-light">{count} 项</span>}
+        <h2 className="text-body font-black tracking-[-0.01em] text-ink">{title}</h2>
+        {typeof count === "number" && <span className="text-micro font-bold text-muted-light">{count} 项</span>}
       </div>
       {children}
     </section>
@@ -105,14 +105,14 @@ export default async function SiteMapPage() {
               const items = newsArticles.filter(article => article.publishedAt.startsWith(year));
               return (
                 <details key={year} open={year === newsArticles[0]?.publishedAt.slice(0, 4)}>
-                  <summary className="cursor-pointer list-none text-sm font-bold text-ink">
+                  <summary className="cursor-pointer list-none text-body font-bold text-ink">
                     {year}
-                    <span className="ml-1.5 text-[11px] font-semibold text-muted-light">({items.length})</span>
+                    <span className="ml-1.5 text-micro font-semibold text-muted-light">({items.length})</span>
                   </summary>
                   <ul className="mt-2 space-y-1.5 pl-4">
                     {items.map(article => (
                       <li key={article.slug}>
-                        <Link href={`/news/${article.slug}.html`} className="text-[13px] leading-snug text-ink-soft transition-colors hover:text-brand-700">
+                        <Link href={`/news/${article.slug}.html`} className="text-caption leading-snug text-ink-soft transition-colors hover:text-brand-700">
                           {article.title}
                         </Link>
                       </li>
@@ -133,14 +133,14 @@ export default async function SiteMapPage() {
                   .filter(product => localProductPaths.has(product.path));
                 return (
                   <div key={category.id}>
-                    <Link href={liveHref(category.path)} className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:underline">
+                    <Link href={liveHref(category.path)} className="inline-flex items-center gap-1.5 text-body font-bold text-brand-700 hover:underline">
                       {category.label}
-                      <span className="text-[11px] font-semibold text-muted-light">({products.length})</span>
+                      <span className="text-micro font-semibold text-muted-light">({products.length})</span>
                     </Link>
                     <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
                       {products.map(product => (
                         <li key={product.path}>
-                          <Link href={product.path} className="text-[12.5px] text-muted transition-colors hover:text-brand-700">
+                          <Link href={product.path} className="text-caption text-muted transition-colors hover:text-brand-700">
                             {product.model}
                           </Link>
                         </li>

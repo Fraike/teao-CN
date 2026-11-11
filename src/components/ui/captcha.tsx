@@ -108,7 +108,7 @@ export const Captcha = forwardRef<CaptchaRef, { className?: string }>(function C
 
   return (
     <div className={className}>
-      <span className="mb-1.5 block text-[13px] font-bold text-ink">验证码 *</span>
+      <span className="mb-1.5 block text-caption font-bold text-ink">验证码 *</span>
       <div className="rounded-lg border border-line bg-white p-3">
         <div className="flex flex-col gap-2.5 min-[390px]:flex-row min-[390px]:items-stretch">
           <div className="shrink-0 overflow-hidden rounded-md border border-line-soft bg-white">
@@ -125,7 +125,7 @@ export const Captcha = forwardRef<CaptchaRef, { className?: string }>(function C
               setError(false);
             }}
             placeholder="输入验证码"
-            className="min-w-0 flex-1 rounded-md border border-line bg-white px-3 text-sm font-bold uppercase tracking-[0.12em] text-ink-soft outline-none placeholder:normal-case placeholder:tracking-normal placeholder:text-muted-light focus:border-brand-500 focus:ring-2 focus:ring-brand-500/10"
+            className="min-w-0 flex-1 rounded-md border border-line bg-white px-3 text-body font-bold uppercase tracking-[0.12em] text-ink-soft outline-none placeholder:normal-case placeholder:tracking-normal placeholder:text-muted-light focus:border-brand-500 focus:ring-2 focus:ring-brand-500/10"
           />
         </div>
         <div className="mt-2 flex justify-end">

@@ -63,7 +63,7 @@ export function QualitySection() {
                 <div className="group flex items-center justify-between rounded-[14px] border border-line bg-white p-[22px] px-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-[250ms] ease-out hover:translate-x-[3px] hover:border-brand-500/20 hover:shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
                   <div className="cert-info">
                     <strong className="block text-[19px] font-bold text-ink">{cert.name}</strong>
-                    <span className="mt-1 block text-[12.5px] text-muted">{cert.description}</span>
+                    <span className="mt-1 block text-caption text-muted">{cert.description}</span>
                   </div>
                   <div
                     className={`flex h-[54px] w-[54px] flex-shrink-0 items-center justify-center rounded-[10px] text-xs font-bold text-white transition-transform duration-300 ease-out group-hover:rotate-[4deg] group-hover:scale-104 ${cert.badgeBg}`}
@@ -83,8 +83,8 @@ export function QualitySection() {
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-[7px] bg-brand-500 text-xs font-bold text-white transition-transform duration-[250ms] ease-out group-hover:scale-108">
                     {step.num}
                   </span>
-                  <strong className="mt-3 block text-[15px] font-bold text-ink">{step.title}</strong>
-                  <p className="mt-1.5 text-[12.5px] leading-[1.6] text-muted">{step.description}</p>
+                  <strong className="mt-3 block text-body-lg font-bold text-ink">{step.title}</strong>
+                  <p className="mt-1.5 text-caption leading-[1.6] text-muted">{step.description}</p>
                 </div>
               </Reveal>
             ))}

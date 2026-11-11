@@ -52,7 +52,7 @@ export function AboutHero() {
           {/* Left: text */}
           <div>
             <div
-              className={`inline-flex items-center gap-2 text-[11.5px] font-bold text-brand-700 tracking-[0.14em] uppercase transition-all duration-700 ${
+              className={`inline-flex items-center gap-2 text-micro font-bold text-brand-700 tracking-[0.14em] uppercase transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -61,7 +61,7 @@ export function AboutHero() {
             </div>
 
             <h1
-              className={`mt-5 max-w-[640px] text-[clamp(34px,4.2vw,52px)] leading-[1.05] font-black tracking-[-0.04em] text-ink transition-all duration-700 delay-100 ${
+              className={`mt-5 max-w-[640px] text-[clamp(34px,4.2vw,52px)] leading-[1.1] font-bold tracking-[-0.02em] text-ink transition-all duration-700 delay-100 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -75,7 +75,7 @@ export function AboutHero() {
             </h1>
 
             <p
-              className={`mt-5 max-w-[560px] text-[16px] leading-relaxed text-muted transition-all duration-700 delay-200 lg:text-[18px] ${
+              className={`mt-5 max-w-[560px] text-body-lg leading-relaxed text-muted transition-all duration-700 delay-200 lg:text-[18px] ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -92,7 +92,7 @@ export function AboutHero() {
             >
               <Link
                 href="/contacts/"
-                className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_14px_rgba(232,120,26,0.35)] transition-all hover:bg-brand-700 hover:shadow-[0_6px_20px_rgba(232,120,26,0.45)] hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 text-body font-bold text-white shadow-[0_4px_14px_rgba(232,120,26,0.35)] transition-all hover:bg-brand-700 hover:shadow-[0_6px_20px_rgba(232,120,26,0.45)] hover:-translate-y-0.5"
               >
                 立即询价
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export function AboutHero() {
               </Link>
               <a
                 href={telHref(contact.primaryMobile)}
-                className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-sm font-bold text-ink-soft transition-all hover:border-brand-500 hover:text-brand-700"
+                className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-body font-bold text-ink-soft transition-all hover:border-brand-500 hover:text-brand-700"
               >
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -119,7 +119,7 @@ export function AboutHero() {
               {trustBadges.map((b) => (
                 <span
                   key={b}
-                  className="flex items-center justify-center bg-white px-2 py-3 text-[11px] font-extrabold text-muted transition-colors hover:text-brand-700"
+                  className="flex items-center justify-center bg-white px-2 py-3 text-micro font-extrabold text-muted transition-colors hover:text-brand-700"
                 >
                   {b}
                 </span>
@@ -137,7 +137,7 @@ export function AboutHero() {
                   <svg className="h-4 w-4 shrink-0 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-[13px] font-semibold text-ink-soft">
+                  <span className="text-caption font-semibold text-ink-soft">
                     <span className="text-brand-600">{p.label}</span> · {p.desc}
                   </span>
                 </div>

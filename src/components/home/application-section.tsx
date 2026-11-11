@@ -95,14 +95,14 @@ export function ApplicationSection() {
                   多领域开合机构的<br />
                   <em className="not-italic text-brand-500 font-black">静音缓冲方案</em>
                 </h3>
-                <p className="mt-3 text-[14.5px] leading-[1.8] text-white/75 max-w-[440px]">
+                <p className="mt-3 text-body leading-[1.8] text-white/75 max-w-[440px]">
                   解决杯托弹开撞击、手套箱下落过快、家电盖板缓降、马桶盖缓冲、医疗设备平稳运动等问题。稳定扭矩输出，适配 -30°C ～ +80°C 温度区间。
                 </p>
               </div>
 
               <Link
                 href="/contacts/"
-                className="relative z-10 inline-flex items-center gap-1.5 border-[1.5px] border-white/28 bg-white/6 px-[22px] py-3 text-[13px] font-bold rounded-lg transition-all duration-250 hover:border-white/50 hover:bg-white/12 w-fit"
+                className="relative z-10 inline-flex items-center gap-1.5 border-[1.5px] border-white/28 bg-white/6 px-[22px] py-3 text-caption font-bold rounded-lg transition-all duration-250 hover:border-white/50 hover:bg-white/12 w-fit"
               >
                 提交应用需求 &rarr;
               </Link>
@@ -119,13 +119,13 @@ export function ApplicationSection() {
                     {card.icon}
                   </div>
 
-                  <h4 className="text-[15px] font-bold text-ink">
+                  <h4 className="text-body-lg font-bold text-ink">
                     {card.title}
                   </h4>
-                  <p className="mt-1.5 text-[12.5px] leading-[1.65] text-muted">
+                  <p className="mt-1.5 text-caption leading-[1.65] text-muted">
                     {card.description}
                   </p>
-                  <span className="inline-block mt-2.5 px-2.5 py-[3px] text-[11px] font-bold text-brand-700 bg-brand-50 rounded">
+                  <span className="inline-block mt-2.5 px-2.5 py-[3px] text-micro font-bold text-brand-700 bg-brand-50 rounded">
                     {card.recommend}
                   </span>
                 </div>

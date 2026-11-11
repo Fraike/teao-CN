@@ -23,35 +23,35 @@ export function AboutCTA() {
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.7fr] lg:gap-16">
           <Reveal>
             <div>
-              <span className="inline-flex items-center gap-2 text-[11.5px] font-bold uppercase tracking-[0.14em] text-brand-700
+              <span className="inline-flex items-center gap-2 text-micro font-bold uppercase tracking-[0.14em] text-brand-700
                 before:content-[''] before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500">
                 开始合作
               </span>
-              <h2 className="mt-4 max-w-[640px] text-[clamp(30px,4vw,46px)] font-black leading-[1.05] tracking-[-0.04em] text-ink">
+              <h2 className="mt-4 max-w-[640px] text-[clamp(30px,4vw,46px)] font-bold leading-[1.1] tracking-[-0.02em] text-ink">
                 有阻尼器需求?<br />
                 让我们为您提供<span className="text-brand-700">专业方案</span>
               </h2>
-              <p className="mt-4 max-w-[560px] text-[16px] leading-relaxed text-muted">
+              <p className="mt-4 max-w-[560px] text-body-lg leading-relaxed text-muted">
                 发送图纸或样品,我们将在 24 小时内提供技术评估和报价建议。
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 text-base font-bold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 text-body-lg font-bold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
                 >
                   立即询价
                   <ArrowUpRight size={18} />
                 </Link>
                 <a
                   href={telHref(contact.primaryMobile)}
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-base font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-body-lg font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   {contact.primaryName} {contact.primaryMobile}
                 </a>
               </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-6 text-[13px] font-semibold text-muted">
+              <div className="mt-7 flex flex-wrap items-center gap-6 text-caption font-semibold text-muted">
                 {trust.map(item => {
                   const label = typeof item === "string" ? item : item.text;
                   const note = typeof item === "string" ? null : item.note;
@@ -59,7 +59,7 @@ export function AboutCTA() {
                     <span key={label} className="flex items-center gap-1.5">
                       <Check size={15} className="text-brand-700" strokeWidth={3} />
                       {label}
-                      {note && <span className="text-[11px] font-normal text-muted-light">({note})</span>}
+                      {note && <span className="text-micro font-normal text-muted-light">({note})</span>}
                     </span>
                   );
                 })}
@@ -78,10 +78,10 @@ export function AboutCTA() {
                     <Image src={item.src} alt="" fill className="object-contain p-2" sizes="56px" loading="lazy" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] font-black uppercase tracking-[0.14em] text-brand-700">
+                    <span className="text-micro font-black uppercase tracking-[0.14em] text-brand-700">
                       0{index + 1}
                     </span>
-                    <p className="mt-0.5 text-sm font-extrabold text-ink">{item.label}</p>
+                    <p className="mt-0.5 text-body font-extrabold text-ink">{item.label}</p>
                   </div>
                 </div>
               ))}

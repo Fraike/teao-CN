@@ -36,11 +36,11 @@ export default function FaqPage() {
                 <div className="divide-y divide-line-soft rounded-2xl border border-line bg-white">
                   {group.items.map(item => (
                     <details key={item.q} className="group">
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold text-ink">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-body font-semibold text-ink">
                         {item.q}
                         <span className="shrink-0 text-brand-700 transition-transform group-open:rotate-45">+</span>
                       </summary>
-                      <p className="px-5 pb-5 text-sm leading-7 text-muted">{item.a}</p>
+                      <p className="px-5 pb-5 text-body leading-7 text-muted">{item.a}</p>
                     </details>
                   ))}
                 </div>

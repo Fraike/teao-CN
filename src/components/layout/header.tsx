@@ -55,7 +55,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop navigation */}
-          <div className="hidden items-center gap-6 text-[15px] font-semibold text-ink-soft lg:flex">
+          <div className="hidden items-center gap-6 text-body-lg font-semibold text-ink-soft lg:flex">
             {navItems.map((item) =>
               item.mega ? (
                 <div key={item.label} className="group relative flex min-h-[73px] items-center">
@@ -109,20 +109,20 @@ export default function Header() {
               rel="noopener noreferrer"
               aria-label="访问英文国际站"
               title="英文国际站"
-              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-3.5 text-[13px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 lg:h-[38px]"
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-3.5 text-caption font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 lg:h-[38px]"
             >
               <Globe size={14} />
               EN
             </a>
             <Link
               href="/convert/"
-              className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-[15px] font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"
+              className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"
             >
               扭矩换算
             </Link>
             <Link
               href="/contacts/"
-              className="inline-flex h-9 items-center rounded-full bg-brand-500 px-4 text-[15px] font-bold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:h-[38px]"
+              className="inline-flex h-9 items-center rounded-full bg-brand-500 px-3.5 text-body font-bold text-white lg:px-4 shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:h-[38px]"
             >
               获取报价
             </Link>
@@ -158,7 +158,7 @@ export default function Header() {
                         key={cat.id}
                         href={liveHref(cat.path)}
                         onClick={() => setMobileOpen(false)}
-                        className="rounded-lg border border-line px-3 py-2 text-sm text-muted transition-colors hover:border-brand-500/40 hover:text-brand-700"
+                        className="rounded-lg border border-line px-3 py-2 text-body text-muted transition-colors hover:border-brand-500/40 hover:text-brand-700"
                       >
                         {cat.label}
                       </Link>
@@ -170,7 +170,7 @@ export default function Header() {
             <Link
               href="/convert/"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 rounded-full border border-line py-3 text-center text-sm font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+              className="mt-4 rounded-full border border-line py-3 text-center text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
             >
               扭矩换算
             </Link>
@@ -178,14 +178,14 @@ export default function Header() {
               href="https://teao-damper.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-line py-3 text-center text-sm font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+              className="rounded-full border border-line py-3 text-center text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
             >
               English 国际站
             </a>
             <Link
               href="/contacts/"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 rounded-full bg-brand-500 py-3 text-center text-sm font-bold text-white"
+              className="mt-2 rounded-full bg-brand-500 py-3 text-center text-body font-bold text-white"
             >
               获取报价
             </Link>

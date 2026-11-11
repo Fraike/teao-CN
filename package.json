@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "fonts:build": "node scripts/build-fonts.mjs",
     "data:product-specs": "node scripts/generate-product-specs.mjs",
     "data:product-content": "node scripts/generate-product-content.mjs",
     "db:seed": "npx tsx src/db/seed.ts",
@@ -31,13 +32,17 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@fontpkg/mi-sans": "^4.3.0",
+    "@fontpkg/mi-sans-vf": "^4.3.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cn-font-split": "^7.4.3",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "subset-font": "^2.9.0",
     "tailwindcss": "^4",
     "tsx": "^4.22.4",
     "typescript": "^5"

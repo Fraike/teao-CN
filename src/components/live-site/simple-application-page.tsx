@@ -37,20 +37,20 @@ export default function SimpleApplicationPage({ app, canonicalPath }: { app: Sim
             <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-line bg-surface">
               <Image src={app.image} alt={app.title} fill sizes="(max-width: 1024px) 100vw, 620px" className="object-cover" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-              <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
+              <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-micro font-black uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
                 {app.title}
               </span>
             </div>
           </Reveal>
 
           <Reveal delay={1}>
-            <p className="text-[15px] leading-relaxed text-muted">
+            <p className="text-body-lg leading-relaxed text-muted">
               {app.description}。欢迎提供应用位置、目标扭矩与安装空间,特澳可推荐标准阻尼平台或按结构空间定制方案。
             </p>
 
             <ul className="mt-6 space-y-2.5">
               {capabilities.map(item => (
-                <li key={item} className="flex items-center gap-2.5 text-sm font-semibold text-ink-soft">
+                <li key={item} className="flex items-center gap-2.5 text-body font-semibold text-ink-soft">
                   <span className="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-700">
                     <Check size={12} strokeWidth={3} />
                   </span>

@@ -82,7 +82,7 @@ export default function GlobalSearch() {
     const Icon = icon === "product" ? Package : FileText;
     return (
       <section>
-        <div className="mb-2 flex items-center gap-2 px-1 text-[11px] font-black uppercase tracking-[0.14em] text-muted-light">
+        <div className="mb-2 flex items-center gap-2 px-1 text-micro font-black uppercase tracking-[0.14em] text-muted-light">
           <Icon size={14} className="text-brand-700" />
           {title}
         </div>
@@ -103,10 +103,10 @@ export default function GlobalSearch() {
               </div>
               <div className="min-w-0">
                 <div className="mb-1 flex items-center gap-2">
-                  <span className="truncate rounded-full bg-surface px-2 py-0.5 text-[10px] font-bold text-muted">{item.label}</span>
-                  {item.publishedAt && <span className="shrink-0 text-[11px] text-muted-light">{item.publishedAt}</span>}
+                  <span className="truncate rounded-full bg-surface px-2 py-0.5 text-micro font-bold text-muted">{item.label}</span>
+                  {item.publishedAt && <span className="shrink-0 text-micro text-muted-light">{item.publishedAt}</span>}
                 </div>
-                <h3 className="truncate text-sm font-bold text-ink group-hover:text-brand-700">{item.title}</h3>
+                <h3 className="truncate text-body font-bold text-ink group-hover:text-brand-700">{item.title}</h3>
                 {item.excerpt && <p className="mt-1 line-clamp-1 text-xs text-muted">{item.excerpt}</p>}
               </div>
               <ArrowRight size={16} className="text-muted-light group-hover:text-brand-700" />
@@ -140,7 +140,7 @@ export default function GlobalSearch() {
                 value={query}
                 onChange={event => setQuery(event.target.value)}
                 placeholder="搜索产品型号、新闻…"
-                className="h-11 min-w-0 flex-1 bg-transparent text-base font-semibold text-ink outline-none placeholder:text-muted-light"
+                className="h-11 min-w-0 flex-1 bg-transparent text-body-lg font-semibold text-ink outline-none placeholder:text-muted-light"
               />
               {loading && <Loader2 size={18} className="animate-spin text-muted-light" />}
               <button type="button" onClick={close} aria-label="关闭搜索" className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface hover:text-ink">
@@ -151,17 +151,17 @@ export default function GlobalSearch() {
             <div className="max-h-[min(68vh,620px)] overflow-y-auto p-4">
               {query.trim().length < 2 ? (
                 <div className="py-10 text-center">
-                  <p className="text-sm font-bold text-ink">输入至少 2 个字符</p>
-                  <p className="mt-2 text-sm text-muted">可搜索产品型号、阻尼器类型、技术文章与新闻。</p>
+                  <p className="text-body font-bold text-ink">输入至少 2 个字符</p>
+                  <p className="mt-2 text-body text-muted">可搜索产品型号、阻尼器类型、技术文章与新闻。</p>
                 </div>
               ) : loading && results.total === 0 ? (
-                <div className="flex items-center justify-center gap-2 py-12 text-sm font-semibold text-muted">
+                <div className="flex items-center justify-center gap-2 py-12 text-body font-semibold text-muted">
                   <Loader2 size={18} className="animate-spin" /> 搜索中…
                 </div>
               ) : results.total === 0 ? (
                 <div className="py-12 text-center">
-                  <p className="text-sm font-bold text-ink">没有找到「{query.trim()}」</p>
-                  <p className="mt-2 text-sm text-muted">试试型号(如 RD-T036)或关键词(如 手套箱、齿轮阻尼器)。</p>
+                  <p className="text-body font-bold text-ink">没有找到「{query.trim()}」</p>
+                  <p className="mt-2 text-body text-muted">试试型号(如 RD-T036)或关键词(如 手套箱、齿轮阻尼器)。</p>
                 </div>
               ) : (
                 <div className="space-y-5">
