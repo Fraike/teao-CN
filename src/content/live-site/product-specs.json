@@ -41,7 +41,11 @@
   },
   "/gear-damper/rd-t069-rd-v069shuangxiang-shiyongyuqicheneishijiayongdianqigongyejixieRD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械.html": {
     "model": "RD-T069 / RD-V069",
-    "torque": null,
+    "torque": {
+      "min": 200,
+      "max": 3500,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -369,7 +373,11 @@
   },
   "/gear-damper/gear-rotary-damper- RD-T038A/V038A.html": {
     "model": "RD-T038A",
-    "torque": null,
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1045,7 +1053,11 @@
   },
   "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html": {
     "model": "RD-V088",
-    "torque": null,
+    "torque": {
+      "min": 5000,
+      "max": 60000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1065,7 +1077,11 @@
   },
   "/axial-dampers/rd-v088wutongzhouxinshiyongyumatongzuniqizhinengweiyu.html": {
     "model": "RD-V088",
-    "torque": null,
+    "torque": {
+      "min": 5000,
+      "max": 60000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1137,7 +1153,11 @@
   },
   "/axial-dampers/axial-barrel-damper-RD-R018.html": {
     "model": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
-    "torque": null,
+    "torque": {
+      "min": 30,
+      "max": 180,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1321,7 +1341,11 @@
   },
   "/axial-dampers/axial-barrel-damper- RD-V088.html": {
     "model": "RD-V088",
-    "torque": null,
+    "torque": {
+      "min": 5000,
+      "max": 60000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1521,7 +1545,11 @@
   },
   "/Glove Box Dampers/liner-damper- RD-V128.html": {
     "model": "RD-V128",
-    "torque": null,
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1577,7 +1605,11 @@
   },
   "/Glove Box Dampers/axial-barrel-damper-rd-v108a.html": {
     "model": "RD-V108A",
-    "torque": null,
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1589,7 +1621,11 @@
   },
   "/Glove Box Dampers/air-damper- RD-V108.html": {
     "model": "RD-V108",
-    "torque": null,
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [
@@ -1601,7 +1637,11 @@
   },
   "/Glove Box Dampers/axial-barrel-damper- RD-V08.html": {
     "model": "RD-V08",
-    "torque": null,
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
     "force": null,
     "mounting": null,
     "specs": [

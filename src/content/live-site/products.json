@@ -5935,5 +5935,549 @@
     "dimensionDrawing": "/images/products/rd-11/size.webp",
     "performanceCharts": null,
     "variants": null
+  },
+  "/gear-damper/rd-t069-rd-v069shuangxiang-shiyongyuqicheneishijiayongdianqigongyejixieRD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械.html": {
+    "path": "/gear-damper/rd-t069-rd-v069shuangxiang-shiyongyuqicheneishijiayongdianqigongyejixieRD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械.html",
+    "slug": "rd-t069",
+    "categoryId": "gear-damper",
+    "model": "RD-T069 / RD-V069",
+    "name": "RD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械",
+    "summary": "扭矩 200 – 3500 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t069/main.webp",
+        "alt": "RD-T069/ RD-V069双向 适用于汽车内饰、家用电器、工业机械"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 3500,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ14.7"
+      },
+      {
+        "label": "模数",
+        "value": "0.8"
+      },
+      {
+        "label": "压力角",
+        "value": "20°c"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/gear-damper/gear-rotary-damper- RD-T038A/V038A.html": {
+    "path": "/gear-damper/gear-rotary-damper- RD-T038A/V038A.html",
+    "slug": "rd-t038a",
+    "categoryId": "gear-damper",
+    "model": "RD-T038A",
+    "name": "RD-T038A/V038A 适用于汽车内饰、家用电器、工业机械",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t038a/main.webp",
+        "alt": "RD-T038A/V038A 适用于汽车内饰、家用电器、工业机械"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ16.25"
+      },
+      {
+        "label": "模数",
+        "value": "1.25"
+      },
+      {
+        "label": "安装方式",
+        "value": "螺钉"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html": {
+    "path": "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html",
+    "slug": "rd-v088",
+    "categoryId": "axial-damper",
+    "model": "RD-V088",
+    "name": "RD-V088（铜轴心）适用于马桶阻尼器、智能卫浴",
+    "summary": "扭矩 5000 – 60000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v088/main.webp",
+        "alt": "RD-V088（铜轴心）适用于马桶阻尼器、智能卫浴"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "双向",
+      "110度"
+    ],
+    "torque": {
+      "min": 5000,
+      "max": 60000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ20"
+      },
+      {
+        "label": "轴尺寸",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "37.2"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/axial-dampers/rd-v088wutongzhouxinshiyongyumatongzuniqizhinengweiyu.html": {
+    "path": "/axial-dampers/rd-v088wutongzhouxinshiyongyumatongzuniqizhinengweiyu.html",
+    "slug": "rd-v088-2",
+    "categoryId": "axial-damper",
+    "model": "RD-V088",
+    "name": "RD-V088（无铜轴心）适用于马桶阻尼器、智能卫浴",
+    "summary": "扭矩 5000 – 60000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v088-2/main.webp",
+        "alt": "RD-V088（无铜轴心）适用于马桶阻尼器、智能卫浴"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 5000,
+      "max": 60000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ20"
+      },
+      {
+        "label": "轴尺寸",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "37.2"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-RD-R018.html": {
+    "path": "/axial-dampers/axial-barrel-damper-RD-R018.html",
+    "slug": "rd-r018",
+    "categoryId": "axial-damper",
+    "model": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
+    "name": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器",
+    "summary": "扭矩 30 – 180 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-r018/main.webp",
+        "alt": "RD-R018 适用于汽车内饰、家用电器、工业机械、车顶把手、吸尘器"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 30,
+      "max": 180,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "φ8"
+      },
+      {
+        "label": "孔尺寸",
+        "value": "φ5.3"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper- RD-V088.html": {
+    "path": "/axial-dampers/axial-barrel-damper- RD-V088.html",
+    "slug": "rd-v088-3",
+    "categoryId": "axial-damper",
+    "model": "RD-V088",
+    "name": "RD-V088适用于马桶阻尼器、智能卫浴",
+    "summary": "扭矩 5000 – 60000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v088-3/main.webp",
+        "alt": "RD-V088适用于马桶阻尼器、智能卫浴"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "双向",
+      "110度"
+    ],
+    "torque": {
+      "min": 5000,
+      "max": 60000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "尺寸",
+        "value": "Φ20"
+      },
+      {
+        "label": "轴尺寸",
+        "value": "φ12"
+      },
+      {
+        "label": "高度",
+        "value": "37.2"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/rd-t183shiyongyuqichezawuxiangsuojigouqichefushouxiang.html": {
+    "path": "/Glove Box Dampers/rd-t183shiyongyuqichezawuxiangsuojigouqichefushouxiang.html",
+    "slug": "rd-t183",
+    "categoryId": "glove-box-damper",
+    "model": "RD-T183",
+    "name": "RD-T183适用于汽车杂物箱锁机构、汽车扶手箱",
+    "summary": "扭矩可定制,支持按应用调校",
+    "images": [
+      {
+        "url": "/images/products/rd-t183/main.webp",
+        "alt": "RD-T183适用于汽车杂物箱锁机构、汽车扶手箱"
+      }
+    ],
+    "characteristics": [],
+    "torque": null,
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "10MM"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/liner-damper- RD-V128.html": {
+    "path": "/Glove Box Dampers/liner-damper- RD-V128.html",
+    "slug": "rd-v128",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V128",
+    "name": "RD-V128 适用于汽车手套箱、 收纳盒",
+    "summary": "扭矩 200 – 1000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v128/main.webp",
+        "alt": "RD-V128 适用于汽车手套箱、 收纳盒"
+      }
+    ],
+    "characteristics": [],
+    "torque": {
+      "min": 200,
+      "max": 1000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/axial-barrel-damper-rd-v108a.html": {
+    "path": "/Glove Box Dampers/axial-barrel-damper-rd-v108a.html",
+    "slug": "rd-v108a",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V108A",
+    "name": "RD-V108A 适用于家电内饰阻尼器、汽车手套箱",
+    "summary": "扭矩 3000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v108a/main.webp",
+        "alt": "RD-V108A 适用于家电内饰阻尼器、汽车手套箱"
+      }
+    ],
+    "characteristics": [],
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/air-damper- RD-V108.html": {
+    "path": "/Glove Box Dampers/air-damper- RD-V108.html",
+    "slug": "rd-v108",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V108",
+    "name": "RD-V108适用于家电内饰阻尼器、汽车手套箱、汽车收纳盒",
+    "summary": "扭矩 3000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v108/main.webp",
+        "alt": "RD-V108适用于家电内饰阻尼器、汽车手套箱、汽车收纳盒"
+      }
+    ],
+    "characteristics": [],
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/Glove Box Dampers/axial-barrel-damper- RD-V08.html": {
+    "path": "/Glove Box Dampers/axial-barrel-damper- RD-V08.html",
+    "slug": "rd-v08",
+    "categoryId": "glove-box-damper",
+    "model": "RD-V08",
+    "name": "空气拉杆阻尼器 RD-V08适用于汽车扶手箱、杂物箱",
+    "summary": "扭矩 3000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-v08/main.webp",
+        "alt": "空气拉杆阻尼器 RD-V08适用于汽车扶手箱、杂物箱"
+      }
+    ],
+    "characteristics": [
+      "手套箱",
+      "单向"
+    ],
+    "torque": {
+      "min": 3000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "有效行程",
+        "value": "60MM"
+      },
+      {
+        "label": "安装方式",
+        "value": "卡扣"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/latches/rd-05shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html": {
+    "path": "/latches/rd-05shiyongyusuoluosisuliaomenkouchaxiao-nilongmenkouzuo-suliaomenxipengzhujixiemensuopeijianchakoujian.html",
+    "slug": "rd-05",
+    "categoryId": "latch",
+    "model": "RD-05",
+    "name": "RD-05适用于锁螺丝塑料门扣插销 尼龙门扣闩 塑料门吸碰珠机械门锁配件插扣件",
+    "summary": "扭矩可定制,支持按应用调校",
+    "images": [
+      {
+        "url": "/images/products/rd-05/main.webp",
+        "alt": "RD-05适用于锁螺丝塑料门扣插销 尼龙门扣闩 塑料门吸碰珠机械门锁配件插扣件"
+      }
+    ],
+    "characteristics": [
+      "主要使用的地方有电饭煲",
+      "电水壶",
+      "微波炉",
+      "咖啡壶"
+    ],
+    "torque": null,
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "材质",
+        "value": "PA66"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
   }
 }
