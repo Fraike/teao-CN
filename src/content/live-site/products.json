@@ -6418,5 +6418,161 @@
     "dimensionDrawing": null,
     "performanceCharts": null,
     "variants": null
+  },
+  "/axial-dampers/RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html": {
+    "path": "/axial-dampers/RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html",
+    "slug": "rd-t150",
+    "categoryId": "axial-damper",
+    "model": "RD-T150",
+    "name": "RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器",
+    "summary": "扭矩 2000 – 8000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t150/main.webp",
+        "alt": "RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 2000,
+      "max": 8000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "外径",
+        "value": "15 mm"
+      },
+      {
+        "label": "总高",
+        "value": "44.2 mm"
+      },
+      {
+        "label": "卡扣宽",
+        "value": "6 mm"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/axial-dampers/RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html": {
+    "path": "/axial-dampers/RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html",
+    "slug": "rd-t160",
+    "categoryId": "axial-damper",
+    "model": "RD-T160",
+    "name": "RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器",
+    "summary": "扭矩 1000 – 3000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t160/main.webp",
+        "alt": "RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 1000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "外径",
+        "value": "14.9 mm"
+      },
+      {
+        "label": "总高",
+        "value": "29 mm"
+      },
+      {
+        "label": "卡扣宽",
+        "value": "6 mm"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T170.html": {
+    "path": "/axial-dampers/axial-barrel-damper-RD-T170.html",
+    "slug": "rd-t170",
+    "categoryId": "axial-damper",
+    "model": "RD-T170",
+    "name": "RD-T170适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器",
+    "summary": "扭矩 1000 – 7000 gf·cm",
+    "images": [
+      {
+        "url": "/images/products/rd-t170/main.webp",
+        "alt": "RD-T170适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器"
+      }
+    ],
+    "characteristics": [
+      "环保材质",
+      "螺钉",
+      "双向",
+      "无角度限制"
+    ],
+    "torque": {
+      "min": 1000,
+      "max": 7000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "hardTorque": null,
+    "hardForce": null,
+    "soundType": null,
+    "bufferDirection": null,
+    "assemblyMethod": null,
+    "durability": null,
+    "specifications": [
+      {
+        "label": "外径",
+        "value": "16 mm"
+      },
+      {
+        "label": "总高",
+        "value": "38 mm"
+      },
+      {
+        "label": "卡扣宽",
+        "value": "8 mm"
+      }
+    ],
+    "materials": [],
+    "applications": [],
+    "applicationScenarios": [],
+    "dimensionDrawing": null,
+    "performanceCharts": null,
+    "variants": null
   }
 }

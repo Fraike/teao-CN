@@ -557,6 +557,42 @@
               "轴尺寸:φ12",
               "高度:37.2"
             ]
+          },
+          {
+            "path": "/axial-dampers/RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html",
+            "title": "RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器",
+            "model": "RD-T150",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260410/69d86221424f5.jpg",
+            "image": "/images/products/rd-t150/main.webp",
+            "specifications": [
+              "外径:15 mm",
+              "总高:44.2 mm",
+              "卡扣宽:6 mm"
+            ]
+          },
+          {
+            "path": "/axial-dampers/RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html",
+            "title": "RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器",
+            "model": "RD-T160",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260410/69d8610645b6e.jpg",
+            "image": "/images/products/rd-t160/main.webp",
+            "specifications": [
+              "外径:14.9 mm",
+              "总高:29 mm",
+              "卡扣宽:6 mm"
+            ]
+          },
+          {
+            "path": "/axial-dampers/axial-barrel-damper-RD-T170.html",
+            "title": "RD-T170适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器",
+            "model": "RD-T170",
+            "imageSource": "https://www.chinateao.com/data/watermark/20260410/69d85c4b2f595.jpg",
+            "image": "/images/products/rd-t170/main.webp",
+            "specifications": [
+              "外径:16 mm",
+              "总高:38 mm",
+              "卡扣宽:8 mm"
+            ]
           }
         ],
         "sourceSnapshot": "docs/site-audit/2026-09-10/snapshots/axial-dampers-2.html"

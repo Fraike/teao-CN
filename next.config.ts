@@ -13,6 +13,13 @@ const nextConfig: NextConfig = {
         destination: "/Glove%20Box%20Dampers/gear-rotary-vane-damper-RD-V127.html",
         statusCode: 301,
       },
+      // 老站 RD-T170 的页面误挂在 RD-T138 路径下，301 到正确地址
+      {
+        source:
+          "/axial-dampers/RD-T138%E9%80%82%E7%94%A8%E4%BA%8E%E8%A1%A3%E5%B8%BD%E9%92%A9%E3%80%81%20%E6%89%AB%E5%9C%B0%E6%9C%BA%E5%99%A8%E4%BA%BA%E3%80%81%E6%B1%BD%E8%BD%A6%E9%98%BB%E5%B0%BC%E5%99%A8%E3%80%81%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8.html",
+        destination: "/axial-dampers/axial-barrel-damper-RD-T170.html",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

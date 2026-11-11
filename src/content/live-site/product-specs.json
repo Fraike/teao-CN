@@ -2035,5 +2035,77 @@
         "value": "11 N"
       }
     ]
+  },
+  "/axial-dampers/RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html": {
+    "model": "RD-T150",
+    "torque": {
+      "min": 2000,
+      "max": 8000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "外径",
+        "value": "15 mm"
+      },
+      {
+        "label": "总高",
+        "value": "44.2 mm"
+      },
+      {
+        "label": "卡扣宽",
+        "value": "6 mm"
+      }
+    ]
+  },
+  "/axial-dampers/RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html": {
+    "model": "RD-T160",
+    "torque": {
+      "min": 1000,
+      "max": 3000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "外径",
+        "value": "14.9 mm"
+      },
+      {
+        "label": "总高",
+        "value": "29 mm"
+      },
+      {
+        "label": "卡扣宽",
+        "value": "6 mm"
+      }
+    ]
+  },
+  "/axial-dampers/axial-barrel-damper-RD-T170.html": {
+    "model": "RD-T170",
+    "torque": {
+      "min": 1000,
+      "max": 7000,
+      "unit": "gf·cm"
+    },
+    "force": null,
+    "mounting": null,
+    "specs": [
+      {
+        "label": "外径",
+        "value": "16 mm"
+      },
+      {
+        "label": "总高",
+        "value": "38 mm"
+      },
+      {
+        "label": "卡扣宽",
+        "value": "8 mm"
+      }
+    ]
   }
 }
