@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>字体与字号改造 · 前后对比</title>
+<style>
+  :root { --ink:#1E1E20; --muted:#6F6F75; --line:#E4E4E7; --brand:#E8781A; --bg:#FAFAFB; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 "MiSans VF","PingFang SC","Microsoft YaHei",sans-serif; }
+  .wrap { max-width:1280px; margin:0 auto; padding:56px 24px 96px; }
+  h1 { font-size:40px; line-height:1.2; letter-spacing:-.02em; margin:0 0 12px; font-weight:700; }
+  .lead { color:var(--muted); margin:0 0 40px; max-width:760px; }
+  h2 { font-size:24px; margin:64px 0 20px; font-weight:700; letter-spacing:-.02em; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+  .metric { background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 20px; }
+  .metric b { display:block; font-size:26px; font-variant-numeric:tabular-nums; letter-spacing:-.01em; }
+  .metric span { color:var(--muted); font-size:13px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; font-size:15px; }
+  th,td { padding:12px 16px; text-align:left; border-bottom:1px solid var(--line); }
+  th { font-weight:600; color:var(--muted); font-size:13px; }
+  tr:last-child td { border-bottom:0; }
+  td:nth-child(2),td:nth-child(3) { font-variant-numeric:tabular-nums; }
+  .pair { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
+  .pair figure { margin:0; background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+  .pair img { display:block; width:100%; height:auto; }
+  .pair figcaption { padding:10px 16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line); }
+  .pair figcaption b { color:var(--ink); }
+  .stack .pair { grid-template-columns:1fr; }
+  .stack .pair img { max-width:390px; margin:0 auto; background:#fff; }
+  @media (max-width:860px) { .pair { grid-template-columns:1fr; } h1 { font-size:30px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>字体与字号改造 · 前后对比</h1>
+  <p class="lead">
+    截图统一为 1440×900 视口（移动端 390×900），DPR 1.5 / 2.0，关闭入场动画后截取。
+    「改造前」为提交 <code>1a07ce4</code>，「改造后」为提交 <code>be87773</code>。
+  </p>
+
+  <div class="metrics">
+    <div class="metric"><b>MiSans VF</b><span>自托管，真实字重 150–700</span></div>
+    <div class="metric"><b>362 KB</b><span>常规页首屏字体（9 个分片）</span></div>
+    <div class="metric"><b>682 KB</b><span>含新闻正文的页面（12–13 片）</span></div>
+    <div class="metric"><b>12 px</b><span>全站最小字号（原 9 px）</span></div>
+  </div>
+
+  <h2>产品详情页（桌面）</h2>
+  <div class="pair">
+    <figure><img src="before/detail.png" alt="改造前产品详情页" /><figcaption><b>改造前</b> · 参数标签 10px、数值 15px、chip 11px、主标题 52px/900/行高 0.98</figcaption></figure>
+    <figure><img src="after/detail.png" alt="改造后产品详情页" /><figcaption><b>改造后</b> · 标签 12px、数值 18px、chip 13px、主标题 46px/700/行高 1.08</figcaption></figure>
+  </div>
+
+  <h2>产品详情页（移动端 390px）</h2>
+  <div class="pair stack">
+    <figure><img src="before/detail-mobile.png" alt="改造前移动端" /><figcaption><b>改造前</b></figcaption></figure>
+    <figure><img src="after/detail-mobile.png" alt="改造后移动端" /><figcaption><b>改造后</b> · 无横向溢出，扭矩数值响应式收缩</figcaption></figure>
+  </div>
+
+  <h2>产品列表</h2>
+  <div class="pair">
+    <figure><img src="before/list.png" alt="改造前列表" /><figcaption><b>改造前</b> · chip 9–11px、扭矩条 9–11px</figcaption></figure>
+    <figure><img src="after/list.png" alt="改造后列表" /><figcaption><b>改造后</b> · chip 11–12.5px、扭矩条 11–12.5px、型号 16–17px</figcaption></figure>
+  </div>
+
+  <h2>首页</h2>
+  <div class="pair">
+    <figure><img src="before/home.png" alt="改造前首页" /><figcaption><b>改造前</b></figcaption></figure>
+    <figure><img src="after/home.png" alt="改造后首页" /><figcaption><b>改造后</b> · MiSans 渲染，标题字距由 -0.01em 放宽</figcaption></figure>
+  </div>
+
+  <h2>关于我们</h2>
+  <div class="pair">
+    <figure><img src="before/about.png" alt="改造前关于页" /><figcaption><b>改造前</b></figcaption></figure>
+    <figure><img src="after/about.png" alt="改造后关于页" /><figcaption><b>改造后</b></figcaption></figure>
+  </div>
+
+  <h2>联系我们</h2>
+  <div class="pair">
+    <figure><img src="before/contact.png" alt="改造前联系页" /><figcaption><b>改造前</b></figcaption></figure>
+    <figure><img src="after/contact.png" alt="改造后联系页" /><figcaption><b>改造后</b></figcaption></figure>
+  </div>
+
+  <h2>新闻</h2>
+  <div class="pair">
+    <figure><img src="before/news.png" alt="改造前新闻页" /><figcaption><b>改造前</b></figcaption></figure>
+    <figure><img src="after/news.png" alt="改造后新闻页" /><figcaption><b>改造后</b> · 新闻页会额外加载 729 个新闻专用字</figcaption></figure>
+  </div>
+
+  <h2>字号与字重对照</h2>
+  <table>
+    <thead><tr><th>元素</th><th>改造前</th><th>改造后</th></tr></thead>
+    <tbody>
+      <tr><td>正文</td><td>15px / 行高 1.7</td><td>16px / 行高 1.75</td></tr>
+      <tr><td>详情页主标题</td><td>32–52px / 900 / 行高 0.98 / 字距 -0.045em</td><td>30–46px / 700 / 行高 1.08 / 字距 -0.02em</td></tr>
+      <tr><td>详情页副标题</td><td>16px / 灰</td><td>18px / 深灰</td></tr>
+      <tr><td>详情页参数标签</td><td>10px / 700</td><td>12px / 600</td></tr>
+      <tr><td>详情页参数数值</td><td>15px / 900</td><td>18px / 700</td></tr>
+      <tr><td>详情页规格 chip</td><td>11px / 700</td><td>13px / 600</td></tr>
+      <tr><td>详情页扭矩数值</td><td>20px / 900</td><td>24px / 700（移动端 20px）</td></tr>
+      <tr><td>列表卡片型号</td><td>15–16px / 900</td><td>16–17px / 700</td></tr>
+      <tr><td>列表卡片 chip</td><td>9–12px</td><td>11–12.5px</td></tr>
+      <tr><td>全站最小字号</td><td>9px（共 8 处）</td><td>12px</td></tr>
+      <tr><td>字号写法</td><td>任意 px 218 处 > 命名阶梯 199 处</td><td>5 档 token：12 / 13 / 15 / 16 / 18</td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
