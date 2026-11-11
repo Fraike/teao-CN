@@ -29,9 +29,10 @@ test("torque and force values are finite with the expected units", () => {
 test("overlay coverage matches the English source", () => {
   const torque = entries.filter(([, entry]) => entry.torque).length;
   const force = entries.filter(([, entry]) => entry.force).length;
-  assert.equal(torque, 47);
+  // 2026-11-11：用导出数据补入 12 个产品后，扭矩 56 / 按压力 13 / 两者都没有 5
+  assert.equal(torque, 56);
   assert.equal(force, 13);
-  assert.equal(entries.length - torque - force, 15);
+  assert.equal(entries.length - torque - force, 5);
 });
 
 test("kgf·cm values are converted to gf·cm, not relabelled", () => {

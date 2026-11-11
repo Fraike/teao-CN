@@ -18,7 +18,8 @@ test("unknown products and case variants are not the sample product", () => {
 });
 
 test("unported links keep original spelling, Chinese, spaces, nested slashes and extensions", () => {
-  for (const path of ["/gear-damper/gear-rotary-damper- RD-T038A/V038A.html", "/齿轮/中文 产品.html", "/index.php/products/gear-damper.html"]) {
+  // 老站真实存在、但未纳入我们目录的产品，仍应回源
+  for (const path of ["/axial-dampers/RD-T150适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html", "/齿轮/中文 产品.html", "/index.php/products/gear-damper.html"]) {
     assert.equal(liveHref(path), LIVE_ORIGIN + path);
   }
 });
@@ -155,7 +156,7 @@ test("encoded product paths resolve like decoded ones", () => {
 });
 
 test("unmatched product paths and near-misses still go to the live origin", () => {
-  const unmatched = "/axial-dampers/rd-v088tongzhouxinshiyongyumatongzuniqizhinengweiyu.html";
+  const unmatched = "/axial-dampers/RD-T160适用于衣帽钩、 扫地机器人、汽车阻尼器、家用电器.html";
   assert.equal(getPilotPage(unmatched.split("/").filter(Boolean)), null);
   assert.equal(liveHref(unmatched), LIVE_ORIGIN + unmatched);
   assert.equal(getPilotPage(["gear-damper", "index_200.html"]), null);
