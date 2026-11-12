@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { liveCatalog } from "@/lib/live-catalog";
@@ -9,13 +10,10 @@ const heroProducts = ["gear-damper", "axial-damper", "latch"]
   .map(id => liveCatalog.find(category => category.id === id))
   .filter((category): category is NonNullable<typeof category> => Boolean(category));
 
-const sceneTags = [
-  "汽车杯托",
-  "手套箱",
-  "家电盖板",
-  "马桶盖",
-  "医疗设备",
-  "工业机构",
+const proofPoints = [
+  "200+ 家客户",
+  "支持按图定制",
+  "PPAP 文件支持",
 ];
 
 export function HeroSection() {
@@ -44,41 +42,38 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="home-shell relative z-[2] grid items-center gap-8 py-[clamp(2.25rem,4.4vw,7rem)] lg:min-h-[min(49rem,calc(100svh-9rem))] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-[clamp(2rem,4.5vw,7rem)]">
+      <div className="home-shell relative z-[2] grid items-center gap-10 py-[clamp(2.5rem,4.6vw,5.5rem)] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-[clamp(2rem,4vw,5rem)]">
         {/* ── Left content ── */}
         <div className="min-w-0">
-          {/* Eyebrow tag */}
+          {/* Eyebrow */}
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-caption font-semibold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
-              <span className="h-[7px] w-[7px] shrink-0 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(232,120,26,0.15)]" />
-              面向汽车 · 家电 · 卫浴 · 医疗 · 工业供应链
-            </div>
+            <p className="flex items-center gap-2.5 text-caption font-medium tracking-[0.06em] text-brand-700">
+              <span className="h-px w-6 bg-brand-500" />
+              汽车 · 家电 · 卫浴 · 医疗 · 工业供应链
+            </p>
           </Reveal>
 
           {/* Headline */}
-          <h1 className="mt-[22px] font-sans text-[clamp(1.875rem,4.4vw,5rem)] font-semibold leading-[1.15] tracking-[-0.01em] text-ink">
+          <h1 className="mt-5 font-sans text-[clamp(1.75rem,3.4vw,3.75rem)] font-medium leading-[1.2] tracking-[-0.02em] text-ink">
             <Reveal delay={1} className="inline-block">
               多领域{" "}
             </Reveal>
             <Reveal delay={2} className="inline-block">
-              <em className="not-italic relative font-semibold text-brand-700">
-                阻尼器
-                <span className="absolute bottom-[2px] left-0 h-2 w-full rounded bg-brand-500/12 -z-[1]" />
-              </em>
+              <em className="not-italic font-semibold text-brand-700">阻尼器</em>
             </Reveal>
             <Reveal delay={3} className="inline-block">
               与锁扣
             </Reveal>
             <br />
             <Reveal delay={4} className="inline-block">
-              <b className="font-semibold">定制源头厂家</b>
+              <span className="font-semibold">定制源头厂家</span>
             </Reveal>
           </h1>
 
           {/* Description */}
           <Reveal delay={2}>
-            <p className="mt-4 max-w-[42rem] text-body-lg leading-[1.8] text-muted">
-              专注阻尼器与锁扣机构研发制造,支持扭矩、方向与安装结构按图定制,从打样到量产一体化交付。
+            <p className="mt-5 max-w-[34rem] text-body leading-[1.8] text-muted">
+              扭矩、方向与安装结构按图定制,从打样到量产一体化交付。
             </p>
           </Reveal>
 
@@ -94,20 +89,16 @@ export function HeroSection() {
             </div>
           </Reveal>
 
-          {/* Scene tags */}
+          {/* Proof points */}
           <Reveal delay={5}>
-            <p className="mt-4 text-caption font-medium leading-[1.7] text-muted-light">
-              适用于：
-              {sceneTags.map((tag) => (
-                <code
-                  key={tag}
-                  className="mx-0.5 inline-block rounded bg-brand-50 px-2 py-0.5 text-xs font-semibold text-brand-700"
-                >
-                  {tag}
-                </code>
+            <ul className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-caption text-muted">
+              {proofPoints.map(point => (
+                <li key={point} className="flex items-center gap-1.5">
+                  <Check size={13} className="shrink-0 text-brand-500" strokeWidth={3} />
+                  {point}
+                </li>
               ))}
-              等开合缓冲结构
-            </p>
+            </ul>
           </Reveal>
         </div>
 
@@ -122,8 +113,8 @@ export function HeroSection() {
                 aria-label={`查看${category.label}`}
                 className={`group relative overflow-hidden rounded-2xl border border-line shadow-[0_10px_30px_rgba(30,30,32,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_18px_42px_rgba(232,120,26,0.12)] ${
                   index === 0
-                    ? "col-span-2 h-[clamp(8.5rem,36vw,12rem)] sm:col-span-1 sm:h-44 lg:col-span-2 lg:h-[clamp(13rem,min(16.5vw,34svh),25rem)] bg-[linear-gradient(135deg,#FFF7EF_0%,#FFFFFF_62%)]"
-                    : "h-[clamp(6.5rem,28vw,10rem)] bg-white sm:h-44 lg:h-[clamp(10.5rem,min(12.5vw,25svh),19rem)]"
+                    ? "col-span-2 h-[clamp(8.5rem,36vw,12rem)] sm:col-span-1 sm:h-44 lg:col-span-2 lg:h-[clamp(11rem,min(14vw,30svh),19rem)] bg-[linear-gradient(135deg,#FFF7EF_0%,#FFFFFF_62%)]"
+                    : "h-[clamp(6.5rem,28vw,10rem)] bg-white sm:h-44 lg:h-[clamp(9rem,min(11vw,22svh),15rem)]"
                 }`}
               >
                 <Image
