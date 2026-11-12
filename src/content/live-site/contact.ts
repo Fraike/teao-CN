@@ -7,7 +7,7 @@ export const contact = {
   wechatQr: "/images/contact/wechat-luoxiaojie.png",
   secondaryMobile: "18617094202",
   phone: "0769-82937929",
-  email: "karl@shanghaiteao.com",
+  email: "info@chinateao.com",
   address: "广东省东莞市黄江镇黄江北三街2号",
 };
 
