@@ -19,11 +19,11 @@ export function SectionHead({ eyebrow, title, description, align = "left", size 
   return (
     <div className={`mb-10 ${centered ? "mx-auto max-w-2xl text-center" : "max-w-[680px]"}`}>
       <Reveal>
-        <p className="mb-2 inline-flex items-center gap-2 text-micro font-bold uppercase tracking-[0.14em] text-brand-700
+        <p className="mb-2 inline-flex items-center gap-2 text-micro font-medium uppercase tracking-[0.14em] text-brand-700
           before:content-[''] before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500">
           {eyebrow}
         </p>
-        <h2 className={`font-bold leading-[1.15] tracking-[-0.02em] text-ink ${titleSizes[size]}`}>{title}</h2>
+        <h2 className={`font-semibold leading-[1.15] tracking-[-0.02em] text-ink ${titleSizes[size]}`}>{title}</h2>
       </Reveal>
       {description && (
         <Reveal delay={1}>

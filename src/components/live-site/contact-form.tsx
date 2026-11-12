@@ -77,9 +77,9 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-brand-500/20 bg-brand-50/60 p-8 text-center">
-        <h3 className="text-xl font-black text-ink">询盘已提交</h3>
+        <h3 className="text-xl font-semibold text-ink">询盘已提交</h3>
         <p className="mt-2 text-body leading-relaxed text-muted">感谢您的需求,销售工程师会在 24 小时内与您联系。</p>
-        <button type="button" onClick={() => setStatus("idle")} className="mt-5 text-body font-bold text-brand-700 hover:underline">
+        <button type="button" onClick={() => setStatus("idle")} className="mt-5 text-body font-semibold text-brand-700 hover:underline">
           再提交一条询盘
         </button>
       </div>
@@ -90,23 +90,23 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-caption font-bold text-ink">姓名 *</label>
+          <label className="mb-1.5 block text-caption font-semibold text-ink">姓名 *</label>
           <input type="text" name="name" required value={form.name} onChange={handleChange} className={fieldClass} />
         </div>
         <div>
-          <label className="mb-1.5 block text-caption font-bold text-ink">公司名称</label>
+          <label className="mb-1.5 block text-caption font-semibold text-ink">公司名称</label>
           <input type="text" name="company" value={form.company} onChange={handleChange} className={fieldClass} />
         </div>
         <div>
-          <label className="mb-1.5 block text-caption font-bold text-ink">手机号码 *</label>
+          <label className="mb-1.5 block text-caption font-semibold text-ink">手机号码 *</label>
           <input type="tel" name="phone" required value={form.phone} onChange={handleChange} className={fieldClass} />
         </div>
         <div>
-          <label className="mb-1.5 block text-caption font-bold text-ink">邮箱</label>
+          <label className="mb-1.5 block text-caption font-semibold text-ink">邮箱</label>
           <input type="email" name="email" value={form.email} onChange={handleChange} className={fieldClass} />
         </div>
         <div>
-          <label className="mb-1.5 block text-caption font-bold text-ink">产品类型</label>
+          <label className="mb-1.5 block text-caption font-semibold text-ink">产品类型</label>
           <select name="productInterest" value={form.productInterest} onChange={handleChange} className={fieldClass}>
             <option value="">请选择产品…</option>
             {productTypes.map(type => (
@@ -115,13 +115,13 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label className="mb-1.5 block text-caption font-bold text-ink">预估年用量</label>
+          <label className="mb-1.5 block text-caption font-semibold text-ink">预估年用量</label>
           <input type="text" name="annualVolume" value={form.annualVolume} onChange={handleChange} placeholder="例如 5 万件 / 年" className={fieldClass} />
         </div>
       </div>
 
       <div>
-        <label className="mb-1.5 block text-caption font-bold text-ink">需求描述 *</label>
+        <label className="mb-1.5 block text-caption font-semibold text-ink">需求描述 *</label>
         <textarea
           name="message"
           required
@@ -160,7 +160,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex h-12 min-w-[190px] items-center justify-center rounded-full bg-brand-500 px-8 text-body-lg font-bold text-white shadow-[0_14px_30px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 disabled:translate-y-0 disabled:opacity-50"
+        className="inline-flex h-12 min-w-[190px] items-center justify-center rounded-full bg-brand-500 px-8 text-body-lg font-semibold text-white shadow-[0_14px_30px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 disabled:translate-y-0 disabled:opacity-50"
       >
         {status === "submitting" ? "提交中…" : "提交需求,获取选型方案 →"}
       </button>

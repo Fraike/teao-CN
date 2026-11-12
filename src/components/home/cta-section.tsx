@@ -16,13 +16,13 @@ export function CTASection() {
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)] lg:gap-[clamp(2rem,4vw,6rem)]">
           <div>
             <Reveal>
-              <p className="mb-2 inline-flex items-center gap-2 text-micro font-bold uppercase tracking-[0.14em] text-brand-700
+              <p className="mb-2 inline-flex items-center gap-2 text-micro font-medium uppercase tracking-[0.14em] text-brand-700
                 before:content-[''] before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500">
                 快速询盘
               </p>
-              <h2 className="max-w-[620px] text-[36px] font-bold leading-[1.22] tracking-[-0.01em] text-ink">
+              <h2 className="max-w-[620px] text-[36px] font-semibold leading-[1.22] tracking-[-0.01em] text-ink">
                 发图纸或描述需求<br />
-                <b className="font-black text-brand-700">我们先帮你判断结构和扭矩方向</b>
+                <b className="font-semibold text-brand-700">我们先帮你判断结构和扭矩方向</b>
               </h2>
               <p className="mt-4 max-w-[620px] text-body leading-[1.8] text-muted">
                 无论是标准品选型还是非标定制，提交以下任一信息即可启动工程师评估流程。也可直接电话、微信或邮件联系销售工程师。
@@ -33,7 +33,7 @@ export function CTASection() {
               {ctaBenefits.map(benefit => (
                 <Reveal key={benefit}>
                   <div className="flex items-center gap-2 rounded-xl border border-line bg-white p-4 text-caption font-semibold text-ink-soft transition-all duration-250 hover:border-brand-500/40 hover:bg-brand-50">
-                    <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-micro font-black text-brand-700">✓</span>
+                    <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-micro font-semibold text-brand-700">✓</span>
                     {benefit}
                   </div>
                 </Reveal>
@@ -52,8 +52,8 @@ export function CTASection() {
                   className="shrink-0 rounded-xl border border-line-soft bg-white p-1"
                 />
                 <div className="min-w-0">
-                  <p className="text-micro font-black uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
-                  <p className="mt-1 text-2xl font-black text-ink">{contact.primaryName}</p>
+                  <p className="text-micro font-medium uppercase tracking-[0.14em] text-brand-700">销售工程师</p>
+                  <p className="mt-1 text-2xl font-semibold text-ink">{contact.primaryName}</p>
                   <a href={telHref(contact.primaryMobile)} className="mt-1 block text-body font-semibold text-muted transition-colors hover:text-brand-700">
                     {contact.primaryMobile}
                   </a>
@@ -64,13 +64,13 @@ export function CTASection() {
               <div className="mt-6 grid grid-cols-2 gap-2">
                 <a
                   href={telHref(contact.primaryMobile)}
-                  className="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-3 text-body font-bold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-3 text-body font-semibold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
                 >
                   电话咨询
                 </a>
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center justify-center rounded-full border border-line bg-white px-4 py-3 text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  className="inline-flex items-center justify-center rounded-full border border-line bg-white px-4 py-3 text-body font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   在线留言
                 </Link>

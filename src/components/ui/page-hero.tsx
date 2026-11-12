@@ -44,10 +44,10 @@ export function PageHero({
         )}
 
         <Reveal>
-          <span className={`inline-flex items-center gap-2 text-micro font-bold uppercase tracking-[0.14em] text-brand-700 before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500 before:content-[''] ${centered ? "justify-center" : ""}`}>
+          <span className={`inline-flex items-center gap-2 text-micro font-medium uppercase tracking-[0.14em] text-brand-700 before:block before:h-[2px] before:w-[22px] before:rounded before:bg-brand-500 before:content-[''] ${centered ? "justify-center" : ""}`}>
             {eyebrow}
           </span>
-          <h1 className="mt-3 text-[clamp(32px,4vw,50px)] font-bold leading-[1.1] tracking-[-0.02em] text-ink">
+          <h1 className="mt-3 text-[clamp(32px,4vw,50px)] font-semibold leading-[1.1] tracking-[-0.02em] text-ink">
             {title}
           </h1>
           {description && (

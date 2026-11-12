@@ -67,10 +67,10 @@ export function BusinessStats() {
                 key={stat.label}
                 className="group h-full rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]"
               >
-                <span className="block text-[36px] font-black leading-none tracking-[-0.04em] text-brand-500 tabular-nums lg:text-[44px]">
+                <span className="block text-[36px] font-bold leading-none tracking-[-0.04em] text-brand-500 tabular-nums lg:text-[44px]">
                   {parsed ? <CountUp target={parsed.target} suffix={parsed.suffix} /> : stat.value}
                 </span>
-                <span className="mt-3 block text-body font-bold leading-snug text-ink">{stat.label}</span>
+                <span className="mt-3 block text-body font-semibold leading-snug text-ink">{stat.label}</span>
                 <span className="mt-1 block text-micro font-semibold text-muted-light">{stat.unit}</span>
               </div>
             );

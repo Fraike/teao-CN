@@ -64,7 +64,7 @@ export function PeopleCulture() {
               <Reveal key={item.name} delay={Math.min(index + 2, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
                 <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   <Icon className="h-6 w-6 text-brand-500" strokeWidth={1.7} />
-                  <h3 className="mt-4 text-[17px] font-extrabold tracking-[-0.02em] text-ink">
+                  <h3 className="mt-4 text-[17px] font-semibold tracking-[-0.02em] text-ink">
                     {item.name}
                   </h3>
                   <p className="mt-2 text-body leading-relaxed text-muted">{item.description}</p>

@@ -36,13 +36,13 @@ export function CapabilitySection() {
           {/* ── Left: photo + description ── */}
           <Reveal>
             <div>
-              <p className="mb-2 inline-flex items-center gap-2 text-micro font-bold tracking-[0.14em] uppercase text-brand-700
+              <p className="mb-2 inline-flex items-center gap-2 text-micro font-medium tracking-[0.14em] uppercase text-brand-700
                 before:content-[''] before:block before:w-[22px] before:h-[2px] before:bg-brand-500 before:rounded">
                 制造实力
               </p>
-              <h2 className="mt-2 text-[36px] font-bold leading-[1.2] tracking-[-0.01em] text-ink">
+              <h2 className="mt-2 text-[36px] font-semibold leading-[1.2] tracking-[-0.01em] text-ink">
                 模具开发 &rarr; 注塑生产 &rarr;<br />
-                <b className="font-black text-brand-700">自动化装配 &rarr; 批量交付</b>
+                <b className="font-semibold text-brand-700">自动化装配 &rarr; 批量交付</b>
               </h2>
               <p className="mt-[18px] max-w-[430px] text-body leading-[1.75] text-muted">
                 国内采购判断供应商时，工厂实拍、设备清单和检测能力是关键依据。
@@ -69,7 +69,7 @@ export function CapabilitySection() {
                 <div className="group relative flex min-h-[140px] flex-col justify-center overflow-hidden rounded-[14px] border border-line bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-[280ms] ease-out hover:border-brand-500/20 hover:shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
                   {/* Left accent bar — grows on hover */}
                   <span className="absolute top-0 left-0 h-0 w-[3px] bg-brand-500 transition-all duration-[350ms] ease-out group-hover:h-full" />
-                  <strong className="text-body-lg font-bold text-ink">{cap.title}</strong>
+                  <strong className="text-body-lg font-semibold text-ink">{cap.title}</strong>
                   <p className="mt-2 text-caption leading-[1.7] text-muted">{cap.description}</p>
                 </div>
               </Reveal>

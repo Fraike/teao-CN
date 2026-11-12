@@ -61,8 +61,8 @@ function Card({ title, count, children }: { title: string; count?: number; child
   return (
     <section className="rounded-2xl border border-line bg-white p-6">
       <div className="mb-4 flex items-baseline justify-between gap-3 border-b border-line-soft pb-3">
-        <h2 className="text-body font-black tracking-[-0.01em] text-ink">{title}</h2>
-        {typeof count === "number" && <span className="text-micro font-bold text-muted-light">{count} 项</span>}
+        <h2 className="text-body font-semibold tracking-[-0.01em] text-ink">{title}</h2>
+        {typeof count === "number" && <span className="text-micro font-semibold text-muted-light">{count} 项</span>}
       </div>
       {children}
     </section>
@@ -105,7 +105,7 @@ export default async function SiteMapPage() {
               const items = newsArticles.filter(article => article.publishedAt.startsWith(year));
               return (
                 <details key={year} open={year === newsArticles[0]?.publishedAt.slice(0, 4)}>
-                  <summary className="cursor-pointer list-none text-body font-bold text-ink">
+                  <summary className="cursor-pointer list-none text-body font-semibold text-ink">
                     {year}
                     <span className="ml-1.5 text-micro font-semibold text-muted-light">({items.length})</span>
                   </summary>
@@ -133,7 +133,7 @@ export default async function SiteMapPage() {
                   .filter(product => localProductPaths.has(product.path));
                 return (
                   <div key={category.id}>
-                    <Link href={liveHref(category.path)} className="inline-flex items-center gap-1.5 text-body font-bold text-brand-700 hover:underline">
+                    <Link href={liveHref(category.path)} className="inline-flex items-center gap-1.5 text-body font-semibold text-brand-700 hover:underline">
                       {category.label}
                       <span className="text-micro font-semibold text-muted-light">({products.length})</span>
                     </Link>

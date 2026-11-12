@@ -39,8 +39,8 @@ export default function ProductList({
     <section id="product-list" className="scroll-mt-24">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-black uppercase tracking-[0.16em] text-muted-light">产品</span>
-          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-ink px-2 text-xs font-extrabold text-white">
+          <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-light">产品</span>
+          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-ink px-2 text-xs font-semibold text-white">
             {filtered.length}
           </span>
         </div>

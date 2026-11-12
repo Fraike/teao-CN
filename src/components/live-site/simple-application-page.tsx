@@ -37,7 +37,7 @@ export default function SimpleApplicationPage({ app, canonicalPath }: { app: Sim
             <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-line bg-surface">
               <Image src={app.image} alt={app.title} fill sizes="(max-width: 1024px) 100vw, 620px" className="object-cover" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-              <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-micro font-black uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
+              <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-micro font-medium uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
                 {app.title}
               </span>
             </div>

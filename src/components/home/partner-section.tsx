@@ -24,13 +24,13 @@ export function PartnerSection() {
           {/* ── Left: section copy ── */}
           <Reveal>
             <div>
-              <p className="mb-2 inline-flex items-center gap-2 text-micro font-bold tracking-[0.14em] uppercase text-brand-700
+              <p className="mb-2 inline-flex items-center gap-2 text-micro font-medium tracking-[0.14em] uppercase text-brand-700
                 before:content-[''] before:block before:w-[22px] before:h-[2px] before:bg-brand-500 before:rounded">
                 客户案例
               </p>
-              <h2 className="mt-2 text-[36px] font-bold leading-[1.2] tracking-[-0.01em] text-ink">
+              <h2 className="mt-2 text-[36px] font-semibold leading-[1.2] tracking-[-0.01em] text-ink">
                 服务汽车及<br />
-                <b className="font-black text-brand-700">家电供应链客户</b>
+                <b className="font-semibold text-brand-700">家电供应链客户</b>
               </h2>
               <p className="mt-3.5 max-w-[430px] text-body leading-[1.75] text-muted">
                 产品已应用于国内外多家汽车品牌及零部件供应商项目，覆盖燃油车与新能源车型。

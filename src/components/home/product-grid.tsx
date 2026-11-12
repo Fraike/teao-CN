@@ -12,7 +12,7 @@ export async function ProductGrid() {
       <div className="home-shell">
         <SectionHead
           eyebrow="产品中心"
-          title={<>从标准型号到<b className="font-black text-brand-700">按图非标定制</b></>}
+          title={<>从标准型号到<b className="font-semibold text-brand-700">按图非标定制</b></>}
           description="每款产品支持扭矩范围、阻尼方向、安装方式和材料定制。点击查看参数表、尺寸图和性能曲线。"
         />
 
@@ -36,8 +36,8 @@ export async function ProductGrid() {
 
                 {/* Body */}
                 <div className="px-3 pb-4 sm:px-5 sm:pb-5">
-                  <h3 className="text-body-lg font-bold text-ink transition-colors group-hover:text-brand-700">{cat.label}</h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-caption font-bold text-brand-700">
+                  <h3 className="text-body-lg font-semibold text-ink transition-colors group-hover:text-brand-700">{cat.label}</h3>
+                  <span className="mt-2 inline-flex items-center gap-1 text-caption font-semibold text-brand-700">
                     查看分类
                     <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                   </span>

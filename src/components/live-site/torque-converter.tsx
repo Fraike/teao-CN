@@ -33,7 +33,7 @@ export default function TorqueConverter() {
               value={unit}
               onChange={(event) => setUnit(event.target.value)}
               aria-label="输入单位"
-              className="h-14 w-full cursor-pointer appearance-none rounded-xl border border-line bg-white pl-5 pr-10 text-body font-bold text-ink-soft transition-all focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
+              className="h-14 w-full cursor-pointer appearance-none rounded-xl border border-line bg-white pl-5 pr-10 text-body font-semibold text-ink-soft transition-all focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
             >
               {TORQUE_UNITS.map((item) => (
                 <option key={item.key} value={item.key}>{item.label}</option>
@@ -46,7 +46,7 @@ export default function TorqueConverter() {
         <div className="my-6 flex items-center gap-3">
           <div className="h-px flex-1 bg-line" />
           <ArrowDown size={16} className="shrink-0 text-brand-500" strokeWidth={2.5} />
-          <span className="text-xs font-bold uppercase tracking-[0.12em] text-muted-light">换算结果</span>
+          <span className="text-xs font-medium uppercase tracking-[0.12em] text-muted-light">换算结果</span>
           <div className="h-px flex-1 bg-line" />
         </div>
 
@@ -67,11 +67,11 @@ export default function TorqueConverter() {
                     teaUnit ? "border border-brand-500/40 bg-brand-50" : "border border-line bg-surface"
                   }`}
                 >
-                  <div className="mb-1 text-micro font-bold uppercase tracking-[0.08em] text-muted-light lg:text-micro">
+                  <div className="mb-1 text-micro font-medium uppercase tracking-[0.08em] text-muted-light lg:text-micro">
                     {result.label}
                     {teaUnit && <span className="ml-1.5 text-micro text-brand-700">TEAO</span>}
                   </div>
-                  <div className={`text-lg font-black tracking-[-0.03em] tabular-nums lg:text-xl ${teaUnit ? "text-brand-700" : "text-ink"}`}>
+                  <div className={`text-lg font-semibold tracking-[-0.03em] tabular-nums lg:text-xl ${teaUnit ? "text-brand-700" : "text-ink"}`}>
                     {formatTorqueValue(result.value)}
                   </div>
                 </div>

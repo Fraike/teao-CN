@@ -4,7 +4,7 @@ import { container } from "./container";
 
 export default function ListingTabs({ active }: { active?: string }) {
   const pill = (isActive: boolean) =>
-    `shrink-0 rounded-full px-5 py-2 text-body font-bold transition-colors ${
+    `shrink-0 rounded-full px-5 py-2 text-body font-semibold transition-colors ${
       isActive
         ? "bg-brand-500 text-white"
         : "border border-line bg-white text-muted hover:border-brand-500 hover:text-brand-700"

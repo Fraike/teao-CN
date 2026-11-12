@@ -20,10 +20,10 @@ export function CompanyTimeline() {
                   {/* Top accent bar */}
                   <div className="mb-2 h-1 w-8 rounded-full bg-line transition-all duration-300 group-hover:w-12 group-hover:bg-brand-500" />
 
-                  <b className="block text-xl font-black tracking-tight text-ink transition-colors duration-300 group-hover:text-brand-600">
+                  <b className="block text-xl font-semibold tracking-tight text-ink transition-colors duration-300 group-hover:text-brand-600">
                     {item.year}
                   </b>
-                  <h3 className="mt-1.5 text-body font-extrabold leading-tight text-ink-soft">
+                  <h3 className="mt-1.5 text-body font-semibold leading-tight text-ink-soft">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-caption leading-relaxed text-muted">

@@ -45,13 +45,13 @@ export default function Footer() {
             </p>
 
             <div className="mt-5">
-              <p className="text-micro font-black uppercase tracking-[0.14em] text-muted-light">关注我们</p>
+              <p className="text-micro font-medium uppercase tracking-[0.14em] text-muted-light">关注我们</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <a
                   href={ALIBABA_INTL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   阿里巴巴国际站
                 </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                   href={ALIBABA_CN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  className="rounded-full border border-line bg-white px-3.5 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   阿里巴巴国内站 1688
                 </a>
@@ -67,7 +67,7 @@ export default function Footer() {
             </div>
             <Link
               href="/contacts/"
-              className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-body font-bold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
+              className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-body font-semibold text-white shadow-[0_10px_24px_rgba(232,120,26,0.22)] transition-all hover:-translate-y-0.5 hover:bg-brand-700"
             >
               获取报价
             </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:pt-2">
             {footerLinks.map(group => (
               <div key={group.title}>
-                <h3 className="mb-4 text-micro font-black uppercase tracking-[0.14em] text-muted-light">{group.title}</h3>
+                <h3 className="mb-4 text-micro font-medium uppercase tracking-[0.14em] text-muted-light">{group.title}</h3>
                 <ul className="space-y-2.5">
                   {group.links.map(link => (
                     <li key={link.label}>

@@ -56,8 +56,8 @@ export default function ConvertPage() {
             {howToSteps.map((item, i) => (
               <Reveal key={item.step} delay={(i + 1) as 1 | 2 | 3}>
                 <div className="h-full rounded-2xl border border-line bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
-                  <span className="text-xs font-bold tracking-[0.14em] text-brand-700">{item.step}</span>
-                  <h3 className="mt-2 font-bold text-ink">{item.title}</h3>
+                  <span className="text-xs font-semibold tracking-[0.14em] text-brand-700">{item.step}</span>
+                  <h3 className="mt-2 font-semibold text-ink">{item.title}</h3>
                   <p className="mt-1.5 text-body leading-relaxed text-muted">{item.description}</p>
                 </div>
               </Reveal>

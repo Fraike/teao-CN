@@ -16,7 +16,7 @@ export default function ListingHero({ title, description, crumb }: { title: stri
             </>
           )}
         </nav>
-        <h1 className="mt-5 text-[clamp(34px,4.5vw,52px)] font-bold leading-[1.1] tracking-[-0.02em] text-ink">{title}</h1>
+        <h1 className="mt-5 text-[clamp(34px,4.5vw,52px)] font-semibold leading-[1.1] tracking-[-0.02em] text-ink">{title}</h1>
         {description && <p className="mt-4 max-w-[640px] text-body-lg leading-relaxed text-muted">{description}</p>}
       </div>
     </section>

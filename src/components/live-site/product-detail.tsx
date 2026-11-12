@@ -24,7 +24,7 @@ function SectionTitle({ index, title, description }: { index: string; title: str
     <div className="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
       <div className="flex items-baseline gap-4">
         <span className="text-micro font-semibold tracking-[0.14em] text-brand-700">{index}</span>
-        <h2 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">{title}</h2>
+        <h2 className="text-[24px] font-semibold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">{title}</h2>
       </div>
       {description && <p className="max-w-[380px] text-caption leading-relaxed text-muted">{description}</p>}
     </div>
@@ -126,7 +126,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 <span className="text-micro font-semibold uppercase tracking-[0.14em] text-brand-700">{category.label}</span>
               </div>
 
-              <h1 className="mt-4 text-[clamp(30px,3.6vw,46px)] font-bold leading-[1.08] tracking-[-0.02em] text-ink">
+              <h1 className="mt-4 text-[clamp(30px,3.6vw,46px)] font-semibold leading-[1.08] tracking-[-0.02em] text-ink">
                 {product.name}
               </h1>
               <p className="mt-4 max-w-[560px] text-metric leading-relaxed text-ink-soft">{product.summary}</p>
@@ -180,14 +180,14 @@ export default function ProductDetail({ product, category }: { product: ProductC
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
                   href="/contacts/"
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-body font-bold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-body font-semibold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
                 >
                   获取报价
                   <ArrowUpRight size={16} />
                 </Link>
                 <a
                   href={telHref(contact.primaryMobile)}
-                  className="inline-flex items-center rounded-full border border-line bg-white px-8 py-4 text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+                  className="inline-flex items-center rounded-full border border-line bg-white px-8 py-4 text-body font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
                 >
                   电话咨询
                 </a>
@@ -219,13 +219,13 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <div className={`grid gap-6 ${product.specifications.length > 0 && product.materials.length > 0 ? "lg:grid-cols-2" : ""}`}>
               {product.specifications.length > 0 && (
                 <div className="rounded-2xl border border-line bg-white p-6">
-                  <h3 className="mb-4 text-caption font-bold uppercase tracking-[0.12em] text-ink">规格</h3>
+                  <h3 className="mb-4 text-caption font-medium uppercase tracking-[0.12em] text-ink">规格</h3>
                   <table className="w-full">
                     <tbody>
                       {product.specifications.map(spec => (
                         <tr key={spec.label} className="border-t border-line-soft transition-colors first:border-t-0 hover:bg-surface/70">
                           <th scope="row" className="py-3 pr-4 text-left text-micro font-medium text-muted">{spec.label}</th>
-                          <td className="py-3 text-right text-sm font-bold tabular-nums text-ink">{spec.value}</td>
+                          <td className="py-3 text-right text-sm font-semibold tabular-nums text-ink">{spec.value}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -235,13 +235,13 @@ export default function ProductDetail({ product, category }: { product: ProductC
 
               {product.materials.length > 0 && (
                 <div className="rounded-2xl border border-line bg-white p-6">
-                  <h3 className="mb-4 text-caption font-bold uppercase tracking-[0.12em] text-ink">材料清单</h3>
+                  <h3 className="mb-4 text-caption font-medium uppercase tracking-[0.12em] text-ink">材料清单</h3>
                   <table className="w-full">
                     <tbody>
                       {product.materials.map(item => (
                         <tr key={item.part} className="border-t border-line-soft transition-colors first:border-t-0 hover:bg-surface/70">
                           <th scope="row" className="py-3 pr-4 text-left text-micro font-medium text-muted">{item.part}</th>
-                          <td className="py-3 text-right text-sm font-bold tabular-nums text-ink">{item.material}</td>
+                          <td className="py-3 text-right text-sm font-semibold tabular-nums text-ink">{item.material}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -262,7 +262,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 <tr>
                   <th scope="col" className="px-5 py-4 text-micro font-semibold uppercase tracking-[0.14em] text-brand-700/70">参数</th>
                   {product.variants.variants.map(model => (
-                    <th key={model} scope="col" className="px-5 py-4 text-right text-caption font-bold tabular-nums">{model}</th>
+                    <th key={model} scope="col" className="px-5 py-4 text-right text-caption font-semibold tabular-nums">{model}</th>
                   ))}
                 </tr>
               </thead>
@@ -330,7 +330,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
           <div className="divide-y divide-line-soft rounded-2xl border border-line bg-white">
             {faq.map((item, index) => (
               <details key={item.question} className="group">
-                <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-5 text-sm font-bold text-ink lg:px-6">
+                <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-5 text-sm font-semibold text-ink lg:px-6">
                   <span className="text-micro font-semibold tabular-nums text-brand-700">{String(index + 1).padStart(2, "0")}</span>
                   <span className="flex-1">{item.question}</span>
                   <span className="shrink-0 text-lg font-light text-brand-700 transition-transform group-open:rotate-45">+</span>
@@ -348,9 +348,9 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
               <div className="flex items-baseline gap-4">
                 <span className="text-micro font-semibold tracking-[0.14em] text-brand-700">{nextSection()}</span>
-                <h2 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">相关产品</h2>
+                <h2 className="text-[24px] font-semibold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">相关产品</h2>
               </div>
-              <Link href={liveHref(category.path)} className="text-sm font-bold text-brand-700 hover:underline">
+              <Link href={liveHref(category.path)} className="text-sm font-semibold text-brand-700 hover:underline">
                 查看全部 {category.label} →
               </Link>
             </div>

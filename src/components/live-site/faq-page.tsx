@@ -32,7 +32,7 @@ export default function FaqPage() {
           {faqGroups.map((group, gi) => (
             <Reveal key={group.label} delay={(Math.min(gi, 2) + 1) as 1 | 2 | 3}>
               <section>
-                <h2 className="mb-4 text-xl font-black tracking-[-0.02em] text-ink">{group.label}</h2>
+                <h2 className="mb-4 text-xl font-semibold tracking-[-0.02em] text-ink">{group.label}</h2>
                 <div className="divide-y divide-line-soft rounded-2xl border border-line bg-white">
                   {group.items.map(item => (
                     <details key={item.q} className="group">

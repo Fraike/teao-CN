@@ -131,11 +131,11 @@ export default async function ProductDetailPage({
             {/* Right: Product Info */}
             <div>
               {/* Model badge */}
-              <span className="inline-block rounded-lg bg-brand-50 px-3 py-1 text-xs font-bold text-brand-700 mb-4">
+              <span className="inline-block rounded-lg bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 mb-4">
                 {product.model}
               </span>
 
-              <h1 className="text-[32px] leading-tight font-bold text-ink tracking-tight">
+              <h1 className="text-[32px] leading-tight font-semibold text-ink tracking-tight">
                 {product.name}
               </h1>
 
@@ -146,7 +146,7 @@ export default async function ProductDetailPage({
               {/* Specifications Table */}
               {Object.keys(specs).length > 0 && (
                 <div className="mt-8">
-                  <h2 className="text-lg font-bold text-ink mb-4">技术参数</h2>
+                  <h2 className="text-lg font-semibold text-ink mb-4">技术参数</h2>
                   <div className="rounded-xl border border-line overflow-hidden">
                     <table className="w-full text-body">
                       <tbody>
@@ -172,7 +172,7 @@ export default async function ProductDetailPage({
               {/* Features List */}
               {features.length > 0 && (
                 <div className="mt-8">
-                  <h2 className="text-lg font-bold text-ink mb-3">产品特点</h2>
+                  <h2 className="text-lg font-semibold text-ink mb-3">产品特点</h2>
                   <ul className="space-y-2">
                     {features.map((feat) => (
                       <li
@@ -190,7 +190,7 @@ export default async function ProductDetailPage({
               {/* Applications List */}
               {applications.length > 0 && (
                 <div className="mt-6">
-                  <h2 className="text-lg font-bold text-ink mb-3">应用场景</h2>
+                  <h2 className="text-lg font-semibold text-ink mb-3">应用场景</h2>
                   <div className="flex flex-wrap gap-2">
                     {applications.map((app) => (
                       <span

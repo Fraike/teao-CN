@@ -73,7 +73,7 @@ export function ApplicationSection() {
       <div className="home-shell">
         <SectionHead
           eyebrow="应用领域"
-          title={<>先看场景，<b className="font-black text-brand-700">再选产品</b></>}
+          title={<>先看场景，<b className="font-semibold text-brand-700">再选产品</b></>}
           description="国内采购更习惯从使用场景出发找解决方案。以下是我们最常见的应用领域和推荐产品组合。"
         />
 
@@ -93,7 +93,7 @@ export function ApplicationSection() {
               <div className="relative z-10">
                 <h3 className="text-[28px] leading-[1.25] font-semibold max-w-[450px]">
                   多领域开合机构的<br />
-                  <em className="not-italic text-brand-500 font-black">静音缓冲方案</em>
+                  <em className="not-italic text-brand-500 font-semibold">静音缓冲方案</em>
                 </h3>
                 <p className="mt-3 text-body leading-[1.8] text-white/75 max-w-[440px]">
                   解决杯托弹开撞击、手套箱下落过快、家电盖板缓降、马桶盖缓冲、医疗设备平稳运动等问题。稳定扭矩输出，适配 -30°C ～ +80°C 温度区间。
@@ -102,7 +102,7 @@ export function ApplicationSection() {
 
               <Link
                 href="/contacts/"
-                className="relative z-10 inline-flex items-center gap-1.5 border-[1.5px] border-white/28 bg-white/6 px-[22px] py-3 text-caption font-bold rounded-lg transition-all duration-250 hover:border-white/50 hover:bg-white/12 w-fit"
+                className="relative z-10 inline-flex items-center gap-1.5 border-[1.5px] border-white/28 bg-white/6 px-[22px] py-3 text-caption font-semibold rounded-lg transition-all duration-250 hover:border-white/50 hover:bg-white/12 w-fit"
               >
                 提交应用需求 &rarr;
               </Link>
@@ -119,13 +119,13 @@ export function ApplicationSection() {
                     {card.icon}
                   </div>
 
-                  <h4 className="text-body-lg font-bold text-ink">
+                  <h4 className="text-body-lg font-semibold text-ink">
                     {card.title}
                   </h4>
                   <p className="mt-1.5 text-caption leading-[1.65] text-muted">
                     {card.description}
                   </p>
-                  <span className="inline-block mt-2.5 px-2.5 py-[3px] text-micro font-bold text-brand-700 bg-brand-50 rounded">
+                  <span className="inline-block mt-2.5 px-2.5 py-[3px] text-micro font-semibold text-brand-700 bg-brand-50 rounded">
                     {card.recommend}
                   </span>
                 </div>

@@ -64,7 +64,7 @@ export default function VideoPlayer({
           <span className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
           <span className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/50 px-3.5 py-2 text-white/85 backdrop-blur-md">
             <Video size={15} strokeWidth={2} />
-            <span className="text-micro font-black uppercase tracking-[0.14em]">{badge}</span>
+            <span className="text-micro font-medium uppercase tracking-[0.14em]">{badge}</span>
           </span>
           <span className="absolute inset-0 flex items-center justify-center">
             <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-500 text-white shadow-[0_18px_48px_rgba(232,120,26,0.36)] transition-transform duration-300 group-hover:scale-105 lg:h-20 lg:w-20">
@@ -72,7 +72,7 @@ export default function VideoPlayer({
             </span>
           </span>
           <span className="absolute inset-x-5 bottom-5 lg:inset-x-7 lg:bottom-7">
-            <span className="block max-w-[420px] text-2xl font-bold leading-[1.15] tracking-[-0.02em] text-white lg:text-[30px]">
+            <span className="block max-w-[420px] text-2xl font-semibold leading-[1.15] tracking-[-0.02em] text-white lg:text-[30px]">
               {title}
             </span>
           </span>

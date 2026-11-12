@@ -33,15 +33,15 @@ export async function NewsStrip() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <div className="flex items-center gap-3 text-micro font-bold uppercase tracking-[0.12em] text-muted-light">
+                  <div className="flex items-center gap-3 text-micro font-medium uppercase tracking-[0.12em] text-muted-light">
                     <span className="text-brand-700">{article.categoryLabel}</span>
                     <span>{article.publishedAt}</span>
                   </div>
-                  <h3 className="mt-2 line-clamp-2 text-body-lg font-bold leading-snug text-ink transition-colors group-hover:text-brand-700">
+                  <h3 className="mt-2 line-clamp-2 text-body-lg font-semibold leading-snug text-ink transition-colors group-hover:text-brand-700">
                     {article.title}
                   </h3>
                   <p className="mt-1.5 line-clamp-2 text-caption leading-relaxed text-muted">{article.summary}</p>
-                  <span className="mt-auto inline-flex items-center gap-1 pt-4 text-caption font-bold text-brand-700">
+                  <span className="mt-auto inline-flex items-center gap-1 pt-4 text-caption font-semibold text-brand-700">
                     阅读全文
                     <ArrowUpRight size={13} />
                   </span>
@@ -52,7 +52,7 @@ export async function NewsStrip() {
         </div>
 
         <div className="mt-8 text-center">
-          <Link href="/news/" className="text-body font-bold text-brand-700 hover:underline">
+          <Link href="/news/" className="text-body font-semibold text-brand-700 hover:underline">
             查看全部新闻 →
           </Link>
         </div>

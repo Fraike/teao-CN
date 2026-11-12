@@ -57,9 +57,9 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
             <Reveal key={scene.id} delay={(Math.min(i, 2) + 1) as 1 | 2 | 3}>
               <article id={scene.id} className="scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-white p-5 transition-colors duration-300 hover:border-brand-500/30 lg:p-6">
                 <div className="mb-5 flex items-center gap-3 border-b border-line-soft pb-4">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-body font-black text-brand-700">{scene.no}</span>
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-body font-semibold text-brand-700">{scene.no}</span>
                   <div className="min-w-0">
-                    <h2 className="text-xl font-black leading-tight tracking-[-0.02em]">{scene.title}</h2>
+                    <h2 className="text-xl font-semibold leading-tight tracking-[-0.02em]">{scene.title}</h2>
                     <p className="mt-0.5 text-micro text-muted-light">{modelCount} 个推荐型号</p>
                   </div>
                 </div>
@@ -74,14 +74,14 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
 
                     <div className="mt-4 flex-1 rounded-2xl border border-line bg-surface/60 p-3.5">
                       <div className="mb-2.5 flex items-center justify-between gap-2">
-                        <span className="text-micro font-black uppercase tracking-[0.14em] text-muted-light">推荐型号</span>
+                        <span className="text-micro font-medium uppercase tracking-[0.14em] text-muted-light">推荐型号</span>
                         <span className="text-micro font-semibold text-muted-light">按应用可调扭矩</span>
                       </div>
 
                       <div className="space-y-3">
                         {scene.groups.map(group => (
                           <div key={group.title}>
-                            <Link href={liveHref(group.categoryPath)} className="mb-1.5 inline-flex items-center gap-1 text-caption font-bold text-brand-700 hover:underline">
+                            <Link href={liveHref(group.categoryPath)} className="mb-1.5 inline-flex items-center gap-1 text-caption font-semibold text-brand-700 hover:underline">
                               {group.title}
                               <ArrowUpRight size={12} />
                             </Link>
@@ -90,7 +90,7 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
                                 const item = getProductContentByModel(model);
                                 if (!item) {
                                   return (
-                                    <span key={model} className="rounded-xl border border-dashed border-line bg-white px-3 py-2 text-caption font-bold text-ink-soft">
+                                    <span key={model} className="rounded-xl border border-dashed border-line bg-white px-3 py-2 text-caption font-semibold text-ink-soft">
                                       {model}
                                     </span>
                                   );
@@ -112,7 +112,7 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
                                       )}
                                     </span>
                                     <span className="min-w-0 flex-1">
-                                      <span className="block truncate text-caption font-bold text-ink group-hover:text-brand-700">{item.model}</span>
+                                      <span className="block truncate text-caption font-semibold text-ink group-hover:text-brand-700">{item.model}</span>
                                       <span className="block truncate text-micro text-muted">{range}</span>
                                     </span>
                                     <ArrowUpRight size={13} className="shrink-0 text-muted-light transition-colors group-hover:text-brand-700" />

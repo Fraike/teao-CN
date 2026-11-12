@@ -49,7 +49,7 @@ export function HeroSection() {
         <div className="min-w-0">
           {/* Eyebrow tag */}
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-caption font-bold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
+            <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-caption font-semibold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
               <span className="h-[7px] w-[7px] shrink-0 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(232,120,26,0.15)]" />
               面向汽车 · 家电 · 卫浴 · 医疗 · 工业供应链
             </div>
@@ -61,7 +61,7 @@ export function HeroSection() {
               多领域{" "}
             </Reveal>
             <Reveal delay={2} className="inline-block">
-              <em className="not-italic relative font-black text-brand-700">
+              <em className="not-italic relative font-semibold text-brand-700">
                 阻尼器
                 <span className="absolute bottom-[2px] left-0 h-2 w-full rounded bg-brand-500/12 -z-[1]" />
               </em>
@@ -71,7 +71,7 @@ export function HeroSection() {
             </Reveal>
             <br />
             <Reveal delay={4} className="inline-block">
-              <b className="font-black">定制源头厂家</b>
+              <b className="font-semibold">定制源头厂家</b>
             </Reveal>
           </h1>
 
@@ -134,7 +134,7 @@ export function HeroSection() {
                   sizes={index === 0 ? "(min-width: 1024px) 45vw, (min-width: 640px) 31vw, 92vw" : "(min-width: 1024px) 22vw, (min-width: 640px) 31vw, 45vw"}
                   className="object-contain px-3 pt-2 pb-8 sm:px-5 lg:px-8 lg:pt-5 lg:pb-10 transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute bottom-2 left-2 rounded-full sm:bottom-3 sm:left-3 bg-white/95 px-3 py-1 text-micro font-bold text-ink shadow-sm">
+                <span className="absolute bottom-2 left-2 rounded-full sm:bottom-3 sm:left-3 bg-white/95 px-3 py-1 text-micro font-semibold text-ink shadow-sm">
                   {category.label}
                 </span>
               </Link>

@@ -51,7 +51,7 @@ export function QualitySection() {
       <div className="home-shell">
         <SectionHead
           eyebrow="质量认证"
-          title={<>不只是证书墙 — <b className="font-black text-brand-700">展示质量怎么管</b></>}
+          title={<>不只是证书墙 — <b className="font-semibold text-brand-700">展示质量怎么管</b></>}
           description="从来料到出货的全流程质量控制，每一批次产品均可追溯。"
         />
 
@@ -62,11 +62,11 @@ export function QualitySection() {
               <Reveal key={cert.name}>
                 <div className="group flex items-center justify-between rounded-[14px] border border-line bg-white p-[22px] px-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-[250ms] ease-out hover:translate-x-[3px] hover:border-brand-500/20 hover:shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
                   <div className="cert-info">
-                    <strong className="block text-[19px] font-bold text-ink">{cert.name}</strong>
+                    <strong className="block text-[19px] font-semibold text-ink">{cert.name}</strong>
                     <span className="mt-1 block text-caption text-muted">{cert.description}</span>
                   </div>
                   <div
-                    className={`flex h-[54px] w-[54px] flex-shrink-0 items-center justify-center rounded-[10px] text-xs font-bold text-white transition-transform duration-300 ease-out group-hover:rotate-[4deg] group-hover:scale-104 ${cert.badgeBg}`}
+                    className={`flex h-[54px] w-[54px] flex-shrink-0 items-center justify-center rounded-[10px] text-xs font-semibold text-white transition-transform duration-300 ease-out group-hover:rotate-[4deg] group-hover:scale-104 ${cert.badgeBg}`}
                   >
                     {cert.badge}
                   </div>
@@ -80,10 +80,10 @@ export function QualitySection() {
             {qcSteps.map((step, i) => (
               <Reveal key={step.num} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
                 <div className="group rounded-[14px] border border-line bg-white p-[22px] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-[250ms] ease-out hover:border-brand-500/20 hover:shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-[7px] bg-brand-500 text-xs font-bold text-white transition-transform duration-[250ms] ease-out group-hover:scale-108">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-[7px] bg-brand-500 text-xs font-semibold text-white transition-transform duration-[250ms] ease-out group-hover:scale-108">
                     {step.num}
                   </span>
-                  <strong className="mt-3 block text-body-lg font-bold text-ink">{step.title}</strong>
+                  <strong className="mt-3 block text-body-lg font-semibold text-ink">{step.title}</strong>
                   <p className="mt-1.5 text-caption leading-[1.6] text-muted">{step.description}</p>
                 </div>
               </Reveal>

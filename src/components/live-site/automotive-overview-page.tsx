@@ -74,11 +74,11 @@ export default function AutomotiveOverviewPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-micro font-black uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
+                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-micro font-medium uppercase tracking-[0.12em] text-brand-700 backdrop-blur">
                     {entry.count} 个应用位置
                   </span>
                   <div className="absolute inset-x-5 bottom-5 text-white">
-                    <h2 className="text-2xl font-black tracking-tight">{entry.title}</h2>
+                    <h2 className="text-2xl font-semibold tracking-tight">{entry.title}</h2>
                     <p className="mt-1 max-w-[420px] text-caption leading-relaxed text-white/80">{entry.description}</p>
                   </div>
                   <span className="absolute right-5 bottom-5 grid h-10 w-10 place-items-center rounded-full bg-white text-brand-700 shadow-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -111,7 +111,7 @@ export default function AutomotiveOverviewPage() {
                       className="object-cover"
                     />
                   </div>
-                  <figcaption className="border-t border-line-soft px-5 py-3 text-caption font-bold text-ink">
+                  <figcaption className="border-t border-line-soft px-5 py-3 text-caption font-semibold text-ink">
                     {photo.caption}
                   </figcaption>
                 </figure>

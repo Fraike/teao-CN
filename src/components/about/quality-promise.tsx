@@ -20,13 +20,13 @@ export function QualityPromise() {
               <Reveal key={item.title} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5} className="h-full">
                 <div className="group flex h-full flex-col cursor-default rounded-2xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_12px_32px_rgba(232,120,26,0.08)]">
                   {/* Step number */}
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-lg font-black text-brand-500 transition-all duration-300 group-hover:bg-brand-500 group-hover:text-white group-hover:shadow-[0_4px_12px_rgba(232,120,26,0.35)]">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-lg font-semibold text-brand-500 transition-all duration-300 group-hover:bg-brand-500 group-hover:text-white group-hover:shadow-[0_4px_12px_rgba(232,120,26,0.35)]">
                     {String(i + 1).padStart(2, "0")}
                   </div>
 
                   <Icon className="h-7 w-7 text-brand-500" strokeWidth={1.5} />
 
-                  <h3 className="mt-3 text-body-lg font-extrabold text-ink">{item.title}</h3>
+                  <h3 className="mt-3 text-body-lg font-semibold text-ink">{item.title}</h3>
                   <p className="mt-2 text-caption leading-relaxed text-muted">{item.description}</p>
 
                   {/* Bottom accent */}
@@ -41,7 +41,7 @@ export function QualityPromise() {
         <Reveal delay={3}>
           <div className="mt-8 overflow-hidden rounded-2xl border border-brand-200 bg-brand-50/70 p-6 text-center sm:p-8">
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <div className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-4 py-1.5 text-body font-extrabold text-white">
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-4 py-1.5 text-body font-semibold text-white">
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>

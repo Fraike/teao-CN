@@ -23,7 +23,7 @@ export default function ProductCard({ product }: { product: EnrichedProduct }) {
 
       <div className="flex min-w-0 flex-col">
         <a href={href}>
-          <h3 className="line-clamp-1 text-[16px] font-bold leading-tight tracking-[-0.01em] text-ink transition-colors group-hover:text-brand-700 lg:text-[17px]">
+          <h3 className="line-clamp-1 text-[16px] font-semibold leading-tight tracking-[-0.01em] text-ink transition-colors group-hover:text-brand-700 lg:text-[17px]">
             {product.model}
           </h3>
         </a>

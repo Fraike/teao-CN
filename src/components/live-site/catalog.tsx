@@ -35,10 +35,10 @@ export function ProductCards({ related = false, items = products }: { related?: 
       <a href={liveHref(product.path)} className="relative block aspect-[1.25] border-b border-line-soft">
         <Image src={product.image} alt={product.title} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 300px" className="object-contain p-4" draggable={false} />
       </a>
-      <div className="p-5"><h3 className="text-lg font-bold"><a href={liveHref(product.path)}>{product.model}</a></h3>
+      <div className="p-5"><h3 className="text-lg font-semibold"><a href={liveHref(product.path)}>{product.model}</a></h3>
         <p className="mt-2 line-clamp-2 min-h-12 text-body text-muted">{product.title}</p>
         {!related && <ul className="mt-4 space-y-1 border-t border-line-soft pt-3 text-xs text-ink-soft">{product.specifications.filter(spec => !spec.startsWith("压力角:") && !(product.path === PILOT_PRODUCT_PATH && (spec.startsWith("尺寸:") || spec.startsWith("模数:")))).map(spec => <li key={spec}>{spec}</li>)}</ul>}
-        <a href={liveHref(product.path)} className="mt-4 inline-block text-body font-bold text-brand-700 underline-offset-4 hover:underline">{liveHref(product.path).startsWith("/") ? "查看产品详情" : "查看原站详情"}</a>
+        <a href={liveHref(product.path)} className="mt-4 inline-block text-body font-semibold text-brand-700 underline-offset-4 hover:underline">{liveHref(product.path).startsWith("/") ? "查看产品详情" : "查看原站详情"}</a>
       </div>
     </article>)}
   </div>;
@@ -88,8 +88,8 @@ export function CategoryPage({ category = liveCatalog[0], page = category.pages[
       <section id="products" className={`${container} scroll-mt-24 pb-12 pt-8`}>
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <span className="text-xs font-black uppercase tracking-[0.16em] text-muted-light">产品</span>
-            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-ink px-2 text-xs font-extrabold text-white">{totalCount}</span>
+            <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-light">产品</span>
+            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-ink px-2 text-xs font-semibold text-white">{totalCount}</span>
           </div>
           <p className="text-xs text-muted">第 {page.number} / {category.pages.length} 页 · 本页 {page.products.length} 款</p>
         </div>

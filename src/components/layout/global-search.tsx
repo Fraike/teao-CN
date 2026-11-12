@@ -82,7 +82,7 @@ export default function GlobalSearch() {
     const Icon = icon === "product" ? Package : FileText;
     return (
       <section>
-        <div className="mb-2 flex items-center gap-2 px-1 text-micro font-black uppercase tracking-[0.14em] text-muted-light">
+        <div className="mb-2 flex items-center gap-2 px-1 text-micro font-medium uppercase tracking-[0.14em] text-muted-light">
           <Icon size={14} className="text-brand-700" />
           {title}
         </div>
@@ -103,10 +103,10 @@ export default function GlobalSearch() {
               </div>
               <div className="min-w-0">
                 <div className="mb-1 flex items-center gap-2">
-                  <span className="truncate rounded-full bg-surface px-2 py-0.5 text-micro font-bold text-muted">{item.label}</span>
+                  <span className="truncate rounded-full bg-surface px-2 py-0.5 text-micro font-semibold text-muted">{item.label}</span>
                   {item.publishedAt && <span className="shrink-0 text-micro text-muted-light">{item.publishedAt}</span>}
                 </div>
-                <h3 className="truncate text-body font-bold text-ink group-hover:text-brand-700">{item.title}</h3>
+                <h3 className="truncate text-body font-semibold text-ink group-hover:text-brand-700">{item.title}</h3>
                 {item.excerpt && <p className="mt-1 line-clamp-1 text-xs text-muted">{item.excerpt}</p>}
               </div>
               <ArrowRight size={16} className="text-muted-light group-hover:text-brand-700" />
@@ -151,7 +151,7 @@ export default function GlobalSearch() {
             <div className="max-h-[min(68vh,620px)] overflow-y-auto p-4">
               {query.trim().length < 2 ? (
                 <div className="py-10 text-center">
-                  <p className="text-body font-bold text-ink">输入至少 2 个字符</p>
+                  <p className="text-body font-semibold text-ink">输入至少 2 个字符</p>
                   <p className="mt-2 text-body text-muted">可搜索产品型号、阻尼器类型、技术文章与新闻。</p>
                 </div>
               ) : loading && results.total === 0 ? (
@@ -160,7 +160,7 @@ export default function GlobalSearch() {
                 </div>
               ) : results.total === 0 ? (
                 <div className="py-12 text-center">
-                  <p className="text-body font-bold text-ink">没有找到「{query.trim()}」</p>
+                  <p className="text-body font-semibold text-ink">没有找到「{query.trim()}」</p>
                   <p className="mt-2 text-body text-muted">试试型号(如 RD-T036)或关键词(如 手套箱、齿轮阻尼器)。</p>
                 </div>
               ) : (

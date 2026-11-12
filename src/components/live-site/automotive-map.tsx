@@ -54,7 +54,7 @@ export default function AutomotiveMap({ map, sceneIds }: { map: ApplicationMap; 
               <span className={`grid h-4 w-4 shrink-0 place-items-center rounded-full bg-white/95 ${isActive ? "animate-pulse" : ""}`}>
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-700" />
               </span>
-              <span className="hidden whitespace-nowrap pr-0.5 text-caption font-bold lg:inline">{hotspot.label}</span>
+              <span className="hidden whitespace-nowrap pr-0.5 text-caption font-semibold lg:inline">{hotspot.label}</span>
             </button>
           );
         })}
@@ -68,7 +68,7 @@ export default function AutomotiveMap({ map, sceneIds }: { map: ApplicationMap; 
               key={hotspot.id}
               type="button"
               onClick={() => goToScene(hotspot.id)}
-              className={`shrink-0 rounded-full border px-3 py-1.5 text-micro font-bold transition-colors ${
+              className={`shrink-0 rounded-full border px-3 py-1.5 text-micro font-semibold transition-colors ${
                 active === hotspot.id ? "border-brand-500 bg-brand-50 text-brand-700" : "border-line bg-white text-muted"
               }`}
             >

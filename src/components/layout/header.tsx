@@ -41,7 +41,7 @@ export default function Header() {
             : "border-b border-transparent bg-white/70 backdrop-blur-lg"
         }`}
       >
-        <nav className="home-shell relative flex h-[73px] items-center justify-between transition-all duration-300">
+        <nav className="relative flex h-[73px] items-center justify-between px-5 transition-all duration-300 sm:px-8 lg:px-12">
           {/* Brand */}
           <Link href="/" aria-label="特澳 TEAO 首页" className="relative block h-9 w-[96px] shrink-0">
             <Image
@@ -109,20 +109,20 @@ export default function Header() {
               rel="noopener noreferrer"
               aria-label="访问英文国际站"
               title="英文国际站"
-              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-2.5 text-caption font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:px-3.5 lg:h-[38px]"
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-white px-2.5 text-caption font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:px-3.5 lg:h-[38px]"
             >
               <Globe size={14} />
               <span className="hidden sm:inline">EN</span>
             </a>
             <Link
               href="/convert/"
-              className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"
+              className="hidden h-9 items-center rounded-full border border-line bg-white px-4 text-body font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700 sm:inline-flex lg:h-[38px]"
             >
               扭矩换算
             </Link>
             <Link
               href="/contacts/"
-              className="inline-flex h-9 shrink-0 items-center whitespace-nowrap rounded-full bg-brand-500 px-3.5 text-body font-bold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:px-4 lg:h-[38px]"
+              className="inline-flex h-9 shrink-0 items-center whitespace-nowrap rounded-full bg-brand-500 px-3.5 text-body font-semibold text-white shadow-[0_8px_20px_rgba(232,120,26,.2)] transition-all duration-300 hover:bg-brand-700 lg:px-4 lg:h-[38px]"
             >
               获取报价
             </Link>
@@ -170,7 +170,7 @@ export default function Header() {
             <Link
               href="/convert/"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 rounded-full border border-line py-3 text-center text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+              className="mt-4 rounded-full border border-line py-3 text-center text-body font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
             >
               扭矩换算
             </Link>
@@ -178,14 +178,14 @@ export default function Header() {
               href="https://teao-damper.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-line py-3 text-center text-body font-bold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
+              className="rounded-full border border-line py-3 text-center text-body font-semibold text-ink-soft transition-colors hover:border-brand-500 hover:text-brand-700"
             >
               English 国际站
             </a>
             <Link
               href="/contacts/"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 rounded-full bg-brand-500 py-3 text-center text-body font-bold text-white"
+              className="mt-2 rounded-full bg-brand-500 py-3 text-center text-body font-semibold text-white"
             >
               获取报价
             </Link>
