@@ -34,14 +34,14 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-        <nav
-          className={`flex h-[73px] items-center justify-between px-5 lg:px-8 transition-all duration-300 ${
-            scrolled
-              ? "border-b border-line bg-white/90 shadow-[0_1px_3px_rgba(0,0,0,.04)] backdrop-blur-xl"
-              : "border-b border-transparent bg-white/70 backdrop-blur-lg"
-          }`}
-        >
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "border-b border-line bg-white/90 shadow-[0_1px_3px_rgba(0,0,0,.04)] backdrop-blur-xl"
+            : "border-b border-transparent bg-white/70 backdrop-blur-lg"
+        }`}
+      >
+        <nav className="home-shell relative flex h-[73px] items-center justify-between transition-all duration-300">
           {/* Brand */}
           <Link href="/" aria-label="特澳 TEAO 首页" className="relative block h-9 w-[96px] shrink-0">
             <Image
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden items-center gap-6 text-body-lg font-semibold text-ink-soft lg:flex">
             {navItems.map((item) =>
               item.mega ? (
-                <div key={item.label} className="group relative flex min-h-[73px] items-center">
+                <div key={item.label} className="group flex min-h-[73px] items-center">
                   <Link
                     href={item.href}
                     className="relative flex items-center gap-1 after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-0.5 after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 group-hover:after:scale-x-100 hover:text-brand-500 transition-colors"
@@ -67,7 +67,7 @@ export default function Header() {
                     <ChevronDown size={14} />
                   </Link>
                   {/* Mega menu */}
-                  <div className="invisible absolute left-1/2 top-full grid w-[760px] -translate-x-1/2 translate-y-2.5 grid-cols-5 gap-2 rounded-2xl border border-line bg-white p-3 opacity-0 shadow-[0_20px_60px_rgba(0,0,0,.08)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="invisible absolute left-1/2 top-full grid w-[760px] -translate-x-1/2 translate-y-2.5 grid-cols-5 gap-2 rounded-2xl border border-line bg-white p-3 opacity-0 shadow-[0_20px_60px_rgba(0,0,0,.08)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                     {liveCatalog.map((cat) => (
                       <Link
                         key={cat.id}

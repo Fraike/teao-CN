@@ -57,27 +57,6 @@ function AnimatedCounter({
   );
 }
 
-/* ── Border helper ──
-   Mobile (2 cols): cells 0,2 get border-r; cells 1,3 do NOT
-   Desktop (5 cols): cells 0-3 get border-r; cell 4 never does
-   All cells: border-b on mobile, removed on lg+
-────────────────────────────────── */
-function cellBorderClass(i: number, total: number) {
-  const isLast = i === total - 1;
-  if (isLast) return "border-b border-line-soft lg:border-b-0";
-
-  const isMobileRight = i % 2 === 0; // cells 0,2 are right-column on mobile 2-col
-  const isDesktopRight = i < total - 1; // cells 0-3 are not last on desktop 5-col
-
-  if (isMobileRight && isDesktopRight) {
-    // always has right border
-    return "border-b border-r border-line-soft lg:border-b-0";
-  }
-
-  // only right border on desktop (i=1,3)
-  return "border-b border-line-soft lg:border-b-0 lg:border-r lg:border-line-soft";
-}
-
 /* ── Stat definitions ── */
 const stats = [
   { type: "counter" as const, target: 20, suffix: "+年", label: "阻尼器研发制造经验" },
@@ -90,13 +69,15 @@ const stats = [
 export function StatsBar() {
   return (
     <section className="border-y border-line bg-white">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 px-5 lg:px-8 lg:grid-cols-5">
+      <div className="home-shell grid grid-cols-2 sm:grid-cols-5">
         {stats.map((stat, i) => (
           <div
             key={stat.label}
-            className={`px-4 py-7 text-center transition-colors duration-[250ms] hover:bg-surface ${cellBorderClass(i, stats.length)}`}
+            className={`px-2 py-5 text-center sm:px-4 sm:py-7 ${i === stats.length - 1
+              ? "col-span-2 sm:col-span-1"
+              : `border-b border-line-soft sm:border-b-0 sm:border-r ${i % 2 === 0 ? "border-r" : ""}` }`}
           >
-              <div className="flex items-baseline justify-center gap-[3px] text-[32px] font-bold leading-[1.1] tracking-[-0.02em] text-ink">
+              <div className="flex items-baseline justify-center gap-[3px] text-[clamp(1.4rem,2.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.02em] text-ink">
                 {stat.type === "counter" ? (
                   <AnimatedCounter target={stat.target} suffix={stat.suffix} />
                 ) : (

@@ -32,6 +32,19 @@
   --text-metric: 1.125rem;   /* 18px：参数数值 */
 }
 
+/* Home sections share fluid gutters while their backgrounds span the viewport.
+   内容列在超宽屏上封顶 1440px 并居中，背景仍由外层 section 铺满。 */
+@utility home-shell {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3.6vw, 6rem);
+}
+
+@utility home-section-space {
+  padding-block: clamp(3.25rem, 5.6vw, 7rem);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

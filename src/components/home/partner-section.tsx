@@ -18,9 +18,9 @@ const partners = [
 
 export function PartnerSection() {
   return (
-    <section className="bg-white py-20" id="clients">
-      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[320px_1fr]">
+    <section className="bg-white home-section-space" id="clients">
+      <div className="home-shell">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-[clamp(2rem,4vw,6rem)]">
           {/* ── Left: section copy ── */}
           <Reveal>
             <div>

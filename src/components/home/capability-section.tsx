@@ -30,9 +30,9 @@ const capabilities = [
 
 export function CapabilitySection() {
   return (
-    <section className="bg-white py-20" id="factory">
-      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[420px_1fr]">
+    <section className="bg-white home-section-space" id="factory">
+      <div className="home-shell">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-[clamp(2rem,4vw,6rem)]">
           {/* ── Left: photo + description ── */}
           <Reveal>
             <div>
@@ -55,7 +55,7 @@ export function CapabilitySection() {
                     alt="特澳自动化生产车间"
                     fill
                     className="object-cover transition-transform duration-700 ease-out hover:scale-104"
-                    sizes="420px"
+                    sizes="(min-width: 1024px) 39vw, 92vw"
                   />
                 </div>
               </div>

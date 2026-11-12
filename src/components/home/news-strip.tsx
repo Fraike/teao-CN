@@ -8,8 +8,8 @@ import { getPublishedNews } from "@/lib/news-store";
 export async function NewsStrip() {
   const newsArticles = (await getPublishedNews()).slice(0, 3);
   return (
-    <section className="border-t border-line bg-white py-20">
-      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+    <section className="border-t border-line bg-white home-section-space">
+      <div className="home-shell">
         <SectionHead
           eyebrow="新闻动态"
           title="公司动态与工程进展"
@@ -28,7 +28,7 @@ export async function NewsStrip() {
                     src={article.cover}
                     alt={article.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 400px"
+                    sizes="(min-width: 768px) 30vw, 92vw"
                     className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

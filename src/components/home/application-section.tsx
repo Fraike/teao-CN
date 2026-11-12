@@ -69,8 +69,8 @@ const appCards = [
 
 export function ApplicationSection() {
   return (
-    <section className="bg-surface-warm py-20" id="applications">
-      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+    <section className="bg-surface-warm home-section-space" id="applications">
+      <div className="home-shell">
         <SectionHead
           eyebrow="应用领域"
           title={<>先看场景，<b className="font-black text-brand-700">再选产品</b></>}
@@ -81,7 +81,7 @@ export function ApplicationSection() {
           {/* ── Left hero card ── */}
           <Reveal>
             <div
-              className="relative flex flex-col justify-between min-h-[440px] p-10 rounded-[14px] overflow-hidden text-white"
+              className="relative flex flex-col justify-between min-h-[320px] p-6 sm:min-h-[380px] sm:p-9 lg:min-h-[440px] lg:p-10 rounded-[14px] overflow-hidden text-white"
               style={{
                 background:
                   "linear-gradient(160deg, rgba(26,26,30,0.82) 0%, rgba(26,26,30,0.45) 50%, rgba(26,26,30,0.80) 100%), url('/images/company/automation-workshop.webp') center/cover no-repeat",

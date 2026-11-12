@@ -1,1 +1,2 @@
-export const container = "mx-auto w-full max-w-7xl px-5 lg:px-8";
+// 全站内容列：与首页 .home-shell 完全一致，保证 Header、首页、内页左右对齐。
+export const container = "home-shell";

@@ -47,8 +47,8 @@ const qcSteps = [
 
 export function QualitySection() {
   return (
-    <section className="bg-surface-warm py-20" id="quality">
-      <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+    <section className="bg-surface-warm home-section-space" id="quality">
+      <div className="home-shell">
         <SectionHead
           eyebrow="质量认证"
           title={<>不只是证书墙 — <b className="font-black text-brand-700">展示质量怎么管</b></>}

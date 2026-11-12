@@ -44,19 +44,19 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-[2] mx-auto grid w-full max-w-7xl px-5 lg:px-8 items-center gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12">
+      <div className="home-shell relative z-[2] grid items-center gap-8 py-[clamp(2.25rem,4.4vw,7rem)] lg:min-h-[min(49rem,calc(100svh-9rem))] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-[clamp(2rem,4.5vw,7rem)]">
         {/* ── Left content ── */}
-        <div>
+        <div className="min-w-0">
           {/* Eyebrow tag */}
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-[20px] border border-brand-500/20 bg-white/70 px-[18px] py-2 text-caption font-bold tracking-[0.04em] text-brand-700 backdrop-blur-[8px]">
-              <span className="h-[7px] w-[7px] rounded-full bg-brand-500 shadow-[0_0_8px_rgba(232,120,26,0.15)]" />
+              <span className="h-[7px] w-[7px] shrink-0 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(232,120,26,0.15)]" />
               面向汽车 · 家电 · 卫浴 · 医疗 · 工业供应链
             </div>
           </Reveal>
 
           {/* Headline */}
-          <h1 className="mt-[22px] font-sans text-[clamp(36px,4.5vw,60px)] font-semibold leading-[1.15] tracking-[-0.01em] text-ink">
+          <h1 className="mt-[22px] font-sans text-[clamp(1.875rem,4.4vw,5rem)] font-semibold leading-[1.15] tracking-[-0.01em] text-ink">
             <Reveal delay={1} className="inline-block">
               多领域{" "}
             </Reveal>
@@ -77,7 +77,7 @@ export function HeroSection() {
 
           {/* Description */}
           <Reveal delay={2}>
-            <p className="mt-4 max-w-[600px] text-body-lg leading-[1.8] text-muted">
+            <p className="mt-4 max-w-[42rem] text-body-lg leading-[1.8] text-muted">
               专注阻尼器与锁扣机构研发制造,支持扭矩、方向与安装结构按图定制,从打样到量产一体化交付。
             </p>
           </Reveal>
@@ -112,9 +112,9 @@ export function HeroSection() {
         </div>
 
         {/* ── Right panel: product collage ── */}
-        <aside className="relative hidden lg:block" aria-label="主要产品">
+        <aside className="relative min-w-0" aria-label="主要产品">
           <div className="pointer-events-none absolute -inset-6 rounded-[40px] bg-[radial-gradient(ellipse_at_55%_35%,rgba(232,120,26,0.12),transparent_62%)]" />
-          <div className="relative grid grid-cols-2 gap-3">
+          <div className="relative grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-2 lg:gap-4">
             {heroProducts.map((category, index) => (
               <Link
                 key={category.id}
@@ -122,30 +122,24 @@ export function HeroSection() {
                 aria-label={`查看${category.label}`}
                 className={`group relative overflow-hidden rounded-2xl border border-line shadow-[0_10px_30px_rgba(30,30,32,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_18px_42px_rgba(232,120,26,0.12)] ${
                   index === 0
-                    ? "col-span-2 h-[250px] bg-[linear-gradient(135deg,#FFF7EF_0%,#FFFFFF_62%)]"
-                    : "h-[205px] bg-white"
+                    ? "col-span-2 h-[clamp(8.5rem,36vw,12rem)] sm:col-span-1 sm:h-44 lg:col-span-2 lg:h-[clamp(13rem,min(16.5vw,34svh),25rem)] bg-[linear-gradient(135deg,#FFF7EF_0%,#FFFFFF_62%)]"
+                    : "h-[clamp(6.5rem,28vw,10rem)] bg-white sm:h-44 lg:h-[clamp(10.5rem,min(12.5vw,25svh),19rem)]"
                 }`}
               >
-                <span className="absolute left-4 top-3 text-micro font-black tracking-[0.2em] text-brand-700/50">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
                 <Image
                   src={category.image}
                   alt={category.label}
                   fill
-                  priority={index === 0}
-                  sizes={index === 0 ? "600px" : "300px"}
-                  className="object-contain p-7 transition-transform duration-500 group-hover:scale-105"
+                  preload={index === 0}
+                  sizes={index === 0 ? "(min-width: 1024px) 45vw, (min-width: 640px) 31vw, 92vw" : "(min-width: 1024px) 22vw, (min-width: 640px) 31vw, 45vw"}
+                  className="object-contain px-3 pt-2 pb-8 sm:px-5 lg:px-8 lg:pt-5 lg:pb-10 transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-micro font-bold text-ink shadow-sm">
+                <span className="absolute bottom-2 left-2 rounded-full sm:bottom-3 sm:left-3 bg-white/95 px-3 py-1 text-micro font-bold text-ink shadow-sm">
                   {category.label}
                 </span>
               </Link>
             ))}
           </div>
-          <p className="relative mt-4 text-right text-micro font-semibold tracking-[0.12em] text-muted-light">
-            核心产品 · 5 大产品线
-          </p>
         </aside>
       </div>
     </section>
