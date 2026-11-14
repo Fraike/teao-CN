@@ -21,13 +21,13 @@ export default function ProductGallery({ images, altBase }: { images: ProductIma
           alt={`${altBase} 产品图 ${safeIndex + 1}`}
           fill
           sizes="(max-width: 1024px) 90vw, 460px"
-          className="object-contain p-8 lg:p-10"
+          className="object-contain p-4 scale-[1.18] lg:p-6"
           priority
           draggable={false}
         />
       </div>
       {images.length > 1 && (
-        <div className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-5" aria-label="产品图片">
+        <div className="mt-2.5 grid grid-cols-4 gap-2 sm:grid-cols-5" aria-label="产品图片">
           {images.map((image, index) => (
             <button
               key={image.url}

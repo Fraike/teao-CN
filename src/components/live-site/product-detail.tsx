@@ -105,7 +105,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
       {/* Hero */}
       <section className="border-b border-line bg-gradient-to-b from-surface-warm via-white to-white">
         <div className={container}>
-          <nav aria-label="面包屑" className="flex flex-wrap items-center gap-2 pt-6 text-micro font-semibold uppercase tracking-[0.08em] text-muted-light">
+          <nav aria-label="面包屑" className="flex flex-wrap items-center gap-2 pt-5 text-micro font-semibold uppercase tracking-[0.08em] text-muted-light">
             <Link href="/" className="transition-colors hover:text-brand-700">首页</Link>
             <span className="text-line">/</span>
             <Link href="/products/" className="transition-colors hover:text-brand-700">产品</Link>
@@ -115,8 +115,8 @@ export default function ProductDetail({ product, category }: { product: ProductC
             <span aria-current="page" className="text-ink-soft">{product.model}</span>
           </nav>
 
-          <div className="grid items-start gap-10 py-10 lg:grid-cols-[1fr_1.05fr] lg:gap-14 lg:py-14">
-            <div className="lg:sticky lg:top-24 lg:self-start">
+          <div className="grid items-start gap-8 py-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-12 lg:py-10">
+            <div className="lg:sticky lg:top-24 lg:max-w-[600px] lg:self-start">
               <ProductGallery images={product.images} altBase={product.model} />
             </div>
 
@@ -126,13 +126,13 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 <span className="text-micro font-semibold uppercase tracking-[0.14em] text-brand-700">{category.label}</span>
               </div>
 
-              <h1 className="mt-4 text-[clamp(30px,3.6vw,46px)] font-semibold leading-[1.08] tracking-[-0.02em] text-ink">
+              <h1 className="mt-3 text-[clamp(28px,3.2vw,42px)] font-semibold leading-[1.1] tracking-[-0.02em] text-ink">
                 {product.name}
               </h1>
-              <p className="mt-4 max-w-[560px] text-metric leading-relaxed text-ink-soft">{product.summary}</p>
+              <p className="mt-3 max-w-[560px] text-metric leading-relaxed text-ink-soft">{product.summary}</p>
 
               {product.characteristics.length > 0 && (
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   {product.characteristics.map(item => (
                     <span key={item} className="rounded-full border border-line bg-white px-3.5 py-1.5 text-caption font-semibold text-ink-soft">{item}</span>
                   ))}
@@ -140,7 +140,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
               )}
 
               {rangeBar && (
-                <div className="mt-8 rounded-2xl border border-brand-500/20 bg-white p-5 shadow-[0_10px_30px_rgba(232,120,26,0.06)]">
+                <div className="mt-6 rounded-2xl border border-brand-500/20 bg-white p-4 shadow-[0_10px_30px_rgba(232,120,26,0.06)]">
                   <div className="mb-3 flex items-end justify-between gap-4">
                     <span className="inline-flex items-center gap-2 text-micro font-semibold uppercase tracking-[0.12em] text-muted-light">
                       {torqueBar ? <Gauge size={14} className="text-brand-500" /> : <Wrench size={14} className="text-brand-500" />}
@@ -164,11 +164,11 @@ export default function ProductDetail({ product, category }: { product: ProductC
               )}
 
               {stats.length > 0 && (
-                <div className={`grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line ${rangeBar ? "mt-4" : "mt-8"}`}>
+                <div className={`grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line ${rangeBar ? "mt-3" : "mt-6"}`}>
                   {stats.map((item, index) => (
                     <div
                       key={item.label}
-                      className={`bg-white px-4 py-3.5 ${index === stats.length - 1 && stats.length % 2 === 1 ? "col-span-2" : ""}`}
+                      className={`bg-white px-4 py-3 ${index === stats.length - 1 && stats.length % 2 === 1 ? "col-span-2" : ""}`}
                     >
                       <p className="text-micro font-semibold uppercase tracking-[0.12em] text-muted-light">{item.label}</p>
                       <p className="mt-1 text-metric font-bold tabular-nums text-ink">{item.value}</p>
@@ -177,7 +177,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 </div>
               )}
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Link
                   href="/contacts/"
                   className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-body font-semibold text-white shadow-[0_12px_28px_rgba(232,120,26,0.24)] transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_16px_34px_rgba(232,120,26,0.32)]"
@@ -193,7 +193,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 </a>
               </div>
 
-              <p className="mt-5 text-caption leading-relaxed text-muted-light">
+              <p className="mt-4 text-caption leading-relaxed text-muted-light">
                 支持按应用调校扭矩、方向与安装结构;提供样品验证与 PPAP 文档。
               </p>
             </div>
