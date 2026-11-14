@@ -40,7 +40,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
 
   const stats = [
     product.durability ? { label: "耐久性", value: formatCycles(product.durability.cycles) } : null,
-    product.hardTorque ? { label: "硬扭矩", value: product.hardTorque } : null,
+    product.hardTorque ? { label: "推荐扭矩", value: product.hardTorque } : null,
     product.hardForce ? { label: "按压力", value: product.hardForce } : null,
     product.soundType ? { label: "声音", value: product.soundType } : null,
     product.bufferDirection ? { label: "阻尼方向", value: product.bufferDirection } : null,
@@ -54,7 +54,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
   const additionalProperty = [
     product.torque ? { "@type": "PropertyValue", name: "可调扭矩", value: formatRange(product.torque) } : null,
     product.force ? { "@type": "PropertyValue", name: "操作力", value: formatRange(product.force) } : null,
-    product.hardTorque ? { "@type": "PropertyValue", name: "硬扭矩", value: product.hardTorque } : null,
+    product.hardTorque ? { "@type": "PropertyValue", name: "推荐扭矩", value: product.hardTorque } : null,
     product.hardForce ? { "@type": "PropertyValue", name: "按压力", value: product.hardForce } : null,
     product.durability ? { "@type": "PropertyValue", name: "耐久性", value: formatCycles(product.durability.cycles) } : null,
     product.bufferDirection ? { "@type": "PropertyValue", name: "阻尼方向", value: product.bufferDirection } : null,
