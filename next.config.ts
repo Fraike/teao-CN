@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
+import legacySeoRedirects from "./legacy-seo-redirects.json";
+
+type LegacyRedirect = { source: string; destination: string; statusCode: 301 };
 
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // 老站 sitemap / 导航中的 URL 在切换域名后保留收录，详见 docs/seo-cutover.md
+      ...(legacySeoRedirects as LegacyRedirect[]),
       { source: "/about", destination: "/about-us/", statusCode: 301 },
       { source: "/contact", destination: "/contacts/", statusCode: 301 },
       { source: "/torque-converter", destination: "/convert/", statusCode: 301 },
@@ -34,6 +39,8 @@ const nextConfig: NextConfig = {
   // Preserve the live site's directory slashes and .html URLs verbatim.
   // Do not impose one global slash convention on the existing development routes.
   skipTrailingSlashRedirect: true,
+  // Allow local tools / Playwright to load dev resources via 127.0.0.1.
+  allowedDevOrigins: ["127.0.0.1"],
   turbopack: {
     root: process.cwd(),
   },
