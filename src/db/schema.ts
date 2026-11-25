@@ -87,3 +87,23 @@ export const news = sqliteTable("news", {
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
   updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
+
+// 官网询盘。status: new -> contacted -> closed
+export const inquiries = sqliteTable("inquiries", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  name: text("name").notNull(),
+  company: text("company"),
+  phone: text("phone").notNull(),
+  email: text("email"),
+  productInterest: text("product_interest"),
+  annualVolume: text("annual_volume"),
+  message: text("message").notNull(),
+  ip: text("ip"),
+  status: text("status").notNull().default("new"),
+  submittedAt: text("submitted_at").notNull(),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+}, table => [
+  index("inquiries_status_idx").on(table.status),
+  index("inquiries_submitted_at_idx").on(table.submittedAt),
+]);

@@ -8,6 +8,7 @@ import {
   ExternalLink,
   FolderTree,
   Images,
+  Inbox,
   LayoutDashboard,
   LogOut,
   Newspaper,
@@ -19,6 +20,7 @@ const primaryItems = [
   { href: "/admin/products", label: "商品管理", icon: Package },
   { href: "/admin/categories", label: "分类管理", icon: FolderTree },
   { href: "/admin/media", label: "媒体库", icon: Images },
+  { href: "/admin/inquiries", label: "询盘管理", icon: Inbox },
   { href: "/admin/news", label: "新闻管理", icon: Newspaper },
 ] as const;
 

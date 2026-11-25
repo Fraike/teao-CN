@@ -1,6 +1,7 @@
 import { appendFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { NextResponse } from "next/server";
+import { saveInquiry, type InquiryInput } from "@/lib/inquiry-store";
 
 export const runtime = "nodejs";
 
@@ -24,22 +25,53 @@ function rateLimited(ip: string): boolean {
   return entry.count > MAX_PER_WINDOW;
 }
 
-async function persist(inquiry: Record<string, unknown>) {
+async function notifyInquiry(inquiry: InquiryInput) {
   const webhook = process.env.CONTACT_WEBHOOK_URL;
-  if (webhook) {
+  if (!webhook) return;
+
+  const content = [
+    "【特澳官网新询盘】",
+    `姓名：${inquiry.name}`,
+    `公司：${inquiry.company || "—"}`,
+    `电话：${inquiry.phone}`,
+    `邮箱：${inquiry.email || "—"}`,
+    `产品：${inquiry.productInterest || "—"}`,
+    `年用量：${inquiry.annualVolume || "—"}`,
+    `需求：${inquiry.message}`,
+    `时间：${inquiry.submittedAt}`,
+    "后台：https://www.chinateao.com/admin/inquiries",
+  ].join("\n");
+
+  const payload = process.env.CONTACT_WEBHOOK_TYPE === "wecom"
+    ? { msgtype: "text", text: { content } }
+    : inquiry;
+
+  try {
     const response = await fetch(webhook, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(inquiry),
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(8000),
     });
-    if (!response.ok) throw new Error(`Webhook responded ${response.status}`);
-    return;
+    if (!response.ok) console.warn("[inquiry-webhook] failed", response.status);
+  } catch (error) {
+    console.warn("[inquiry-webhook] request failed", error instanceof Error ? error.message : error);
+  }
+}
+
+async function persist(inquiry: InquiryInput) {
+  try {
+    await saveInquiry(inquiry);
+  } catch (error) {
+    // 数据库失败时保留文件兜底，避免线索直接丢失
+    console.error("Inquiry DB save failed, falling back to file:", error);
+    const dir = join(process.cwd(), ".data");
+    await mkdir(dir, { recursive: true });
+    await appendFile(join(dir, "inquiries.jsonl"), JSON.stringify(inquiry) + "\n", "utf8");
   }
 
-  // 本地开发兜底:写入 .data/inquiries.jsonl(该目录已被 git 忽略)
-  const dir = join(process.cwd(), ".data");
-  await mkdir(dir, { recursive: true });
-  await appendFile(join(dir, "inquiries.jsonl"), JSON.stringify(inquiry) + "\n", "utf8");
+  // 通知不阻塞提交；没有配置 webhook 时只进后台询盘列表
+  void notifyInquiry(inquiry).catch(() => {});
 }
 
 export async function POST(request: Request) {

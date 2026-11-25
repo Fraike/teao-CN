@@ -1,17 +1,18 @@
 import Link from "next/link";
-import { desc } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import {
   ArrowUpRight,
   ExternalLink,
   FolderTree,
   Images,
+  Inbox,
   Newspaper,
   Package,
   Plus,
   Upload,
 } from "lucide-react";
 import { db } from "@/db";
-import { categories, news, products } from "@/db/schema";
+import { categories, inquiries, news, products } from "@/db/schema";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +39,13 @@ const modules = [
     count: null,
   },
   {
+    href: "/admin/inquiries",
+    title: "询盘管理",
+    description: "查看、标记和导出客户询盘。",
+    icon: Inbox,
+    count: "inquiries",
+  },
+  {
     href: "/admin/news",
     title: "新闻管理",
     description: "公司动态、质量管理与工程文章。",
@@ -59,10 +67,11 @@ function formatDate(value: Date | null) {
 }
 
 export default async function AdminHomePage() {
-  const [productRows, categoryRows, newsRows, recentProducts] = await Promise.all([
+  const [productRows, categoryRows, newsRows, inquiryRows, recentProducts] = await Promise.all([
     db.select({ id: products.id }).from(products),
     db.select({ id: categories.id }).from(categories),
     db.select({ id: news.id }).from(news),
+    db.select({ id: inquiries.id }).from(inquiries).where(eq(inquiries.status, "new")),
     db.select({
       id: products.id,
       model: products.model,
@@ -76,6 +85,7 @@ export default async function AdminHomePage() {
     products: productRows.length,
     categories: categoryRows.length,
     news: newsRows.length,
+    inquiries: inquiryRows.length,
   };
 
   return (
@@ -96,7 +106,7 @@ export default async function AdminHomePage() {
         </div>
       </header>
 
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
         {modules.map(module => {
           const Icon = module.icon;
           const count = module.count ? counts[module.count] : null;

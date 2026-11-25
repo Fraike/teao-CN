@@ -15,6 +15,7 @@
     "data:product-content": "node scripts/generate-product-content.mjs",
     "db:seed": "npx tsx scripts/seed-products.ts",
     "db:migrate:products": "node scripts/migrate-product-tables.mjs",
+    "db:migrate:inquiries": "node scripts/migrate-inquiries-table.mjs",
     "db:seed:products": "npx tsx scripts/seed-products.ts",
     "db:verify:products": "npx tsx scripts/verify-products.ts",
     "db:generate": "drizzle-kit generate",
