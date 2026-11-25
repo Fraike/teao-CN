@@ -4,6 +4,7 @@ import { db } from "@/db";
 import { products } from "@/db/schema";
 import { getSession } from "@/lib/auth";
 import { revalidateCatalog } from "@/lib/content-revalidate";
+import { scheduleBaiduPush } from "@/lib/baidu-push";
 
 export const dynamic = "force-dynamic";
 
@@ -28,6 +29,12 @@ export async function POST(request: Request) {
       .where(inArray(products.id, ids));
   }
 
-  revalidateCatalog(rows.map(row => row.path), action !== "delete");
+  const paths = rows.map(row => row.path);
+  revalidateCatalog(paths, action !== "delete");
+  if (action === "publish") {
+    scheduleBaiduPush(rows.filter(row => !row.isActive).map(row => row.path), "push");
+  } else {
+    scheduleBaiduPush(paths, "delete");
+  }
   return NextResponse.json({ success: true, count: rows.length });
 }

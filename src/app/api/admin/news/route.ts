@@ -6,6 +6,7 @@ import { news } from "@/db/schema";
 import { getSession } from "@/lib/auth";
 import { sanitizeHtml } from "@/lib/sanitize-html";
 import { validateNewsPayload, type NewsPayload } from "@/lib/news-admin";
+import { scheduleBaiduPush } from "@/lib/baidu-push";
 
 
 export async function POST(request: Request) {
@@ -49,5 +50,6 @@ export async function POST(request: Request) {
   revalidatePath("/sitemap/");
   revalidatePath("/sitemap.xml");
 
+  if (payload.isPublished) scheduleBaiduPush([`/news/${slug}.html`], "push");
   return NextResponse.json({ success: true, id: created.id }, { status: 201 });
 }

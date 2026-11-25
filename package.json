@@ -9,6 +9,7 @@
     "lint": "eslint",
     "test": "npx tsx --test src/lib/*.test.ts",
     "seo:audit": "node scripts/audit-seo-cutover.mjs",
+    "seo:baidu-push": "node scripts/baidu-push.mjs",
     "fonts:build": "node scripts/build-fonts.mjs",
     "data:product-specs": "node scripts/generate-product-specs.mjs",
     "data:product-content": "node scripts/generate-product-content.mjs",

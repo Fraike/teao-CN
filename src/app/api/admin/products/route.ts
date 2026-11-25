@@ -6,6 +6,7 @@ import { getSession } from "@/lib/auth";
 import { buildProductPatch, validateProductCreate } from "@/lib/product-admin";
 import { dbProductData } from "@/lib/admin-serializers";
 import { revalidateCatalog } from "@/lib/content-revalidate";
+import { scheduleBaiduPush } from "@/lib/baidu-push";
 
 export const dynamic = "force-dynamic";
 
@@ -57,5 +58,7 @@ export async function POST(request: Request) {
 
   const [created] = await db.insert(products).values(data as typeof products.$inferInsert).returning({ id: products.id });
   revalidateCatalog([String(patch.path)]);
+  const active = patch.isActive === undefined ? true : Boolean(patch.isActive);
+  if (active) scheduleBaiduPush([String(patch.path)], "push");
   return NextResponse.json({ id: created.id }, { status: 201 });
 }

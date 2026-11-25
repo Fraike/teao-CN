@@ -6,6 +6,7 @@ import { news } from "@/db/schema";
 import { getSession } from "@/lib/auth";
 import { sanitizeHtml } from "@/lib/sanitize-html";
 import { validateNewsPayload, type NewsPayload } from "@/lib/news-admin";
+import { scheduleBaiduPush } from "@/lib/baidu-push";
 
 async function guard() {
   return (await getSession()) ? null : NextResponse.json({ error: "未登录" }, { status: 401 });
@@ -28,6 +29,12 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
     .where(and(eq(news.slug, slug), ne(news.id, newsId)))
     .limit(1);
   if (conflict.length) return NextResponse.json({ error: "该 slug 已存在" }, { status: 409 });
+
+  const [existing] = await db
+    .select({ slug: news.slug, isPublished: news.isPublished })
+    .from(news)
+    .where(eq(news.id, newsId))
+    .limit(1);
 
   await db
     .update(news)
@@ -54,6 +61,16 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
   revalidatePath("/sitemap/");
   revalidatePath("/sitemap.xml");
 
+  const nowPublished = Boolean(payload.isPublished);
+  if (existing && existing.slug !== slug && existing.isPublished) {
+    scheduleBaiduPush([`/news/${existing.slug}.html`], "delete");
+  }
+  if (nowPublished && (!existing || !existing.isPublished || existing.slug !== slug)) {
+    scheduleBaiduPush([`/news/${slug}.html`], "push");
+  } else if (!nowPublished && existing?.isPublished) {
+    scheduleBaiduPush([`/news/${slug}.html`], "delete");
+  }
+
   return NextResponse.json({ success: true });
 }
 
@@ -62,12 +79,19 @@ export async function DELETE(_request: Request, { params }: { params: Promise<{ 
   if (denied) return denied;
 
   const { id } = await params;
+  const [existing] = await db
+    .select({ slug: news.slug })
+    .from(news)
+    .where(eq(news.id, Number(id)))
+    .limit(1);
   await db.delete(news).where(eq(news.id, Number(id)));
 
   revalidatePath("/news");
   revalidatePath("/");
   revalidatePath("/sitemap/");
   revalidatePath("/sitemap.xml");
+
+  if (existing) scheduleBaiduPush([`/news/${existing.slug}.html`], "delete");
 
   return NextResponse.json({ success: true });
 }

@@ -6,6 +6,7 @@ import { getSession } from "@/lib/auth";
 import { buildProductPatch } from "@/lib/product-admin";
 import { dbProductData } from "@/lib/admin-serializers";
 import { revalidateCatalog } from "@/lib/content-revalidate";
+import { scheduleBaiduPush } from "@/lib/baidu-push";
 
 export const dynamic = "force-dynamic";
 
@@ -34,6 +35,9 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   const data = dbProductData({ ...patch, updatedAt: new Date() });
   await db.update(products).set(data).where(eq(products.id, id));
   revalidateCatalog([existing.path, String(patch.path ?? existing.path)]);
+  if (patch.isActive !== undefined) {
+    scheduleBaiduPush([existing.path], Number(patch.isActive) ? "push" : "delete");
+  }
   return NextResponse.json({ success: true });
 }
 
@@ -46,5 +50,6 @@ export async function DELETE(_request: Request, { params }: { params: Promise<{ 
 
   await db.delete(products).where(eq(products.id, id));
   revalidateCatalog([existing.path]);
+  scheduleBaiduPush([existing.path], "delete");
   return NextResponse.json({ success: true });
 }
