@@ -1,15 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { liveCategories, liveHref } from "@/lib/live-site";
+import type { CategoryPublic } from "@/lib/catalog-store";
+import { liveHref } from "@/lib/live-site";
 
 const ALIBABA_INTL_URL = "https://teaodamper.en.alibaba.com/index.html?spm=a2700.shop_cp.88.3.3c3166e8H8zAXQ&biz=cpscoupon&promotionCode=AB13&xp=Sez8PLFEziUprGY6uJO4hsylJyekhw1tgalUJqPIWm-9p6hqavyvjfsrDlaz_bsiJtkaDeNmMLiMcXQmA9rO6V5Rk_6DeFDDqFgCrDIvzKosMbeanHAIqwcTEART57S-&cps_sk=jnsdjomm&bm=cps&src=saf&pid=accio";
 const ALIBABA_CN_URL = "https://chinateao1688.1688.com/?spm=a261y.7663282.shopNavigation.2.165364a2Mi71w9&offerId=1009140776330&td_page_id=PC-UNLOGIN-DEFAULT-2026";
 
-const footerLinks = [
-  {
-    title: "产品",
-    links: liveCategories.map(category => ({ label: category.label, href: category.path })),
-  },
+const staticFooterLinks = [
   {
     title: "关于",
     links: [
@@ -25,12 +22,17 @@ const footerLinks = [
       { label: "常见问题", href: "/faq/" },
       { label: "扭矩换算", href: "/convert/" },
       { label: "联系我们", href: "/contacts/" },
+      { label: "隐私政策", href: "/privacy/" },
       { label: "网站地图", href: "/sitemap/" },
     ],
   },
 ];
 
-export default function Footer() {
+export default function Footer({ categories }: { categories: CategoryPublic[] }) {
+  const footerLinks = [
+    { title: "产品", links: categories.map(category => ({ label: category.name, href: category.path })) },
+    ...staticFooterLinks,
+  ];
   return (
     <footer className="border-t border-line bg-surface-warm">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">

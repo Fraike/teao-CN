@@ -23,7 +23,7 @@ export const timeline = [
   {
     year: "2021",
     title: "产品创新",
-    description: "推出空气阻尼器、单向阻尼器，新增十余项专利，获国家高新技术企业认定。",
+    description: "推出空气阻尼器、单向阻尼器，新增多项专利，获国家高新技术企业认定。",
   },
   {
     year: "2025",
@@ -81,25 +81,6 @@ export const systemCertificates = [
     name: "ISO 14001:2015",
     description: "环境管理体系认证，践行绿色制造与可持续发展承诺。",
     image: "/images/certifications/ISO14001.webp",
-  },
-];
-
-/* ---------- 专利证书 ---------- */
-export const patentCertificates = [
-  {
-    name: "吊绳式阻尼器专利",
-    description: "阻尼机构创新设计，应用于手套箱缓降系统。",
-    image: "/images/patents/RD-V109.webp",
-  },
-  {
-    name: "空气阻尼器专利",
-    description: "空气阻尼结构设计，提供线性缓冲解决方案。",
-    image: "/images/patents/RD-V108.webp",
-  },
-  {
-    name: "旋转阻尼器专利",
-    description: "旋转阻尼组件结构创新，扭矩输出更稳定。",
-    image: "/images/patents/RD-T088.webp",
   },
 ];
 
@@ -169,7 +150,7 @@ export const qualityPromises = [
 export const trustBadges = [
   "IATF 16949",
   "ISO 14001",
-  "20+ 项专利",
+  "多项核心专利",
   "200+ 家客户",
 ];
 

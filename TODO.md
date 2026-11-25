@@ -1,30 +1,39 @@
 # 待办清单
 
-## 上线与域名(暂缓,后续处理)
+## ✅ 已完成（2026-11-25）
 
-- [x] **部署站点到公网服务器** `8.163.39.156`(PM2 + Nginx;详见 [docs/deployment/server-access.md](docs/deployment/server-access.md))
-- [ ] **绑定域名 `www.chinateao.com`**(DNS + HTTPS 证书)
-- [ ] HTTPS 上线后删除 `.env.local` 里的 `AUTH_COOKIE_SECURE=false`
-- [ ] 确认服务器位于中国大陆或香港(影响百度抓取速度)
-- [ ] 生产环境配置环境变量:`AUTH_SECRET`、`ADMIN_PASSWORD`、`DATABASE_URL`
-- [ ] 生产环境执行一次 `npm run db:push` 与 `npm run db:seed:admin`
+- [x] 商品后台：商品 CRUD、上下架、批量操作、分类管理、媒体库
+- [x] 前台商品/分类/搜索/sitemap 改为 DB 数据源（77 商品 / 5 分类）
+- [x] 旧 URL 301/308 覆盖：老 sitemap 51 条，0 个 404
+- [x] 域名切换：`www.chinateao.com` + `chinateao.com` → `8.163.39.156`
+- [x] 阿里云接入备案通过；HTTPS（Let's Encrypt）已生效
+- [x] `AUTH_COOKIE_SECURE=true`；PM2 已加载新构建
+- [x] 专利墙：15 张证书，5×3 对齐 + 覆盖范围汇总
+- [x] 隐私政策页 `/privacy/` 和联系表单合规链接（本地完成，待部署）
+- [x] 补 `/favicon.ico`（本地完成，待部署）
 
-## 百度搜索资源平台
+## 🔴 上线运营
 
-- [ ] 域名上线后,在百度搜索资源平台点「完成验证」(验证 meta 已加入全站)
-- [ ] 提交 sitemap:`https://www.chinateao.com/sitemap.xml`(当前 124 条 URL)
-- [ ] 获取「普通收录 → API 提交」的 token,配置 `BAIDU_PUSH_TOKEN`
-- [ ] 接入后台发布时的百度主动推送(拿到 token 后实现)
+- [ ] 部署隐私政策页 + favicon（rsync / build / pm2 restart）
+- [ ] 百度搜索资源平台：完成验证、提交 sitemap（140 条）
+- [ ] Google Search Console / Bing Webmaster：提交 sitemap
+- [ ] 百度「普通收录 → API 提交」token，配置 `BAIDU_PUSH_TOKEN`
+- [ ] 接入后台发布时的百度主动推送
+- [ ] 生产后台用真实账号登录，测试商品/分类/媒体/新闻
+- [ ] 修改默认管理员密码（如未改）
+- [ ] 老站、老备案保留 2–4 周；回滚方式：DNS 改回 CNAME `chinateao.gotoip11.com`
 
-## 内容与体验(可选优化)
+## 🟡 本周内
 
-- [ ] 首页 HTML 约 183KB,可精简 RSC 数据
-- [ ] 应用页 GIF 合计约 38MB,可转 WebM/MP4 或压缩
-- [ ] 分类/产品 URL 含大写与空格(如 `/Glove Box Dampers/`),是否规范化需与「保留原站 URL」原则权衡
-- [ ] 增加百度统计或其他访问分析
+- [ ] 监控 Nginx 404 / 百度与 Google 索引
+- [ ] 证书续期 `certbot renew --dry-run` 重测（上次 120s 超时）
+- [ ] 本地 commit + 更新部署文档（当前大量改动未提交）
 
-## 后台后续版本
+## 🟢 后续版本
 
-- [ ] 产品管理(型号、扭矩、规格、图集)
-- [ ] 询盘管理(查看、标记、导出)
-- [ ] 双站发布(借助已预留的 `locale` / `translationKey` 字段)
+- [ ] 询盘管理（查看、标记、导出）
+- [ ] 双站发布 / 中英文同步
+- [ ] 角色权限、操作审计、服务端验证码、CSRF 加固
+- [ ] 首页 RSC 体积、应用页 GIF 压缩
+- [ ] 百度统计或其他访问分析
+- [ ] HTTPS 稳定后开启 HSTS

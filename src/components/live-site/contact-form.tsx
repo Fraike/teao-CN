@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import Link from "next/link";
 import { Captcha, type CaptchaRef } from "@/components/ui/captcha";
 
 const productTypes = ["齿轮阻尼器", "圆筒阻尼器", "手套箱阻尼器", "锁扣", "定制零部件", "不确定 / 需要推荐"];
@@ -150,7 +151,13 @@ export default function ContactForm() {
             onChange={handleChange}
             className="mt-0.5 h-4 w-4 shrink-0 rounded border-line text-brand-500 focus:ring-brand-500"
           />
-          <span>我已阅读并同意隐私说明,所填信息仅用于本次询盘沟通。</span>
+          <span>
+            我已阅读并同意
+            <Link href="/privacy/" target="_blank" rel="noreferrer" onClick={event => event.stopPropagation()} className="mx-1 font-semibold text-brand-700 underline underline-offset-2">
+              隐私政策
+            </Link>
+            ，所填信息仅用于本次询盘沟通。
+          </span>
         </label>
         <Captcha ref={captchaRef} />
       </div>
