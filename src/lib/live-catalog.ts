@@ -1,16 +1,14 @@
 import { legacyPathFromSegments } from "./live-site";
-import catalog from "@/content/live-site/categories.json";
+import { getCategoryRouteByPath, type CatalogCategory, type CatalogPage, type CatalogProduct } from "./catalog-store";
 
-export const liveCatalog = catalog;
-export type CatalogCategory = (typeof catalog)[number];
-export type CatalogPage = CatalogCategory["pages"][number];
-export type CatalogProduct = CatalogPage["products"][number];
+export type { CatalogCategory, CatalogPage, CatalogProduct };
+export { getCatalog, getCategoryRouteByPath } from "./catalog-store";
 
-export function getCategoryRoute(segments: readonly string[]) {
-  const path = legacyPathFromSegments(segments);
-  for (const category of catalog) {
-    const page = category.pages.find(item => item.path === path || item.path === path + "/");
-    if (page) return { category, page };
-  }
-  return null;
+export async function getCategoryRoute(segments: readonly string[]) {
+  return getCategoryRouteByPath(legacyPathFromSegments(segments));
 }
+
+/** 兼容旧类型导出的别名。 */
+export type LiveCatalogCategory = CatalogCategory;
+export type LiveCatalogPage = CatalogPage;
+export type LiveCatalogProduct = CatalogProduct;

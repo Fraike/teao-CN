@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SiteFrame from "@/components/layout/site-frame";
+import { getNavCategories } from "@/lib/catalog-store";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -47,15 +48,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const categories = await getNavCategories();
   return (
     <html lang="zh-CN">
-      <body className="flex min-h-screen flex-col bg-surface text-ink pt-[73px]">
-        <SiteFrame>{children}</SiteFrame>
+      <body className="flex min-h-screen flex-col bg-surface text-ink">
+        <SiteFrame categories={categories}>{children}</SiteFrame>
       </body>
     </html>
   );

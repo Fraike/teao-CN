@@ -39,6 +39,7 @@ yarn-error.log*
 
 # database
 *.db
+*.db.bak
 
 # typescript
 *.tsbuildinfo
@@ -56,3 +57,5 @@ __pycache__/
 
 # source export (large, not for repo)
 /chinateao-export/
+# raw patent certificate scans (large, local only; display assets live in public/images/patents)
+/特澳专利/

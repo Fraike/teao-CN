@@ -23,12 +23,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "尝试次数过多,请稍后再试。" }, { status: 429 });
   }
 
-  const { username, password } = (await request.json().catch(() => ({}))) as {
+  const { username, password, captchaToken, captchaAnswer } = (await request.json().catch(() => ({}))) as {
     username?: string;
     password?: string;
+    captchaToken?: string;
+    captchaAnswer?: string;
   };
   if (!username || !password) {
     return NextResponse.json({ error: "请输入账号和密码。" }, { status: 400 });
+  }
+  if (!captchaToken || !captchaAnswer || btoa(String(captchaAnswer).toUpperCase()) !== captchaToken) {
+    return NextResponse.json({ error: "验证码错误，请重试。" }, { status: 400 });
   }
 
   const admin = await db.select().from(admins).where(eq(admins.username, username)).limit(1).then(rows => rows[0]);

@@ -1,69 +1,37 @@
-// 产品详情内容 —— 仅服务端使用。数据由 scripts/generate-product-content.mjs 生成。
-import productData from "@/content/live-site/products.json";
-import { liveCatalog, type CatalogProduct } from "./live-catalog";
+// 产品详情内容 —— 仅服务端使用，数据来自 DB（catalog-store）。
+import {
+  getProductContentByPath,
+  getProductContentByModel as dbGetProductContentByModel,
+  getRelatedProducts as dbGetRelatedProducts,
+  type CatalogProduct,
+  type ProductContent,
+  type TorqueRange,
+} from "./catalog-store";
 
-export interface ProductImage { url: string; alt?: string }
-export interface SpecChip { label: string; value: string }
-export interface TorqueRange { min: number; max: number; unit: string }
-export interface MaterialItem { part: string; material: string }
-export interface Variants {
-  variants: string[];
-  rows: { param: string; values: string[] }[];
+export type {
+  ProductImage,
+  SpecChip,
+  TorqueRange,
+  MaterialItem,
+  Variants,
+  ProductContent,
+} from "./catalog-store";
+
+export async function getProductContent(path: string): Promise<ProductContent | null> {
+  return getProductContentByPath(path);
 }
 
-export interface ProductContent {
-  path: string;
-  slug: string;
-  categoryId: string;
-  model: string;
-  name: string;
-  summary: string;
-  images: ProductImage[];
-  characteristics: string[];
-  torque: TorqueRange | null;
-  force: TorqueRange | null;
-  hardTorque: string | null;
-  hardForce: string | null;
-  soundType: string | null;
-  bufferDirection: string | null;
-  assemblyMethod: string | null;
-  durability: { cycles: number } | null;
-  specifications: SpecChip[];
-  materials: MaterialItem[];
-  applications: string[];
-  applicationScenarios: { image: string; label: string }[];
-  dimensionDrawing: string | null;
-  performanceCharts: { rotation: string | null; temperature: string | null } | null;
-  variants: Variants | null;
+export async function getProductContentByModel(model: string): Promise<ProductContent | null> {
+  return dbGetProductContentByModel(model);
 }
 
-const content = productData as Record<string, ProductContent>;
-
-export function getProductContent(path: string): ProductContent | null {
-  return content[path] ?? null;
-}
-
-const byModel = new Map<string, ProductContent>();
-for (const record of Object.values(content)) {
-  const key = record.model.toUpperCase().replace(/\s+/g, "").split("/")[0];
-  if (!byModel.has(key)) byModel.set(key, record);
-}
-
-export function getProductContentByModel(model: string): ProductContent | null {
-  const key = String(model ?? "").toUpperCase().replace(/\s+/g, "").split("/")[0];
-  return byModel.get(key) ?? null;
-}
-
-export function getRelatedProducts(categoryId: string, excludePath: string, limit = 4, excludeModel?: string): CatalogProduct[] {
-  const category = liveCatalog.find(item => item.id === categoryId);
-  if (!category) return [];
-  const normalize = (value: string) => value.toUpperCase().replace(/\s+/g, "");
-  const blocked = excludeModel ? normalize(excludeModel) : null;
-  return category.pages
-    .flatMap(page => page.products)
-    .filter(product => product.path !== excludePath)
-    .filter(product => !blocked || normalize(product.model) !== blocked)
-    .slice(0, limit);
+export async function getRelatedProducts(
+  categoryId: string,
+  excludePath: string,
+  limit = 4,
+  excludeModel?: string,
+): Promise<CatalogProduct[]> {
+  return dbGetRelatedProducts(categoryId, excludePath, limit, excludeModel);
 }
 
 export function formatCycles(cycles: number): string {

@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Captcha, type CaptchaRef } from "@/components/ui/captcha";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -10,22 +11,37 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const captchaRef = useRef<CaptchaRef>(null);
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
     setError("");
     setLoading(true);
+
+    if (!captchaRef.current?.validate()) {
+      setError("验证码错误，请重试。");
+      setLoading(false);
+      return;
+    }
+
     try {
+      const captcha = captchaRef.current.getPayload();
       const response = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({
+          username,
+          password,
+          captchaToken: captcha.token,
+          captchaAnswer: captcha.answer,
+        }),
       });
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
+        captchaRef.current?.reset();
         throw new Error(data.error || "登录失败");
       }
-      router.replace("/admin/news");
+      router.replace("/admin");
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "登录失败");
@@ -51,6 +67,8 @@ export default function AdminLoginPage() {
 
           <label className="mt-4 block text-[13px] font-bold text-ink" htmlFor="password">密码</label>
           <input id="password" type="password" className={`${field} mt-1.5`} value={password} onChange={e => setPassword(e.target.value)} autoComplete="current-password" required />
+
+          <Captcha ref={captchaRef} className="mt-4" />
 
           {error && <p className="mt-4 text-sm font-medium text-red-600">{error}</p>}
 

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { liveCatalog } from "@/lib/live-catalog";
-import { liveCategories, liveHref, LIVE_ORIGIN } from "@/lib/live-site";
+import { getCatalog } from "@/lib/live-catalog";
+import { LIVE_ORIGIN } from "@/lib/live-site";
 import { getPublishedNews } from "@/lib/news-store";
 import { container } from "@/components/live-site/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { pageOpenGraph } from "@/lib/metadata";
-import productPaths from "@/content/live-site/product-paths.json";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: "网站地图 | 特澳 TEAO" },
@@ -40,8 +41,6 @@ const applicationLinks = [
   { label: "办公设备", href: "/applications/office-equipment/" },
   { label: "工业设备", href: "/applications/industrial-application/" },
 ];
-
-const localProductPaths = new Set(productPaths);
 
 function LinkList({ items }: { items: { label: string; href: string }[] }) {
   return (
@@ -79,6 +78,7 @@ const sitemapJsonLd = {
 
 export default async function SiteMapPage() {
   const newsArticles = await getPublishedNews();
+  const catalog = await getCatalog();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sitemapJsonLd) }} />
@@ -125,15 +125,13 @@ export default async function SiteMapPage() {
         </Card>
 
         <div className="lg:col-span-3">
-          <Card title="产品分类与型号" count={liveCategories.length}>
+          <Card title="产品分类与型号" count={catalog.length}>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {liveCatalog.map(category => {
-                const products = category.pages
-                  .flatMap(page => page.products)
-                  .filter(product => localProductPaths.has(product.path));
+              {catalog.map(category => {
+                const products = category.pages.flatMap(page => page.products);
                 return (
                   <div key={category.id}>
-                    <Link href={liveHref(category.path)} className="inline-flex items-center gap-1.5 text-body font-semibold text-brand-700 hover:underline">
+                    <Link href={category.path} className="inline-flex items-center gap-1.5 text-body font-semibold text-brand-700 hover:underline">
                       {category.label}
                       <span className="text-micro font-semibold text-muted-light">({products.length})</span>
                     </Link>

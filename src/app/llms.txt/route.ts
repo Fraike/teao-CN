@@ -1,5 +1,4 @@
-import { liveCatalog } from "@/lib/live-catalog";
-import productPaths from "@/content/live-site/product-paths.json";
+import { getCatalog } from "@/lib/live-catalog";
 import { getPublishedNews } from "@/lib/news-store";
 import { contact } from "@/content/live-site/contact";
 
@@ -34,11 +33,10 @@ export async function GET() {
     "## 产品分类与型号",
   ];
 
-  for (const category of liveCatalog) {
+  const catalog = await getCatalog();
+  for (const category of catalog) {
     lines.push("", `### ${category.label}`, category.description, "");
-    const products = category.pages
-      .flatMap(page => page.products)
-      .filter(product => productPaths.includes(product.path));
+    const products = category.pages.flatMap(page => page.products);
     for (const product of products) {
       lines.push(`- ${product.model}: ${product.title.slice(0, 60)} — ${BASE}${encodeURI(product.path)}`);
     }

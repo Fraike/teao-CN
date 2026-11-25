@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
-import { liveCatalog } from "@/lib/live-catalog";
-import { liveHref } from "@/lib/live-site";
+import { eq } from "drizzle-orm";
+import { db } from "@/db";
+import { products } from "@/db/schema";
+import { parseJson } from "@/lib/catalog-store";
 import { getPublishedNews } from "@/lib/news-store";
-import { getProductContent } from "@/lib/product-content";
 
 const LIMIT = 6;
+
+export const dynamic = "force-dynamic";
 
 function plain(html: string) {
   return String(html).replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
@@ -22,24 +25,34 @@ export async function GET(request: Request) {
   }
 
   const needle = q.toLowerCase();
+  const rows = await db.select().from(products).where(eq(products.isActive, 1));
 
-  const products = liveCatalog
-    .flatMap(category => category.pages.flatMap(page => page.products))
-    .filter(product => {
-      const haystack = [product.model, product.title, ...(product.specifications ?? [])].join(" ").toLowerCase();
+  const productResults = rows
+    .filter(row => {
+      const haystack = [
+        row.model,
+        row.name,
+        row.listingTitle,
+        row.summary,
+        row.description,
+        ...parseJson<{ label: string; value: string }[]>(row.specifications, []).map(spec => `${spec.label}:${spec.value}`),
+        ...parseJson<string[]>(row.tags, []),
+      ].join(" ").toLowerCase();
       return haystack.includes(needle);
     })
     .slice(0, LIMIT)
-    .map(product => {
-      const content = getProductContent(product.path);
-      const specs = (product.specifications ?? []).slice(0, 2).join(" · ");
+    .map(row => {
+      const specs = parseJson<{ label: string; value: string }[]>(row.specifications, [])
+        .slice(0, 2)
+        .map(spec => `${spec.label}:${spec.value}`)
+        .join(" · ");
       return {
         type: "product" as const,
-        title: product.title,
-        label: product.model,
-        excerpt: [content?.summary, specs].filter(Boolean).join(" · "),
-        image: content?.images?.[0]?.url ?? product.image,
-        url: liveHref(product.path),
+        title: row.listingTitle || row.name,
+        label: row.model,
+        excerpt: [row.summary, specs].filter(Boolean).join(" · "),
+        image: row.image,
+        url: row.path,
       };
     });
 
@@ -60,8 +73,8 @@ export async function GET(request: Request) {
     }));
 
   return NextResponse.json({
-    products,
+    products: productResults,
     news,
-    total: products.length + news.length,
+    total: productResults.length + news.length,
   });
 }

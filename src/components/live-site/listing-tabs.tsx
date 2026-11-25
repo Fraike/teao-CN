@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { liveCategories, liveHref } from "@/lib/live-site";
+import type { CatalogCategory } from "@/lib/live-catalog";
 import { container } from "./container";
 
-export default function ListingTabs({ active }: { active?: string }) {
+export default function ListingTabs({ active, categories }: { active?: string; categories: CatalogCategory[] }) {
   const pill = (isActive: boolean) =>
     `shrink-0 rounded-full px-5 py-2 text-body font-semibold transition-colors ${
       isActive
@@ -14,8 +14,8 @@ export default function ListingTabs({ active }: { active?: string }) {
     <div className={container}>
       <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Link href="/products/" className={pill(!active)}>全部产品</Link>
-        {liveCategories.map(category => (
-          <Link key={category.path} href={liveHref(category.path)} className={pill(active === category.path)}>
+        {categories.map(category => (
+          <Link key={category.path} href={category.path} className={pill(active === category.path)}>
             {category.label}
           </Link>
         ))}

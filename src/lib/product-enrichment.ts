@@ -1,35 +1,29 @@
-import overlayData from "@/content/live-site/product-specs.json";
-import type { CatalogProduct } from "./live-catalog";
-import { parseSpecifications, pickChips, type SpecChip } from "./product-display";
-
-interface OverlayEntry {
-  model: string;
-  torque: { min: number; max: number; unit: string } | null;
-  force: { min: number; max: number; unit: string } | null;
-  mounting: string | null;
-  specs: SpecChip[];
-}
-
-const overlay = overlayData as Record<string, OverlayEntry>;
+import type { CatalogProduct, SpecChip, TorqueRange } from "./catalog-store";
+import { pickChips } from "./product-display";
 
 export interface EnrichedProduct extends CatalogProduct {
   categoryId: string;
   chips: SpecChip[];
   accentIndex: number;
-  torque: OverlayEntry["torque"];
-  force: OverlayEntry["force"];
+  torque: TorqueRange | null;
+  force: TorqueRange | null;
 }
 
 export function enrichProduct(categoryId: string, product: CatalogProduct): EnrichedProduct {
-  const entry = overlay[product.path];
-  const source = entry?.specs?.length ? entry.specs : parseSpecifications(product.specifications ?? []);
-  const picked = pickChips(source, categoryId);
+  const chips = product.specifications.flatMap(raw => {
+    const index = raw.search(/[:：]/);
+    if (index <= 0) return [];
+    const label = raw.slice(0, index).trim();
+    const value = raw.slice(index + 1).trim();
+    return label && value ? [{ label, value }] : [];
+  });
+  const picked = pickChips(chips, categoryId);
   return {
     ...product,
     categoryId,
     chips: picked.chips,
     accentIndex: picked.accentIndex,
-    torque: entry?.torque ?? null,
-    force: entry?.force ?? null,
+    torque: product.torque ?? null,
+    force: product.force ?? null,
   };
 }

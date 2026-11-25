@@ -3,13 +3,14 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
-import { liveHref, LIVE_ORIGIN } from "@/lib/live-site";
-import { formatRange, getProductContentByModel } from "@/lib/product-content";
+import { LIVE_ORIGIN } from "@/lib/live-site";
+import { formatRange } from "@/lib/product-content";
+import { getProductContentByModelMap, normalizeModel } from "@/lib/catalog-store";
 import { container } from "./container";
 import type { ApplicationMap, ApplicationScene } from "@/content/live-site/applications";
 import AutomotiveMap from "./automotive-map";
 
-export default function ApplicationScenesPage({ eyebrow, title, description, scenes, map, canonicalPath }: {
+export default async function ApplicationScenesPage({ eyebrow, title, description, scenes, map, canonicalPath }: {
   eyebrow: string;
   title: string;
   description: string;
@@ -17,6 +18,7 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
   map: ApplicationMap;
   canonicalPath: string;
 }) {
+  const contents = await getProductContentByModelMap();
   const scenesJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -81,13 +83,13 @@ export default function ApplicationScenesPage({ eyebrow, title, description, sce
                       <div className="space-y-3">
                         {scene.groups.map(group => (
                           <div key={group.title}>
-                            <Link href={liveHref(group.categoryPath)} className="mb-1.5 inline-flex items-center gap-1 text-caption font-semibold text-brand-700 hover:underline">
+                            <Link href={group.categoryPath} className="mb-1.5 inline-flex items-center gap-1 text-caption font-semibold text-brand-700 hover:underline">
                               {group.title}
                               <ArrowUpRight size={12} />
                             </Link>
                             <div className="grid gap-2 sm:grid-cols-2">
                               {group.models.map(model => {
-                                const item = getProductContentByModel(model);
+                                const item = contents.get(normalizeModel(model));
                                 if (!item) {
                                   return (
                                     <span key={model} className="rounded-xl border border-dashed border-line bg-white px-3 py-2 text-caption font-semibold text-ink-soft">

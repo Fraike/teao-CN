@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import products from "@/content/live-site/gear-products.json";
-import { liveCategories, liveHref, LIVE_ORIGIN, PILOT_PRODUCT_PATH } from "@/lib/live-site";
-import { liveCatalog, type CatalogCategory, type CatalogPage, type CatalogProduct } from "@/lib/live-catalog";
+import { liveHref, LIVE_ORIGIN } from "@/lib/live-site";
+import type { CatalogCategory, CatalogPage, CatalogProduct } from "@/lib/live-catalog";
 import { enrichProduct } from "@/lib/product-enrichment";
 import { compareModel } from "@/lib/product-sort";
 import ProductCard from "./product-card";
@@ -14,37 +13,37 @@ import { container } from "./container";
 
 export { container };
 
-export function Breadcrumb({ product = false, category = liveCatalog[0] }: { product?: boolean; category?: CatalogCategory }) {
+export function Breadcrumb({ product = false, category }: { product?: boolean; category: CatalogCategory }) {
   return <nav aria-label="面包屑" className={`${container} flex flex-wrap gap-2 py-5 text-xs text-muted`}>
     <a href={liveHref("/")} className="hover:text-brand-700">首页</a><span>/</span>
     <a href={liveHref("/products/")} className="hover:text-brand-700">产品</a><span>/</span>
-    {product ? <><Link href="/gear-damper/" className="hover:text-brand-700">齿轮阻尼器</Link><span>/</span><span aria-current="page">RD-T038 / RD-V038</span></> : <span aria-current="page">{category.label}</span>}
+    <span aria-current="page">{product ? category.label : category.label}</span>
   </nav>;
 }
 
-export function CategoryNav({ active = "/gear-damper/" }: { active?: string }) {
-  return <nav aria-label="产品类别" className="flex flex-wrap gap-2">{liveCategories.map(category =>
-    <a key={category.path} href={liveHref(category.path)} aria-current={category.path === active ? "page" : undefined} className={`rounded-md border px-4 py-3 text-body font-semibold transition-colors ${category.path === active ? "border-brand-500 bg-brand-500 text-white" : "border-line bg-white hover:border-brand-500 hover:text-brand-700"}`}>{category.label}</a>
+export function CategoryNav({ categories, active = "" }: { categories: CatalogCategory[]; active?: string }) {
+  return <nav aria-label="产品类别" className="flex flex-wrap gap-2">{categories.map(category =>
+    <a key={category.path} href={category.path} aria-current={category.path === active ? "page" : undefined} className={`rounded-md border px-4 py-3 text-body font-semibold transition-colors ${category.path === active ? "border-brand-500 bg-brand-500 text-white" : "border-line bg-white hover:border-brand-500 hover:text-brand-700"}`}>{category.label}</a>
   )}</nav>;
 }
 
-export function ProductCards({ related = false, items = products }: { related?: boolean; items?: CatalogProduct[] }) {
+export function ProductCards({ related = false, items }: { related?: boolean; items: CatalogProduct[] }) {
   const cards = related ? items.slice(0, 5) : items;
   return <div className={`grid grid-cols-1 gap-5 sm:grid-cols-2 ${related ? "xl:grid-cols-5" : "lg:grid-cols-3 xl:grid-cols-4"}`}>
     {cards.map(product => <article key={product.path} className="overflow-hidden rounded-lg border border-line bg-white transition-colors hover:border-brand-500">
-      <a href={liveHref(product.path)} className="relative block aspect-[1.25] border-b border-line-soft">
+      <Link href={product.path} className="relative block aspect-[1.25] border-b border-line-soft">
         <Image src={product.image} alt={product.title} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 300px" className="object-contain p-4" draggable={false} />
-      </a>
-      <div className="p-5"><h3 className="text-lg font-semibold"><a href={liveHref(product.path)}>{product.model}</a></h3>
+      </Link>
+      <div className="p-5"><h3 className="text-lg font-semibold"><Link href={product.path}>{product.model}</Link></h3>
         <p className="mt-2 line-clamp-2 min-h-12 text-body text-muted">{product.title}</p>
-        {!related && <ul className="mt-4 space-y-1 border-t border-line-soft pt-3 text-xs text-ink-soft">{product.specifications.filter(spec => !spec.startsWith("压力角:") && !(product.path === PILOT_PRODUCT_PATH && (spec.startsWith("尺寸:") || spec.startsWith("模数:")))).map(spec => <li key={spec}>{spec}</li>)}</ul>}
-        <a href={liveHref(product.path)} className="mt-4 inline-block text-body font-semibold text-brand-700 underline-offset-4 hover:underline">{liveHref(product.path).startsWith("/") ? "查看产品详情" : "查看原站详情"}</a>
+        {!related && <ul className="mt-4 space-y-1 border-t border-line-soft pt-3 text-xs text-ink-soft">{product.specifications.filter(spec => !spec.startsWith("压力角:")).map(spec => <li key={spec}>{spec}</li>)}</ul>}
+        <Link href={product.path} className="mt-4 inline-block text-body font-semibold text-brand-700 underline-offset-4 hover:underline">查看产品详情</Link>
       </div>
     </article>)}
   </div>;
 }
 
-export function CategoryPage({ category = liveCatalog[0], page = category.pages[0] }: { category?: CatalogCategory; page?: CatalogPage } = {}) {
+export function CategoryPage({ category, page, categories }: { category: CatalogCategory; page: CatalogPage; categories: CatalogCategory[] }) {
   const sorted = category.pages
     .flatMap(item => item.products.map(product => enrichProduct(category.id, product)))
     .sort((a, b) => compareModel(a.model, b.model));
@@ -64,7 +63,7 @@ export function CategoryPage({ category = liveCatalog[0], page = category.pages[
       itemListElement: enriched.map((product, index) => ({
         "@type": "ListItem",
         position: offset + index + 1,
-        item: { "@type": "Product", name: product.model, description: product.title, url: liveHref(product.path) },
+        item: { "@type": "Product", name: product.model, description: product.title, url: LIVE_ORIGIN + encodeURI(product.path) },
       })),
     },
   };
@@ -84,7 +83,7 @@ export function CategoryPage({ category = liveCatalog[0], page = category.pages[
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <ListingHero title={category.label} description={category.description} crumb={category.label} />
-      <ListingTabs active={category.path} />
+      <ListingTabs active={category.path} categories={categories} />
       <section id="products" className={`${container} scroll-mt-24 pb-12 pt-8`}>
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">

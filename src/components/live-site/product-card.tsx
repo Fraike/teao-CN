@@ -1,16 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Gauge, Wrench } from "lucide-react";
-import { liveHref } from "@/lib/live-site";
 import { formatTorque, getForceBar, getTorqueBar } from "@/lib/product-display";
 import type { EnrichedProduct } from "@/lib/product-enrichment";
 
 export default function ProductCard({ product }: { product: EnrichedProduct }) {
-  const href = liveHref(product.path);
-  const external = !href.startsWith("/");
+  const href = product.path;
 
   return (
     <article className="group grid h-full grid-cols-[112px_1fr] items-center gap-3 rounded-2xl border border-line bg-white p-3 shadow-[0_2px_12px_rgba(17,24,39,0.02)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/30 hover:shadow-[0_16px_40px_rgba(232,120,26,0.10)] lg:grid-cols-[176px_1fr] lg:gap-5 lg:p-4 lg:shadow-[0_4px_24px_rgba(17,24,39,0.03)]">
-      <a href={href} className="relative h-[112px] w-[112px] shrink-0 overflow-hidden rounded-xl border border-line-soft bg-gradient-to-br from-surface to-white lg:h-[176px] lg:w-[176px]">
+      <Link href={href} className="relative h-[112px] w-[112px] shrink-0 overflow-hidden rounded-xl border border-line-soft bg-gradient-to-br from-surface to-white lg:h-[176px] lg:w-[176px]">
         <Image
           src={product.image}
           alt={product.title}
@@ -19,14 +18,14 @@ export default function ProductCard({ product }: { product: EnrichedProduct }) {
           loading="lazy"
           className="object-contain p-1.5 transition-transform duration-500 group-hover:scale-105 lg:p-2"
         />
-      </a>
+      </Link>
 
       <div className="flex min-w-0 flex-col">
-        <a href={href}>
+        <Link href={href}>
           <h3 className="line-clamp-1 text-[16px] font-semibold leading-tight tracking-[-0.01em] text-ink transition-colors group-hover:text-brand-700 lg:text-[17px]">
             {product.model}
           </h3>
-        </a>
+        </Link>
 
         <div className="mt-2 lg:mt-3">
           <RangeBlock product={product} />
@@ -47,13 +46,13 @@ export default function ProductCard({ product }: { product: EnrichedProduct }) {
               );
             })}
           </div>
-          <a
+          <Link
             href={href}
-            aria-label={`${external ? "查看原站详情" : "查看产品详情"}：${product.model}`}
+            aria-label={`查看产品详情：${product.model}`}
             className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-line text-ink-soft transition-all duration-300 group-hover:border-brand-500 group-hover:bg-brand-500 group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(232,120,26,0.28)] lg:h-9 lg:w-9"
           >
             <ArrowUpRight size={15} />
-          </a>
+          </Link>
         </div>
       </div>
     </article>

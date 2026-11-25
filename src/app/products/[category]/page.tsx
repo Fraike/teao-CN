@@ -1,9 +1,10 @@
 import { notFound, permanentRedirect } from "next/navigation";
-import { developmentCategoryPath } from "@/lib/live-site";
+import { getPublicCategories } from "@/lib/catalog-store";
 
 /** Compatibility for bookmarks made before the original-site routes were connected. */
 export default async function DevelopmentCategory({ params }: { params: Promise<{ category: string }> }) {
-  const path = developmentCategoryPath((await params).category);
-  if (!path) notFound();
-  permanentRedirect(encodeURI(path));
+  const { category } = await params;
+  const match = (await getPublicCategories()).find(item => item.slug === category);
+  if (!match) notFound();
+  permanentRedirect(encodeURI(match.path));
 }

@@ -24,11 +24,11 @@ test("unported links keep original spelling, Chinese, spaces, nested slashes and
   }
 });
 
-test("all five Header categories resolve to local original URLs with their own contents", () => {
+test("all five Header categories resolve to local original URLs with their own contents", async () => {
   assert.equal(liveCategories.length, 5);
   for (const category of liveCategories) {
     const segments = category.path.split("/").filter(Boolean);
-    const route = getCategoryRoute(segments);
+    const route = await getCategoryRoute(segments);
     assert.ok(route, category.path);
     assert.equal(route.category.path, category.path);
     assert.ok(route.page.products.length > 0, category.path);
@@ -36,21 +36,21 @@ test("all five Header categories resolve to local original URLs with their own c
   }
 });
 
-test("obsolete development links point to original categories and preserve the space-bearing category", () => {
+test("obsolete development links point to original categories and preserve the space-bearing category", async () => {
   assert.equal(developmentCategoryPath("axial-damper"), "/axial-dampers/");
   assert.equal(developmentCategoryPath("glove-box-damper"), "/Glove Box Dampers/");
   assert.equal(developmentCategoryPath("custom"), "/qitaqichelingbujian/");
   assert.equal(developmentCategoryPath("unknown"), null);
-  assert.equal(getCategoryRoute(["glove box dampers"]), null);
+  assert.equal(await getCategoryRoute(["glove box dampers"]), null);
 });
 
-test("original pagination has separate product contents and rejects nonexistent pages", () => {
-  const first = getCategoryRoute(["gear-damper"]);
-  const second = getCategoryRoute(["gear-damper", "index_2.html"]);
+test("original pagination has separate product contents and rejects nonexistent pages", async () => {
+  const first = await getCategoryRoute(["gear-damper"]);
+  const second = await getCategoryRoute(["gear-damper", "index_2.html"]);
   assert.ok(first && second);
   assert.notEqual(first.page.products[0].path, second.page.products[0].path);
   assert.equal(liveHref("/gear-damper/index_2.html"), "/gear-damper/index_2.html");
-  assert.equal(getCategoryRoute(["latches", "index_2.html"]), null);
+  assert.equal(await getCategoryRoute(["latches", "index_2.html"]), null);
 });
 
 test("local anchors stay on the local pilot and arbitrary origins are rejected", () => {
@@ -59,14 +59,14 @@ test("local anchors stay on the local pilot and arbitrary origins are rejected",
   assert.throws(() => liveHref("https://other.example/path"));
 });
 
-test("encoded metadata segments resolve like decoded page segments without double decoding", () => {
+test("encoded metadata segments resolve like decoded page segments without double decoding", async () => {
   for (const segments of [["Glove%20Box%20Dampers"], ["Glove%20Box%20Dampers", "index_2.html"]]) {
     assert.equal(getPilotPage(segments), "category");
-    assert.ok(getCategoryRoute(segments));
+    assert.ok(await getCategoryRoute(segments));
   }
   for (const segments of [["Glove%2520Box%2520Dampers"], ["gear-damper%2Findex_2.html"], ["bad%"]]) {
     assert.equal(getPilotPage(segments), null);
-    assert.equal(getCategoryRoute(segments), null);
+    assert.equal(await getCategoryRoute(segments), null);
   }
 });
 

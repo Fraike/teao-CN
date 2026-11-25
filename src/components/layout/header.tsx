@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
-import { liveCatalog } from "@/lib/live-catalog";
+import type { CategoryPublic } from "@/lib/catalog-store";
 import { liveHref } from "@/lib/live-site";
 import GlobalSearch from "./global-search";
 
@@ -18,7 +18,7 @@ const navItems = [
   { label: "联系我们", href: "/contacts/" },
 ];
 
-export default function Header() {
+export default function Header({ categories }: { categories: CategoryPublic[] }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -68,22 +68,22 @@ export default function Header() {
                   </Link>
                   {/* Mega menu */}
                   <div className="invisible absolute left-1/2 top-full grid w-[760px] -translate-x-1/2 translate-y-2.5 grid-cols-5 gap-2 rounded-2xl border border-line bg-white p-3 opacity-0 shadow-[0_20px_60px_rgba(0,0,0,.08)] transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                    {liveCatalog.map((cat) => (
+                    {categories.map((cat) => (
                       <Link
-                        key={cat.id}
-                        href={liveHref(cat.path)}
+                        key={cat.slug}
+                        href={cat.path}
                         className="flex min-h-[142px] flex-col justify-between rounded-xl border border-line/60 bg-surface p-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/40 hover:bg-white"
                       >
                         <div className="relative h-[76px] w-full">
                           <Image
                             src={cat.image}
-                            alt={cat.label}
+                            alt={cat.name}
                             fill
                             className="rounded-lg bg-white object-contain p-1.5"
                             sizes="140px"
                           />
                         </div>
-                        <strong className="mt-3 text-xs leading-tight text-ink">{cat.label}</strong>
+                        <strong className="mt-3 text-xs leading-tight text-ink">{cat.name}</strong>
                       </Link>
                     ))}
                   </div>
@@ -153,14 +153,14 @@ export default function Header() {
                 </Link>
                 {item.mega && (
                   <div className="grid grid-cols-2 gap-2 py-3">
-                    {liveCatalog.map((cat) => (
+                    {categories.map((cat) => (
                       <Link
-                        key={cat.id}
-                        href={liveHref(cat.path)}
+                        key={cat.slug}
+                        href={cat.path}
                         onClick={() => setMobileOpen(false)}
                         className="rounded-lg border border-line px-3 py-2 text-body text-muted transition-colors hover:border-brand-500/40 hover:text-brand-700"
                       >
-                        {cat.label}
+                        {cat.name}
                       </Link>
                     ))}
                   </div>

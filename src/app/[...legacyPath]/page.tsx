@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { CategoryPage } from "@/components/live-site/catalog";
 import ProductDetail from "@/components/live-site/product-detail";
 import QualityPage from "@/components/live-site/quality-page";
@@ -13,9 +13,8 @@ import ContactPage from "@/components/live-site/contact-page";
 import NewsPage from "@/components/live-site/news-page";
 import NewsArticlePage from "@/components/live-site/news-article-page";
 import ConvertPage from "@/components/live-site/convert-page";
-import { getPilotPage, getNewsSlug, legacyPathFromSegments, LIVE_ORIGIN, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
-import { getCategoryRoute, liveCatalog } from "@/lib/live-catalog";
-import { getProductContent } from "@/lib/product-content";
+import { getNewsSlug, legacyPathFromSegments, LIVE_ORIGIN, QUALITY_PATH, FAQ_PATH, APPLICATIONS_PATH, AUTOMOTIVE_INTERIOR_PATH, INTERIOR_PATH, EXTERIOR_PATH, HOME_LIFE_PATH, OFFICE_EQUIPMENT_PATH, INDUSTRIAL_APPLICATION_PATH, ABOUT_PATH, CONTACTS_PATH, NEWS_PATH, CONVERT_PATH } from "@/lib/live-site";
+import { getCatalog, resolveLegacyPath } from "@/lib/catalog-store";
 import { pageOpenGraph } from "@/lib/metadata";
 import { automotiveInteriorScenes, automotiveExteriorScenes, automotiveInteriorMap, automotiveExteriorMap, simpleApplications } from "@/content/live-site/applications";
 import { getNewsBySlug } from "@/lib/news-store";
@@ -185,28 +184,32 @@ type Props = { params: Promise<{ legacyPath: string[] }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const segments = (await params).legacyPath;
-  const type = getPilotPage(segments);
-  if (!type) notFound();
-  if (type === "quality") return QUALITY_META;
-  if (type === "faq") return FAQ_META;
-  if (type === "applications") return APPLICATIONS_META;
-  if (type === "automotive-interior") return AUTOMOTIVE_INTERIOR_META;
-  if (type === "interior") return INTERIOR_META;
-  if (type === "exterior") return EXTERIOR_META;
-  if (type === "home-life") return HOME_LIFE_META;
-  if (type === "office-equipment") return OFFICE_EQUIPMENT_META;
-  if (type === "industrial-application") return INDUSTRIAL_APPLICATION_META;
-  if (type === "about") return ABOUT_META;
-  if (type === "contacts") return CONTACTS_META;
-  if (type === "news") return NEWS_META;
-  const newsSlug = getNewsSlug(segments);
-  if (type === "news-article" && newsSlug) return await newsArticleMeta(newsSlug);
-  if (type === "convert") return CONVERT_META;
-  if (type === "product") {
-    const path = legacyPathFromSegments(segments);
-    const content = getProductContent(path);
-    if (!content) notFound();
-    const category = liveCatalog.find(item => item.id === content.categoryId)!;
+  const resolved = await resolveLegacyPath(segments);
+  if (!resolved) notFound();
+
+  if (resolved.kind === "static") {
+    const type = resolved.type;
+    if (type === "quality") return QUALITY_META;
+    if (type === "faq") return FAQ_META;
+    if (type === "applications") return APPLICATIONS_META;
+    if (type === "automotive-interior") return AUTOMOTIVE_INTERIOR_META;
+    if (type === "interior") return INTERIOR_META;
+    if (type === "exterior") return EXTERIOR_META;
+    if (type === "home-life") return HOME_LIFE_META;
+    if (type === "office-equipment") return OFFICE_EQUIPMENT_META;
+    if (type === "industrial-application") return INDUSTRIAL_APPLICATION_META;
+    if (type === "about") return ABOUT_META;
+    if (type === "contacts") return CONTACTS_META;
+    if (type === "news") return NEWS_META;
+    const newsSlug = getNewsSlug(segments);
+    if (type === "news-article" && newsSlug) return await newsArticleMeta(newsSlug);
+    if (type === "convert") return CONVERT_META;
+    notFound();
+  }
+
+  if (resolved.kind === "product") {
+    const { content, category } = resolved;
+    const path = content.path;
     const productDescription = `${content.model} ${category.label}:${content.summary}。查看技术规格、材料、尺寸图、性能曲线与应用场景。`;
     return {
       title: { absolute: `${content.model} ${category.label} | 特澳 TEAO` },
@@ -220,50 +223,57 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     };
   }
-  const categoryRoute = getCategoryRoute(segments);
-  const categoryDescription = categoryRoute!.category.description.slice(0, 76);
+
+  const categoryDescription = resolved.category.description.slice(0, 76);
   return {
-    title: { absolute: `${categoryRoute!.category.label}产品与选型${categoryRoute!.page.number > 1 ? ` - 第 ${categoryRoute!.page.number} 页` : ""} | 特澳 TEAO` },
+    title: { absolute: `${resolved.category.label}产品与选型${resolved.page.number > 1 ? ` - 第 ${resolved.page.number} 页` : ""} | 特澳 TEAO` },
     description: categoryDescription,
-    alternates: { canonical: LIVE_ORIGIN + encodeURI(categoryRoute!.page.path) },
+    alternates: { canonical: LIVE_ORIGIN + encodeURI(resolved.page.path) },
     robots: indexable,
     openGraph: pageOpenGraph({
-      title: `${categoryRoute!.category.label}产品与选型`,
+      title: `${resolved.category.label}产品与选型`,
       description: categoryDescription,
-      path: categoryRoute!.page.path,
+      path: resolved.page.path,
     }),
   };
 }
 
 export default async function LegacyPage({ params }: Props) {
   const segments = (await params).legacyPath;
-  const type = getPilotPage(segments);
-  if (type === "quality") return <QualityPage />;
-  if (type === "faq") return <FaqPage />;
-  if (type === "applications") return <ApplicationsPage />;
-  if (type === "automotive-interior") return <AutomotiveOverviewPage />;
-  if (type === "interior") return <ApplicationScenesPage eyebrow="汽车内饰" title="汽车内饰阻尼器应用" description="点击座舱图中的标记,查看中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。" scenes={automotiveInteriorScenes} map={automotiveInteriorMap} canonicalPath={INTERIOR_PATH} />;
-  if (type === "exterior") return <ApplicationScenesPage eyebrow="汽车外饰" title="汽车外饰阻尼器应用" description="点击车身图中的标记,查看外门把手与新能源汽车充电口盖的阻尼应用。" scenes={automotiveExteriorScenes} map={automotiveExteriorMap} canonicalPath={EXTERIOR_PATH} />;
-  if (type === "home-life") return <SimpleApplicationPage app={simpleApplications[0]} canonicalPath={HOME_LIFE_PATH} />;
-  if (type === "office-equipment") return <SimpleApplicationPage app={simpleApplications[1]} canonicalPath={OFFICE_EQUIPMENT_PATH} />;
-  if (type === "industrial-application") return <SimpleApplicationPage app={simpleApplications[2]} canonicalPath={INDUSTRIAL_APPLICATION_PATH} />;
-  if (type === "about") return <AboutPage />;
-  if (type === "contacts") return <ContactPage />;
-  if (type === "news") return <NewsPage />;
-  const newsSlug = getNewsSlug(segments);
-  if (type === "news-article" && newsSlug) {
-    const article = await getNewsBySlug(newsSlug);
-    if (!article) notFound();
-    return <NewsArticlePage article={article} />;
+  const resolved = await resolveLegacyPath(segments);
+  if (!resolved) notFound();
+
+  if (resolved.kind === "static") {
+    const type = resolved.type;
+    if (type === "quality") return <QualityPage />;
+    if (type === "faq") return <FaqPage />;
+    if (type === "applications") return <ApplicationsPage />;
+    if (type === "automotive-interior") return <AutomotiveOverviewPage />;
+    if (type === "interior") return <ApplicationScenesPage eyebrow="汽车内饰" title="汽车内饰阻尼器应用" description="点击座舱图中的标记,查看中控扶手箱盖、手套箱、内门把手、顶棚拉手、眼镜盒与遮阳板的阻尼应用。" scenes={automotiveInteriorScenes} map={automotiveInteriorMap} canonicalPath={INTERIOR_PATH} />;
+    if (type === "exterior") return <ApplicationScenesPage eyebrow="汽车外饰" title="汽车外饰阻尼器应用" description="点击车身图中的标记,查看外门把手与新能源汽车充电口盖的阻尼应用。" scenes={automotiveExteriorScenes} map={automotiveExteriorMap} canonicalPath={EXTERIOR_PATH} />;
+    if (type === "home-life") return <SimpleApplicationPage app={simpleApplications[0]} canonicalPath={HOME_LIFE_PATH} />;
+    if (type === "office-equipment") return <SimpleApplicationPage app={simpleApplications[1]} canonicalPath={OFFICE_EQUIPMENT_PATH} />;
+    if (type === "industrial-application") return <SimpleApplicationPage app={simpleApplications[2]} canonicalPath={INDUSTRIAL_APPLICATION_PATH} />;
+    if (type === "about") return <AboutPage />;
+    if (type === "contacts") return <ContactPage />;
+    if (type === "news") return <NewsPage />;
+    const newsSlug = getNewsSlug(segments);
+    if (type === "news-article" && newsSlug) {
+      const article = await getNewsBySlug(newsSlug);
+      if (!article) notFound();
+      return <NewsArticlePage article={article} />;
+    }
+    if (type === "convert") return <ConvertPage />;
+    notFound();
   }
-  if (type === "convert") return <ConvertPage />;
-  const route = getCategoryRoute(segments);
-  if (route) return <CategoryPage category={route.category} page={route.page} />;
-  if (type === "product") {
-    const content = getProductContent(legacyPathFromSegments(segments));
-    if (!content) notFound();
-    const category = liveCatalog.find(item => item.id === content.categoryId)!;
-    return <ProductDetail product={content} category={category} />;
+
+  if (resolved.kind === "category") {
+    return <CategoryPage category={resolved.category} page={resolved.page} categories={await getCatalog()} />;
   }
-  notFound();
+
+  const requested = legacyPathFromSegments(segments);
+  if (requested !== resolved.content.path) {
+    permanentRedirect(encodeURI(resolved.content.path));
+  }
+  return <ProductDetail product={resolved.content} category={resolved.category} />;
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Gauge, Wrench } from "lucide-react";
-import { liveHref, LIVE_ORIGIN } from "@/lib/live-site";
+import { LIVE_ORIGIN } from "@/lib/live-site";
 import { contact, telHref } from "@/content/live-site/contact";
 import { getForceBar, getTorqueBar } from "@/lib/product-display";
 import { enrichProduct } from "@/lib/product-enrichment";
@@ -31,15 +31,15 @@ function SectionTitle({ index, title, description }: { index: string; title: str
   );
 }
 
-export default function ProductDetail({ product, category }: { product: ProductContent; category: CatalogCategory }) {
-  const related = getRelatedProducts(category.id, product.path, 4, product.model).map(item => enrichProduct(category.id, item));
+export default async function ProductDetail({ product, category }: { product: ProductContent; category: CatalogCategory }) {
+  const related = (await getRelatedProducts(category.id, product.path, 4, product.model)).map(item => enrichProduct(category.id, item));
   const faq = buildProductFaq(product);
   const torqueBar = getTorqueBar(product.torque);
   const forceBar = getForceBar(product.force);
   const rangeBar = torqueBar ?? forceBar;
 
   const stats = [
-    product.durability ? { label: "耐久性", value: formatCycles(product.durability.cycles) } : null,
+    product.durability?.cycles != null ? { label: "耐久性", value: formatCycles(product.durability.cycles) } : null,
     product.hardTorque ? { label: "推荐扭矩", value: product.hardTorque } : null,
     product.hardForce ? { label: "按压力", value: product.hardForce } : null,
     product.soundType ? { label: "声音", value: product.soundType } : null,
@@ -56,7 +56,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
     product.force ? { "@type": "PropertyValue", name: "操作力", value: formatRange(product.force) } : null,
     product.hardTorque ? { "@type": "PropertyValue", name: "推荐扭矩", value: product.hardTorque } : null,
     product.hardForce ? { "@type": "PropertyValue", name: "按压力", value: product.hardForce } : null,
-    product.durability ? { "@type": "PropertyValue", name: "耐久性", value: formatCycles(product.durability.cycles) } : null,
+    product.durability?.cycles != null ? { "@type": "PropertyValue", name: "耐久性", value: formatCycles(product.durability.cycles) } : null,
     product.bufferDirection ? { "@type": "PropertyValue", name: "阻尼方向", value: product.bufferDirection } : null,
     product.assemblyMethod ? { "@type": "PropertyValue", name: "安装方式", value: product.assemblyMethod } : null,
     ...product.materials.map(item => ({ "@type": "PropertyValue", name: item.part, value: item.material })),
@@ -350,7 +350,7 @@ export default function ProductDetail({ product, category }: { product: ProductC
                 <span className="text-micro font-semibold tracking-[0.14em] text-brand-700">{nextSection()}</span>
                 <h2 className="text-[24px] font-semibold leading-[1.15] tracking-[-0.02em] text-ink sm:text-[28px]">相关产品</h2>
               </div>
-              <Link href={liveHref(category.path)} className="text-sm font-semibold text-brand-700 hover:underline">
+              <Link href={category.path} className="text-sm font-semibold text-brand-700 hover:underline">
                 查看全部 {category.label} →
               </Link>
             </div>
