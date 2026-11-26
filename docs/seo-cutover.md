@@ -12,7 +12,7 @@
 | non-www | `chinateao.com` 301 → `https://www.chinateao.com/` |
 | DNS TTL | 600 秒 |
 | 老站 sitemap | 51 条，lastmod 约 2024-02 |
-| 新站 sitemap | 140 条（含 `/products/`、`/privacy/`） |
+| 新站 sitemap | 线上 141 条（含 `/products/`、`/privacy/`、`/terms/`） |
 | 新站 robots | 允许百度 / Bytespider / GPTBot / ClaudeBot / PerplexityBot，禁止 `/admin`、`/api/` |
 
 **结论：域名没有变化，不需要做域名迁移。需要做的是同域名换服务器 + 老 URL 301 覆盖。**

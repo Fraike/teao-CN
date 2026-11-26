@@ -23,6 +23,7 @@ const staticFooterLinks = [
       { label: "扭矩换算", href: "/convert/" },
       { label: "联系我们", href: "/contacts/" },
       { label: "隐私政策", href: "/privacy/" },
+      { label: "服务条款", href: "/terms/" },
       { label: "网站地图", href: "/sitemap/" },
     ],
   },

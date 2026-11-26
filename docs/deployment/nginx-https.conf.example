@@ -9,11 +9,18 @@
 #    cp /etc/nginx/conf.d/teao-cn.conf /etc/nginx/conf.d/teao-cn.conf.bak-https
 #    cp /opt/teao-cn/docs/deployment/nginx-https.conf.example /etc/nginx/conf.d/teao-cn.conf
 #    nginx -t && systemctl reload nginx
+#
+# 3) 清理默认 server 冲突：
+#    Alibaba Cloud Linux 自带的 /etc/nginx/nginx.conf 里有一个
+#    `server_name _;` 的默认 server（约 37-53 行），会和本文件的
+#    `listen 80 default_server` 冲突。启用前把 nginx.conf 里那段
+#    stock default server 注释/删除，然后 nginx -t 确认无 warn。
 
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
     server_name _;
+    server_tokens off;
 
     location ^~ /.well-known/acme-challenge/ {
         root /var/www/certbot;
@@ -28,6 +35,7 @@ server {
     listen 80;
     listen [::]:80;
     server_name chinateao.com www.chinateao.com;
+    server_tokens off;
 
     location ^~ /.well-known/acme-challenge/ {
         root /var/www/certbot;
@@ -50,6 +58,16 @@ server {
     ssl_session_cache shared:SSL:10m;
     ssl_session_timeout 1d;
 
+    server_tokens off;
+
+    # 安全响应头。location 里如果自己写了 add_header，不会继承这里的配置，
+    # 所以下面的静态资源 location 也重复写了一遍。
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+    add_header Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; form-action 'self'" always;
+
     client_max_body_size 10m;
 
     gzip on;
@@ -59,17 +77,32 @@ server {
         alias /opt/teao-cn/public/uploads/;
         expires 30d;
         add_header Cache-Control "public, max-age=2592000";
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header X-Frame-Options "SAMEORIGIN" always;
+        add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+        add_header Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; form-action 'self'" always;
     }
 
     location /_next/static/ {
         proxy_pass http://127.0.0.1:3000;
         add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header X-Frame-Options "SAMEORIGIN" always;
+        add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+        add_header Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; form-action 'self'" always;
     }
 
     location = /google0f0d9d0f414db640.html {
         alias /opt/teao-cn/public/google0f0d9d0f414db640.html;
         default_type text/html;
         add_header Cache-Control "no-store";
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header X-Frame-Options "SAMEORIGIN" always;
+        add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+        add_header Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; form-action 'self'" always;
     }
 
     location / {
@@ -83,8 +116,8 @@ server {
         proxy_set_header Connection "upgrade";
     }
 
-    # HTTPS 稳定后再启用 HSTS
-    # add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    # HSTS 是单向的：确认 HTTPS 连续稳定 2 周后再启用。
+    # add_header Strict-Transport-Security "max-age=15552000; includeSubDomains" always;
 }
 
 server {
@@ -92,6 +125,7 @@ server {
     listen [::]:443 ssl;
     http2 on;
     server_name chinateao.com;
+    server_tokens off;
 
     ssl_certificate /etc/letsencrypt/live/chinateao.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/chinateao.com/privkey.pem;

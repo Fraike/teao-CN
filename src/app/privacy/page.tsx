@@ -38,11 +38,12 @@ export default function PrivacyPage() {
 
       <section className={`${container} py-12 lg:py-16`}>
         <div className="mx-auto max-w-3xl text-body leading-8 text-ink-soft">
-          <p className="mb-10 text-caption text-muted">生效日期：2026 年 11 月 25 日</p>
+          <p className="mb-10 text-caption text-muted">生效日期：2026 年 11 月 26 日</p>
 
           <div className="space-y-10">
             <Section title="1. 适用范围">
               <p>本政策适用于您访问 <strong className="font-semibold text-ink">www.chinateao.com</strong> 及通过官网表单提交询盘、索取样品或技术资料时提供的信息。</p>
+              <p>本政策与 <Link href="/terms/" className="font-semibold text-brand-700 underline underline-offset-2">《服务条款》</Link> 共同适用于您对本网站的使用。</p>
             </Section>
 
             <Section title="2. 我们收集的信息">
@@ -66,13 +67,14 @@ export default function PrivacyPage() {
             <Section title="4. 共享与委托处理">
               <ul className="list-disc space-y-2 pl-5">
                 <li>我们不会出售、出租您的个人信息。</li>
-                <li>为完成业务沟通，可能在必要范围内向邮件、云服务、物流等服务商提供信息，并要求其履行保密和安全义务。</li>
+                <li>为完成业务沟通和及时响应询盘，可能在必要范围内向云服务器（阿里云）、企业微信（询盘通知）、企业邮箱（网易企业邮）等服务商提供信息；我们要求其履行保密和安全义务。</li>
+                <li>上述服务商目前均位于中国境内。如未来涉及个人信息跨境传输，我们将依法另行告知并取得您的同意。</li>
                 <li>除法律法规、司法机关或监管部门依法要求外，我们不会向无关第三方披露您的个人信息。</li>
               </ul>
             </Section>
 
             <Section title="5. 保存期限">
-              <p>我们会在业务沟通、报价、订单或售后服务所需的期限内保存您的信息；超过期限后将删除或匿名化处理。法律法规另有保存要求的，按法律法规执行。</p>
+              <p>一般情况下，我们自最后一次业务沟通起保存您的信息不超过 3 年；超过期限后将删除或匿名化处理。法律法规对合同、发票、税务等另有保存要求的，从其规定。</p>
             </Section>
 
             <Section title="6. Cookie 与访问统计">
@@ -82,6 +84,7 @@ export default function PrivacyPage() {
             <Section title="7. 您的权利">
               <p>您可以联系我们查询、更正、补充或删除您提交的信息，也可以撤回同意或要求我们停止继续使用。我们会在合理期限内处理您的请求，法律法规另有规定的除外。</p>
               <p>联系方式：<a className="font-semibold text-brand-700 underline underline-offset-2" href={`mailto:${contact.email}`}>{contact.email}</a>，或致电 {contact.primaryMobile}。</p>
+              <p>如您对我们的处理有异议，也可以向网信、市场监管等监管部门投诉。</p>
             </Section>
 
             <Section title="8. 信息安全">
@@ -102,6 +105,7 @@ export default function PrivacyPage() {
               <p>电话：{contact.phone} / {contact.primaryMobile}</p>
               <p>邮箱：<a className="font-semibold text-brand-700 underline underline-offset-2" href={`mailto:${contact.email}`}>{contact.email}</a></p>
               <p>如需进一步沟通，也可以访问 <Link href="/contacts/" className="font-semibold text-brand-700 underline underline-offset-2">联系我们</Link>。</p>
+              <p>相关条款：<Link href="/terms/" className="font-semibold text-brand-700 underline underline-offset-2">服务条款</Link>。</p>
               <p className="text-caption text-muted">
                 <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" className="hover:text-ink-soft">粤ICP备13044030号-2</a>
               </p>
